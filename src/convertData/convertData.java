@@ -1,8 +1,11 @@
 package convertData;
 
 import com.sun.org.apache.xalan.internal.xsltc.runtime.BasisLibrary;
-import org.jdom2.*;
-import org.jdom2.input.SAXBuilder;
+import com.sun.org.apache.xalan.internal.xsltc.runtime.BasisLibrary.stringToInt;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
 
 import java.io.*;
 
@@ -21,9 +24,10 @@ public class convertData{
         File[] files = mainFolder.listFiles();
 
         for(int i = 0; i < files.length; i++){
-            if(files[i].getName() == "Armes"){
+            if(files[i].getName().equals("Armes")){
                 convertWeapons(files[i]);
-            } else if(files[i].getName() == "Armures"){
+                System.out.println("Conversion des armes effectuée.");
+            /*} else if(files[i].getName() == "Armures"){
 
             } else if(files[i].getName() == "Competences"){
 
@@ -34,7 +38,7 @@ public class convertData{
             } else if(files[i].getName() == "Carrieres"){
 
             } else if(files[i].getName() == "Races"){
-
+*/
             } else {
                 System.out.println("Fichier non reconnu : " + files[i].getName() + ".");
             }
@@ -42,15 +46,15 @@ public class convertData{
     }
 
     public static void convertWeapons(File file){
+        System.out.println("Traitement de : " + file.getName());
+
         Element root = new Element("weapons");
         Document document = new Document(root);
         Element weapon;
-        Element price;
-        Element attributes;
+        Element attribute;
 
         String s;
         String[] att, s1;
-        int goldenCrowns, silverShillings, brassPennies;
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -68,26 +72,123 @@ public class convertData{
                 weapon.setAttribute("highRange", s1[6]);
                 weapon.setAttribute("reload", s1[7]);
 
-                attributes = new Element("attributes");
+                if(!att[0].equals("Aucun")){
+                    for(int i = 0; i < att.length ; i++){
+                        attribute = new Element("attribute");
+                        attribute.setText(att[i]);
+                        weapon.addContent(attribute);
+                    }
+                }
 
-                goldenCrowns = BasisLibrary.stringToInt(s1[2]) / 240;
-                silverShillings = (BasisLibrary.stringToInt(s1[2]) % 240) / 12;
-                brassPennies = (BasisLibrary.stringToInt(s1[2]) % 240) % 12;
+                int[] price = convertPrices(BasisLibrary.stringToInt(s1[2]));
 
-                weapon.setAttribute("goldenCrowns", "" + goldenCrowns);
-                weapon.setAttribute("silverShillings", "" + silverShillings);
-                weapon.setAttribute("brassPennies", "" + brassPennies);
+                weapon.setAttribute("goldenCrowns", "" + price[0]);
+                weapon.setAttribute("silverShillings", "" + price[1]);
+                weapon.setAttribute("brassPennies", "" + price[2]);
 
+                root.addContent(weapon);
+            }
 
+            br.close();
 
-                liA.add(new Arme(s1[0], stringToInt(s1[1]), stringToInt(s1[2]),
-                        s1[3], s1[4], stringToInt(s1[5]), stringToInt(s1[6]),
-                        stringToInt(s1[7]), att));
+            XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+            xmlOutputter.output(document, new FileOutputStream("resources/weapons.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void convertArmours(File file){
+        System.out.println("Traitement de : " + file.getName());
+
+        Element root = new Element("armours");
+        Document document = new Document(root);
+        Element armour;
+        Element zone;
+
+        String s;
+        String[] zones, s1;
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            while(br.ready()){
+                s = br.readLine();
+                zones=s.substring(s.lastIndexOf(":")+1).split(",");
+                s1=s.split(":");
+
+                armour = new Element("Armour");
+
+                armour.setAttribute("name", s1[0]);
+                armour.setAttribute("enc", s1[1]);
+
+                int[] price = convertPrices(BasisLibrary.stringToInt(s1[2]));
+
+                armour.setAttribute("goldenCrowns", "" + price[0]);
+                armour.setAttribute("silverShillings", "" + price[1]);
+                armour.setAttribute("brassPennies", "" + price[2]);
+
+                for(int i = 0; i < zones.length ; i++){
+                    zone = new Element("zone");
+                    zone.setText(zones[i]);
+                    armour.addContent(zone);
+                }
+
+                armour.setAttribute("armourLevel", s1[3]);
+
+                root.addContent(armour);
+            }
+
+            br.close();
+
+            XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+            xmlOutputter.output(document, new FileOutputStream("resources/armours.xml"));
+        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
+        }
+    }
+
+    public static void convertEquipment(File file){
+        System.out.println("Traitement de : " + file.getName());
+
+        Element root = new Element("equipments");
+        Document document = new Document(root);
+        Element equipment;
+
+        String s;
+        String[] s1;
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            while(br.ready()){
+                s = br.readLine();
+
+                s1 = s.split(":");
+
+                equipment = new Element("equipment");
+
+                equipment.setAttribute("name", s1[0]);
+                equipment.setAttribute("enc", s1[1]);
+
+                int[] price = convertPrices(BasisLibrary.stringToInt())
+
+                liO.add(new Objet(s.substring(0,n),stringToInt(s.substring(n+1, n1)), stringToInt(s.substring(n1+1))));
             }
 
             br.close();
         } catch (FileNotFoundException e) {
         } catch (IOException e) {
         }
+    }
+
+
+
+    public static int[] convertPrices(int price){
+        int[] finalPrice = new int[3];
+
+        finalPrice[0] = price / 240;
+        finalPrice[1] = (price % 240) / 12;
+        finalPrice[3] = (price % 240) % 12;
+
+        return finalPrice;
     }
 }
