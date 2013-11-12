@@ -1,0 +1,42 @@
+Arme à deux mains:200:4800:Armes lourdes:BF:0:0:0:Lente,Percutante
+Arme à une main:50:2400:Aucun:BF:0:0:0:Aucun
+Arme improvisée:35:0:Aucun:BF-4:6:0:1:Aucun
+Bâton:50:36:Aucun:BF-2:0:0:0:Assomante,Défensive
+Bouclier:50:2400:Aucun:BF-2:0:0:0:Défensive,Spéciale
+Brise-lame:40:1200:Armes de parade:BF-3:0:0:0:Equilibrée,Spéciale
+Dague:10:240:Aucun:BF-3:0:0:0:Aucun
+Demi-lance:75:4800:Armes de cavalerie:BF:0:0:0:Epuisante,Percutante,Rapide
+Fléau d'armes:95:3600:Fléaux:BF+1:0:0:0:Epuisante,Percutante
+Fleuret:40:4320:Armes d'escrime:BF-2:0:0:0:Précise,Rapide
+Gantelet/Coup de poing:1:240:Aucun:BF-3:0:0:0:Assomante
+Hallebarde:175:3600:Armes lourdes:BF:0:0:0:Spéciale
+Lance:50:2400:Aucun:BF:0:0:0:Rapide
+Lance de cavalerie:100:3600:Armes de cavalerie:BF+1:0:0:0:Epuisante,Percutante,Rapide
+Main gauche:15:960:Armes de parade:BF-3:0:0:0:Défensive,Equilibrée
+Mains nues:0:0:Aucun:BF-4:0:0:0:Spéciale
+Morgenstern:60:3600:Fléaux:BF:0:0:0:Epuisante,Percutante
+Rapière:40:4320:Armes d'escrime:BF-1:0:0:0:Rapide
+Rondache:10:480:Armes de parade:BF-4:0:0:0:Assomante,Défensive,Equilibrée
+Arbalète:120:7000:Aucun:4:30:60:2:Aucun
+Arbalète à répétition:150:24000:Arbalètes:2:16:32:0:Spéciale
+Arbalète de poing:25:8400:Arbalètes:2:8:16:2:Aucun
+Arc:80:2400:Aucun:3:24:48:1:Aucun
+Arc court:75:1680:Aucun:3:16:32:1:Aucun
+Arc elfique:75:16800:Arcs longs:3:36:72:1:Perforante
+Arc long:90:3600:Arcs longs:3:30:60:1:Perforante
+Arquebuse:30:72000:Armes a poudre:4:24:48:4:Percutante,Peu fiable
+Arquebuse a répétition:30:144000:Armes mécaniques:4:24:48:0:Expérimentale,Spéciale
+Bolas:20:84:Armes paralysantes:1:8:16:1:Immobilisante
+Dague/Etoile de jet:10:7200:Armes de jet:BF-3:6:12:1:Aucun
+Filet:60:720:Armes paralysantes:0:4:8:2:Immobilisante
+Fouet:40:480:Armes paralysantes:BF-4:6:0:1:Immobilisante,Rapide
+Fronde:10:960:Lance-pierres:3:16:32:1:Aucun
+Fustibale:50:1440:Lance-pierres:4:24:48:2:Aucun
+Hache/Marteau de jet:40:1200:Armes de jet:BF-2:8:0:1:Aucun
+Javelot:30:300:Aucun:BF-1:8:16:1:Aucun
+Lance:50:2400:Aucun:BF:8:0:1:Aucun
+Lasso:10:240:Armes paralysantes:0:8:0:1:Immobilisante
+Long fusil d'Hochland:70:108000:Armes mécaniques:4:48:96:4:Percutante,Peu fiable
+Pistolet:25:48000:Armes à poudre:4:8:16:4:Percutante,Peu fiable
+Pistolet à répétition:25:96000:Armes mécaniques:4:8:16:0:Expérimentale,Spéciale
+Tromblon:50:16800:Armes à poudre:3:32:0:6:Mitraille
