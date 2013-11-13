@@ -211,7 +211,23 @@ public class convertData{
                     skill = new Element("skill");
 
                     skill.setAttribute("name", s.substring(0, n));
-                    skill.setAttribute("competence", s.substring(n+1));
+
+                    if(s.substring(n+1).equals("CC"))
+                        skill.setAttribute("competence", "WS");
+                    else if(s.substring(n+1).equals("CT"))
+                        skill.setAttribute("competence", "BS");
+                    else if(s.substring(n+1).equals("F"))
+                        skill.setAttribute("competence", "S");
+                    else if(s.substring(n+1).equals("E"))
+                        skill.setAttribute("competence", "T");
+                    else if(s.substring(n+1).equals("Ag"))
+                        skill.setAttribute("competence", "Ag");
+                    else if(s.substring(n+1).equals("Int"))
+                        skill.setAttribute("competence", "Int");
+                    else if(s.substring(n+1).equals("FM"))
+                        skill.setAttribute("competence", "WP");
+                    else if(s.substring(n+1).equals("Soc"))
+                        skill.setAttribute("competence", "Fel");
 
                     root.addContent(skill);
                 }
@@ -474,7 +490,7 @@ public class convertData{
             System.out.println("Traitement de : " + f.getName());
 
             career = new Element("career");
-            career.setName(f.getName());
+            career.setAttribute("name", f.getName());
 
             try {
                 BufferedReader br = new BufferedReader(new FileReader(f));

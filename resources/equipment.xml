@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipments>
+  <equipment name="Atours royaux" enc="50" goldenCrowns="100" silverShillings="0" brassPennies="0" />
+  <equipment name="Atours de nobles" enc="30" goldenCrowns="50" silverShillings="0" brassPennies="0" />
+  <equipment name="Beaux atours" enc="20" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Vetements confortables" enc="15" goldenCrowns="3" silverShillings="0" brassPennies="0" />
+  <equipment name="Vetements communs" enc="15" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Piètres vetements" enc="10" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Haillons" enc="5" goldenCrowns="0" silverShillings="0" brassPennies="1" />
+  <equipment name="Uniforme" enc="15" goldenCrowns="15" silverShillings="0" brassPennies="0" />
+  <equipment name="Cape" enc="10" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Capuchon ou masque" enc="2" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Chapeau à larges bords" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Chapeau simple" enc="1" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Costume de scène" enc="10" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Pardessus" enc="15" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Robe/Chasuble" enc="25" goldenCrowns="15" silverShillings="0" brassPennies="0" />
+  <equipment name="Bouteille d'alcool fort" enc="5" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Tonnelet d'ale" enc="30" goldenCrowns="0" silverShillings="1" brassPennies="6" />
+  <equipment name="Tonnelet de bière" enc="30" goldenCrowns="0" silverShillings="3" brassPennies="0" />
+  <equipment name="Ration(la semaine)" enc="50" goldenCrowns="0" silverShillings="6" brassPennies="0" />
+  <equipment name="Besace" enc="7" goldenCrowns="0" silverShillings="5" brassPennies="0" />
+  <equipment name="Bourse" enc="1" goldenCrowns="0" silverShillings="2" brassPennies="0" />
+  <equipment name="Coffre" enc="40" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Etui a cartes ou parchemins" enc="2" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Flasque de cuir" enc="5" goldenCrowns="0" silverShillings="15" brassPennies="0" />
+  <equipment name="Flasque en métal" enc="15" goldenCrowns="1" silverShillings="15" brassPennies="0" />
+  <equipment name="Fontes de selle" enc="5" goldenCrowns="1" silverShillings="15" brassPennies="0" />
+  <equipment name="Gibecière" enc="5" goldenCrowns="1" silverShillings="15" brassPennies="0" />
+  <equipment name="Outre" enc="1" goldenCrowns="0" silverShillings="8" brassPennies="0" />
+  <equipment name="Petit sac" enc="1" goldenCrowns="0" silverShillings="5" brassPennies="0" />
+  <equipment name="Pichet" enc="10" goldenCrowns="0" silverShillings="4" brassPennies="0" />
+  <equipment name="Sac à dos" enc="20" goldenCrowns="1" silverShillings="10" brassPennies="0" />
+  <equipment name="Allumette" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="1" />
+  <equipment name="Bois de chauffe" enc="5" goldenCrowns="0" silverShillings="2" brassPennies="0" />
+  <equipment name="Bougie de cire" enc="5" goldenCrowns="0" silverShillings="6" brassPennies="0" />
+  <equipment name="Bougie de suif" enc="5" goldenCrowns="0" silverShillings="3" brassPennies="0" />
+  <equipment name="Huile pour lampe" enc="5" goldenCrowns="0" silverShillings="5" brassPennies="0" />
+  <equipment name="Lampe" enc="20" goldenCrowns="0" silverShillings="5" brassPennies="0" />
+  <equipment name="Lampe tempete" enc="30" goldenCrowns="12" silverShillings="0" brassPennies="0" />
+  <equipment name="Lanterne" enc="20" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Torche" enc="5" goldenCrowns="0" silverShillings="0" brassPennies="5" />
+  <equipment name="Boite d'amadou" enc="5" goldenCrowns="1" silverShillings="10" brassPennies="0" />
+  <equipment name="Bouilloire" enc="10" goldenCrowns="1" silverShillings="10" brassPennies="0" />
+  <equipment name="Cadenas de bonne qualité" enc="5" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Cadenas" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Chope en bois" enc="5" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Chope en étain" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Corde, 20mètres" enc="50" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Couverts en argent" enc="3" goldenCrowns="15" silverShillings="0" brassPennies="0" />
+  <equipment name="Couverts en bois" enc="2" goldenCrowns="0" silverShillings="5" brassPennies="0" />
+  <equipment name="Couverts en métal" enc="4" goldenCrowns="3" silverShillings="0" brassPennies="0" />
+  <equipment name="Couverture" enc="10" goldenCrowns="1" silverShillings="5" brassPennies="0" />
+  <equipment name="Dés (os)" enc="0" goldenCrowns="0" silverShillings="6" brassPennies="0" />
+  <equipment name="Échelle" enc="50" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Gamelle" enc="20" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Instrument de musique" enc="5" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Longue-vue" enc="5" goldenCrowns="100" silverShillings="0" brassPennies="0" />
+  <equipment name="Miroir" enc="5" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Papier" enc="0" goldenCrowns="0" silverShillings="5" brassPennies="0" />
+  <equipment name="Paquet de cartes" enc="1" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Parchemin" enc="0" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Parfum" enc="0" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Tente" enc="20" goldenCrowns="0" silverShillings="15" brassPennies="0" />
+  <equipment name="Accessoires de calligraphie" enc="5" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Accessoires de déguisement" enc="10" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Boulier" enc="5" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Cale en bois" enc="2" goldenCrowns="0" silverShillings="0" brassPennies="8" />
+  <equipment name="Chaîne(1mètre)" enc="5" goldenCrowns="1" silverShillings="10" brassPennies="0" />
+  <equipment name="Collet" enc="2" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Grappin" enc="20" goldenCrowns="4" silverShillings="0" brassPennies="0" />
+  <equipment name="Hameçon et ligne" enc="2" goldenCrowns="0" silverShillings="3" brassPennies="0" />
+  <equipment name="Lingot de métal" enc="20" goldenCrowns="1" silverShillings="5" brassPennies="0" />
+  <equipment name="Livre enluminé" enc="50" goldenCrowns="350" silverShillings="0" brassPennies="0" />
+  <equipment name="Livre imprimé" enc="35" goldenCrowns="100" silverShillings="0" brassPennies="0" />
+  <equipment name="Masse" enc="40" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Menottes" enc="20" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Outils d'artisan" enc="50" goldenCrowns="50" silverShillings="0" brassPennies="0" />
+  <equipment name="Outils de crochetage" enc="20" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Pelle" enc="20" goldenCrowns="1" silverShillings="5" brassPennies="0" />
+  <equipment name="Perche(1mètre)" enc="10" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Pied-de-biche" enc="10" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Piège a loup" enc="20" goldenCrowns="1" silverShillings="15" brassPennies="0" />
+  <equipment name="Piolet" enc="20" goldenCrowns="1" silverShillings="5" brassPennies="0" />
+  <equipment name="Pointe" enc="5" goldenCrowns="0" silverShillings="5" brassPennies="0" />
+  <equipment name="Bateau a rames" enc="900" goldenCrowns="90" silverShillings="0" brassPennies="0" />
+  <equipment name="Harnais" enc="20" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Selle" enc="50" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Bière de Bugman" enc="5" goldenCrowns="50" silverShillings="0" brassPennies="0" />
+  <equipment name="Don de Greta" enc="0" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <equipment name="Potion de soins" enc="0" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Bonnet de fou" enc="0" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <equipment name="Brise-coeur" enc="0" goldenCrowns="800" silverShillings="0" brassPennies="0" />
+  <equipment name="Fumet de manticore" enc="0" goldenCrowns="65" silverShillings="0" brassPennies="0" />
+  <equipment name="Lotus noir" enc="0" goldenCrowns="17" silverShillings="10" brassPennies="0" />
+  <equipment name="Ombre pourpre" enc="0" goldenCrowns="35" silverShillings="0" brassPennies="0" />
+  <equipment name="Racine de mandragore" enc="0" goldenCrowns="25" silverShillings="0" brassPennies="0" />
+  <equipment name="Salive de chimère" enc="0" goldenCrowns="150" silverShillings="0" brassPennies="0" />
+  <equipment name="Venin noir" enc="0" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <equipment name="Cataplasme médicinal" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="5" />
+  <equipment name="Eau bénite" enc="0" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Grimoire" enc="0" goldenCrowns="500" silverShillings="0" brassPennies="0" />
+  <equipment name="Nécessaire antipoison" enc="0" goldenCrowns="3" silverShillings="0" brassPennies="0" />
+  <equipment name="Porte-bonheur" enc="0" goldenCrowns="15" silverShillings="0" brassPennies="0" />
+  <equipment name="Relique religieuse" enc="0" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <equipment name="Bandeau oculaire" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="6" />
+  <equipment name="Boucle d'oreille" enc="0" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Crochet" enc="0" goldenCrowns="0" silverShillings="4" brassPennies="0" />
+  <equipment name="Fausses dents" enc="0" goldenCrowns="0" silverShillings="3" brassPennies="0" />
+  <equipment name="Jambe de bois" enc="0" goldenCrowns="0" silverShillings="6" brassPennies="0" />
+  <equipment name="Main de vétéran" enc="0" goldenCrowns="60" silverShillings="0" brassPennies="0" />
+  <equipment name="Nez en or" enc="0" goldenCrowns="0" silverShillings="6" brassPennies="0" />
+  <equipment name="Oeil de verre" enc="0" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Plaque cranienne" enc="0" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Tatouage" enc="0" goldenCrowns="0" silverShillings="3" brassPennies="0" />
+  <equipment name="Balles(10)" enc="10" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Carreaux(5)" enc="10" goldenCrowns="0" silverShillings="2" brassPennies="0" />
+  <equipment name="Flèches(5)" enc="10" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Poudre(1 tir)" enc="1" goldenCrowns="0" silverShillings="3" brassPennies="0" />
+</equipments>

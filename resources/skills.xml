@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skills>
-  <skill name="Canotage" competence="F" />
-  <skill name="Charisme" competence="Soc" />
-  <skill name="Commandement" competence="Soc" />
-  <skill name="Commérage" competence="Soc" />
-  <skill name="Conduite d'attelages" competence="F" />
-  <skill name="Déguisement" competence="Soc" />
+  <skill name="Canotage" competence="S" />
+  <skill name="Charisme" competence="Fel" />
+  <skill name="Commandement" competence="Fel" />
+  <skill name="Commérage" competence="Fel" />
+  <skill name="Conduite d'attelages" competence="S" />
+  <skill name="Déguisement" competence="Fel" />
   <skill name="Déplacement silencieux" competence="Ag" />
   <skill name="Dissimulation" competence="Ag" />
   <skill name="Équitation" competence="Ag" />
-  <skill name="Escalade" competence="F" />
+  <skill name="Escalade" competence="S" />
   <skill name="Évaluation" competence="Int" />
   <skill name="Fouille" competence="Int" />
-  <skill name="Intimidation" competence="F" />
+  <skill name="Intimidation" competence="S" />
   <skill name="Jeu" competence="Int" />
-  <skill name="Marchandage" competence="Soc" />
-  <skill name="Natation" competence="F" />
+  <skill name="Marchandage" competence="Fel" />
+  <skill name="Natation" competence="S" />
   <skill name="Perception" competence="Int" />
-  <skill name="Résistance à l'alcool" competence="E" />
+  <skill name="Résistance à l'alcool" competence="T" />
   <skill name="Soins des animaux" competence="Int" />
   <skill name="Survie" competence="Int" />
   <skill name="Alphabet secret (pisteur)" competence="Int" />
   <skill name="Alphabet secret (rôdeur)" competence="Int" />
   <skill name="Alphabet secret (templier)" competence="Int" />
   <skill name="Alphabet secret (voleur)" competence="Int" />
-  <skill name="Baratin" competence="Soc" />
+  <skill name="Baratin" competence="Fel" />
   <skill name="Braconnage" competence="Ag" />
   <skill name="Connaissances académiques (arts)" competence="Int" />
   <skill name="Connaissances académiques (astronomie)" competence="Int" />
@@ -53,26 +53,26 @@
   <skill name="Connaissances générales (Principautés Frontalières)" competence="Int" />
   <skill name="Connaissances générales (Tilée)" competence="Int" />
   <skill name="Crochetage" competence="Ag" />
-  <skill name="Dressage" competence="Soc" />
-  <skill name="Emprise sur les animaux" competence="Soc" />
+  <skill name="Dressage" competence="Fel" />
+  <skill name="Emprise sur les animaux" competence="Fel" />
   <skill name="Escamotage" competence="Ag" />
   <skill name="Esquive" competence="Ag" />
-  <skill name="Expression artistique (acrobate)" competence="Soc" />
-  <skill name="Expression artistique (acteur)" competence="Soc" />
-  <skill name="Expression artistique (bouffon)" competence="Soc" />
-  <skill name="Expression artistique (chanteur)" competence="Soc" />
-  <skill name="Expression artistique (chiromancien)" competence="Soc" />
-  <skill name="Expression artistique (clown)" competence="Soc" />
-  <skill name="Expression artistique (comédien)" competence="Soc" />
-  <skill name="Expression artistique (conteur)" competence="Soc" />
-  <skill name="Expression artistique (cracheur de feu)" competence="Soc" />
-  <skill name="Expression artistique (danseur)" competence="Soc" />
-  <skill name="Expression artistique (jongleur)" competence="Soc" />
-  <skill name="Expression artistique (mime)" competence="Soc" />
-  <skill name="Expression artistique (musicien)" competence="Soc" />
+  <skill name="Expression artistique (acrobate)" competence="Fel" />
+  <skill name="Expression artistique (acteur)" competence="Fel" />
+  <skill name="Expression artistique (bouffon)" competence="Fel" />
+  <skill name="Expression artistique (chanteur)" competence="Fel" />
+  <skill name="Expression artistique (chiromancien)" competence="Fel" />
+  <skill name="Expression artistique (clown)" competence="Fel" />
+  <skill name="Expression artistique (comédien)" competence="Fel" />
+  <skill name="Expression artistique (conteur)" competence="Fel" />
+  <skill name="Expression artistique (cracheur de feu)" competence="Fel" />
+  <skill name="Expression artistique (danseur)" competence="Fel" />
+  <skill name="Expression artistique (jongleur)" competence="Fel" />
+  <skill name="Expression artistique (mime)" competence="Fel" />
+  <skill name="Expression artistique (musicien)" competence="Fel" />
   <skill name="Filature" competence="Ag" />
-  <skill name="Focalisation" competence="FM" />
-  <skill name="Hypnotisme" competence="FM" />
+  <skill name="Focalisation" competence="WP" />
+  <skill name="Hypnotisme" competence="WP" />
   <skill name="Langage mystique (demonik)" competence="Int" />
   <skill name="Langage mystique (elfique mystique)" competence="Int" />
   <skill name="Langage mystique (magick)" competence="Int" />
@@ -98,7 +98,7 @@
   <skill name="Métier (apothicaire)" competence="Int" />
   <skill name="Métier (arquebusier)" competence="Ag" />
   <skill name="Métier (artiste)" competence="Ag" />
-  <skill name="Métier (brasseur) Int" competence="" />
+  <skill name="Métier (brasseur) Int" />
   <skill name="Métier (calligraphe)" competence="Ag" />
   <skill name="Métier (cartographe)" competence="Ag" />
   <skill name="Métier (charpentier)" competence="Ag" />
@@ -108,27 +108,27 @@
   <skill name="Métier (cuisinier)" competence="Int" />
   <skill name="Métier (embaumeur)" competence="Int" />
   <skill name="Métier (fabricant d'arcs)" competence="Ag" />
-  <skill name="Métier (fabricant d'armes)" competence="F" />
-  <skill name="Métier (fabricant d'armures)" competence="F" />
+  <skill name="Métier (fabricant d'armes)" competence="S" />
+  <skill name="Métier (fabricant d'armures)" competence="S" />
   <skill name="Métier (fabricant de bougies)" competence="Ag" />
-  <skill name="Métier (fermier)" competence="F" />
-  <skill name="Métier (forgeron)" competence="F" />
-  <skill name="Métier (herboriste) Int" competence="" />
+  <skill name="Métier (fermier)" competence="S" />
+  <skill name="Métier (forgeron)" competence="S" />
+  <skill name="Métier (herboriste)" competence="Int" />
   <skill name="Métier (maçon)" competence="Ag" />
-  <skill name="Métier (marchand)" competence="Soc" />
-  <skill name="Métier (meunier)" competence="F" />
-  <skill name="Métier (mineur)" competence="F" />
+  <skill name="Métier (marchand)" competence="Fel" />
+  <skill name="Métier (meunier)" competence="S" />
+  <skill name="Métier (mineur)" competence="S" />
   <skill name="Métier (orfèvre)" competence="Ag" />
-  <skill name="Métier (prospecteur)" competence="F" />
+  <skill name="Métier (prospecteur)" competence="S" />
   <skill name="Métier (tailleur)" competence="Ag" />
-  <skill name="Métier (tanneur)" competence="F" />
-  <skill name="Métier (tonnelier)" competence="F" />
+  <skill name="Métier (tanneur)" competence="S" />
+  <skill name="Métier (tonnelier)" competence="S" />
   <skill name="Navigation" competence="Ag" />
   <skill name="Orientation" competence="Int" />
   <skill name="Pistage" competence="Int" />
   <skill name="Préparation de poisons" competence="Int" />
-  <skill name="Sens de la magie" competence="FM" />
+  <skill name="Sens de la magie" competence="WP" />
   <skill name="Soins" competence="Int" />
-  <skill name="Torture" competence="Soc" />
-  <skill name="Ventriloquie" competence="Soc" />
+  <skill name="Torture" competence="Fel" />
+  <skill name="Ventriloquie" competence="Fel" />
 </skills>
