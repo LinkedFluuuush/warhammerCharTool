@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<careers>
+  <Agitateur>
+    <profile WS="5" BS="5" S="0" T="0" Ag="5" Int="10" WP="0" Fel="10" A="0" W="2" M="0" Mag="0" />
+    <competencesTable>
+      <eCompetences>
+        <choice>Charisme</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Commérage</choice>
+        <choice>Connaissances académiques (histoire)</choice>
+        <choice>Connaissances générales (Empire)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Dissimulation</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (bretonnien)</choice>
+        <choice>Langue (tiléen)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (reikspiel)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Lire/écrire</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Perception</choice>
+      </eCompetences>
+    </competencesTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Combat de rue</choice>
+        <choice>Sang-froid</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Eloquence</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Fuite</choice>
+      </eTalents>
+      <eTrappings>
+        <choice>Veste de cuir</choice>
+      </eTrappings>
+      <eTrappings>
+        <choice>Vetements confortables</choice>
+      </eTrappings>
+    </talentsTable>
+    <trappingsTable />
+  </Agitateur>
+</careers>

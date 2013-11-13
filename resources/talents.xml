@@ -1,120 +1,123 @@
-Acrobatie équestre:Les tests d'Equitation ne sont requis que dans les circonstances les plus extrêmes, et même alors, un bonus de +10 est appliqué.
-Acuité auditive:Les tests de Perception impliquant l'ouïe bénéficient d'un bonus de +20%.
-Acuité visuelle:Les tests de Perception impliquant la vue et les tests de Lecture sur les lèvres bénéficient d'un bonus de +10%.
-Adresse au tir:Le bonus lié a la visée est de +20%.
-Ambidextre:Pas de malus de -20% lors de l'utilisation de la main non-directrice.
-Armes naturelles:Les attaques a main nues sont considérées comme étant effectuées avec une arme a une main. Pas de parade possible, pas de désarmement possible.
-Calcul mental:Bonus de +10% sur les tests de Jeu et d'Orientation, et +20% sur les tests de PErception correspondant a une estimation.
-Camouflage rural:+10% aux tests de Déplacement silencieux et Dissimulation en milieu rural.
-Camouflage souterrain:+10% aux tests de Déplacement silencieux et Dissimulation en milieu souterrain.
-Camouflage urbain:+10% aux tests de Déplacement silencieux et Dissimulation en milieu urbain.
-Chance:+1 point de fortune
-Chirurgie:+10% aux tests de soins. Si un soin est effectué sur un personnage gravement blesse, il récupère 2 blessures. Si le personnage soigné risque de perdre un membre, il bénéficie de +20% au test d'Endurance.
-Code de la rue:+10% aux tests de Charisme et Commérage en rapport avec le milieu du crime.
-Combat de rue:Les attaques a mains nues bénéficient de +10%CC et +1dégât.
-Combattant virevoltant:Le saut coute 1/2A et la portée des sauts augmente de 1mètre.
-Connaissance des pièges:+10% aux tests de Crochetage et Perception sur la détection et le désamorçage des pièges.
-Contorsionniste:+10% aux tests d'Expression Artistique liés au corps, et +20% aux tests d'Agilité liés a la libération de liens, au passage dans de petits trous, etc..
-Coups Assomants:Possibilité d'assomer un adversaire au lieu d'infliger des dégâts via un test de Force, contré par un test d'Endurance a +10% pour chaque PA a la tête. En cas de réussite, l'adversaire est assomé pour 1d10 rounds.
-Coups précis:La valeur des Coups Critiques augmente de 1.
-Coups puissants:+1 dégât au corps à corps.
-Course à pied:+1 mouvement.
-Désarmement:Possibilité de désarmer l'adversaire au lieu d'infliger des dégâts via un test de Force opposé.
-Dur à cuire:+1 Blessure.
-Dur en affaires:+10% aux tests d'Evaluation et de Marchandage.
-Effrayant:Provoque la peur.
-Eloquence:Le nombre de personnes affecté par Charisme est multiplié par 10.
-Etiquette:+10% aux tests de Charisme et de Commérage face a des nobles.
-Force accrue:+5% Force.
-Frénésie:1 round de préparation. Au round suivant et jusqu'a la fin du combat : +10% en Force et en Force Mentale, -10% en Capacité de Combat et en Intelligence, doit attaquer l'ennemi le plus proche au corps à corps, et ne peut attaquer qu'en charge ou en attaque brutale.
-Fuite:En cas de fuite de combat ou de grave danger, +1 mouvement pour 1d10 rounds.
-Fureur vengeresse:+5% en Capacité de Combat contre toute peau-verte.
-Grand voyageur:+10% aux tests de Connaissances Générales et Langue.
-Guerrier né:+5 en Capacité de Combat.
-Harmonie aethyrique:+10% aux tests de Focalisation et Sens de la Magie.
-Imitation:+10% aux tests de Déguisement pour la voix, aux tests d'Expression artistique(acteur, bouffon, clown, comédien, conteur) et Langue pour se faire passer pour originaire d'un autre pays.
-Incantation de bataille:Le malus d'incantation du a une armure est réduit de 3 points.
-Inspiration divine (Grungni):Maitrise des sorts du domaine divin de Grungni.
-Inspiration divine (Manann):Maitrise des sorts du domaine divin de Manann.
-Inspiration divine (Morr):Maitrise des sorts du domaine divin de Morr.
-Inspiration divine (Myrmidia):Maitrise des sorts du domaine divin de Myrmidia.
-Inspiration divine (Ranald):Maitrise des sorts du domaine divin de Ranald.
-Inspiration divine (Sigmar):Maitrise des sorts du domaine divin de Sigmar.
-Inspiration divine (Shallya):Maitrise des sorts du domaine divin de Shallya.
-Inspiration divine (Taal/Rhya):Maitrise des sorts du domaine divin de Taal et Rhya.
-Inspiration divine (Ulric):Maitrise des sorts du domaine divin de Ulric.
-Inspiration divine (Verena):Maitrise des sorts du domaine divin de Verena.
-Intelligent:+5% Intelligence.
-Intrigant:+10% aux tests de Charisme liés aux intrigues, et aux tests de Force Mentale visant a résister au charisme d'autrui.
-Lévitation:Vous pouvez volez sur une courte distance au dessus du sol.
-Linguistique:+10% aux tests de Lire/Ecrire et aux tests de Langue.
-Lutte:+10% Capacité de Combat lors d'une tentative de prise, et +10% Force liés a une prise.
-Magie commune (Occulte):Maitrise des sorts de magie occulte.
-Magie commune (Vulgaire):Maitrise des sorts de magie vulgaire.
-Magie commune (Divine):Maitrise des sorts de magie divine.
-Magie mineure (alarme magique):Maitrise du sort alarme magique.
-Magie mineure (arme consacrée):Maitrise du sort arme consacrée.
-Magie mineure (armure aethyrique):Maitrise du sort armure aethyrique.
-Magie mineure (dissipation):Maitrise du sort dissipation.
-Magie mineure (manipulation distante):Maitrise du sort manipulation distante.
-Magie mineure (marche dans les airs):Maitrise du sort marche dans les airs.
-Magie mineure (silence):Maitrise du sort silence.
-Magie mineure (verrou magique):Maitrise du sort verrou magique.
-Magie noire:1d10 supplémentaire lors du lancement d'un sort, le dé le plus faible étant écarté. Tous les dés sont comptabilisés pour la malédiction de Tzeentch.
-Magie vulgaire:Capacité de lancer des sorts de Magie commune(vulgaire) sans avoir appris de Langage mystique. 1d10 supplémentaire lors du lancement d'un sort, non comptabilisé dans la difficulté mais comptabilisé dans la malédiction de Tzeentch. Ce dé est rétiré lors de l'apprentissage d'un langage mystique.
-Mains agiles:+20% Capacité de Combat lors du lancement de sorts de contact.
-Maitre artilleur:Le temps de rechargement des armes a poudre est réduit d'1/2A. Cumulable avec Rechargement Rapide.
-Maitrise (arbalètes):Maitrise les armes du groupe arbalètes.
-Maitrise (arcs longs):Maitrise les armes du groupe arcs longs.
-Maitrise (armes a feu):Maitrise les armes du groupe armes a feu.
-Maitrise (armes de cavalerie):Maitrise les armes du groupe armes de cavalerie.
-Maitrise (armes de jet):Maitrise les armes du groupe armes de jet.
-Maitrise (armes de parade):Maitrise les armes du groupe armes de parade.
-Maitrise (armes d'escrime):Maitrise les armes du groupe armes d'escrime.
-Maitrise (armes lourdes):Maitrise les armes du groupe armes lourdes.
-Maitrise (armes mécaniques):Maitrise les armes du groupe armes mécaniques.
-Maitrise (armes paralysantes):Maitrise les armes du groupe armes paralysantes.
-Maitrise (fléaux):Maitrise les armes du groupe fléaux.
-Maitrise (lance-pierres):Maitrise les armes du groupe lance-pierres.
-Méditation:Lors de magie rituelle, bonus au jet d'incantation égal a la caractéristique de magie.
-Menaçant:+10% aux tests d'Intimidation et de Torture.
-Mort-vivant:Immunité contre la Peur, la Terreur, les coups assomants, le poison, les maladies, tous les sorts et effets relatifs a la manipulation des émotions et de l'esprit.
-Orateur né:Le nombre de personnes affecté par Charisme est multiplié par 100. Talent Eloquence requis.
-Parade éclair:Lors d'une attaque rapide, possibilité de renoncer a une attaque contre une parade gratuite.
-Projectile puissant:+1 dégats aux sorts de projectile magique.
-Rechargement rapide:Delai de rechargement des armes a distance réduit d'1/2A.
-Réflexes éclair:+5% Agilité.
-Résistance accrue:+5% Endurance.
-Résistance à la magie:+10% aux tests de Force Mentale visant a résister a la magie.
-Résistance au Chaos:+10% aux tests de Force Mentale visant a résister a la magie ou aux Chaos. Immunité contre les mutations Chaotiques, mais impossibilité de devenir un lançeur de sorts.
-Résistance aux maladies:+10% aux tests d'Endurance visant a résister a une maladie.
-Résistance aux poisons:+10% aux tests d'Endurance visant a résister a un poison.
-Robuste:Pas de malus au Mouvement lors du port d'une armure lourde.
-Sain d'esprit:Points de Folies minimum avant un test de Folie : 8, Points de Folies avant une Folie automatique : 14.
-Sang-froid:+5% Force Mentale.
-Sans peur:Immunité contre la Peur, l'Intimidation et le Talent troublant. La Terreur est vue come de la Peur.
-Savoir-faire nain:+10% aux tests de métiers Arquebusier, Brasseur, Cristallier, Fabricant d'Armes, Fabricant d'Armures, Forgeron, Maçon, Mineur.
-Science de la magie (Ghur):Maitrise des sorts de l'ordre de la bête.
-Science de la magie (Azyr):Maitrise des sorts de l'ordre des cieux.
-Science de la magie (Aqshy):Maitrise des sorts de l'ordre du feu.
-Science de la magie (Hysh):Maitrise des sorts de l'ordre de la lumière.
-Science de la magie (Chamon):Maitrise des sorts de l'ordre du métal.
-Science de la magie (Shyish):Maitrise des sorts de l'ordre de la mort.
-Science de la magie (Ulgu):Maitrise des sorts de l'ordre des ombres.
-Science de la magie (Ghyran):Maitrise des sorts de l'ordre de la vie.
-Sens aiguisés:+20% aux tests de Perception.
-Sens de l'orientation:+10% aux tests d'orientation.
-Sixième sens:Sur test de Force Mentale du MJ, vous êtes avertis d'un danger imminent.
-Sociable:+5% Sociabilité.
-Sombre Savoir (chaos):Maitrise des sorts du Chaos.
-Sombre Savoir (nécromancie):Maitrise des sorts de Nécromancie.
-Sur ses gardes:Une fois par round, dégainement gratuit.
-Talent artistique:+20% aux tests de Métier(artiste) et aux tests d'Evaluation d'oeuvre d'art.
-Terrifiant:Provoque la Terreur.
-Tir de précision:Attaques a distances ignorent 1PA.
-Tir en puissance:+1 dégâts aux armes de tir.
-Tireur d'élite:+5% Capacité de Tir.
-Troublant:Vos ennemis doivent réussir un test de Force Mentale sous peine de subir -10% en Capacité de Combat et en Capacité de Tir.
-Valeureux:+10% aux tests de Force Mentale pour résister a la Peur, la Terreur et l'Intimidation.
-Vision nocturne:Vue dans l'obscurité à 30 mètres. Recquiert la lumière des étoiles ou équivalent.
-Vol:Vous savez voler.
+<?xml version="1.0" encoding="UTF-8"?>
+<talents>
+  <talent name="Acrobatie équestre" description="Les tests d'Equitation ne sont requis que dans les circonstances les plus extrêmes, et même alors, un bonus de +10 est appliqué." />
+  <talent name="Acuité auditive" description="Les tests de Perception impliquant l'ouïe bénéficient d'un bonus de +20%." />
+  <talent name="Acuité visuelle" description="Les tests de Perception impliquant la vue et les tests de Lecture sur les lèvres bénéficient d'un bonus de +10%." />
+  <talent name="Adresse au tir" description="Le bonus lié a la visée est de +20%." />
+  <talent name="Ambidextre" description="Pas de malus de -20% lors de l'utilisation de la main non-directrice." />
+  <talent name="Armes naturelles" description="Les attaques a main nues sont considérées comme étant effectuées avec une arme a une main. Pas de parade possible, pas de désarmement possible." />
+  <talent name="Calcul mental" description="Bonus de +10% sur les tests de Jeu et d'Orientation, et +20% sur les tests de PErception correspondant a une estimation." />
+  <talent name="Camouflage rural" description="+10% aux tests de Déplacement silencieux et Dissimulation en milieu rural." />
+  <talent name="Camouflage souterrain" description="+10% aux tests de Déplacement silencieux et Dissimulation en milieu souterrain." />
+  <talent name="Camouflage urbain" description="+10% aux tests de Déplacement silencieux et Dissimulation en milieu urbain." />
+  <talent name="Chance" description="+1 point de fortune" />
+  <talent name="Chirurgie" description="+10% aux tests de soins. Si un soin est effectué sur un personnage gravement blesse, il récupère 2 blessures. Si le personnage soigné risque de perdre un membre, il bénéficie de +20% au test d'Endurance." />
+  <talent name="Code de la rue" description="+10% aux tests de Charisme et Commérage en rapport avec le milieu du crime." />
+  <talent name="Combat de rue" description="Les attaques a mains nues bénéficient de +10%CC et +1dégât." />
+  <talent name="Combattant virevoltant" description="Le saut coute 1/2A et la portée des sauts augmente de 1mètre." />
+  <talent name="Connaissance des pièges" description="+10% aux tests de Crochetage et Perception sur la détection et le désamorçage des pièges." />
+  <talent name="Contorsionniste" description="+10% aux tests d'Expression Artistique liés au corps, et +20% aux tests d'Agilité liés a la libération de liens, au passage dans de petits trous, etc.." />
+  <talent name="Coups Assomants" description="Possibilité d'assomer un adversaire au lieu d'infliger des dégâts via un test de Force, contré par un test d'Endurance a +10% pour chaque PA a la tête. En cas de réussite, l'adversaire est assomé pour 1d10 rounds." />
+  <talent name="Coups précis" description="La valeur des Coups Critiques augmente de 1." />
+  <talent name="Coups puissants" description="+1 dégât au corps à corps." />
+  <talent name="Course à pied" description="+1 mouvement." />
+  <talent name="Désarmement" description="Possibilité de désarmer l'adversaire au lieu d'infliger des dégâts via un test de Force opposé." />
+  <talent name="Dur à cuire" description="+1 Blessure." />
+  <talent name="Dur en affaires" description="+10% aux tests d'Evaluation et de Marchandage." />
+  <talent name="Effrayant" description="Provoque la peur." />
+  <talent name="Eloquence" description="Le nombre de personnes affecté par Charisme est multiplié par 10." />
+  <talent name="Etiquette" description="+10% aux tests de Charisme et de Commérage face a des nobles." />
+  <talent name="Force accrue" description="+5% Force." />
+  <talent name="Frénésie" description="1 round de préparation. Au round suivant et jusqu'a la fin du combat " />
+  <talent name="Fuite" description="En cas de fuite de combat ou de grave danger, +1 mouvement pour 1d10 rounds." />
+  <talent name="Fureur vengeresse" description="+5% en Capacité de Combat contre toute peau-verte." />
+  <talent name="Grand voyageur" description="+10% aux tests de Connaissances Générales et Langue." />
+  <talent name="Guerrier né" description="+5 en Capacité de Combat." />
+  <talent name="Harmonie aethyrique" description="+10% aux tests de Focalisation et Sens de la Magie." />
+  <talent name="Imitation" description="+10% aux tests de Déguisement pour la voix, aux tests d'Expression artistique(acteur, bouffon, clown, comédien, conteur) et Langue pour se faire passer pour originaire d'un autre pays." />
+  <talent name="Incantation de bataille" description="Le malus d'incantation du a une armure est réduit de 3 points." />
+  <talent name="Inspiration divine (Grungni)" description="Maitrise des sorts du domaine divin de Grungni." />
+  <talent name="Inspiration divine (Manann)" description="Maitrise des sorts du domaine divin de Manann." />
+  <talent name="Inspiration divine (Morr)" description="Maitrise des sorts du domaine divin de Morr." />
+  <talent name="Inspiration divine (Myrmidia)" description="Maitrise des sorts du domaine divin de Myrmidia." />
+  <talent name="Inspiration divine (Ranald)" description="Maitrise des sorts du domaine divin de Ranald." />
+  <talent name="Inspiration divine (Sigmar)" description="Maitrise des sorts du domaine divin de Sigmar." />
+  <talent name="Inspiration divine (Shallya)" description="Maitrise des sorts du domaine divin de Shallya." />
+  <talent name="Inspiration divine (Taal/Rhya)" description="Maitrise des sorts du domaine divin de Taal et Rhya." />
+  <talent name="Inspiration divine (Ulric)" description="Maitrise des sorts du domaine divin de Ulric." />
+  <talent name="Inspiration divine (Verena)" description="Maitrise des sorts du domaine divin de Verena." />
+  <talent name="Intelligent" description="+5% Intelligence." />
+  <talent name="Intrigant" description="+10% aux tests de Charisme liés aux intrigues, et aux tests de Force Mentale visant a résister au charisme d'autrui." />
+  <talent name="Lévitation" description="Vous pouvez volez sur une courte distance au dessus du sol." />
+  <talent name="Linguistique" description="+10% aux tests de Lire/Ecrire et aux tests de Langue." />
+  <talent name="Lutte" description="+10% Capacité de Combat lors d'une tentative de prise, et +10% Force liés a une prise." />
+  <talent name="Magie commune (Occulte)" description="Maitrise des sorts de magie occulte." />
+  <talent name="Magie commune (Vulgaire)" description="Maitrise des sorts de magie vulgaire." />
+  <talent name="Magie commune (Divine)" description="Maitrise des sorts de magie divine." />
+  <talent name="Magie mineure (alarme magique)" description="Maitrise du sort alarme magique." />
+  <talent name="Magie mineure (arme consacrée)" description="Maitrise du sort arme consacrée." />
+  <talent name="Magie mineure (armure aethyrique)" description="Maitrise du sort armure aethyrique." />
+  <talent name="Magie mineure (dissipation)" description="Maitrise du sort dissipation." />
+  <talent name="Magie mineure (manipulation distante)" description="Maitrise du sort manipulation distante." />
+  <talent name="Magie mineure (marche dans les airs)" description="Maitrise du sort marche dans les airs." />
+  <talent name="Magie mineure (silence)" description="Maitrise du sort silence." />
+  <talent name="Magie mineure (verrou magique)" description="Maitrise du sort verrou magique." />
+  <talent name="Magie noire" description="1d10 supplémentaire lors du lancement d'un sort, le dé le plus faible étant écarté. Tous les dés sont comptabilisés pour la malédiction de Tzeentch." />
+  <talent name="Magie vulgaire" description="Capacité de lancer des sorts de Magie commune(vulgaire) sans avoir appris de Langage mystique. 1d10 supplémentaire lors du lancement d'un sort, non comptabilisé dans la difficulté mais comptabilisé dans la malédiction de Tzeentch. Ce dé est rétiré lors de l'apprentissage d'un langage mystique." />
+  <talent name="Mains agiles" description="+20% Capacité de Combat lors du lancement de sorts de contact." />
+  <talent name="Maitre artilleur" description="Le temps de rechargement des armes a poudre est réduit d'1/2A. Cumulable avec Rechargement Rapide." />
+  <talent name="Maitrise (arbalètes)" description="Maitrise les armes du groupe arbalètes." />
+  <talent name="Maitrise (arcs longs)" description="Maitrise les armes du groupe arcs longs." />
+  <talent name="Maitrise (armes a feu)" description="Maitrise les armes du groupe armes a feu." />
+  <talent name="Maitrise (armes de cavalerie)" description="Maitrise les armes du groupe armes de cavalerie." />
+  <talent name="Maitrise (armes de jet)" description="Maitrise les armes du groupe armes de jet." />
+  <talent name="Maitrise (armes de parade)" description="Maitrise les armes du groupe armes de parade." />
+  <talent name="Maitrise (armes d'escrime)" description="Maitrise les armes du groupe armes d'escrime." />
+  <talent name="Maitrise (armes lourdes)" description="Maitrise les armes du groupe armes lourdes." />
+  <talent name="Maitrise (armes mécaniques)" description="Maitrise les armes du groupe armes mécaniques." />
+  <talent name="Maitrise (armes paralysantes)" description="Maitrise les armes du groupe armes paralysantes." />
+  <talent name="Maitrise (fléaux)" description="Maitrise les armes du groupe fléaux." />
+  <talent name="Maitrise (lance-pierres)" description="Maitrise les armes du groupe lance-pierres." />
+  <talent name="Méditation" description="Lors de magie rituelle, bonus au jet d'incantation égal a la caractéristique de magie." />
+  <talent name="Menaçant" description="+10% aux tests d'Intimidation et de Torture." />
+  <talent name="Mort-vivant" description="Immunité contre la Peur, la Terreur, les coups assomants, le poison, les maladies, tous les sorts et effets relatifs a la manipulation des émotions et de l'esprit." />
+  <talent name="Orateur né" description="Le nombre de personnes affecté par Charisme est multiplié par 100. Talent Eloquence requis." />
+  <talent name="Parade éclair" description="Lors d'une attaque rapide, possibilité de renoncer a une attaque contre une parade gratuite." />
+  <talent name="Projectile puissant" description="+1 dégats aux sorts de projectile magique." />
+  <talent name="Rechargement rapide" description="Delai de rechargement des armes a distance réduit d'1/2A." />
+  <talent name="Réflexes éclair" description="+5% Agilité." />
+  <talent name="Résistance accrue" description="+5% Endurance." />
+  <talent name="Résistance à la magie" description="+10% aux tests de Force Mentale visant a résister a la magie." />
+  <talent name="Résistance au Chaos" description="+10% aux tests de Force Mentale visant a résister a la magie ou aux Chaos. Immunité contre les mutations Chaotiques, mais impossibilité de devenir un lançeur de sorts." />
+  <talent name="Résistance aux maladies" description="+10% aux tests d'Endurance visant a résister a une maladie." />
+  <talent name="Résistance aux poisons" description="+10% aux tests d'Endurance visant a résister a un poison." />
+  <talent name="Robuste" description="Pas de malus au Mouvement lors du port d'une armure lourde." />
+  <talent name="Sain d'esprit" description="Points de Folies minimum avant un test de Folie " />
+  <talent name="Sang-froid" description="+5% Force Mentale." />
+  <talent name="Sans peur" description="Immunité contre la Peur, l'Intimidation et le Talent troublant. La Terreur est vue come de la Peur." />
+  <talent name="Savoir-faire nain" description="+10% aux tests de métiers Arquebusier, Brasseur, Cristallier, Fabricant d'Armes, Fabricant d'Armures, Forgeron, Maçon, Mineur." />
+  <talent name="Science de la magie (Ghur)" description="Maitrise des sorts de l'ordre de la bête." />
+  <talent name="Science de la magie (Azyr)" description="Maitrise des sorts de l'ordre des cieux." />
+  <talent name="Science de la magie (Aqshy)" description="Maitrise des sorts de l'ordre du feu." />
+  <talent name="Science de la magie (Hysh)" description="Maitrise des sorts de l'ordre de la lumière." />
+  <talent name="Science de la magie (Chamon)" description="Maitrise des sorts de l'ordre du métal." />
+  <talent name="Science de la magie (Shyish)" description="Maitrise des sorts de l'ordre de la mort." />
+  <talent name="Science de la magie (Ulgu)" description="Maitrise des sorts de l'ordre des ombres." />
+  <talent name="Science de la magie (Ghyran)" description="Maitrise des sorts de l'ordre de la vie." />
+  <talent name="Sens aiguisés" description="+20% aux tests de Perception." />
+  <talent name="Sens de l'orientation" description="+10% aux tests d'orientation." />
+  <talent name="Sixième sens" description="Sur test de Force Mentale du MJ, vous êtes avertis d'un danger imminent." />
+  <talent name="Sociable" description="+5% Sociabilité." />
+  <talent name="Sombre Savoir (chaos)" description="Maitrise des sorts du Chaos." />
+  <talent name="Sombre Savoir (nécromancie)" description="Maitrise des sorts de Nécromancie." />
+  <talent name="Sur ses gardes" description="Une fois par round, dégainement gratuit." />
+  <talent name="Talent artistique" description="+20% aux tests de Métier(artiste) et aux tests d'Evaluation d'oeuvre d'art." />
+  <talent name="Terrifiant" description="Provoque la Terreur." />
+  <talent name="Tir de précision" description="Attaques a distances ignorent 1PA." />
+  <talent name="Tir en puissance" description="+1 dégâts aux armes de tir." />
+  <talent name="Tireur d'élite" description="+5% Capacité de Tir." />
+  <talent name="Troublant" description="Vos ennemis doivent réussir un test de Force Mentale sous peine de subir -10% en Capacité de Combat et en Capacité de Tir." />
+  <talent name="Valeureux" description="+10% aux tests de Force Mentale pour résister a la Peur, la Terreur et l'Intimidation." />
+  <talent name="Vision nocturne" description="Vue dans l'obscurité à 30 mètres. Recquiert la lumière des étoiles ou équivalent." />
+  <talent name="Vol" description="Vous savez voler." />
+</talents>

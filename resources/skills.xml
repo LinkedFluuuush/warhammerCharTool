@@ -1,131 +1,134 @@
-Canotage F
-Charisme Soc
-Commandement Soc
-Commérage Soc
-Conduite d'attelages F
-Déguisement Soc
-Déplacement silencieux Ag
-Dissimulation Ag
-Équitation Ag
-Escalade F
-Évaluation Int
-Fouille Int
-Intimidation F
-Jeu Int
-Marchandage Soc
-Natation F
-Perception Int
-Résistance à l'alcool E
-Soins des animaux Int
-Survie Int
-Alphabet secret (pisteur) Int
-Alphabet secret (rôdeur) Int
-Alphabet secret (templier) Int
-Alphabet secret (voleur) Int
-Baratin Soc
-Braconnage Ag
-Connaissances académiques (arts) Int
-Connaissances académiques (astronomie) Int
-Connaissances académiques (démonologie) Int
-Connaissances académiques (droit) Int
-Connaissances académiques (généalogie/héraldique) Int
-Connaissances académiques (histoire) Int
-Connaissances académiques (ingénierie) Int
-Connaissances académiques (magie) Int
-Connaissances académiques (nécromancie) Int
-Connaissances académiques (philosophie) Int
-Connaissances académiques (runes) Int
-Connaissances académiques (science) Int
-Connaissances académiques (stratégie/tactique) Int
-Connaissances académiques (théologie) Int
-Connaissances générales (Bretonnie) Int
-Connaissances générales (elfes) Int
-Connaissances générales (Empire) Int
-Connaissances générales (Estalie) Int
-Connaissances générales (halfings) Int
-Connaissances générales (Kislev) Int
-Connaissances générales (nains) Int
-Connaissances générales (Norsca) Int
-Connaissances générales (ogres) Int
-Connaissances générales (Pays Perdu) Int
-Connaissances générales (Principautés Frontalières) Int
-Connaissances générales (Tilée) Int
-Crochetage Ag
-Dressage Soc
-Emprise sur les animaux Soc
-Escamotage Ag
-Esquive Ag
-Expression artistique (acrobate) Soc
-Expression artistique (acteur) Soc
-Expression artistique (bouffon) Soc
-Expression artistique (chanteur) Soc
-Expression artistique (chiromancien) Soc
-Expression artistique (clown) Soc
-Expression artistique (comédien) Soc
-Expression artistique (conteur) Soc
-Expression artistique (cracheur de feu) Soc
-Expression artistique (danseur) Soc
-Expression artistique (jongleur) Soc
-Expression artistique (mime) Soc
-Expression artistique (musicien) Soc
-Filature Ag
-Focalisation FM
-Hypnotisme FM
-Langage mystique (demonik) Int
-Langage mystique (elfique mystique) Int
-Langage mystique (magick) Int
-Langage secret (bataille) Int
-Langage secret (guilde) Int
-Langage secret (rôdeur) Int
-Langage secret (voleur) Int
-Langue (bretonnien) Int
-Langue (eltharin) Int
-Langue (estalien) Int
-Langue (halfing) Int
-Langue (khazalid) Int
-Langue (kislevien) Int
-Langue (norse) Int
-Langue (reikspiel) Int
-Langue (tiléen) Int
-Langue (classique) Int
-Langue (gobelinoïde) Int
-Langue (grumbarth) Int
-Langue (langage sombre) Int
-Lecture sur les lèvres Int
-Lire/écrire Int
-Métier (apothicaire) Int
-Métier (arquebusier) Ag
-Métier (artiste) Ag
-Métier (brasseur) Int 
-Métier (calligraphe) Ag
-Métier (cartographe) Ag
-Métier (charpentier) Ag
-Métier (charpentier naval) Int
-Métier (cordonnier) Ag
-Métier (cristallier) Ag
-Métier (cuisinier) Int
-Métier (embaumeur) Int
-Métier (fabricant d'arcs) Ag
-Métier (fabricant d'armes) F
-Métier (fabricant d'armures) F
-Métier (fabricant de bougies) Ag
-Métier (fermier) F
-Métier (forgeron) F
-Métier (herboriste) Int 
-Métier (maçon) Ag
-Métier (marchand) Soc
-Métier (meunier) F
-Métier (mineur) F
-Métier (orfèvre) Ag
-Métier (prospecteur) F
-Métier (tailleur) Ag
-Métier (tanneur) F
-Métier (tonnelier) F
-Navigation Ag
-Orientation Int
-Pistage Int
-Préparation de poisons Int
-Sens de la magie FM
-Soins Int
-Torture Soc
-Ventriloquie Soc
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+  <skill name="Canotage" competence="F" />
+  <skill name="Charisme" competence="Soc" />
+  <skill name="Commandement" competence="Soc" />
+  <skill name="Commérage" competence="Soc" />
+  <skill name="Conduite d'attelages" competence="F" />
+  <skill name="Déguisement" competence="Soc" />
+  <skill name="Déplacement silencieux" competence="Ag" />
+  <skill name="Dissimulation" competence="Ag" />
+  <skill name="Équitation" competence="Ag" />
+  <skill name="Escalade" competence="F" />
+  <skill name="Évaluation" competence="Int" />
+  <skill name="Fouille" competence="Int" />
+  <skill name="Intimidation" competence="F" />
+  <skill name="Jeu" competence="Int" />
+  <skill name="Marchandage" competence="Soc" />
+  <skill name="Natation" competence="F" />
+  <skill name="Perception" competence="Int" />
+  <skill name="Résistance à l'alcool" competence="E" />
+  <skill name="Soins des animaux" competence="Int" />
+  <skill name="Survie" competence="Int" />
+  <skill name="Alphabet secret (pisteur)" competence="Int" />
+  <skill name="Alphabet secret (rôdeur)" competence="Int" />
+  <skill name="Alphabet secret (templier)" competence="Int" />
+  <skill name="Alphabet secret (voleur)" competence="Int" />
+  <skill name="Baratin" competence="Soc" />
+  <skill name="Braconnage" competence="Ag" />
+  <skill name="Connaissances académiques (arts)" competence="Int" />
+  <skill name="Connaissances académiques (astronomie)" competence="Int" />
+  <skill name="Connaissances académiques (démonologie)" competence="Int" />
+  <skill name="Connaissances académiques (droit)" competence="Int" />
+  <skill name="Connaissances académiques (généalogie/héraldique)" competence="Int" />
+  <skill name="Connaissances académiques (histoire)" competence="Int" />
+  <skill name="Connaissances académiques (ingénierie)" competence="Int" />
+  <skill name="Connaissances académiques (magie)" competence="Int" />
+  <skill name="Connaissances académiques (nécromancie)" competence="Int" />
+  <skill name="Connaissances académiques (philosophie)" competence="Int" />
+  <skill name="Connaissances académiques (runes)" competence="Int" />
+  <skill name="Connaissances académiques (science)" competence="Int" />
+  <skill name="Connaissances académiques (stratégie/tactique)" competence="Int" />
+  <skill name="Connaissances académiques (théologie)" competence="Int" />
+  <skill name="Connaissances générales (Bretonnie)" competence="Int" />
+  <skill name="Connaissances générales (elfes)" competence="Int" />
+  <skill name="Connaissances générales (Empire)" competence="Int" />
+  <skill name="Connaissances générales (Estalie)" competence="Int" />
+  <skill name="Connaissances générales (halfings)" competence="Int" />
+  <skill name="Connaissances générales (Kislev)" competence="Int" />
+  <skill name="Connaissances générales (nains)" competence="Int" />
+  <skill name="Connaissances générales (Norsca)" competence="Int" />
+  <skill name="Connaissances générales (ogres)" competence="Int" />
+  <skill name="Connaissances générales (Pays Perdu)" competence="Int" />
+  <skill name="Connaissances générales (Principautés Frontalières)" competence="Int" />
+  <skill name="Connaissances générales (Tilée)" competence="Int" />
+  <skill name="Crochetage" competence="Ag" />
+  <skill name="Dressage" competence="Soc" />
+  <skill name="Emprise sur les animaux" competence="Soc" />
+  <skill name="Escamotage" competence="Ag" />
+  <skill name="Esquive" competence="Ag" />
+  <skill name="Expression artistique (acrobate)" competence="Soc" />
+  <skill name="Expression artistique (acteur)" competence="Soc" />
+  <skill name="Expression artistique (bouffon)" competence="Soc" />
+  <skill name="Expression artistique (chanteur)" competence="Soc" />
+  <skill name="Expression artistique (chiromancien)" competence="Soc" />
+  <skill name="Expression artistique (clown)" competence="Soc" />
+  <skill name="Expression artistique (comédien)" competence="Soc" />
+  <skill name="Expression artistique (conteur)" competence="Soc" />
+  <skill name="Expression artistique (cracheur de feu)" competence="Soc" />
+  <skill name="Expression artistique (danseur)" competence="Soc" />
+  <skill name="Expression artistique (jongleur)" competence="Soc" />
+  <skill name="Expression artistique (mime)" competence="Soc" />
+  <skill name="Expression artistique (musicien)" competence="Soc" />
+  <skill name="Filature" competence="Ag" />
+  <skill name="Focalisation" competence="FM" />
+  <skill name="Hypnotisme" competence="FM" />
+  <skill name="Langage mystique (demonik)" competence="Int" />
+  <skill name="Langage mystique (elfique mystique)" competence="Int" />
+  <skill name="Langage mystique (magick)" competence="Int" />
+  <skill name="Langage secret (bataille)" competence="Int" />
+  <skill name="Langage secret (guilde)" competence="Int" />
+  <skill name="Langage secret (rôdeur)" competence="Int" />
+  <skill name="Langage secret (voleur)" competence="Int" />
+  <skill name="Langue (bretonnien)" competence="Int" />
+  <skill name="Langue (eltharin)" competence="Int" />
+  <skill name="Langue (estalien)" competence="Int" />
+  <skill name="Langue (halfing)" competence="Int" />
+  <skill name="Langue (khazalid)" competence="Int" />
+  <skill name="Langue (kislevien)" competence="Int" />
+  <skill name="Langue (norse)" competence="Int" />
+  <skill name="Langue (reikspiel)" competence="Int" />
+  <skill name="Langue (tiléen)" competence="Int" />
+  <skill name="Langue (classique)" competence="Int" />
+  <skill name="Langue (gobelinoïde)" competence="Int" />
+  <skill name="Langue (grumbarth)" competence="Int" />
+  <skill name="Langue (langage sombre)" competence="Int" />
+  <skill name="Lecture sur les lèvres" competence="Int" />
+  <skill name="Lire/écrire" competence="Int" />
+  <skill name="Métier (apothicaire)" competence="Int" />
+  <skill name="Métier (arquebusier)" competence="Ag" />
+  <skill name="Métier (artiste)" competence="Ag" />
+  <skill name="Métier (brasseur) Int" competence="" />
+  <skill name="Métier (calligraphe)" competence="Ag" />
+  <skill name="Métier (cartographe)" competence="Ag" />
+  <skill name="Métier (charpentier)" competence="Ag" />
+  <skill name="Métier (charpentier naval)" competence="Int" />
+  <skill name="Métier (cordonnier)" competence="Ag" />
+  <skill name="Métier (cristallier)" competence="Ag" />
+  <skill name="Métier (cuisinier)" competence="Int" />
+  <skill name="Métier (embaumeur)" competence="Int" />
+  <skill name="Métier (fabricant d'arcs)" competence="Ag" />
+  <skill name="Métier (fabricant d'armes)" competence="F" />
+  <skill name="Métier (fabricant d'armures)" competence="F" />
+  <skill name="Métier (fabricant de bougies)" competence="Ag" />
+  <skill name="Métier (fermier)" competence="F" />
+  <skill name="Métier (forgeron)" competence="F" />
+  <skill name="Métier (herboriste) Int" competence="" />
+  <skill name="Métier (maçon)" competence="Ag" />
+  <skill name="Métier (marchand)" competence="Soc" />
+  <skill name="Métier (meunier)" competence="F" />
+  <skill name="Métier (mineur)" competence="F" />
+  <skill name="Métier (orfèvre)" competence="Ag" />
+  <skill name="Métier (prospecteur)" competence="F" />
+  <skill name="Métier (tailleur)" competence="Ag" />
+  <skill name="Métier (tanneur)" competence="F" />
+  <skill name="Métier (tonnelier)" competence="F" />
+  <skill name="Navigation" competence="Ag" />
+  <skill name="Orientation" competence="Int" />
+  <skill name="Pistage" competence="Int" />
+  <skill name="Préparation de poisons" competence="Int" />
+  <skill name="Sens de la magie" competence="FM" />
+  <skill name="Soins" competence="Int" />
+  <skill name="Torture" competence="Soc" />
+  <skill name="Ventriloquie" competence="Soc" />
+</skills>

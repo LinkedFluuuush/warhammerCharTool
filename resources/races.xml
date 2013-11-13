@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<races>
+  <race name="Elfe">
+    <profile WS="20" BS="30" S="20" T="20" Ag="30" Int="20" WP="20" Fel="20" M="5" />
+    <size F="160" M="165" />
+    <wounds>
+      <choice>9</choice>
+      <choice>10</choice>
+      <choice>11</choice>
+      <choice>12</choice>
+    </wounds>
+    <fate>
+      <choice>1</choice>
+      <choice>2</choice>
+      <choice>2</choice>
+    </fate>
+    <fNames>
+      <name>Alane</name>
+      <name>Altronia</name>
+      <name>Davandrel</name>
+      <name>Eldril</name>
+      <name>Eponia</name>
+      <name>Fanriel</name>
+      <name>Filamir</name>
+      <name>Gallina</name>
+      <name>Halion</name>
+      <name>Iludil</name>
+      <name>Ionor</name>
+      <name>Lindara</name>
+      <name>Lorandara</name>
+      <name>Maruviel</name>
+      <name>Pelgrana</name>
+      <name>Siluvaine</name>
+      <name>Tallana</name>
+      <name>Ulliana</name>
+      <name>Vivandrel</name>
+      <name>Yuviel</name>
+    </fNames>
+    <mNames>
+      <name>Aluthol</name>
+      <name>Amendil</name>
+      <name>Angran</name>
+      <name>Cavindel</name>
+      <name>Dolwen</name>
+      <name>Eldillor</name>
+      <name>Fallandar</name>
+      <name>Farnoth</name>
+      <name>Gildiril</name>
+      <name>Harrond</name>
+      <name>Imhol</name>
+      <name>Larandar</name>
+      <name>Laurenor</name>
+      <name>Mellion</name>
+      <name>Mormacar</name>
+      <name>Ravandil</name>
+      <name>Torendil</name>
+      <name>Urdithane</name>
+      <name>Valahuir</name>
+      <name>Yavandir</name>
+    </mNames>
+    <hairColour>
+      <colour>Argenté</colour>
+      <colour>Blond cendré</colour>
+      <colour>Paille</colour>
+      <colour>Blond</colour>
+      <colour>Auburn</colour>
+      <colour>Châtain clair</colour>
+      <colour>Châtain clair</colour>
+      <colour>Châtain</colour>
+      <colour>Brun</colour>
+      <colour>Noir</colour>
+    </hairColour>
+    <eyeColour>
+      <colour>Gris-bleu</colour>
+      <colour>Bleu</colour>
+      <colour>Vert</colour>
+      <colour>Cuivre</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron</colour>
+      <colour>Marron foncé</colour>
+      <colour>Argent</colour>
+      <colour>Mauve</colour>
+      <colour>Noir</colour>
+    </eyeColour>
+    <weightTable>
+      <eWeight>36</eWeight>
+      <eWeight>38</eWeight>
+      <eWeight>40</eWeight>
+      <eWeight>43</eWeight>
+      <eWeight>45</eWeight>
+      <eWeight>47</eWeight>
+      <eWeight>49</eWeight>
+      <eWeight>52</eWeight>
+      <eWeight>54</eWeight>
+      <eWeight>56</eWeight>
+      <eWeight>59</eWeight>
+      <eWeight>61</eWeight>
+      <eWeight>63</eWeight>
+      <eWeight>65</eWeight>
+      <eWeight>68</eWeight>
+      <eWeight>70</eWeight>
+      <eWeight>72</eWeight>
+      <eWeight>74</eWeight>
+      <eWeight>77</eWeight>
+      <eWeight>79</eWeight>
+    </weightTable>
+    <ageTable>
+      <eAge>30</eAge>
+      <eAge>35</eAge>
+      <eAge>40</eAge>
+      <eAge>45</eAge>
+      <eAge>50</eAge>
+      <eAge>55</eAge>
+      <eAge>60</eAge>
+      <eAge>65</eAge>
+      <eAge>70</eAge>
+      <eAge>75</eAge>
+      <eAge>80</eAge>
+      <eAge>85</eAge>
+      <eAge>90</eAge>
+      <eAge>95</eAge>
+      <eAge>100</eAge>
+      <eAge>105</eAge>
+      <eAge>110</eAge>
+      <eAge>115</eAge>
+      <eAge>120</eAge>
+      <eAge>125</eAge>
+    </ageTable>
+    <competencesTable>
+      <eCompetences>
+        <choice>Connaissances générales (elfes)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (eltharin)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (reikspiel)</choice>
+      </eCompetences>
+    </competencesTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Acuité visuelle</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Harmonie aethyrique</choice>
+        <choice>Maitrise (arcs longs)</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Intelligent</choice>
+        <choice>Sang-froid</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Vision nocturne</choice>
+      </eTalents>
+    </talentsTable>
+  </race>
+  <race name="Halfing">
+    <profile WS="10" BS="30" S="10" T="10" Ag="30" Int="20" WP="20" Fel="30" M="4" />
+    <size F="95" M="100" />
+    <wounds>
+      <choice>8</choice>
+      <choice>9</choice>
+      <choice>10</choice>
+      <choice>11</choice>
+    </wounds>
+    <fate>
+      <choice>2</choice>
+      <choice>2</choice>
+      <choice>3</choice>
+    </fate>
+    <fNames>
+      <name>Agnès</name>
+      <name>Alice</name>
+      <name>Elena</name>
+      <name>Eva</name>
+      <name>Frida</name>
+      <name>Gréta</name>
+      <name>Hanna</name>
+      <name>Heidi</name>
+      <name>Hilda</name>
+      <name>Janna</name>
+      <name>Karin</name>
+      <name>Leni</name>
+      <name>Marie</name>
+      <name>Pétra</name>
+      <name>Silma</name>
+      <name>Sophia</name>
+      <name>Susi</name>
+      <name>Théda</name>
+      <name>Ulla</name>
+      <name>Wanda</name>
+    </fNames>
+    <mNames>
+      <name>Adam</name>
+      <name>Albert</name>
+      <name>Alfred</name>
+      <name>Axel</name>
+      <name>Carl</name>
+      <name>Edgar</name>
+      <name>Hugo</name>
+      <name>Jakob</name>
+      <name>Ludo</name>
+      <name>Max</name>
+      <name>Niklaus</name>
+      <name>Oskar</name>
+      <name>Paul</name>
+      <name>Ralf</name>
+      <name>Rudi</name>
+      <name>Théo</name>
+      <name>Thomas</name>
+      <name>Udo</name>
+      <name>Viktor</name>
+      <name>Walter</name>
+    </mNames>
+    <hairColour>
+      <colour>Blond cendré</colour>
+      <colour>Paille</colour>
+      <colour>Blond</colour>
+      <colour>Blond</colour>
+      <colour>Auburn</colour>
+      <colour>Roux</colour>
+      <colour>Châtain clair</colour>
+      <colour>Châtain</colour>
+      <colour>Brun</colour>
+      <colour>Noir</colour>
+    </hairColour>
+    <eyeColour>
+      <colour>Bleu</colour>
+      <colour>Noisette</colour>
+      <colour>Noisette</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron</colour>
+      <colour>Marron</colour>
+      <colour>Marron foncé</colour>
+      <colour>Marron foncé</colour>
+      <colour>Marron foncé</colour>
+    </eyeColour>
+    <weightTable>
+      <eWeight>34</eWeight>
+      <eWeight>34</eWeight>
+      <eWeight>36</eWeight>
+      <eWeight>36</eWeight>
+      <eWeight>38</eWeight>
+      <eWeight>38</eWeight>
+      <eWeight>40</eWeight>
+      <eWeight>40</eWeight>
+      <eWeight>43</eWeight>
+      <eWeight>45</eWeight>
+      <eWeight>45</eWeight>
+      <eWeight>47</eWeight>
+      <eWeight>49</eWeight>
+      <eWeight>52</eWeight>
+      <eWeight>54</eWeight>
+      <eWeight>56</eWeight>
+      <eWeight>59</eWeight>
+      <eWeight>61</eWeight>
+      <eWeight>63</eWeight>
+      <eWeight>65</eWeight>
+    </weightTable>
+    <ageTable>
+      <eAge>20</eAge>
+      <eAge>22</eAge>
+      <eAge>24</eAge>
+      <eAge>26</eAge>
+      <eAge>28</eAge>
+      <eAge>30</eAge>
+      <eAge>32</eAge>
+      <eAge>34</eAge>
+      <eAge>36</eAge>
+      <eAge>38</eAge>
+      <eAge>40</eAge>
+      <eAge>42</eAge>
+      <eAge>44</eAge>
+      <eAge>46</eAge>
+      <eAge>48</eAge>
+      <eAge>50</eAge>
+      <eAge>52</eAge>
+      <eAge>54</eAge>
+      <eAge>56</eAge>
+      <eAge>58</eAge>
+      <eAge>60</eAge>
+    </ageTable>
+    <competencesTable>
+      <eCompetences>
+        <choice>Commérage</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Connaissances académiques (généalogie/héraldique)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Connaissances générales (halfings)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (reikspiel)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Métier (cuisinier)</choice>
+        <choice>Métier (fermier)</choice>
+      </eCompetences>
+    </competencesTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Maitrise (lance-pierres)</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Résistance au Chaos</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Vision nocturne</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Acuité auditive</choice>
+        <choice>Acuité visuelle</choice>
+        <choice>Ambidextre</choice>
+        <choice>Calcul mental</choice>
+        <choice>Chance</choice>
+        <choice>Course à pied</choice>
+        <choice>Dur à cuire</choice>
+        <choice>Force accrue</choice>
+        <choice>Guerrier né</choice>
+        <choice>Imitation</choice>
+        <choice>Intelligent</choice>
+        <choice>Réflexes éclair</choice>
+        <choice>Résistance à la magie</choice>
+        <choice>Résistance accrue</choice>
+        <choice>Résistance aux maladies</choice>
+        <choice>Résistance aux poisons</choice>
+        <choice>Robuste</choice>
+        <choice>Sain d'esprit</choice>
+        <choice>Sang-froid</choice>
+        <choice>Sixième sens</choice>
+        <choice>Sociable</choice>
+        <choice>Tireur d'élite</choice>
+      </eTalents>
+    </talentsTable>
+  </race>
+  <race name="Humain">
+    <profile WS="20" BS="20" S="20" T="20" Ag="20" Int="20" WP="20" Fel="20" M="4" />
+    <size F="152" M="160" />
+    <wounds>
+      <choice>10</choice>
+      <choice>11</choice>
+      <choice>12</choice>
+      <choice>13</choice>
+    </wounds>
+    <fate>
+      <choice>2</choice>
+      <choice>3</choice>
+      <choice>3</choice>
+    </fate>
+    <fNames>
+      <name>Alexa</name>
+      <name>Alfrida</name>
+      <name>Béatrix</name>
+      <name>Bianka</name>
+      <name>Carlott</name>
+      <name>Elfrida</name>
+      <name>Élise</name>
+      <name>Gabrielle</name>
+      <name>Gretchen</name>
+      <name>Hanna</name>
+      <name>Ilsa</name>
+      <name>Klara</name>
+      <name>Jarla</name>
+      <name>Ludmilla</name>
+      <name>Mathilde</name>
+      <name>Régina</name>
+      <name>Solveig</name>
+      <name>Théodora</name>
+      <name>Ulrike</name>
+      <name>Wertha</name>
+    </fNames>
+    <mNames>
+      <name>Adelbert</name>
+      <name>Albrecht</name>
+      <name>Berthold</name>
+      <name>Dieter</name>
+      <name>Eckhardt</name>
+      <name>Félix</name>
+      <name>Gottfried</name>
+      <name>Gustav</name>
+      <name>Heinz</name>
+      <name>Johann</name>
+      <name>Konrad</name>
+      <name>Leopold</name>
+      <name>Magnus</name>
+      <name>Otto</name>
+      <name>Pieter</name>
+      <name>Rudiger</name>
+      <name>Siegfried</name>
+      <name>Ulrich</name>
+      <name>Waldemar</name>
+      <name>Wolfgang</name>
+    </mNames>
+    <hairColour>
+      <colour>Blond cendré</colour>
+      <colour>Paille</colour>
+      <colour>Blond</colour>
+      <colour>Auburn</colour>
+      <colour>Châtain clair</colour>
+      <colour>Châtain</colour>
+      <colour>Châtain</colour>
+      <colour>Brun</colour>
+      <colour>Noir</colour>
+    </hairColour>
+    <eyeColour>
+      <colour>Gris clair</colour>
+      <colour>Gris-bleu</colour>
+      <colour>Bleu</colour>
+      <colour>Vert</colour>
+      <colour>Cuivre</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron</colour>
+      <colour>Marron foncé</colour>
+      <colour>Mauve</colour>
+      <colour>Noir</colour>
+    </eyeColour>
+    <weightTable>
+      <eWeight>47</eWeight>
+      <eWeight>49</eWeight>
+      <eWeight>52</eWeight>
+      <eWeight>54</eWeight>
+      <eWeight>56</eWeight>
+      <eWeight>59</eWeight>
+      <eWeight>61</eWeight>
+      <eWeight>63</eWeight>
+      <eWeight>65</eWeight>
+      <eWeight>68</eWeight>
+      <eWeight>70</eWeight>
+      <eWeight>72</eWeight>
+      <eWeight>74</eWeight>
+      <eWeight>77</eWeight>
+      <eWeight>79</eWeight>
+      <eWeight>81</eWeight>
+      <eWeight>86</eWeight>
+      <eWeight>90</eWeight>
+      <eWeight>95</eWeight>
+      <eWeight>99</eWeight>
+    </weightTable>
+    <ageTable>
+      <eAge>16</eAge>
+      <eAge>17</eAge>
+      <eAge>18</eAge>
+      <eAge>19</eAge>
+      <eAge>20</eAge>
+      <eAge>21</eAge>
+      <eAge>22</eAge>
+      <eAge>23</eAge>
+      <eAge>24</eAge>
+      <eAge>25</eAge>
+      <eAge>26</eAge>
+      <eAge>27</eAge>
+      <eAge>28</eAge>
+      <eAge>29</eAge>
+      <eAge>30</eAge>
+      <eAge>31</eAge>
+      <eAge>32</eAge>
+      <eAge>33</eAge>
+      <eAge>34</eAge>
+      <eAge>35</eAge>
+    </ageTable>
+    <competencesTable>
+      <eCompetences>
+        <choice>Commérage</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Connaissances générales (Empire)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (reikspiel)</choice>
+      </eCompetences>
+    </competencesTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Acuité auditive</choice>
+        <choice>Acuité visuelle</choice>
+        <choice>Ambidextre</choice>
+        <choice>Calcul mental</choice>
+        <choice>Chance</choice>
+        <choice>Course à pied</choice>
+        <choice>Dur à cuire</choice>
+        <choice>Force accrue</choice>
+        <choice>Guerrier né</choice>
+        <choice>Imitation</choice>
+        <choice>Intelligent</choice>
+        <choice>Réflexes éclair</choice>
+        <choice>Résistance à la magie</choice>
+        <choice>Résistance accrue</choice>
+        <choice>Résistance aux maladies</choice>
+        <choice>Résistance aux poisons</choice>
+        <choice>Robuste</choice>
+        <choice>Sain d'esprit</choice>
+        <choice>Sang-froid</choice>
+        <choice>Sixième sens</choice>
+        <choice>Sociable</choice>
+        <choice>Tireur d'élite</choice>
+        <choice>Vision nocturne</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Acuité auditive</choice>
+        <choice>Acuité visuelle</choice>
+        <choice>Ambidextre</choice>
+        <choice>Calcul mental</choice>
+        <choice>Chance</choice>
+        <choice>Course à pied</choice>
+        <choice>Dur à cuire</choice>
+        <choice>Force accrue</choice>
+        <choice>Guerrier né</choice>
+        <choice>Imitation</choice>
+        <choice>Intelligent</choice>
+        <choice>Réflexes éclair</choice>
+        <choice>Résistance à la magie</choice>
+        <choice>Résistance accrue</choice>
+        <choice>Résistance aux maladies</choice>
+        <choice>Résistance aux poisons</choice>
+        <choice>Robuste</choice>
+        <choice>Sain d'esprit</choice>
+        <choice>Sang-froid</choice>
+        <choice>Sixième sens</choice>
+        <choice>Sociable</choice>
+        <choice>Tireur d'élite</choice>
+        <choice>Vision nocturne</choice>
+      </eTalents>
+    </talentsTable>
+  </race>
+  <race name="Nain">
+    <profile WS="30" BS="20" S="20" T="30" Ag="10" Int="20" WP="20" Fel="10" M="3" />
+    <size F="125" M="130" />
+    <wounds>
+      <choice>11</choice>
+      <choice>12</choice>
+      <choice>13</choice>
+      <choice>14</choice>
+    </wounds>
+    <fate>
+      <choice>1</choice>
+      <choice>2</choice>
+      <choice>3</choice>
+    </fate>
+    <fNames>
+      <name>Anika</name>
+      <name>Asta</name>
+      <name>Astrid</name>
+      <name>Berta</name>
+      <name>Birgit</name>
+      <name>Dagmar</name>
+      <name>Elsa</name>
+      <name>Erika</name>
+      <name>Franziska</name>
+      <name>Gréta</name>
+      <name>Hunni</name>
+      <name>Ingrid</name>
+      <name>Janna</name>
+      <name>Karin</name>
+      <name>Pétra</name>
+      <name>Sigrid</name>
+      <name>Sigrun</name>
+      <name>Silma</name>
+      <name>Thylda</name>
+      <name>Ulla</name>
+    </fNames>
+    <mNames>
+      <name>Bardin</name>
+      <name>Brokk</name>
+      <name>Dimzad</name>
+      <name>Durak</name>
+      <name>Garil</name>
+      <name>Gottri</name>
+      <name>Grundi</name>
+      <name>Hargin</name>
+      <name>Imrak</name>
+      <name>Kargun</name>
+      <name>Jotunn</name>
+      <name>Magnar</name>
+      <name>Mordrin</name>
+      <name>Nargond</name>
+      <name>Orzad</name>
+      <name>Ragnar</name>
+      <name>Snorri</name>
+      <name>Storri</name>
+      <name>Thingrim</name>
+      <name>Urgrim</name>
+    </mNames>
+    <hairColour>
+      <colour>Blond cendré</colour>
+      <colour>Blond</colour>
+      <colour>Roux</colour>
+      <colour>Auburn</colour>
+      <colour>Châtain clair</colour>
+      <colour>Châtain</colour>
+      <colour>Châtain</colour>
+      <colour>Brun</colour>
+      <colour>Bleu foncé</colour>
+      <colour>Noir</colour>
+    </hairColour>
+    <eyeColour>
+      <colour>Gris clair</colour>
+      <colour>Bleu</colour>
+      <colour>Cuivre</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron</colour>
+      <colour>Marron</colour>
+      <colour>Marron foncé</colour>
+      <colour>Marron foncé</colour>
+      <colour>Mauve</colour>
+    </eyeColour>
+    <weightTable>
+      <eWeight>40</eWeight>
+      <eWeight>43</eWeight>
+      <eWeight>45</eWeight>
+      <eWeight>47</eWeight>
+      <eWeight>49</eWeight>
+      <eWeight>52</eWeight>
+      <eWeight>54</eWeight>
+      <eWeight>56</eWeight>
+      <eWeight>59</eWeight>
+      <eWeight>61</eWeight>
+      <eWeight>63</eWeight>
+      <eWeight>65</eWeight>
+      <eWeight>68</eWeight>
+      <eWeight>70</eWeight>
+      <eWeight>72</eWeight>
+      <eWeight>74</eWeight>
+      <eWeight>77</eWeight>
+      <eWeight>79</eWeight>
+      <eWeight>81</eWeight>
+      <eWeight>83</eWeight>
+    </weightTable>
+    <ageTable>
+      <eAge>20</eAge>
+      <eAge>25</eAge>
+      <eAge>30</eAge>
+      <eAge>35</eAge>
+      <eAge>40</eAge>
+      <eAge>45</eAge>
+      <eAge>50</eAge>
+      <eAge>55</eAge>
+      <eAge>60</eAge>
+      <eAge>65</eAge>
+      <eAge>70</eAge>
+      <eAge>75</eAge>
+      <eAge>80</eAge>
+      <eAge>85</eAge>
+      <eAge>90</eAge>
+      <eAge>95</eAge>
+      <eAge>100</eAge>
+      <eAge>105</eAge>
+      <eAge>110</eAge>
+      <eAge>115</eAge>
+    </ageTable>
+    <competencesTable>
+      <eCompetences>
+        <choice>Connaissances générales (nains)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (reikspiel)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Langue (khazalid)</choice>
+      </eCompetences>
+      <eCompetences>
+        <choice>Métier (forgeron)</choice>
+        <choice>Métier (maçon)</choice>
+        <choice>Métier (mineur)</choice>
+      </eCompetences>
+    </competencesTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Fureur vengeresse</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Résistance à la magie</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Robuste</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Savoir-faire nain</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Valeureux</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Vision nocturne</choice>
+      </eTalents>
+    </talentsTable>
+  </race>
+</races>
