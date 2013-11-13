@@ -20,15 +20,7 @@ public class Skill {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getCharacteristics() {
         return characteristics;
-    }
-
-    public void setCharacteristics(String characteristics) {
-        this.characteristics = characteristics;
     }
 }

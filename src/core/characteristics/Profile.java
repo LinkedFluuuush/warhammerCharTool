@@ -86,6 +86,25 @@ public class Profile {
         this.fp = fp;
     }
 
+    public Profile(int ws, int bs, int s, int t, int ag, int intel, int wp, int fel, int m) {
+        this.ws = ws;
+        this.bs = bs;
+        this.s = s;
+        this.t = t;
+        this.ag = ag;
+        this.intel = intel;
+        this.wp = wp;
+        this.fel = fel;
+        this.a = 1;
+        this.w = 0;
+        this.sb = s / 10;
+        this.tb = t / 10;
+        this.m = m;
+        this.mag = 0;
+        this.ip = 0;
+        this.fp = 0;
+    }
+
     public int getWs() {
         return ws;
     }

@@ -2,32 +2,32 @@
 <careers>
   <career name="Agitateur">
     <profile WS="5" BS="5" S="0" T="0" Ag="5" Int="10" WP="0" Fel="10" A="0" W="2" M="0" Mag="0" />
-    <competencesTable>
-      <eCompetences>
+    <skillsTable>
+      <eSkills>
         <choice>Charisme</choice>
-      </eCompetences>
-      <eCompetences>
+      </eSkills>
+      <eSkills>
         <choice>Commérage</choice>
         <choice>Connaissances académiques (histoire)</choice>
         <choice>Connaissances générales (Empire)</choice>
-      </eCompetences>
-      <eCompetences>
+      </eSkills>
+      <eSkills>
         <choice>Dissimulation</choice>
-      </eCompetences>
-      <eCompetences>
+      </eSkills>
+      <eSkills>
         <choice>Langue (bretonnien)</choice>
         <choice>Langue (tiléen)</choice>
-      </eCompetences>
-      <eCompetences>
+      </eSkills>
+      <eSkills>
         <choice>Langue (reikspiel)</choice>
-      </eCompetences>
-      <eCompetences>
+      </eSkills>
+      <eSkills>
         <choice>Lire/écrire</choice>
-      </eCompetences>
-      <eCompetences>
+      </eSkills>
+      <eSkills>
         <choice>Perception</choice>
-      </eCompetences>
-    </competencesTable>
+      </eSkills>
+    </skillsTable>
     <talentsTable>
       <eTalents>
         <choice>Combat de rue</choice>
@@ -39,13 +39,19 @@
       <eTalents>
         <choice>Fuite</choice>
       </eTalents>
+    </talentsTable>
+    <weaponsTable>
+      <eWeapon />
+    </weaponsTable>
+    <armoursTable>
       <eArmours>
         <choice>Veste de cuir</choice>
       </eArmours>
-      <eTrappings>
+    </armoursTable>
+    <equipmentsTable>
+      <eEquipments>
         <choice>Vetements confortables</choice>
-      </eTrappings>
-    </talentsTable>
-    <trappingsTable />
+      </eEquipments>
+    </equipmentsTable>
   </career>
 </careers>

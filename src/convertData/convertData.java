@@ -421,10 +421,10 @@ public class convertData{
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element competencesTable = new Element("competencesTable");
+                Element competencesTable = new Element("skillsTable");
 
                 for(String competences : elts){
-                    Element eCompetences = new Element("eCompetences");
+                    Element eCompetences = new Element("eSkills");
 
                     String[] choices = competences.split(":");
 
@@ -459,6 +459,75 @@ public class convertData{
                 }
 
                 race.addContent(talentsTable);
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                Element weaponsTable = new Element("weaponsTable");
+
+                for(String weapon : elts){
+                    Element eWeapon = new Element("eWeapon");
+
+                    String[] choices = weapon.split(":");
+
+                    for(int i = 0 ; i < choices.length ; i++){
+                        if(!choices[i].equals("") && choices[i] != null){
+                            Element choice = new Element("choice");
+                            choice.setText(choices[i]);
+                            eWeapon.addContent(choice);
+                        }
+                    }
+
+                    weaponsTable.addContent(eWeapon);
+                }
+
+                race.addContent(weaponsTable);
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                Element armoursTable = new Element("armoursTable");
+
+                for(String armour : elts){
+                    Element eArmours = new Element("eArmours");
+
+                    String[] choices = armour.split(":");
+
+                    for(int i = 0 ; i < choices.length ; i++){
+                        if(!choices[i].equals("") && choices[i] != null){
+                            Element choice = new Element("choice");
+                            choice.setText(choices[i]);
+                            eArmours.addContent(choice);
+                        }
+                    }
+
+                    armoursTable.addContent(eArmours);
+                }
+
+                race.addContent(armoursTable);
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                Element equipmentsTable = new Element("equipmentsTable");
+
+                for(String equipment : elts){
+                    Element eEquipments = new Element("eEquipments");
+
+                    String[] choices = equipment.split(":");
+
+                    for(int i = 0 ; i < choices.length ; i++){
+                        if(!choices[i].equals("") && choices[i] != null){
+                            Element choice = new Element("choice");
+                            choice.setText(choices[i]);
+                            eEquipments.addContent(choice);
+                        }
+                    }
+
+                    equipmentsTable.addContent(eEquipments);
+                }
+
+                race.addContent(equipmentsTable);
 
                 root.addContent(race);
 
@@ -518,10 +587,10 @@ public class convertData{
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element competencesTable = new Element("competencesTable");
+                Element competencesTable = new Element("skillsTable");
 
                 for(String competences : elts){
-                    Element eCompetences = new Element("eCompetences");
+                    Element eCompetences = new Element("eSkills");
 
                     String[] choices = competences.split(":");
 
@@ -560,23 +629,71 @@ public class convertData{
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element trappingsTable = new Element("trappingsTable");
+                Element weaponsTable = new Element("weaponsTable");
 
-                for(String trapping : elts){
-                    Element eTrappings = new Element("eTrappings");
+                for(String weapon : elts){
+                    Element eWeapon = new Element("eWeapon");
 
-                    String[] choices = trapping.split(":");
+                    String[] choices = weapon.split(":");
 
                     for(int i = 0 ; i < choices.length ; i++){
-                        Element choice = new Element("choice");
-                        choice.setText(choices[i]);
-                        eTrappings.addContent(choice);
+                        if(!choices[i].equals("") && choices[i] != null){
+                            Element choice = new Element("choice");
+                            choice.setText(choices[i]);
+                            eWeapon.addContent(choice);
+                        }
                     }
 
-                    talentsTable.addContent(eTrappings);
+                    weaponsTable.addContent(eWeapon);
                 }
 
-                career.addContent(trappingsTable);
+                career.addContent(weaponsTable);
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                Element armoursTable = new Element("armoursTable");
+
+                for(String armour : elts){
+                    Element eArmours = new Element("eArmours");
+
+                    String[] choices = armour.split(":");
+
+                    for(int i = 0 ; i < choices.length ; i++){
+                        if(!choices[i].equals("") && choices[i] != null){
+                            Element choice = new Element("choice");
+                            choice.setText(choices[i]);
+                            eArmours.addContent(choice);
+                        }
+                    }
+
+                    armoursTable.addContent(eArmours);
+                }
+
+                career.addContent(armoursTable);
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                Element equipmentsTable = new Element("equipmentsTable");
+
+                for(String equipment : elts){
+                    Element eEquipments = new Element("eEquipments");
+
+                    String[] choices = equipment.split(":");
+
+                    for(int i = 0 ; i < choices.length ; i++){
+                        if(!choices[i].equals("") && choices[i] != null){
+                            Element choice = new Element("choice");
+                            choice.setText(choices[i]);
+                            eEquipments.addContent(choice);
+                        }
+                    }
+
+                    equipmentsTable.addContent(eEquipments);
+                }
+
+                career.addContent(equipmentsTable);
 
                 root.addContent(career);
 

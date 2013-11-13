@@ -24,76 +24,63 @@ public class Career {
     private LinkedList<LinkedList<Armour>> armours;
 
     public Career(String name, Profile profile, LinkedList<LinkedList<Skill>> skills,
-                  LinkedList<LinkedList<Talent>> talents) {
+                  LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours) {
         this.name = name;
         this.profile = profile;
         this.skills = skills;
         this.talents = talents;
+        this.equipments = equipments;
+        this.weapons = weapons;
+        this.armours = armours;
     }
 
     public Career(String name, int ws, int bs, int s, int t, int ag, int intel, int wp,
                   int fel, int a, int w, int m, int mag,
                   LinkedList<LinkedList<Skill>> skills,
-                  LinkedList<LinkedList<Talent>> talents) {
+                  LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours) {
         this.name = name;
         this.profile = new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag);
         this.skills = skills;
         this.talents = talents;
+        this.equipments = equipments;
+        this.weapons = weapons;
+        this.armours = armours;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Profile getProfile() {
         return profile;
-    }
-
-    public void setProfile(Profile profile) {
-        this.profile = profile;
     }
 
     public LinkedList<LinkedList<Skill>> getSkills() {
         return skills;
     }
 
-    public void setSkills(LinkedList<LinkedList<Skill>> skills) {
-        this.skills = skills;
-    }
-
     public LinkedList<LinkedList<Talent>> getTalents() {
         return talents;
-    }
-
-    public void setTalents(LinkedList<LinkedList<Talent>> talents) {
-        this.talents = talents;
     }
 
     public LinkedList<LinkedList<Equipment>> getEquipments() {
         return equipments;
     }
 
-    public void setEquipments(LinkedList<LinkedList<Equipment>> equipments) {
-        this.equipments = equipments;
-    }
-
     public LinkedList<LinkedList<Weapon>> getWeapons() {
         return weapons;
-    }
-
-    public void setWeapons(LinkedList<LinkedList<Weapon>> weapons) {
-        this.weapons = weapons;
     }
 
     public LinkedList<LinkedList<Armour>> getArmours() {
         return armours;
     }
 
-    public void setArmours(LinkedList<LinkedList<Armour>> armours) {
-        this.armours = armours;
+    @Override
+    public String toString(){
+        String res = "Carrière : " + name + "\n";
+        res += profile + "\n";
+        res += "Compétences : \n";
     }
 }
