@@ -213,21 +213,21 @@ public class convertData{
                     skill.setAttribute("name", s.substring(0, n));
 
                     if(s.substring(n+1).equals("CC"))
-                        skill.setAttribute("competence", "WS");
+                        skill.setAttribute("characteristics", "WS");
                     else if(s.substring(n+1).equals("CT"))
-                        skill.setAttribute("competence", "BS");
+                        skill.setAttribute("characteristics", "BS");
                     else if(s.substring(n+1).equals("F"))
-                        skill.setAttribute("competence", "S");
+                        skill.setAttribute("characteristics", "S");
                     else if(s.substring(n+1).equals("E"))
-                        skill.setAttribute("competence", "T");
+                        skill.setAttribute("characteristics", "T");
                     else if(s.substring(n+1).equals("Ag"))
-                        skill.setAttribute("competence", "Ag");
+                        skill.setAttribute("characteristics", "Ag");
                     else if(s.substring(n+1).equals("Int"))
-                        skill.setAttribute("competence", "Int");
+                        skill.setAttribute("characteristics", "Int");
                     else if(s.substring(n+1).equals("FM"))
-                        skill.setAttribute("competence", "WP");
+                        skill.setAttribute("characteristics", "WP");
                     else if(s.substring(n+1).equals("Soc"))
-                        skill.setAttribute("competence", "Fel");
+                        skill.setAttribute("characteristics", "Fel");
 
                     root.addContent(skill);
                 }
