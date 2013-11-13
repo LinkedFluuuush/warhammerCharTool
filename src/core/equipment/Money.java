@@ -37,14 +37,6 @@ public class Money {
         return this;
     }
 
-    public Money randomizeMoney(){
-        int leftGoldenCrowns;
-        int leftSilverShillings;
-        Random r = new Random();
-
-        return this;
-    }
-
     public int getGoldenCrowns() {
         return goldenCrowns;
     }

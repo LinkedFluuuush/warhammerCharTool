@@ -14,7 +14,6 @@ import java.util.LinkedList;
 public class PersonalDetails {
     private boolean male;
     private int age;
-    private String dateOfBirth;
     private String birthplace;
     private String nationality;
     private String favoriteGod;
@@ -28,7 +27,6 @@ public class PersonalDetails {
     public PersonalDetails(){
         male = true;
         age = 0;
-        dateOfBirth = "Unknown";
         birthplace = "Unknown";
         nationality = "Unknown";
         favoriteGod = "Unknown";
@@ -40,12 +38,11 @@ public class PersonalDetails {
         distinguishingMarks = new LinkedList<String>();
     }
 
-    public PersonalDetails(boolean male, int age, String dateOfBirth, String birthplace, String nationality,
+    public PersonalDetails(boolean male, int age, String birthplace, String nationality,
                            String favoriteGod, int height, int weight, String rightEyeColour, String leftEyeColour,
                            String hairColour, LinkedList<String> distinguishingMarks) {
         this.male = male;
         this.age = age;
-        this.dateOfBirth = dateOfBirth;
         this.birthplace = birthplace;
         this.nationality = nationality;
         this.favoriteGod = favoriteGod;
@@ -55,27 +52,6 @@ public class PersonalDetails {
         this.leftEyeColour = leftEyeColour;
         this.hairColour = hairColour;
         this.distinguishingMarks = distinguishingMarks;
-    }
-
-    public PersonalDetails(Race race){
-        male = true;
-        age = 0;
-        dateOfBirth = "Unknown";
-        birthplace = "Unknown";
-        nationality = "Unknown";
-        favoriteGod = "Unknown";
-        height = 0;
-        weight = 0;
-        rightEyeColour = "Unknown";
-        leftEyeColour = rightEyeColour;
-        hairColour = "Unknown";
-        distinguishingMarks = new LinkedList<String>();
-
-        this.generateDetails(race);
-    }
-
-    public PersonalDetails generateDetails(Race race){
-        return this;
     }
 
     public boolean isMale() {
@@ -92,14 +68,6 @@ public class PersonalDetails {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
     }
 
     public String getBirthplace() {

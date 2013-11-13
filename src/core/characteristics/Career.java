@@ -1,5 +1,9 @@
 package core.characteristics;
 
+import core.equipment.Armour;
+import core.equipment.Equipment;
+import core.equipment.Weapon;
+
 import java.util.LinkedList;
 
 /**
@@ -14,11 +18,13 @@ public class Career {
     private Profile profile;
 
     private LinkedList<LinkedList<Skill>> skills;
-    private LinkedList<LinkedList<Skill>> talents;
-
+    private LinkedList<LinkedList<Talent>> talents;
+    private LinkedList<LinkedList<Equipment>> equipments;
+    private LinkedList<LinkedList<Weapon>> weapons;
+    private LinkedList<LinkedList<Armour>> armours;
 
     public Career(String name, Profile profile, LinkedList<LinkedList<Skill>> skills,
-                  LinkedList<LinkedList<Skill>> talents) {
+                  LinkedList<LinkedList<Talent>> talents) {
         this.name = name;
         this.profile = profile;
         this.skills = skills;
@@ -28,7 +34,7 @@ public class Career {
     public Career(String name, int ws, int bs, int s, int t, int ag, int intel, int wp,
                   int fel, int a, int w, int m, int mag,
                   LinkedList<LinkedList<Skill>> skills,
-                  LinkedList<LinkedList<Skill>> talents) {
+                  LinkedList<LinkedList<Talent>> talents) {
         this.name = name;
         this.profile = new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag);
         this.skills = skills;
@@ -59,11 +65,35 @@ public class Career {
         this.skills = skills;
     }
 
-    public LinkedList<LinkedList<Skill>> getTalents() {
+    public LinkedList<LinkedList<Talent>> getTalents() {
         return talents;
     }
 
-    public void setTalents(LinkedList<LinkedList<Skill>> talents) {
+    public void setTalents(LinkedList<LinkedList<Talent>> talents) {
         this.talents = talents;
+    }
+
+    public LinkedList<LinkedList<Equipment>> getEquipments() {
+        return equipments;
+    }
+
+    public void setEquipments(LinkedList<LinkedList<Equipment>> equipments) {
+        this.equipments = equipments;
+    }
+
+    public LinkedList<LinkedList<Weapon>> getWeapons() {
+        return weapons;
+    }
+
+    public void setWeapons(LinkedList<LinkedList<Weapon>> weapons) {
+        this.weapons = weapons;
+    }
+
+    public LinkedList<LinkedList<Armour>> getArmours() {
+        return armours;
+    }
+
+    public void setArmours(LinkedList<LinkedList<Armour>> armours) {
+        this.armours = armours;
     }
 }
