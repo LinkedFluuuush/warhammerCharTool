@@ -141,4 +141,39 @@ public class PersonalDetails {
     public void setDistinguishingMarks(LinkedList<String> distinguishingMarks) {
         this.distinguishingMarks = distinguishingMarks;
     }
+
+    public String toString(){
+        String res;
+
+        if (male){
+            res = "Sexe : Masculin\n";
+        } else {
+            res = "Sexe : Féminin\n";
+        }
+
+        res += "Age : " + age + "\n";
+        res += "Taille : " + height / 100 + "m" + height % 100 + "\n";
+        res += "Poids : " + weight + "kg\n";
+        res += "Couleur de cheveux : " + hairColour + "\n";
+
+        if(leftEyeColour.equals(rightEyeColour)){
+            res += "Couleur des yeux : " + leftEyeColour + "\n";
+        } else {
+            res += "Couleur de l'oeil droit : " + rightEyeColour + "\n";
+            res += "Couleur de l'oeil gauche : " + leftEyeColour + "\n";
+        }
+
+        res += "Nationalité : " + nationality + "\n";
+        res += "Lieu de Naissance : " + birthplace + "\n";
+
+        res += "Dieu favori : " + favoriteGod + "\n";
+
+        res += "Signes distinctifs : \n";
+
+        for(String mark : distinguishingMarks){
+            res += " - " + mark + "\n";
+        }
+
+        return res;
+    }
 }

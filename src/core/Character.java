@@ -10,11 +10,9 @@ import java.util.LinkedList;
 import java.util.Random;
 
 /**
- * Created with IntelliJ IDEA.
  * User: Linked
  * Date: 12/11/13
  * Time: 15:14
- * To change this template use File | Settings | File Templates.
  */
 public class Character {
     private String name;
@@ -89,6 +87,28 @@ public class Character {
         this.actualWounds = profile.getW();
     }
 
+    public Character(String player, Race race, Career career) {
+        this.player = player;
+        this.race = race;
+        this.career = career;
+
+        randomPNJ();
+        randomName();
+
+        this.actualWounds = profile.getW();
+    }
+
+    public Character(Race race, Career career) {
+        this.player = "npc";
+        this.race = race;
+        this.career = career;
+
+        randomPNJ();
+        randomName();
+
+        this.actualWounds = profile.getW();
+    }
+
     public Character(String name, String player, Race race, Career career,
                      LinkedList<Career> previousCareers,
                      LinkedList<Skill> skills, LinkedList<Talent> talents,
@@ -112,7 +132,16 @@ public class Character {
         this.profile = randomPNJProfile();
     }
 
-    public Character randomPNJ(){
+    public void randomName(){
+        Random r = new Random();
+
+        if(this.details.isMale())
+            this.name = this.race.getmNames()[r.nextInt(this.race.getmNames().length)];
+        else
+            this.name = this.race.getfNames()[r.nextInt(this.race.getfNames().length)];
+    }
+
+    public void randomPNJ(){
         this.profile = randomPNJProfile();
         this.details = randomDetails();
         this.skills = randomSkills();
@@ -120,7 +149,6 @@ public class Character {
         randomTrappings();
         this.money = randomMoney();
 
-        return this;
     }
 
     public Profile randomPNJProfile(){
@@ -178,7 +206,7 @@ public class Character {
 
         String eyeColour = race.getEyeColour()[r.nextInt(race.getEyeColour().length)];
 
-        PersonalDetails newDetails = new PersonalDetails(
+        return new PersonalDetails(
                 male,
                 race.getAge()[r.nextInt(race.getAge().length)],
                 "Unknown", "Empire", "Ulric",
@@ -188,8 +216,6 @@ public class Character {
                 race.getHairColour()[r.nextInt(race.getHairColour().length)],
                 new LinkedList<String>()
         );
-
-        return details;
     }
 
     public LinkedList<Skill> randomSkills(){
@@ -382,7 +408,8 @@ public class Character {
 
     @Override
     public String toString(){
-        String res = "Race : " + name + "\n";
+        String res = name + ", " + race.getName() + " " + career.getName() + "\n";
+        res += details + "\n";
         res += profile + "\n";
         res += "Compétences : \n";
 

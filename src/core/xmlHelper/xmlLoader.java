@@ -28,8 +28,8 @@ import java.util.List;
  */
 public class xmlLoader {
 
-    static Document document;
-    static Element root;
+    private static Document document;
+    private static Element root;
 
     public static LinkedList<Skill> skillLoader(){
         SAXBuilder sxb = new SAXBuilder();

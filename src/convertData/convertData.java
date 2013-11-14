@@ -51,7 +51,7 @@ public class convertData{
         }
     }
 
-    public static void convertWeapons(File file){
+    private static void convertWeapons(File file){
         System.out.println("Traitement de : " + file.getName());
 
         Element root = new Element("weapons");
@@ -106,7 +106,7 @@ public class convertData{
         }
     }
 
-    public static void convertArmours(File file){
+    private static void convertArmours(File file){
         System.out.println("Traitement de : " + file.getName());
 
         Element root = new Element("armours");
@@ -154,7 +154,7 @@ public class convertData{
         }
     }
 
-    public static void convertEquipment(File file){
+    private static void convertEquipment(File file){
         System.out.println("Traitement de : " + file.getName());
 
         Element root = new Element("equipments");
@@ -193,7 +193,7 @@ public class convertData{
         }
     }
 
-    public static void convertSkills(File file){
+    private static void convertSkills(File file){
             System.out.println("Traitement de : " + file.getName());
 
             Element root = new Element("skills");
@@ -242,7 +242,7 @@ public class convertData{
         }
     }
 
-    public static void convertTalents(File file){
+    private static void convertTalents(File file){
         System.out.println("Traitement de : " + file.getName());
 
         Element root = new Element("talents");
@@ -275,7 +275,7 @@ public class convertData{
         }
     }
 
-    public static void convertRace(File file){
+    private static void convertRace(File file){
         File[] raceFiles = file.listFiles();
         Element root = new Element("races");
         Document document = new Document(root);
@@ -546,7 +546,7 @@ public class convertData{
 
     }
 
-    public static void convertCareers(File file){
+    private static void convertCareers(File file){
         File[] careersFiles = file.listFiles();
         Element root = new Element("careers");
         Document document = new Document(root);
@@ -709,7 +709,7 @@ public class convertData{
     }
 
 
-    public static int[] convertPrices(int price){
+    private static int[] convertPrices(int price){
         int[] finalPrice = new int[3];
 
         finalPrice[0] = price / 240;

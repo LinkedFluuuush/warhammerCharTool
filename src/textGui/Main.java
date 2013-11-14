@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args){
         World.loadAll();
 
-        core.Character randomCharacter = new Character("Random Char", "Random PLayer", World.searchRaceByName("Humain"), World.searchCareerByName("Agitateur"));
+        core.Character randomCharacter = new Character("Random Player", World.searchRaceByName("Humain"), World.searchCareerByName("Agitateur"));
 
         System.out.println(randomCharacter);
     }
