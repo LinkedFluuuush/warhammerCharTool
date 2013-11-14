@@ -128,7 +128,7 @@ public class Character {
         Profile raceProfile = this.race.getProfile();
         Profile careerProfile = this.career.getProfile();
 
-        Profile newProfile = new Profile(
+        return new Profile(
                 raceProfile.getWs() + (r.nextInt(10) + 1) + careerProfile.getWs(),
                 raceProfile.getBs() + (r.nextInt(10) + 1) + careerProfile.getBs(),
                 raceProfile.getS() + (r.nextInt(10) + 1) + careerProfile.getS(),
@@ -141,8 +141,6 @@ public class Character {
                 race.getWounds()[r.nextInt(race.getWounds().length)] + careerProfile.getW(),
                 raceProfile.getM() + careerProfile.getM(),
                 careerProfile.getMag());
-
-        return newProfile;
     }
 
     public Profile randomPJProfile(){
@@ -225,6 +223,10 @@ public class Character {
             newWeapons.add(weaponChoice.get(r.nextInt(weaponChoice.size())));
         }
 
+        for(LinkedList<Weapon> weaponChoice : race.getWeapons()){
+            newWeapons.add(weaponChoice.get(r.nextInt(weaponChoice.size())));
+        }
+
         LinkedList<Armour> newArmours = new LinkedList<Armour>();
 
         for(LinkedList<Armour> armourChoice : career.getArmours()){
@@ -244,9 +246,10 @@ public class Character {
 
     public Money randomMoney(){
         Random r = new Random();
-        int initialMoney = (r.nextInt(10) + 1) + (r.nextInt() + 1);
+        int initialMoney = (r.nextInt(10) + 1) + (r.nextInt(10) + 1);
 
         int goldenCrowns = r.nextInt(initialMoney + 1);
+
         int silverShillings = 0;
         int brassPennies = 0;
 
@@ -258,64 +261,11 @@ public class Character {
             initialMoney = initialMoney - silverShillings;
 
             if(initialMoney > 0){
-                silverShillings = initialMoney * 12;
+                brassPennies = initialMoney * 12;
             }
         }
 
-        Money newMoney = new Money(goldenCrowns, silverShillings, brassPennies);
-
-        return newMoney;
-    }
-
-    @Override
-    public String toString(){
-        String res = name + " joué par " + player + ".\n\n";
-        res += race.getName() + " " + career.getName() + ".";
-
-        res += "\n Anciennes carrières :\n\t";
-
-        for(Career previousCareer : previousCareers){
-            res += previousCareer.getName() + ", ";
-        }
-
-
-        res += details + "\n\n";
-        res += profile + "\n\n";
-
-        res += "Compétences : \n";
-
-        for(Skill skill : skills){
-            res += "\t" + skill + "\n";
-        }
-
-        res += "\n Talents : \n";
-
-        for(Talent talent : talents){
-            res += "\t" + talent + "\n";
-        }
-
-        res += "\n Armes :\n";
-
-        for(Weapon weapon : weapons){
-            res += "\t" + weapon + "\n";
-        }
-
-        res += "\n Armures :\n";
-
-        for(Armour armour : armours){
-            res += "\t" + armour + "\n";
-        }
-
-        res += "\n Equipement :\n";
-        res += "\t" + money + "\n";
-
-        for(Equipment equipment1 : equipment){
-            res += "\t" + equipment1.getName() + "\n";
-        }
-
-        res +="\n\n";
-
-        return res;
+        return new Money(goldenCrowns, silverShillings, brassPennies);
     }
 
     public String getName() {
@@ -428,5 +378,126 @@ public class Character {
 
     public void setActualWounds(int actualWounds) {
         this.actualWounds = actualWounds;
+    }
+
+    @Override
+    public String toString(){
+        String res = "Race : " + name + "\n";
+        res += profile + "\n";
+        res += "Compétences : \n";
+
+        for(int i = 0; i < skills.size() ; i++){
+            res += skills.get(i).getName();
+
+            if(i < skills.size() - 1){
+                res += ", ";
+            } else {
+                res += "\n";
+            }
+        }
+
+        res += "Talents : \n";
+
+        for(int i = 0; i < talents.size() ; i++){
+            res += talents.get(i).getName();
+
+            if(i < talents.size() - 1){
+                res += ", ";
+            } else {
+                res += "\n";
+            }
+        }
+
+        res += "Equipement : \n";
+
+        for(int i = 0; i < equipment.size() ; i++){
+            res += equipment.get(i).getName();
+
+            if(i < equipment.size() - 1){
+                res += ", ";
+            }
+        }
+
+        if(armours.size() != 0){
+            res += ", ";
+        }
+
+        for(int i = 0; i < armours.size() ; i++){
+            res += armours.get(i).getName();
+
+
+            if(i < armours.size() - 1){
+                res += ", ";
+            }
+        }
+
+        if(weapons.size() != 0){
+            res += ", ";
+        }
+
+        for(int i = 0; i < weapons.size() ; i++){
+            res += weapons.get(i).getName();
+
+            if(i < weapons.size() - 1){
+                res += ", ";
+            }
+        }
+
+        res += "\n";
+
+        res += money;
+
+        res += "\n";
+
+        res += "Armes : \n";
+
+        res += "Nom\t|\tGroupe\t|\tDégâts\t|\tPortée Courte/Portée Longue\t|\tRechargement\t|\tAttributs\n";
+
+        for(Weapon weapon : weapons){
+            res += weapon.getName() + "\t|\t" + weapon.getGroup() + "\t|\t" + weapon.getDamage() + "\t|\t" +
+                    weapon.getLowRange() + "/" + weapon.getHighRange() + "\t|\t" + weapon.getReload() + "\t|\t";
+
+            for(String attribute : weapon.getAttributes()){
+                res += attribute + ", ";
+            }
+
+            res = res.substring(0, res.length() - 2);
+
+            res += "\n";
+        }
+
+        res += "\n";
+
+        res += "Armures : \n";
+
+        int headArmour = 0, armsArmour = 0, bodyArmour = 0, legsArmour = 0;
+
+        res += "Nom\t|\tPoints d'armure\t|\tZones\n";
+
+        for(Armour armour : armours){
+            res += armour.getName() + "\t|\t" + armour.getArmourLevel() + "\t|\t";
+
+            for(String zone : armour.getCoveredZones()){
+                res += zone + ", ";
+                if(zone.equals("Tête")){
+                    headArmour += armour.getArmourLevel();
+                } else if(zone.equals("Bras")){
+                    armsArmour += armour.getArmourLevel();
+                } else if(zone.equals("Corps")){
+                    bodyArmour += armour.getArmourLevel();
+                } else if(zone.equals("Jambes")){
+                    legsArmour += armour.getArmourLevel();
+                }
+            }
+
+            res = res.substring(0, res.length() - 2);
+
+            res += "\n";
+        }
+
+        res += "Tête : " + headArmour + ", Bras gauche : " + armsArmour + ", Bras droit : " + armsArmour + ", " +
+                "Corps : " + bodyArmour + ", Jambe gauche : " + legsArmour + ", Jambe droite  : " + legsArmour;
+
+        return res;
     }
 }

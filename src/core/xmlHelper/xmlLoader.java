@@ -42,8 +42,8 @@ public class xmlLoader {
 
         try{
             document = sxb.build(new File("resources/skills.xml"));
-        }catch (JDOMException e) {}
-        catch (IOException e) {}
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -70,8 +70,8 @@ public class xmlLoader {
 
         try{
             document = sxb.build(new File("resources/talents.xml"));
-        }catch (JDOMException e) {}
-        catch (IOException e) {}
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -98,8 +98,8 @@ public class xmlLoader {
 
         try{
             document = sxb.build(new File("resources/equipments.xml"));
-        }catch (JDOMException e) {}
-        catch (IOException e) {}
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -133,8 +133,8 @@ public class xmlLoader {
 
         try{
             document = sxb.build(new File("resources/weapons.xml"));
-        }catch (JDOMException e) {}
-        catch (IOException e) {}
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -147,8 +147,8 @@ public class xmlLoader {
 
             eAttributes = currentWeapon.getChildren("attribute");
 
-            for(int i = 0; i < eAttributes.size() ; i++){
-                attributes.add(eAttributes.get(i).getText());
+            for (Element eAttribute : eAttributes) {
+                attributes.add(eAttribute.getText());
             }
 
             weapon = new Weapon(currentWeapon.getAttributeValue("name"), new Money(
@@ -181,8 +181,8 @@ public class xmlLoader {
 
         try{
             document = sxb.build(new File("resources/armours.xml"));
-        }catch (JDOMException e) {}
-        catch (IOException e) {}
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -195,8 +195,8 @@ public class xmlLoader {
 
             eZones = currentArmour.getChildren("zone");
 
-            for(int i = 0; i < eZones.size() ; i++){
-                zones.add(eZones.get(i).getText());
+            for (Element eZone : eZones) {
+                zones.add(eZone.getText());
             }
 
             armour = new Armour(currentArmour.getAttributeValue("name"), new Money(
@@ -204,7 +204,7 @@ public class xmlLoader {
                     Integer.parseInt(currentArmour.getAttributeValue("silverShillings")),
                     Integer.parseInt(currentArmour.getAttributeValue("brassPennies"))),
                     Integer.parseInt(currentArmour.getAttributeValue("enc")),
-                    Integer.parseInt("armourLevel"), zones);
+                    Integer.parseInt(currentArmour.getAttributeValue("armourLevel")), zones);
             armourLinkedList.add(armour);
         }
 
@@ -267,8 +267,8 @@ public class xmlLoader {
 
         try{
             document = sxb.build(new File("resources/races.xml"));
-        }catch (JDOMException e) {}
-        catch (IOException e) {}
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -335,7 +335,7 @@ public class xmlLoader {
             }
 
             eAge = currentRace.getChild("ageTable");
-            age = new int[eWeight.getChildren("eAge").size()];
+            age = new int[eAge.getChildren("eAge").size()];
 
             for(int i = 0 ; i < eAge.getChildren("eAge").size() ; i++){
                 age[i] = Integer.parseInt(eAge.getChildren("eAge").get(i).getText());
@@ -345,70 +345,76 @@ public class xmlLoader {
             skillTable = currentRace.getChild("skillsTable");
             eSkills = skillTable.getChildren("eSkills");
 
-            for(int i = 0 ; i < eSkills.size() ; i++){
+            for (Element eSkill : eSkills) {
                 currentSkillSet = new LinkedList<Skill>();
-                eSkillsChoice = eSkills.get(i).getChildren("choice");
-                for (int j = 0; j < eSkillsChoice.size() ; j++){
-                    currentSkillSet.add(World.searchSkillByName(eSkillsChoice.get(j).getText()));
+                eSkillsChoice = eSkill.getChildren("choice");
+                for (Element anESkillsChoice : eSkillsChoice) {
+                    currentSkillSet.add(World.searchSkillByName(anESkillsChoice.getText()));
                 }
 
                 skills.add(currentSkillSet);
             }
 
             talents = new LinkedList<LinkedList<Talent>>();
-            talentTable = currentRace.getChild("talentTable");
+            talentTable = currentRace.getChild("talentsTable");
             eTalents = talentTable.getChildren("eTalents");
 
-            for(int i = 0 ; i < eTalents.size() ; i++){
+            for (Element eTalent : eTalents) {
                 currentTalentSet = new LinkedList<Talent>();
-                eTalentsChoice = eSkills.get(i).getChildren("choice");
-                for (int j = 0; j < eTalentsChoice.size() ; j++){
-                    currentTalentSet.add(World.searchTalentByName(eTalentsChoice.get(j).getText()));
+                eTalentsChoice = eTalent.getChildren("choice");
+                for (Element anETalentsChoice : eTalentsChoice) {
+                    currentTalentSet.add(World.searchTalentByName(anETalentsChoice.getText()));
                 }
 
                 talents.add(currentTalentSet);
             }
 
             weapons = new LinkedList<LinkedList<Weapon>>();
-            weaponTable = currentRace.getChild("weaponTable");
+            weaponTable = currentRace.getChild("weaponsTable");
             eWeapons = weaponTable.getChildren("eWeapons");
 
-            for(int i = 0 ; i < eWeapons.size() ; i++){
+            for (Element eWeapon : eWeapons) {
                 currentWeaponSet = new LinkedList<Weapon>();
-                eWeaponsChoice = eWeapons.get(i).getChildren("choice");
-                for (int j = 0; j < eWeaponsChoice.size() ; j++){
-                    currentWeaponSet.add(World.searchWeaponByName(eWeaponsChoice.get(j).getText()));
+                eWeaponsChoice = eWeapon.getChildren("choice");
+                for (Element anEWeaponsChoice : eWeaponsChoice) {
+                    currentWeaponSet.add(World.searchWeaponByName(anEWeaponsChoice.getText()));
                 }
 
-                weapons.add(currentWeaponSet);
+                if (currentWeaponSet.size() != 0) {
+                    weapons.add(currentWeaponSet);
+                }
             }
 
             armours = new LinkedList<LinkedList<Armour>>();
-            armourTable = currentRace.getChild("armourTable");
+            armourTable = currentRace.getChild("armoursTable");
             eArmours = armourTable.getChildren("eArmours");
 
-            for(int i = 0 ; i < eArmours.size() ; i++){
+            for (Element eArmour : eArmours) {
                 currentArmourSet = new LinkedList<Armour>();
-                eArmoursChoice = eArmours.get(i).getChildren("choice");
-                for (int j = 0; j < eArmoursChoice.size() ; j++){
-                    currentArmourSet.add(World.searchArmourByName(eArmoursChoice.get(j).getText()));
+                eArmoursChoice = eArmour.getChildren("choice");
+                for (Element anEArmoursChoice : eArmoursChoice) {
+                    currentArmourSet.add(World.searchArmourByName(anEArmoursChoice.getText()));
                 }
 
-                armours.add(currentArmourSet);
+                if (currentArmourSet.size() != 0) {
+                    armours.add(currentArmourSet);
+                }
             }
 
             equipments = new LinkedList<LinkedList<Equipment>>();
-            equipmentTable = currentRace.getChild("equipmentTable");
+            equipmentTable = currentRace.getChild("equipmentsTable");
             eEquipments = equipmentTable.getChildren("eEquipments");
 
-            for(int i = 0 ; i < eEquipments.size() ; i++){
+            for (Element eEquipment : eEquipments) {
                 currentEquipmentSet = new LinkedList<Equipment>();
-                eEquipmentsChoice = eEquipments.get(i).getChildren("choice");
-                for (int j = 0; j < eEquipmentsChoice.size() ; j++){
-                    currentEquipmentSet.add(World.searchEquipmentByName(eEquipmentsChoice.get(j).getText()));
+                eEquipmentsChoice = eEquipment.getChildren("choice");
+                for (Element anEEquipmentsChoice : eEquipmentsChoice) {
+                    currentEquipmentSet.add(World.searchEquipmentByName(anEEquipmentsChoice.getText()));
                 }
 
-                equipments.add(currentEquipmentSet);
+                if (currentEquipmentSet.size() != 0) {
+                    equipments.add(currentEquipmentSet);
+                }
             }
 
             race = new Race(currentRace.getAttributeValue("name"), profile,
@@ -463,8 +469,8 @@ public class xmlLoader {
 
         try{
             document = sxb.build(new File("resources/careers.xml"));
-        }catch (JDOMException e) {}
-        catch (IOException e) {}
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -492,70 +498,76 @@ public class xmlLoader {
             skillTable = currentCareer.getChild("skillsTable");
             eSkills = skillTable.getChildren("eSkills");
 
-            for(int i = 0 ; i < eSkills.size() ; i++){
+            for (Element eSkill : eSkills) {
                 currentSkillSet = new LinkedList<Skill>();
-                eSkillsChoice = eSkills.get(i).getChildren("choice");
-                for (int j = 0; j < eSkillsChoice.size() ; j++){
-                    currentSkillSet.add(World.searchSkillByName(eSkillsChoice.get(j).getText()));
+                eSkillsChoice = eSkill.getChildren("choice");
+                for (Element anESkillsChoice : eSkillsChoice) {
+                    currentSkillSet.add(World.searchSkillByName(anESkillsChoice.getText()));
                 }
 
                 skills.add(currentSkillSet);
             }
 
             talents = new LinkedList<LinkedList<Talent>>();
-            talentTable = currentCareer.getChild("talentTable");
+            talentTable = currentCareer.getChild("talentsTable");
             eTalents = talentTable.getChildren("eTalents");
 
-            for(int i = 0 ; i < eTalents.size() ; i++){
+            for (Element eTalent : eTalents) {
                 currentTalentSet = new LinkedList<Talent>();
-                eTalentsChoice = eSkills.get(i).getChildren("choice");
-                for (int j = 0; j < eTalentsChoice.size() ; j++){
-                    currentTalentSet.add(World.searchTalentByName(eTalentsChoice.get(j).getText()));
+                eTalentsChoice = eTalent.getChildren("choice");
+                for (Element anETalentsChoice : eTalentsChoice) {
+                    currentTalentSet.add(World.searchTalentByName(anETalentsChoice.getText()));
                 }
 
                 talents.add(currentTalentSet);
             }
 
             weapons = new LinkedList<LinkedList<Weapon>>();
-            weaponTable = currentCareer.getChild("weaponTable");
+            weaponTable = currentCareer.getChild("weaponsTable");
             eWeapons = weaponTable.getChildren("eWeapons");
 
-            for(int i = 0 ; i < eWeapons.size() ; i++){
+            for (Element eWeapon : eWeapons) {
                 currentWeaponSet = new LinkedList<Weapon>();
-                eWeaponsChoice = eWeapons.get(i).getChildren("choice");
-                for (int j = 0; j < eWeaponsChoice.size() ; j++){
-                    currentWeaponSet.add(World.searchWeaponByName(eWeaponsChoice.get(j).getText()));
+                eWeaponsChoice = eWeapon.getChildren("choice");
+                for (Element anEWeaponsChoice : eWeaponsChoice) {
+                    currentWeaponSet.add(World.searchWeaponByName(anEWeaponsChoice.getText()));
                 }
 
-                weapons.add(currentWeaponSet);
+                if (currentWeaponSet.size() != 0) {
+                    weapons.add(currentWeaponSet);
+                }
             }
 
             armours = new LinkedList<LinkedList<Armour>>();
-            armourTable = currentCareer.getChild("armourTable");
+            armourTable = currentCareer.getChild("armoursTable");
             eArmours = armourTable.getChildren("eArmours");
 
-            for(int i = 0 ; i < eArmours.size() ; i++){
+            for (Element eArmour : eArmours) {
                 currentArmourSet = new LinkedList<Armour>();
-                eArmoursChoice = eArmours.get(i).getChildren("choice");
-                for (int j = 0; j < eArmoursChoice.size() ; j++){
-                    currentArmourSet.add(World.searchArmourByName(eArmoursChoice.get(j).getText()));
+                eArmoursChoice = eArmour.getChildren("choice");
+                for (Element anEArmoursChoice : eArmoursChoice) {
+                    currentArmourSet.add(World.searchArmourByName(anEArmoursChoice.getText()));
                 }
 
-                armours.add(currentArmourSet);
+                if (currentArmourSet.size() != 0) {
+                    armours.add(currentArmourSet);
+                }
             }
 
             equipments = new LinkedList<LinkedList<Equipment>>();
-            equipmentTable = currentCareer.getChild("equipmentTable");
+            equipmentTable = currentCareer.getChild("equipmentsTable");
             eEquipments = equipmentTable.getChildren("eEquipments");
 
-            for(int i = 0 ; i < eEquipments.size() ; i++){
+            for (Element eEquipment : eEquipments) {
                 currentEquipmentSet = new LinkedList<Equipment>();
-                eEquipmentsChoice = eEquipments.get(i).getChildren("choice");
-                for (int j = 0; j < eEquipmentsChoice.size() ; j++){
-                    currentEquipmentSet.add(World.searchEquipmentByName(eEquipmentsChoice.get(j).getText()));
+                eEquipmentsChoice = eEquipment.getChildren("choice");
+                for (Element anEEquipmentsChoice : eEquipmentsChoice) {
+                    currentEquipmentSet.add(World.searchEquipmentByName(anEEquipmentsChoice.getText()));
                 }
 
-                equipments.add(currentEquipmentSet);
+                if (currentEquipmentSet.size() != 0) {
+                    equipments.add(currentEquipmentSet);
+                }
             }
 
             career = new Career(currentCareer.getAttributeValue("name"), profile, skills, talents, equipments, weapons, armours);

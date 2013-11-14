@@ -1,5 +1,8 @@
 package textGui;
 
+import core.*;
+import core.Character;
+
 import java.util.Random;
 
 /**
@@ -13,8 +16,10 @@ import java.util.Random;
  */
 public class Main {
     public static void main(String[] args){
-        Random r = new Random();
+        World.loadAll();
 
-        System.out.println(r.nextInt(0));
+        core.Character randomCharacter = new Character("Random Char", "Random PLayer", World.searchRaceByName("Humain"), World.searchCareerByName("Agitateur"));
+
+        System.out.println(randomCharacter);
     }
 }

@@ -154,12 +154,12 @@
       </eTalents>
     </talentsTable>
     <weaponsTable>
-      <eWeapon>
+      <eWeapons>
         <choice>Dague</choice>
-      </eWeapon>
-      <eWeapon>
-        <choice>Epee</choice>
-      </eWeapon>
+      </eWeapons>
+      <eWeapons>
+        <choice>Arme à une main</choice>
+      </eWeapons>
     </weaponsTable>
     <armoursTable>
       <eArmours />
@@ -363,12 +363,12 @@
       </eTalents>
     </talentsTable>
     <weaponsTable>
-      <eWeapon>
+      <eWeapons>
         <choice>Dague</choice>
-      </eWeapon>
-      <eWeapon>
-        <choice>Epee</choice>
-      </eWeapon>
+      </eWeapons>
+      <eWeapons>
+        <choice>Arme à une main</choice>
+      </eWeapons>
     </weaponsTable>
     <armoursTable>
       <eArmours />
@@ -580,12 +580,12 @@
       </eTalents>
     </talentsTable>
     <weaponsTable>
-      <eWeapon>
+      <eWeapons>
         <choice>Dague</choice>
-      </eWeapon>
-      <eWeapon>
-        <choice>Epee</choice>
-      </eWeapon>
+      </eWeapons>
+      <eWeapons>
+        <choice>Arme à une main</choice>
+      </eWeapons>
     </weaponsTable>
     <armoursTable>
       <eArmours />
@@ -771,12 +771,12 @@
       </eTalents>
     </talentsTable>
     <weaponsTable>
-      <eWeapon>
+      <eWeapons>
         <choice>Dague</choice>
-      </eWeapon>
-      <eWeapon>
-        <choice>Epee</choice>
-      </eWeapon>
+      </eWeapons>
+      <eWeapons>
+        <choice>Arme à une main</choice>
+      </eWeapons>
     </weaponsTable>
     <armoursTable>
       <eArmours />

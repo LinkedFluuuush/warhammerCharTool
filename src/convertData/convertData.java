@@ -22,30 +22,31 @@ public class convertData{
         File mainFolder = new File("oldResources");
         File[] files = mainFolder.listFiles();
 
-        for(int i = 0; i < files.length; i++){
-            if(files[i].getName().equals("Armes")){
-                convertWeapons(files[i]);
+        assert files != null;
+        for (File file : files) {
+            if (file.getName().equals("Armes")) {
+                convertWeapons(file);
                 System.out.println("Conversion des armes effectuée.");
-            } else if(files[i].getName().equals("Armures")){
-                convertArmours(files[i]);
+            } else if (file.getName().equals("Armures")) {
+                convertArmours(file);
                 System.out.println("Conversion des armures effectuée.");
-            } else if(files[i].getName().equals("Competences")){
-                convertSkills(files[i]);
+            } else if (file.getName().equals("Competences")) {
+                convertSkills(file);
                 System.out.println("Conversion des compétences effectuée.");
-            } else if(files[i].getName().equals("Objets")){
-                convertEquipment(files[i]);
+            } else if (file.getName().equals("Objets")) {
+                convertEquipment(file);
                 System.out.println("Conversion des objets effectuée.");
-            } else if(files[i].getName().equals("Talents")){
-                convertTalents(files[i]);
+            } else if (file.getName().equals("Talents")) {
+                convertTalents(file);
                 System.out.println("Conversion des talents effectuée.");
-            } else if(files[i].getName().equals("Carrieres")){
-                convertCareers(files[i]);
+            } else if (file.getName().equals("Carrieres")) {
+                convertCareers(file);
                 System.out.println("Conversion des carrières effectuée.");
-            } else if(files[i].getName().equals("Races")){
-                convertRace(files[i]);
+            } else if (file.getName().equals("Races")) {
+                convertRace(file);
                 System.out.println("Conversion des races effectuée.");
             } else {
-                System.out.println("Fichier non reconnu : " + files[i].getName() + ".");
+                System.out.println("Fichier non reconnu : " + file.getName() + ".");
             }
         }
     }
@@ -78,9 +79,9 @@ public class convertData{
                 weapon.setAttribute("reload", s1[7]);
 
                 if(!att[0].equals("Aucun")){
-                    for(int i = 0; i < att.length ; i++){
+                    for (String anAtt : att) {
                         attribute = new Element("attribute");
-                        attribute.setText(att[i]);
+                        attribute.setText(anAtt);
                         weapon.addContent(attribute);
                     }
                 }
@@ -122,7 +123,7 @@ public class convertData{
                 zones=s.substring(s.lastIndexOf(":")+1).split(",");
                 s1=s.split(":");
 
-                armour = new Element("Armour");
+                armour = new Element("armour");
 
                 armour.setAttribute("name", s1[0]);
                 armour.setAttribute("enc", s1[1]);
@@ -133,9 +134,9 @@ public class convertData{
                 armour.setAttribute("silverShillings", "" + price[1]);
                 armour.setAttribute("brassPennies", "" + price[2]);
 
-                for(int i = 0; i < zones.length ; i++){
+                for (String zone1 : zones) {
                     zone = new Element("zone");
-                    zone.setText(zones[i]);
+                    zone.setText(zone1);
                     armour.addContent(zone);
                 }
 
@@ -148,8 +149,8 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/armours.xml"));
-        } catch (FileNotFoundException e) {
-        } catch (IOException e) {
+        } catch (FileNotFoundException ignored) {
+        } catch (IOException ignored) {
         }
     }
 
@@ -186,9 +187,9 @@ public class convertData{
             br.close();
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
-            xmlOutputter.output(document, new FileOutputStream("resources/equipment.xml"));
-        } catch (FileNotFoundException e) {
-        } catch (IOException e) {
+            xmlOutputter.output(document, new FileOutputStream("resources/equipments.xml"));
+        } catch (FileNotFoundException ignored) {
+        } catch (IOException ignored) {
         }
     }
 
@@ -236,8 +237,8 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/skills.xml"));
-        } catch (FileNotFoundException e) {
-        } catch (IOException e) {
+        } catch (FileNotFoundException ignored) {
+        } catch (IOException ignored) {
         }
     }
 
@@ -250,7 +251,6 @@ public class convertData{
 
         String s;
         String[] s1;
-        int n;
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -270,8 +270,8 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/talents.xml"));
-        } catch (FileNotFoundException e) {
-        } catch (IOException e) {
+        } catch (FileNotFoundException ignored) {
+        } catch (IOException ignored) {
         }
     }
 
@@ -320,9 +320,9 @@ public class convertData{
 
                 Element wounds = new Element("wounds");
 
-                for(int i = 0; i < elts.length ; i++){
+                for (String elt : elts) {
                     Element choice = new Element("choice");
-                    choice.setText(elts[i]);
+                    choice.setText(elt);
                     wounds.addContent(choice);
                 }
 
@@ -333,9 +333,9 @@ public class convertData{
 
                 Element fate = new Element("fate");
 
-                for(int i = 0; i < elts.length ; i++){
+                for (String elt : elts) {
                     Element choice = new Element("choice");
-                    choice.setText(elts[i]);
+                    choice.setText(elt);
                     fate.addContent(choice);
                 }
                 race.addContent(fate);
@@ -428,9 +428,9 @@ public class convertData{
 
                     String[] choices = competences.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
+                    for (String choice1 : choices) {
                         Element choice = new Element("choice");
-                        choice.setText(choices[i]);
+                        choice.setText(choice1);
                         eCompetences.addContent(choice);
                     }
 
@@ -449,9 +449,9 @@ public class convertData{
 
                     String[] choices = talents.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
+                    for (String choice1 : choices) {
                         Element choice = new Element("choice");
-                        choice.setText(choices[i]);
+                        choice.setText(choice1);
                         eTalents.addContent(choice);
                     }
 
@@ -466,14 +466,14 @@ public class convertData{
                 Element weaponsTable = new Element("weaponsTable");
 
                 for(String weapon : elts){
-                    Element eWeapon = new Element("eWeapon");
+                    Element eWeapon = new Element("eWeapons");
 
                     String[] choices = weapon.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
-                        if(!choices[i].equals("") && choices[i] != null){
+                    for (String choice1 : choices) {
+                        if (!choice1.equals("") && choice1 != null) {
                             Element choice = new Element("choice");
-                            choice.setText(choices[i]);
+                            choice.setText(choice1);
                             eWeapon.addContent(choice);
                         }
                     }
@@ -493,10 +493,10 @@ public class convertData{
 
                     String[] choices = armour.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
-                        if(!choices[i].equals("") && choices[i] != null){
+                    for (String choice1 : choices) {
+                        if (!choice1.equals("") && choice1 != null) {
                             Element choice = new Element("choice");
-                            choice.setText(choices[i]);
+                            choice.setText(choice1);
                             eArmours.addContent(choice);
                         }
                     }
@@ -516,10 +516,10 @@ public class convertData{
 
                     String[] choices = equipment.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
-                        if(!choices[i].equals("") && choices[i] != null){
+                    for (String choice1 : choices) {
+                        if (!choice1.equals("") && choice1 != null) {
                             Element choice = new Element("choice");
-                            choice.setText(choices[i]);
+                            choice.setText(choice1);
                             eEquipments.addContent(choice);
                         }
                     }
@@ -533,16 +533,15 @@ public class convertData{
 
                 br.close();
 
-            } catch (FileNotFoundException e) {
-            } catch (IOException e) {
+            } catch (FileNotFoundException ignored) {
+            } catch (IOException ignored) {
             }
         }
 
         try {
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/races.xml"));
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IOException ignored) {
         }
 
     }
@@ -594,9 +593,9 @@ public class convertData{
 
                     String[] choices = competences.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
+                    for (String choice1 : choices) {
                         Element choice = new Element("choice");
-                        choice.setText(choices[i]);
+                        choice.setText(choice1);
                         eCompetences.addContent(choice);
                     }
 
@@ -615,9 +614,9 @@ public class convertData{
 
                     String[] choices = talents.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
+                    for (String choice1 : choices) {
                         Element choice = new Element("choice");
-                        choice.setText(choices[i]);
+                        choice.setText(choice1);
                         eTalents.addContent(choice);
                     }
 
@@ -632,14 +631,14 @@ public class convertData{
                 Element weaponsTable = new Element("weaponsTable");
 
                 for(String weapon : elts){
-                    Element eWeapon = new Element("eWeapon");
+                    Element eWeapon = new Element("eWeapons");
 
                     String[] choices = weapon.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
-                        if(!choices[i].equals("") && choices[i] != null){
+                    for (String choice1 : choices) {
+                        if (!choice1.equals("") && choice1 != null) {
                             Element choice = new Element("choice");
-                            choice.setText(choices[i]);
+                            choice.setText(choice1);
                             eWeapon.addContent(choice);
                         }
                     }
@@ -659,10 +658,10 @@ public class convertData{
 
                     String[] choices = armour.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
-                        if(!choices[i].equals("") && choices[i] != null){
+                    for (String choice1 : choices) {
+                        if (!choice1.equals("") && choice1 != null) {
                             Element choice = new Element("choice");
-                            choice.setText(choices[i]);
+                            choice.setText(choice1);
                             eArmours.addContent(choice);
                         }
                     }
@@ -682,10 +681,10 @@ public class convertData{
 
                     String[] choices = equipment.split(":");
 
-                    for(int i = 0 ; i < choices.length ; i++){
-                        if(!choices[i].equals("") && choices[i] != null){
+                    for (String choice1 : choices) {
+                        if (!choice1.equals("") && choice1 != null) {
                             Element choice = new Element("choice");
-                            choice.setText(choices[i]);
+                            choice.setText(choice1);
                             eEquipments.addContent(choice);
                         }
                     }
@@ -697,16 +696,15 @@ public class convertData{
 
                 root.addContent(career);
 
-            } catch (FileNotFoundException e) {
-            } catch (IOException e) {
+            } catch (FileNotFoundException ignored) {
+            } catch (IOException ignored) {
             }
         }
 
         try {
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/careers.xml"));
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IOException ignored) {
         }
     }
 

@@ -60,4 +60,9 @@ public class Money {
     public void setBrassPennies(int brassPennies) {
         this.brassPennies = brassPennies;
     }
+
+    @Override
+    public String toString(){
+        return this.getGoldenCrowns() + "Co, " + this.getSilverShillings() + "Pa, " + this.getBrassPennies() + "Sc.";
+    }
 }

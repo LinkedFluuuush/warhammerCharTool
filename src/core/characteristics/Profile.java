@@ -232,4 +232,16 @@ public class Profile {
     public void setFp(int fp) {
         this.fp = fp;
     }
+
+    @Override
+    public String toString(){
+        String res = "Caratéristiques\n";
+        res += "CC\tCT\tF\tE\tAg\tInt\tFM\tSoc\n";
+        res += this.getWs() + "\t" + this.getBs() + "\t" + this.getS() + "\t" + this.getT() + "\t" + this.getAg() +
+                "\t" + this.getIntel() + "\t" + this.getWp() + "\t" + this.getFel() + "\n";
+        res += "A\tB\tBF\tBE\tM\tMag\tPF\tPD\n";
+        res += this.getA() + "\t" + this.getW() + "\t" + this.getSb() + "\t" + this.getTb() + "\t" + this.getM() +
+                "\t" + this.getMag() + "\t" + this.getIp() + "\t" + this.getFp() + "\n";
+        return res;
+    }
 }

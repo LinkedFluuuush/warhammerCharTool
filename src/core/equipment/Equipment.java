@@ -48,4 +48,9 @@ public class Equipment {
     public void setPrice(Money price) {
         this.price = price;
     }
+
+    @Override
+    public String toString(){
+        return this.name + "\t" + this.enc + "\t" + this.getPrice();
+    }
 }

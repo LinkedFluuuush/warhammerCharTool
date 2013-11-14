@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <armours>
-  <Armour name="Armure de cuir complète" enc="80" goldenCrowns="29" silverShillings="3" brassPennies="4" armourLevel="1">
+  <armour name="Armure de cuir complète" enc="80" goldenCrowns="29" silverShillings="3" brassPennies="4" armourLevel="1">
     <zone>Tête</zone>
     <zone>Corps</zone>
     <zone>Bras</zone>
     <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Calotte de cuir" enc="10" goldenCrowns="3" silverShillings="0" brassPennies="0" armourLevel="1">
+  </armour>
+  <armour name="Calotte de cuir" enc="10" goldenCrowns="3" silverShillings="0" brassPennies="0" armourLevel="1">
     <zone>Tête</zone>
-  </Armour>
-  <Armour name="Gilet de cuir" enc="40" goldenCrowns="6" silverShillings="0" brassPennies="0" armourLevel="1">
+  </armour>
+  <armour name="Gilet de cuir" enc="40" goldenCrowns="6" silverShillings="0" brassPennies="0" armourLevel="1">
     <zone>Corps</zone>
-  </Armour>
-  <Armour name="Jambières de cuir" enc="20" goldenCrowns="0" silverShillings="0" brassPennies="1" armourLevel="2400">
+  </armour>
+  <armour name="Jambières de cuir" enc="20" goldenCrowns="10" silverShillings="0" brassPennies="0" armourLevel="1">
     <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Veste de cuir" enc="50" goldenCrowns="12" silverShillings="0" brassPennies="0" armourLevel="1">
+  </armour>
+  <armour name="Veste de cuir" enc="50" goldenCrowns="12" silverShillings="0" brassPennies="0" armourLevel="1">
     <zone>Corps</zone>
     <zone>Bras</zone>
-  </Armour>
-  <Armour name="Armure de mailles complète" enc="210" goldenCrowns="170" silverShillings="0" brassPennies="0" armourLevel="3">
-    <zone>Tête</zone>
-    <zone>Corps</zone>
-    <zone>Bras</zone>
-    <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Cagoule de mailles" enc="30" goldenCrowns="20" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Tête</zone>
-  </Armour>
-  <Armour name="Chemise de mailles" enc="80" goldenCrowns="95" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Corps</zone>
-    <zone>Bras</zone>
-  </Armour>
-  <Armour name="Gilet de mailles" enc="60" goldenCrowns="60" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Corps</zone>
-  </Armour>
-  <Armour name="Jambières de mailles" enc="40" goldenCrowns="20" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Manteau de mailles" enc="80" goldenCrowns="75" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Corps</zone>
-    <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Manteau de mailles à manches" enc="100" goldenCrowns="130" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Corps</zone>
-    <zone>Bras</zone>
-    <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Armure de plaques complète" enc="395" goldenCrowns="400" silverShillings="0" brassPennies="0" armourLevel="5">
+  </armour>
+  <armour name="Armure de mailles complète" enc="210" goldenCrowns="170" silverShillings="0" brassPennies="0" armourLevel="3">
     <zone>Tête</zone>
     <zone>Corps</zone>
     <zone>Bras</zone>
     <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Brassards d'acier" enc="30" goldenCrowns="60" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Bras</zone>
-  </Armour>
-  <Armour name="Casque" enc="40" goldenCrowns="30" silverShillings="0" brassPennies="0" armourLevel="2">
+  </armour>
+  <armour name="Cagoule de mailles" enc="30" goldenCrowns="20" silverShillings="0" brassPennies="0" armourLevel="2">
     <zone>Tête</zone>
-  </Armour>
-  <Armour name="Jambières d'acier" enc="40" goldenCrowns="70" silverShillings="0" brassPennies="0" armourLevel="2">
-    <zone>Jambes</zone>
-  </Armour>
-  <Armour name="Plastron" enc="75" goldenCrowns="70" silverShillings="0" brassPennies="0" armourLevel="2">
+  </armour>
+  <armour name="Chemise de mailles" enc="80" goldenCrowns="95" silverShillings="0" brassPennies="0" armourLevel="2">
     <zone>Corps</zone>
-  </Armour>
+    <zone>Bras</zone>
+  </armour>
+  <armour name="Gilet de mailles" enc="60" goldenCrowns="60" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Corps</zone>
+  </armour>
+  <armour name="Jambières de mailles" enc="40" goldenCrowns="20" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Jambes</zone>
+  </armour>
+  <armour name="Manteau de mailles" enc="80" goldenCrowns="75" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Corps</zone>
+    <zone>Jambes</zone>
+  </armour>
+  <armour name="Manteau de mailles à manches" enc="100" goldenCrowns="130" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Corps</zone>
+    <zone>Bras</zone>
+    <zone>Jambes</zone>
+  </armour>
+  <armour name="Armure de plaques complète" enc="395" goldenCrowns="400" silverShillings="0" brassPennies="0" armourLevel="5">
+    <zone>Tête</zone>
+    <zone>Corps</zone>
+    <zone>Bras</zone>
+    <zone>Jambes</zone>
+  </armour>
+  <armour name="Brassards d'acier" enc="30" goldenCrowns="60" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Bras</zone>
+  </armour>
+  <armour name="Casque" enc="40" goldenCrowns="30" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Tête</zone>
+  </armour>
+  <armour name="Jambières d'acier" enc="40" goldenCrowns="70" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Jambes</zone>
+  </armour>
+  <armour name="Plastron" enc="75" goldenCrowns="70" silverShillings="0" brassPennies="0" armourLevel="2">
+    <zone>Corps</zone>
+  </armour>
 </armours>

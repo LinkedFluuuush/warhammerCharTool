@@ -36,12 +36,13 @@ public class World {
         ARMOURS = xmlLoader.armourLoader();
         EQUIPMENTS = xmlLoader.equipmentLoader();
         RACES = xmlLoader.raceLoader();
+        CAREERS = xmlLoader.careerLoader();
     }
 
     public static Skill searchSkillByName(String name){
-        for(int i = 0; i < SKILLS.size() ; i++){
-            if(SKILLS.get(i).getName().equals(name)){
-                return SKILLS.get(i);
+        for (Skill SKILL : SKILLS) {
+            if (SKILL.getName().equals(name)) {
+                return SKILL;
             }
         }
 
@@ -49,9 +50,9 @@ public class World {
     }
 
     public static Talent searchTalentByName(String name){
-        for(int i = 0; i < TALENTS.size() ; i++){
-            if(TALENTS.get(i).getName().equals(name)){
-                return TALENTS.get(i);
+        for (Talent TALENT : TALENTS) {
+            if (TALENT.getName().equals(name)) {
+                return TALENT;
             }
         }
 
@@ -59,9 +60,9 @@ public class World {
     }
 
     public static Weapon searchWeaponByName(String name){
-        for(int i = 0; i < WEAPONS.size() ; i++){
-            if(WEAPONS.get(i).getName().equals(name)){
-                return WEAPONS.get(i);
+        for (Weapon WEAPON : WEAPONS) {
+            if (WEAPON.getName().equals(name)) {
+                return WEAPON;
             }
         }
 
@@ -69,9 +70,9 @@ public class World {
     }
 
     public static Armour searchArmourByName(String name){
-        for(int i = 0; i < ARMOURS.size() ; i++){
-            if(ARMOURS.get(i).getName().equals(name)){
-                return ARMOURS.get(i);
+        for (Armour ARMOUR : ARMOURS) {
+            if (ARMOUR.getName().equals(name)) {
+                return ARMOUR;
             }
         }
 
@@ -79,9 +80,9 @@ public class World {
     }
 
     public static Equipment searchEquipmentByName(String name){
-        for(int i = 0; i < EQUIPMENTS.size() ; i++){
-            if(EQUIPMENTS.get(i).getName().equals(name)){
-                return EQUIPMENTS.get(i);
+        for (Equipment EQUIPMENT : EQUIPMENTS) {
+            if (EQUIPMENT.getName().equals(name)) {
+                return EQUIPMENT;
             }
         }
 
@@ -89,9 +90,9 @@ public class World {
     }
 
     public static Race searchRaceByName(String name){
-        for(int i = 0; i < RACES.size() ; i++){
-            if(RACES.get(i).getName().equals(name)){
-                return RACES.get(i);
+        for (Race RACE : RACES) {
+            if (RACE.getName().equals(name)) {
+                return RACE;
             }
         }
 
@@ -99,9 +100,9 @@ public class World {
     }
 
     public static Career searchCareerByName(String name){
-        for(int i = 0; i < CAREERS.size() ; i++){
-            if(CAREERS.get(i).getName().equals(name)){
-                return CAREERS.get(i);
+        for (Career CAREER : CAREERS) {
+            if (CAREER.getName().equals(name)) {
+                return CAREER;
             }
         }
 

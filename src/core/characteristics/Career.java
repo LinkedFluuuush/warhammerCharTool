@@ -82,5 +82,93 @@ public class Career {
         String res = "Carrière : " + name + "\n";
         res += profile + "\n";
         res += "Compétences : \n";
+
+        for(int i = 0; i < skills.size() ; i++){
+            for (int j = 0 ; j < skills.get(i).size() ; j++){
+                res += skills.get(i).get(j).getName();
+
+                if(j < skills.get(i).size() - 1){
+                    res += " ou ";
+                }
+            }
+
+            if(i < skills.size() - 1){
+                res += ", ";
+            } else {
+                res += "\n";
+            }
+        }
+
+        res += "Talents : \n";
+
+        for(int i = 0; i < talents.size() ; i++){
+            for (int j = 0 ; j < talents.get(i).size() ; j++){
+                res += talents.get(i).get(j).getName();
+
+                if(j < talents.get(i).size() - 1){
+                    res += " ou ";
+                }
+            }
+
+            if(i < talents.size() - 1){
+                res += ", ";
+            } else {
+                res += "\n";
+            }
+        }
+
+        res += "Equipement : \n";
+
+        for(int i = 0; i < equipments.size() ; i++){
+            for (int j = 0 ; j < equipments.get(i).size() ; j++){
+                res += equipments.get(i).get(j).getName();
+
+                if(j < equipments.get(i).size() - 1){
+                    res += " ou ";
+                }
+            }
+
+            if(i < equipments.size() - 1){
+                res += ", ";
+            }
+        }
+
+        if(armours.size() != 0){
+            res += ", ";
+        }
+
+        for(int i = 0; i < armours.size() ; i++){
+            for (int j = 0 ; j < armours.get(i).size() ; j++){
+                res += armours.get(i).get(j).getName();
+
+                if(j < armours.get(i).size() - 1){
+                    res += " ou ";
+                }
+            }
+
+            if(i < armours.size() - 1){
+                res += ", ";
+            }
+        }
+
+        if(weapons.size() != 0){
+            res += ", ";
+        }
+
+        for(int i = 0; i < weapons.size() ; i++){
+            for (int j = 0 ; j < weapons.get(i).size() ; j++){
+                res += weapons.get(i).get(j).getName();
+
+                if(j < weapons.get(i).size() - 1){
+                    res += " ou ";
+                }
+            }
+
+            if(i < weapons.size() - 1){
+                res += ", ";
+            }
+        }
+
+        return res;
     }
 }
