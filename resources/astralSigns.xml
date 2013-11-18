@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<astralSigns>
+  <astralSign name="Wymund l'Anachorète" description="Signe d'Endurance" />
+  <astralSign name="La Grande Croix" description="Signe de Clairvoyance" />
+  <astralSign name="Le Trait du Peintre" description="Signe de Précision et de Perfection" />
+  <astralSign name="Gnuthus le Buffle" description="Signe du Dévouement et de la Loyauté" />
+  <astralSign name="Dragomas le Dragon" description="Signe de Bravoure" />
+  <astralSign name="Le Crépuscule" description="Signe d'Illusion et de Mystère" />
+  <astralSign name="Le Fourreau de Grungni" description="Signe des Armes et de la Guerre" />
+  <astralSign name="Mammit le Sage" description="Signe de Sagesse" />
+  <astralSign name="Mummit le Fou" description="Signe d'Intuition" />
+  <astralSign name="Les Deux Boeufs" description="Signe de la Terre et de la Belle Ouvrage" />
+  <astralSign name="Le Danseur" description="Signe de Séduction et d'Amour" />
+  <astralSign name="Le Tambour" description="Signe du Plaisir et des Excès" />
+  <astralSign name="Le Flutiste" description="Signe du Roublard" />
+  <astralSign name="Vobist le Pâle" description="Signe de Doute et d'Incertitude" />
+  <astralSign name="La Charette Brisée" description="Signe de Talent et d'Apprentissage" />
+  <astralSign name="La Chèvre Sauvage" description="Signe de Passions Interdites" />
+  <astralSign name="Le Chaudron de Rhya" description="Signe de Miséricorde, Mort et Création" />
+  <astralSign name="Cackelfax le Coq" description="Signe de Richesse et de Négoce" />
+  <astralSign name="Le Grimoire" description="Signe de Compétence et d'Etude" />
+  <astralSign name="L'Etoile du Sorcier" description="Signe de Magie" />
+</astralSigns>

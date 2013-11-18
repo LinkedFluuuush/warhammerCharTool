@@ -19,6 +19,6 @@ public class Main {
 
         //System.out.println(randomCharacter);
 
-        System.out.println(World.searchRaceByName("Nain").getWorshipedGods());
+        System.out.println(World.ASTRALSIGNS);
     }
 }

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gods>
+  <god name="Manann">
+    <domain>Les océans</domain>
+    <domain>Les mers</domain>
+    <domain>Les marées</domain>
+    <worshiper>Les pêcheurs</worshiper>
+    <worshiper>Les marins</worshiper>
+    <worshiper>Les voyageurs</worshiper>
+  </god>
+  <god name="Morr">
+    <domain>La mort</domain>
+    <domain>Les rêves</domain>
+    <worshiper>Ceux qui portent le deuil</worshiper>
+    <worshiper>Les rêveurs</worshiper>
+    <worshiper>Les sorciers d'Améthyste</worshiper>
+  </god>
+  <god name="Myrmidia">
+    <domain>La science de la guerre</domain>
+    <domain>L'Estalie</domain>
+    <domain>La Tilée</domain>
+    <worshiper>Les soldats</worshiper>
+    <worshiper>Les stratèges</worshiper>
+    <worshiper>Les officiers</worshiper>
+  </god>
+  <god name="Ranald">
+    <domain>Les voleurs</domain>
+    <domain>Les escrocs</domain>
+    <domain>La chance</domain>
+    <worshiper>Les voyous</worshiper>
+    <worshiper>Les joueurs</worshiper>
+    <worshiper>Les opprimés</worshiper>
+  </god>
+  <god name="Rhya">
+    <domain>La fertilité</domain>
+    <domain>La terre</domain>
+    <domain>L'amour</domain>
+    <worshiper>Les fermiers</worshiper>
+    <worshiper>Les sorciers de Jade</worshiper>
+    <worshiper>Les paysans</worshiper>
+  </god>
+  <god name="Shallya">
+    <domain>La guérison</domain>
+    <domain>La compassion</domain>
+    <domain>La naissance</domain>
+    <worshiper>Les pauvres</worshiper>
+    <worshiper>Les malades</worshiper>
+    <worshiper>Les femmes</worshiper>
+  </god>
+  <god name="Sigmar">
+    <domain>L'Empire</domain>
+    <domain>La protection</domain>
+    <worshiper>Les citoyens de l'Empire</worshiper>
+    <worshiper>La noblesse</worshiper>
+    <worshiper>L'armée</worshiper>
+  </god>
+  <god name="Taal">
+    <domain>La nature</domain>
+    <domain>Les contrées sauvages</domain>
+    <worshiper>Les sorciers d'Ambre</worshiper>
+    <worshiper>Les paysans</worshiper>
+    <worshiper>Les forestiers</worshiper>
+  </god>
+  <god name="Ulric">
+    <domain>Les batailles</domain>
+    <domain>Les loups</domain>
+    <domain>L'hiver</domain>
+    <worshiper>Les guerriers</worshiper>
+    <worshiper>La population de Middenheim</worshiper>
+  </god>
+  <god name="Verena">
+    <domain>L'apprentissage</domain>
+    <domain>La justice</domain>
+    <worshiper>Les scribes</worshiper>
+    <worshiper>Les sorciers Célestes</worshiper>
+    <worshiper>Les magistrats</worshiper>
+  </god>
+  <god name="Nurgle">
+    <domain>La maladie</domain>
+    <domain>La peste</domain>
+    <domain>La putréfaction</domain>
+    <worshiper>Les malades</worshiper>
+    <worshiper>Les désespérés</worshiper>
+    <worshiper>Les médecins avides de connaissance</worshiper>
+  </god>
+  <god name="Khorne">
+    <domain>La barbarie</domain>
+    <domain>Le sang</domain>
+    <worshiper>Les guerriers barbares</worshiper>
+    <worshiper>Les Norses</worshiper>
+  </god>
+  <god name="Slaanesh">
+    <domain>La perversité</domain>
+    <domain>Les plaisirs interdits</domain>
+    <domain>La drogue</domain>
+    <domain>Les déviances</domain>
+    <worshiper>Les nobles</worshiper>
+    <worshiper>Les pervers</worshiper>
+    <worshiper>Les hermaphrodites</worshiper>
+  </god>
+  <god name="Tzeentch">
+    <domain>La magie</domain>
+    <domain>Le changement</domain>
+    <domain>La divination</domain>
+    <worshiper>Les mages avides de pouvoir</worshiper>
+    <worshiper>Les désespérés</worshiper>
+  </god>
+</gods>
