@@ -42,10 +42,13 @@ public class MoneyRandomizer {
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
+        int base;
 
-        System.out.println("Combien d'or ?");
-        int base = sc.nextInt();
+        do{
+            System.out.println("Combien d'or ?");
+            base = sc.nextInt();
 
-        System.out.println(randomMoney(base));
+        System.out.println(randomMoney(base) + "\n");
+        } while(base != 0);
     }
 }

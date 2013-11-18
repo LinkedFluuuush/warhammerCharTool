@@ -570,11 +570,59 @@ public class xmlLoader {
                 }
             }
 
-            career = new Career(currentCareer.getAttributeValue("name"), profile, skills, talents, equipments, weapons, armours);
+            career = new Career(currentCareer.getAttributeValue("name"), profile, skills, talents, equipments, weapons, armours, Integer.parseInt(currentCareer.getAttributeValue("type")));
 
             careerLinkedList.add(career);
         }
 
         return careerLinkedList;
+    }
+
+    public static void careerLinker(Career career){
+        SAXBuilder sxb = new SAXBuilder();
+        List<Element> careers;
+        Element currentCareer;
+        Iterator<Element> iteratorCareers;
+
+        try{
+            document = sxb.build(new File("resources/careers.xml"));
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
+
+        root = document.getRootElement();
+
+        careers = root.getChildren("career");
+
+        currentCareer = searchElementCareerByName(careers, career.getName());
+
+        LinkedList<Career> accessCareer = new LinkedList<Career>();
+
+        List<Element> eAccessCareers = currentCareer.getChild("accessTable").getChildren();
+
+        for(Element element : eAccessCareers){
+            accessCareer.add(World.searchCareerByName(element.getText()));
+        }
+        LinkedList<Career> openingCareer = new LinkedList<Career>();
+
+        List<Element> eOpeningCareers = currentCareer.getChild("openingTable").getChildren();
+
+        for(Element element : eOpeningCareers){
+            openingCareer.add(World.searchCareerByName(element.getText()));
+        }
+
+        career.setAccessCareers(accessCareer);
+        career.setOpeningCareers(openingCareer);
+    }
+
+    private static Element searchElementCareerByName(List<Element> careers, String name){
+        Element career = null;
+
+        for(Element currentCareer : careers){
+            if(currentCareer.getAttributeValue("name").equals(name)){
+                career = currentCareer;
+            }
+        }
+
+        return career;
     }
 }

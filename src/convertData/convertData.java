@@ -694,6 +694,38 @@ public class convertData{
 
                 career.addContent(equipmentsTable);
 
+                Element accessTable = new Element("accessTable");
+                Element accessCareer;
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                for(String access : elts){
+                    accessCareer = new Element("accessCareer");
+                    accessCareer.setText(access);
+                    accessTable.addContent(accessCareer);
+                }
+
+                career.addContent(accessTable);
+
+                Element openingTable = new Element("openingTable");
+                Element openingCareer;
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                for(String opening : elts){
+                    openingCareer = new Element("openingCareer");
+                    openingCareer.setText(opening);
+                    openingTable.addContent(openingCareer);
+                }
+
+                career.addContent(openingTable);
+
+                line = br.readLine();
+
+                career.setAttribute("type", line.charAt(0) + "");
+
                 root.addContent(career);
 
             } catch (FileNotFoundException ignored) {

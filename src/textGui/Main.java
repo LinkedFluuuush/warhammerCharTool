@@ -20,6 +20,8 @@ public class Main {
 
         core.Character randomCharacter = new Character("Random Player", World.searchRaceByName("Humain"), World.searchCareerByName("Agitateur"));
 
-        System.out.println(randomCharacter);
+        //System.out.println(randomCharacter);
+
+        System.out.println(World.searchCareerByName("Agitateur"));
     }
 }

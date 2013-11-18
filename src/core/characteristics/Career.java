@@ -14,6 +14,7 @@ import java.util.LinkedList;
 public class Career {
     private String name;
     private Profile profile;
+    private int type;
 
     private LinkedList<LinkedList<Skill>> skills;
     private LinkedList<LinkedList<Talent>> talents;
@@ -21,9 +22,12 @@ public class Career {
     private LinkedList<LinkedList<Weapon>> weapons;
     private LinkedList<LinkedList<Armour>> armours;
 
+    private LinkedList<Career> accessCareers;
+    private LinkedList<Career> openingCareers;
+
     public Career(String name, Profile profile, LinkedList<LinkedList<Skill>> skills,
                   LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
-                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours) {
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, int type) {
         this.name = name;
         this.profile = profile;
         this.skills = skills;
@@ -31,13 +35,14 @@ public class Career {
         this.equipments = equipments;
         this.weapons = weapons;
         this.armours = armours;
+        this.type = type;
     }
 
     public Career(String name, int ws, int bs, int s, int t, int ag, int intel, int wp,
                   int fel, int a, int w, int m, int mag,
                   LinkedList<LinkedList<Skill>> skills,
                   LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
-                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours) {
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, int type) {
         this.name = name;
         this.profile = new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag);
         this.skills = skills;
@@ -45,6 +50,7 @@ public class Career {
         this.equipments = equipments;
         this.weapons = weapons;
         this.armours = armours;
+        this.type = type;
     }
 
     public String getName() {
@@ -75,9 +81,36 @@ public class Career {
         return armours;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public LinkedList<Career> getOpeningCareers() {
+        return openingCareers;
+    }
+
+    public void setOpeningCareers(LinkedList<Career> openingCareers) {
+        this.openingCareers = openingCareers;
+    }
+
+    public LinkedList<Career> getAccessCareers() {
+        return accessCareers;
+    }
+
+    public void setAccessCareers(LinkedList<Career> accessCareers) {
+        this.accessCareers = accessCareers;
+    }
+
     @Override
     public String toString(){
-        String res = "Carrière : " + name + "\n";
+        String res = "Carrière : " + name + " (Carrière";
+
+        if(type == 1){
+            res += " de base)\n";
+        } else {
+            res += " avancée)\n";
+        }
+
         res += profile + "\n";
         res += "Compétences : \n";
 
@@ -163,6 +196,28 @@ public class Career {
             }
 
             if(i < weapons.size() - 1){
+                res += ", ";
+            }
+        }
+
+        res += "\n\n";
+        res += "Accès : \n";
+
+        for(int i = 0; i < accessCareers.size() ; i++){
+            res += accessCareers.get(i).getName();
+
+            if (i < accessCareers.size() - 1){
+                res += ", ";
+            }
+        }
+
+        res += "\n\n";
+        res += "Débouchés : \n";
+
+        for(int i = 0; i < openingCareers.size() ; i++){
+            res += openingCareers.get(i).getName();
+
+            if (i < openingCareers.size() - 1){
                 res += ", ";
             }
         }

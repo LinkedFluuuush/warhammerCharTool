@@ -182,99 +182,91 @@
       </eEquipments>
     </equipmentsTable>
   </race>
-  <race name="Halfing">
-    <profile WS="10" BS="30" S="10" T="10" Ag="30" Int="20" WP="20" Fel="30" M="4" />
-    <size F="95" M="100" />
+  <race name="Nain">
+    <profile WS="30" BS="20" S="20" T="30" Ag="10" Int="20" WP="20" Fel="10" M="3" />
+    <size F="125" M="130" />
     <wounds>
-      <choice>8</choice>
-      <choice>9</choice>
-      <choice>10</choice>
       <choice>11</choice>
+      <choice>12</choice>
+      <choice>13</choice>
+      <choice>14</choice>
     </wounds>
     <fate>
-      <choice>2</choice>
+      <choice>1</choice>
       <choice>2</choice>
       <choice>3</choice>
     </fate>
     <fNames>
-      <name>Agnès</name>
-      <name>Alice</name>
-      <name>Elena</name>
-      <name>Eva</name>
-      <name>Frida</name>
+      <name>Anika</name>
+      <name>Asta</name>
+      <name>Astrid</name>
+      <name>Berta</name>
+      <name>Birgit</name>
+      <name>Dagmar</name>
+      <name>Elsa</name>
+      <name>Erika</name>
+      <name>Franziska</name>
       <name>Gréta</name>
-      <name>Hanna</name>
-      <name>Heidi</name>
-      <name>Hilda</name>
+      <name>Hunni</name>
+      <name>Ingrid</name>
       <name>Janna</name>
       <name>Karin</name>
-      <name>Leni</name>
-      <name>Marie</name>
       <name>Pétra</name>
+      <name>Sigrid</name>
+      <name>Sigrun</name>
       <name>Silma</name>
-      <name>Sophia</name>
-      <name>Susi</name>
-      <name>Théda</name>
+      <name>Thylda</name>
       <name>Ulla</name>
-      <name>Wanda</name>
     </fNames>
     <mNames>
-      <name>Adam</name>
-      <name>Albert</name>
-      <name>Alfred</name>
-      <name>Axel</name>
-      <name>Carl</name>
-      <name>Edgar</name>
-      <name>Hugo</name>
-      <name>Jakob</name>
-      <name>Ludo</name>
-      <name>Max</name>
-      <name>Niklaus</name>
-      <name>Oskar</name>
-      <name>Paul</name>
-      <name>Ralf</name>
-      <name>Rudi</name>
-      <name>Théo</name>
-      <name>Thomas</name>
-      <name>Udo</name>
-      <name>Viktor</name>
-      <name>Walter</name>
+      <name>Bardin</name>
+      <name>Brokk</name>
+      <name>Dimzad</name>
+      <name>Durak</name>
+      <name>Garil</name>
+      <name>Gottri</name>
+      <name>Grundi</name>
+      <name>Hargin</name>
+      <name>Imrak</name>
+      <name>Kargun</name>
+      <name>Jotunn</name>
+      <name>Magnar</name>
+      <name>Mordrin</name>
+      <name>Nargond</name>
+      <name>Orzad</name>
+      <name>Ragnar</name>
+      <name>Snorri</name>
+      <name>Storri</name>
+      <name>Thingrim</name>
+      <name>Urgrim</name>
     </mNames>
     <hairColour>
       <colour>Blond cendré</colour>
-      <colour>Paille</colour>
       <colour>Blond</colour>
-      <colour>Blond</colour>
-      <colour>Auburn</colour>
       <colour>Roux</colour>
+      <colour>Auburn</colour>
       <colour>Châtain clair</colour>
       <colour>Châtain</colour>
+      <colour>Châtain</colour>
       <colour>Brun</colour>
+      <colour>Bleu foncé</colour>
       <colour>Noir</colour>
     </hairColour>
     <eyeColour>
+      <colour>Gris clair</colour>
       <colour>Bleu</colour>
-      <colour>Noisette</colour>
-      <colour>Noisette</colour>
+      <colour>Cuivre</colour>
       <colour>Marron clair</colour>
       <colour>Marron clair</colour>
       <colour>Marron</colour>
       <colour>Marron</colour>
       <colour>Marron foncé</colour>
       <colour>Marron foncé</colour>
-      <colour>Marron foncé</colour>
+      <colour>Mauve</colour>
     </eyeColour>
     <weightTable>
-      <eWeight>34</eWeight>
-      <eWeight>34</eWeight>
-      <eWeight>36</eWeight>
-      <eWeight>36</eWeight>
-      <eWeight>38</eWeight>
-      <eWeight>38</eWeight>
-      <eWeight>40</eWeight>
       <eWeight>40</eWeight>
       <eWeight>43</eWeight>
-      <eWeight>45</eWeight>
       <eWeight>45</eWeight>
       <eWeight>47</eWeight>
       <eWeight>49</eWeight>
@@ -285,81 +277,71 @@
       <eWeight>61</eWeight>
       <eWeight>63</eWeight>
       <eWeight>65</eWeight>
+      <eWeight>68</eWeight>
+      <eWeight>70</eWeight>
+      <eWeight>72</eWeight>
+      <eWeight>74</eWeight>
+      <eWeight>77</eWeight>
+      <eWeight>79</eWeight>
+      <eWeight>81</eWeight>
+      <eWeight>83</eWeight>
     </weightTable>
     <ageTable>
       <eAge>20</eAge>
-      <eAge>22</eAge>
-      <eAge>24</eAge>
-      <eAge>26</eAge>
-      <eAge>28</eAge>
+      <eAge>25</eAge>
       <eAge>30</eAge>
-      <eAge>32</eAge>
-      <eAge>34</eAge>
-      <eAge>36</eAge>
-      <eAge>38</eAge>
+      <eAge>35</eAge>
       <eAge>40</eAge>
-      <eAge>42</eAge>
-      <eAge>44</eAge>
-      <eAge>46</eAge>
-      <eAge>48</eAge>
+      <eAge>45</eAge>
       <eAge>50</eAge>
-      <eAge>52</eAge>
-      <eAge>54</eAge>
-      <eAge>56</eAge>
-      <eAge>58</eAge>
+      <eAge>55</eAge>
       <eAge>60</eAge>
+      <eAge>65</eAge>
+      <eAge>70</eAge>
+      <eAge>75</eAge>
+      <eAge>80</eAge>
+      <eAge>85</eAge>
+      <eAge>90</eAge>
+      <eAge>95</eAge>
+      <eAge>100</eAge>
+      <eAge>105</eAge>
+      <eAge>110</eAge>
+      <eAge>115</eAge>
     </ageTable>
     <skillsTable>
       <eSkills>
-        <choice>Commérage</choice>
-      </eSkills>
-      <eSkills>
-        <choice>Connaissances académiques (généalogie/héraldique)</choice>
-      </eSkills>
-      <eSkills>
-        <choice>Connaissances générales (halfings)</choice>
+        <choice>Connaissances générales (nains)</choice>
       </eSkills>
       <eSkills>
         <choice>Langue (reikspiel)</choice>
       </eSkills>
       <eSkills>
-        <choice>Métier (cuisinier)</choice>
-        <choice>Métier (fermier)</choice>
+        <choice>Langue (khazalid)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Métier (forgeron)</choice>
+        <choice>Métier (maçon)</choice>
+        <choice>Métier (mineur)</choice>
       </eSkills>
     </skillsTable>
     <talentsTable>
       <eTalents>
-        <choice>Maitrise (lance-pierres)</choice>
+        <choice>Fureur vengeresse</choice>
       </eTalents>
       <eTalents>
-        <choice>Résistance au Chaos</choice>
+        <choice>Résistance à la magie</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Robuste</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Savoir-faire nain</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Valeureux</choice>
       </eTalents>
       <eTalents>
         <choice>Vision nocturne</choice>
-      </eTalents>
-      <eTalents>
-        <choice>Acuité auditive</choice>
-        <choice>Acuité visuelle</choice>
-        <choice>Ambidextre</choice>
-        <choice>Calcul mental</choice>
-        <choice>Chance</choice>
-        <choice>Course à pied</choice>
-        <choice>Dur à cuire</choice>
-        <choice>Force accrue</choice>
-        <choice>Guerrier né</choice>
-        <choice>Imitation</choice>
-        <choice>Intelligent</choice>
-        <choice>Réflexes éclair</choice>
-        <choice>Résistance à la magie</choice>
-        <choice>Résistance accrue</choice>
-        <choice>Résistance aux maladies</choice>
-        <choice>Résistance aux poisons</choice>
-        <choice>Robuste</choice>
-        <choice>Sain d'esprit</choice>
-        <choice>Sang-froid</choice>
-        <choice>Sixième sens</choice>
-        <choice>Sociable</choice>
-        <choice>Tireur d'élite</choice>
       </eTalents>
     </talentsTable>
     <weaponsTable>
@@ -608,91 +590,99 @@
       </eEquipments>
     </equipmentsTable>
   </race>
-  <race name="Nain">
-    <profile WS="30" BS="20" S="20" T="30" Ag="10" Int="20" WP="20" Fel="10" M="3" />
-    <size F="125" M="130" />
+  <race name="Halfing">
+    <profile WS="10" BS="30" S="10" T="10" Ag="30" Int="20" WP="20" Fel="30" M="4" />
+    <size F="95" M="100" />
     <wounds>
+      <choice>8</choice>
+      <choice>9</choice>
+      <choice>10</choice>
       <choice>11</choice>
-      <choice>12</choice>
-      <choice>13</choice>
-      <choice>14</choice>
     </wounds>
     <fate>
-      <choice>1</choice>
+      <choice>2</choice>
       <choice>2</choice>
       <choice>3</choice>
     </fate>
     <fNames>
-      <name>Anika</name>
-      <name>Asta</name>
-      <name>Astrid</name>
-      <name>Berta</name>
-      <name>Birgit</name>
-      <name>Dagmar</name>
-      <name>Elsa</name>
-      <name>Erika</name>
-      <name>Franziska</name>
+      <name>Agnès</name>
+      <name>Alice</name>
+      <name>Elena</name>
+      <name>Eva</name>
+      <name>Frida</name>
       <name>Gréta</name>
-      <name>Hunni</name>
-      <name>Ingrid</name>
+      <name>Hanna</name>
+      <name>Heidi</name>
+      <name>Hilda</name>
       <name>Janna</name>
       <name>Karin</name>
+      <name>Leni</name>
+      <name>Marie</name>
       <name>Pétra</name>
-      <name>Sigrid</name>
-      <name>Sigrun</name>
       <name>Silma</name>
-      <name>Thylda</name>
+      <name>Sophia</name>
+      <name>Susi</name>
+      <name>Théda</name>
       <name>Ulla</name>
+      <name>Wanda</name>
     </fNames>
     <mNames>
-      <name>Bardin</name>
-      <name>Brokk</name>
-      <name>Dimzad</name>
-      <name>Durak</name>
-      <name>Garil</name>
-      <name>Gottri</name>
-      <name>Grundi</name>
-      <name>Hargin</name>
-      <name>Imrak</name>
-      <name>Kargun</name>
-      <name>Jotunn</name>
-      <name>Magnar</name>
-      <name>Mordrin</name>
-      <name>Nargond</name>
-      <name>Orzad</name>
-      <name>Ragnar</name>
-      <name>Snorri</name>
-      <name>Storri</name>
-      <name>Thingrim</name>
-      <name>Urgrim</name>
+      <name>Adam</name>
+      <name>Albert</name>
+      <name>Alfred</name>
+      <name>Axel</name>
+      <name>Carl</name>
+      <name>Edgar</name>
+      <name>Hugo</name>
+      <name>Jakob</name>
+      <name>Ludo</name>
+      <name>Max</name>
+      <name>Niklaus</name>
+      <name>Oskar</name>
+      <name>Paul</name>
+      <name>Ralf</name>
+      <name>Rudi</name>
+      <name>Théo</name>
+      <name>Thomas</name>
+      <name>Udo</name>
+      <name>Viktor</name>
+      <name>Walter</name>
     </mNames>
     <hairColour>
       <colour>Blond cendré</colour>
+      <colour>Paille</colour>
       <colour>Blond</colour>
-      <colour>Roux</colour>
+      <colour>Blond</colour>
       <colour>Auburn</colour>
+      <colour>Roux</colour>
       <colour>Châtain clair</colour>
       <colour>Châtain</colour>
-      <colour>Châtain</colour>
       <colour>Brun</colour>
-      <colour>Bleu foncé</colour>
       <colour>Noir</colour>
     </hairColour>
     <eyeColour>
-      <colour>Gris clair</colour>
       <colour>Bleu</colour>
-      <colour>Cuivre</colour>
+      <colour>Noisette</colour>
+      <colour>Noisette</colour>
       <colour>Marron clair</colour>
       <colour>Marron clair</colour>
       <colour>Marron</colour>
       <colour>Marron</colour>
       <colour>Marron foncé</colour>
       <colour>Marron foncé</colour>
-      <colour>Mauve</colour>
+      <colour>Marron foncé</colour>
     </eyeColour>
     <weightTable>
+      <eWeight>34</eWeight>
+      <eWeight>34</eWeight>
+      <eWeight>36</eWeight>
+      <eWeight>36</eWeight>
+      <eWeight>38</eWeight>
+      <eWeight>38</eWeight>
+      <eWeight>40</eWeight>
       <eWeight>40</eWeight>
       <eWeight>43</eWeight>
+      <eWeight>45</eWeight>
       <eWeight>45</eWeight>
       <eWeight>47</eWeight>
       <eWeight>49</eWeight>
@@ -703,71 +693,81 @@
       <eWeight>61</eWeight>
       <eWeight>63</eWeight>
       <eWeight>65</eWeight>
-      <eWeight>68</eWeight>
-      <eWeight>70</eWeight>
-      <eWeight>72</eWeight>
-      <eWeight>74</eWeight>
-      <eWeight>77</eWeight>
-      <eWeight>79</eWeight>
-      <eWeight>81</eWeight>
-      <eWeight>83</eWeight>
     </weightTable>
     <ageTable>
       <eAge>20</eAge>
-      <eAge>25</eAge>
+      <eAge>22</eAge>
+      <eAge>24</eAge>
+      <eAge>26</eAge>
+      <eAge>28</eAge>
       <eAge>30</eAge>
-      <eAge>35</eAge>
+      <eAge>32</eAge>
+      <eAge>34</eAge>
+      <eAge>36</eAge>
+      <eAge>38</eAge>
       <eAge>40</eAge>
-      <eAge>45</eAge>
+      <eAge>42</eAge>
+      <eAge>44</eAge>
+      <eAge>46</eAge>
+      <eAge>48</eAge>
       <eAge>50</eAge>
-      <eAge>55</eAge>
+      <eAge>52</eAge>
+      <eAge>54</eAge>
+      <eAge>56</eAge>
+      <eAge>58</eAge>
       <eAge>60</eAge>
-      <eAge>65</eAge>
-      <eAge>70</eAge>
-      <eAge>75</eAge>
-      <eAge>80</eAge>
-      <eAge>85</eAge>
-      <eAge>90</eAge>
-      <eAge>95</eAge>
-      <eAge>100</eAge>
-      <eAge>105</eAge>
-      <eAge>110</eAge>
-      <eAge>115</eAge>
     </ageTable>
     <skillsTable>
       <eSkills>
-        <choice>Connaissances générales (nains)</choice>
+        <choice>Commérage</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Connaissances académiques (généalogie/héraldique)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Connaissances générales (halfings)</choice>
       </eSkills>
       <eSkills>
         <choice>Langue (reikspiel)</choice>
       </eSkills>
       <eSkills>
-        <choice>Langue (khazalid)</choice>
-      </eSkills>
-      <eSkills>
-        <choice>Métier (forgeron)</choice>
-        <choice>Métier (maçon)</choice>
-        <choice>Métier (mineur)</choice>
+        <choice>Métier (cuisinier)</choice>
+        <choice>Métier (fermier)</choice>
       </eSkills>
     </skillsTable>
     <talentsTable>
       <eTalents>
-        <choice>Fureur vengeresse</choice>
+        <choice>Maitrise (lance-pierres)</choice>
       </eTalents>
       <eTalents>
-        <choice>Résistance à la magie</choice>
-      </eTalents>
-      <eTalents>
-        <choice>Robuste</choice>
-      </eTalents>
-      <eTalents>
-        <choice>Savoir-faire nain</choice>
-      </eTalents>
-      <eTalents>
-        <choice>Valeureux</choice>
+        <choice>Résistance au Chaos</choice>
       </eTalents>
       <eTalents>
         <choice>Vision nocturne</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Acuité auditive</choice>
+        <choice>Acuité visuelle</choice>
+        <choice>Ambidextre</choice>
+        <choice>Calcul mental</choice>
+        <choice>Chance</choice>
+        <choice>Course à pied</choice>
+        <choice>Dur à cuire</choice>
+        <choice>Force accrue</choice>
+        <choice>Guerrier né</choice>
+        <choice>Imitation</choice>
+        <choice>Intelligent</choice>
+        <choice>Réflexes éclair</choice>
+        <choice>Résistance à la magie</choice>
+        <choice>Résistance accrue</choice>
+        <choice>Résistance aux maladies</choice>
+        <choice>Résistance aux poisons</choice>
+        <choice>Robuste</choice>
+        <choice>Sain d'esprit</choice>
+        <choice>Sang-froid</choice>
+        <choice>Sixième sens</choice>
+        <choice>Sociable</choice>
+        <choice>Tireur d'élite</choice>
       </eTalents>
     </talentsTable>
     <weaponsTable>

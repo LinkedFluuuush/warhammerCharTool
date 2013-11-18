@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <careers>
-  <career name="Agitateur">
+  <career name="Agitateur" type="1">
     <profile WS="5" BS="5" S="0" T="0" Ag="5" Int="10" WP="0" Fel="10" A="0" W="2" M="0" Mag="0" />
     <skillsTable>
       <eSkills>
@@ -53,5 +53,23 @@
         <choice>Vetements confortables</choice>
       </eEquipments>
     </equipmentsTable>
+    <accessTable>
+      <accessCareer>Bandit de grand chemin</accessCareer>
+      <accessCareer>Bourgeois</accessCareer>
+      <accessCareer>Capitaine</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Héraut</accessCareer>
+      <accessCareer>Scribe</accessCareer>
+      <accessCareer>Serviteur</accessCareer>
+    </accessTable>
+    <openingTable>
+      <openingCareer>Charlatan</openingCareer>
+      <openingCareer>Démagogue</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Politicien</openingCareer>
+    </openingTable>
   </career>
 </careers>

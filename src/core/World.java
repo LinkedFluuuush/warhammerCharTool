@@ -37,6 +37,10 @@ public class World {
         EQUIPMENTS = xmlLoader.equipmentLoader();
         RACES = xmlLoader.raceLoader();
         CAREERS = xmlLoader.careerLoader();
+
+        for(Career career : CAREERS){
+            xmlLoader.careerLinker(career);
+        }
     }
 
     public static Skill searchSkillByName(String name){
