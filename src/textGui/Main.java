@@ -1,9 +1,6 @@
 package textGui;
 
 import core.*;
-import core.Character;
-
-import java.util.Random;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,10 +15,10 @@ public class Main {
     public static void main(String[] args){
         World.loadAll();
 
-        core.Character randomCharacter = new Character("Random Player", World.searchRaceByName("Humain"), World.searchCareerByName("Agitateur"));
+        //core.entities.Character randomCharacter = new Character("Random Player", World.searchRaceByName("Humain"), World.searchCareerByName("Agitateur"));
 
         //System.out.println(randomCharacter);
 
-        System.out.println(World.searchCareerByName("Agitateur"));
+        System.out.println(World.searchRaceByName("Nain").getWorshipedGods());
     }
 }

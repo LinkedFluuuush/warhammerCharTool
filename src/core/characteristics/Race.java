@@ -1,5 +1,6 @@
 package core.characteristics;
 
+import core.entities.God;
 import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Weapon;
@@ -33,11 +34,14 @@ public class Race {
     private LinkedList<LinkedList<Armour>> armours;
     private LinkedList<LinkedList<Equipment>> equipments;
 
+    LinkedList<String> birthPlaces;
+    LinkedList<God> worshipedGods;
+
     public Race(String name, Profile profile, int fSize, int mSize, int[] wounds, int[] fate, int[] weight, int[] age,
                 String[] mNames, String[] fNames, String[] hairColour, String[] eyeColour,
                 LinkedList<LinkedList<Skill>> skills, LinkedList<LinkedList<Talent>> talents,
                 LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours,
-                LinkedList<LinkedList<Equipment>> equipments) {
+                LinkedList<LinkedList<Equipment>> equipments, LinkedList<String> birthPlaces, LinkedList<God> worshipedGods) {
         this.name = name;
         this.profile = profile;
         this.fSize = fSize;
@@ -55,6 +59,8 @@ public class Race {
         this.weapons = weapons;
         this.armours = armours;
         this.equipments = equipments;
+        this.birthPlaces = birthPlaces;
+        this.worshipedGods = worshipedGods;
     }
 
     public String getName() {
@@ -123,6 +129,14 @@ public class Race {
 
     public LinkedList<LinkedList<Equipment>> getEquipments() {
         return equipments;
+    }
+
+    public LinkedList<String> getBirthPlaces() {
+        return birthPlaces;
+    }
+
+    public LinkedList<God> getWorshipedGods() {
+        return worshipedGods;
     }
 
     @Override

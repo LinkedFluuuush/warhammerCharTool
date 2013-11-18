@@ -1,4 +1,4 @@
-package core;
+package core.entities;
 
 import core.characteristics.*;
 import core.equipment.Armour;

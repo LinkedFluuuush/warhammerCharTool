@@ -4,6 +4,8 @@ import core.characteristics.Career;
 import core.characteristics.Race;
 import core.characteristics.Skill;
 import core.characteristics.Talent;
+import core.entities.AstralSign;
+import core.entities.God;
 import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Weapon;
@@ -28,6 +30,8 @@ public class World {
     public static LinkedList<Equipment> EQUIPMENTS;
     public static LinkedList<Race> RACES;
     public static LinkedList<Career> CAREERS;
+    public static LinkedList<God> GODS;
+    public static LinkedList<AstralSign> ASTRALSIGNS;
 
     public static void loadAll(){
         SKILLS = xmlLoader.skillLoader();
@@ -35,6 +39,8 @@ public class World {
         WEAPONS = xmlLoader.weaponLoader();
         ARMOURS = xmlLoader.armourLoader();
         EQUIPMENTS = xmlLoader.equipmentLoader();
+        GODS = xmlLoader.godLoader();
+        ASTRALSIGNS = xmlLoader.astralSignsLoader();
         RACES = xmlLoader.raceLoader();
         CAREERS = xmlLoader.careerLoader();
 
@@ -87,6 +93,26 @@ public class World {
         for (Equipment EQUIPMENT : EQUIPMENTS) {
             if (EQUIPMENT.getName().equals(name)) {
                 return EQUIPMENT;
+            }
+        }
+
+        return null;
+    }
+
+    public static God searchGodByName(String name){
+        for (God GOD : GODS) {
+            if (GOD.getName().equals(name)) {
+                return GOD;
+            }
+        }
+
+        return null;
+    }
+
+    public static AstralSign searchAstralSignByName(String name){
+        for (AstralSign ASTRALSIGN : ASTRALSIGNS) {
+            if (ASTRALSIGN.getName().equals(name)) {
+                return ASTRALSIGN;
             }
         }
 

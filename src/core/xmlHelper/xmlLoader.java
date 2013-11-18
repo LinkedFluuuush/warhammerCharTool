@@ -2,6 +2,8 @@ package core.xmlHelper;
 
 import core.World;
 import core.characteristics.*;
+import core.entities.AstralSign;
+import core.entities.God;
 import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Money;
@@ -211,6 +213,77 @@ public class xmlLoader {
         return armourLinkedList;
     }
 
+    public static LinkedList<God> godLoader(){
+        SAXBuilder sxb = new SAXBuilder();
+        List<Element> gods;
+        Element currentGod;
+        Iterator<Element> godIterator;
+
+        List<Element> eDomains;
+        List<Element> eWorshipers;
+
+        LinkedList<God> godList = new LinkedList<God>();
+        LinkedList<String> domains;
+        LinkedList<String> worshipers;
+
+        try{
+            document = sxb.build(new File("resources/gods.xml"));
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
+
+        root = document.getRootElement();
+
+        gods = root.getChildren("god");
+        godIterator = gods.iterator();
+
+        while(godIterator.hasNext()){
+            currentGod = godIterator.next();
+
+            domains = new LinkedList<String>();
+            eDomains = currentGod.getChildren("domain");
+            for(Element domain : eDomains){
+                domains.add(domain.getText());
+            }
+
+            worshipers = new LinkedList<String>();
+            eWorshipers = currentGod.getChildren("worshiper");
+            for(Element worshiper : eWorshipers){
+                worshipers.add(worshiper.getText());
+            }
+
+            godList.add(new God(currentGod.getAttributeValue("name"), domains, worshipers));
+        }
+
+        return godList;
+    }
+
+    public static LinkedList<AstralSign> astralSignsLoader(){
+        SAXBuilder sxb = new SAXBuilder();
+        List<Element> astralSigns;
+        Element currentSign;
+        Iterator<Element> signIterator;
+
+        LinkedList<AstralSign> astralSignList = new LinkedList<AstralSign>();
+
+        try{
+            document = sxb.build(new File("resources/astralSigns.xml"));
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
+
+        root = document.getRootElement();
+
+        astralSigns = root.getChildren("astralSign");
+        signIterator = astralSigns.iterator();
+
+        while(signIterator.hasNext()){
+            currentSign = signIterator.next();
+
+            astralSignList.add(new AstralSign(currentSign.getAttributeValue("name"), currentSign.getAttributeValue("description")));
+        }
+
+        return astralSignList;
+    }
+
     public static LinkedList<Race> raceLoader(){
         SAXBuilder sxb = new SAXBuilder();
         List<Element> races;
@@ -222,13 +295,13 @@ public class xmlLoader {
 
         Element eProfile;
         Profile profile;
-        Element eWounds;
+        List<Element> eWounds;
         int[] wounds;
-        Element eFate;
+        List<Element> eFate;
         int[] fate;
-        Element eWeight;
+        List<Element> eWeight;
         int[] weight;
-        Element eAge;
+        List<Element> eAge;
         int[] age;
         Element eMNames;
         String[] mNames;
@@ -239,31 +312,31 @@ public class xmlLoader {
         Element eHairColour;
         String[] hairColour;
 
-        Element skillTable;
-        List<Element> eSkills;
+        List<Element> skillTable;
         List<Element> eSkillsChoice;
         LinkedList<Skill> currentSkillSet;
         LinkedList<LinkedList<Skill>> skills;
-        Element talentTable;
-        List<Element> eTalents;
+        List<Element> talentTable;
         List<Element> eTalentsChoice;
         LinkedList<Talent> currentTalentSet;
         LinkedList<LinkedList<Talent>> talents;
-        Element weaponTable;
-        List<Element> eWeapons;
+        List<Element> weaponTable;
         List<Element> eWeaponsChoice;
         LinkedList<Weapon> currentWeaponSet;
         LinkedList<LinkedList<Weapon>> weapons;
-        Element armourTable;
-        List<Element> eArmours;
+        List<Element> armourTable;
         List<Element> eArmoursChoice;
         LinkedList<Armour> currentArmourSet;
         LinkedList<LinkedList<Armour>> armours;
-        Element equipmentTable;
-        List<Element> eEquipments;
+        List<Element> equipmentTable;
         List<Element> eEquipmentsChoice;
         LinkedList<Equipment> currentEquipmentSet;
         LinkedList<LinkedList<Equipment>> equipments;
+
+        LinkedList<String> birthPlaces;
+        List<Element> birthPlacesTable;
+        LinkedList<God> worshipedGods;
+        List<Element> worshipedGodsTable;
 
         try{
             document = sxb.build(new File("resources/races.xml"));
@@ -285,18 +358,18 @@ public class xmlLoader {
                     Integer.parseInt(eProfile.getAttributeValue("WP")), Integer.parseInt(eProfile.getAttributeValue("Fel")),
                     Integer.parseInt(eProfile.getAttributeValue("M")));
 
-            eWounds = currentRace.getChild("wounds");
-            wounds = new int[eWounds.getChildren("choice").size()];
+            eWounds = currentRace.getChildren("wounds");
+            wounds = new int[eWounds.size()];
 
-            for(int i = 0 ; i < eWounds.getChildren("choice").size() ; i++){
-                wounds[i] = Integer.parseInt(eWounds.getChildren("choice").get(i).getText());
+            for(int i = 0 ; i < eWounds.size() ; i++){
+                wounds[i] = Integer.parseInt(eWounds.get(i).getText());
             }
 
-            eFate = currentRace.getChild("fate");
-            fate = new int[eFate.getChildren("choice").size()];
+            eFate = currentRace.getChildren("fate");
+            fate = new int[eFate.size()];
 
-            for(int i = 0 ; i < eFate.getChildren("choice").size() ; i++){
-                fate[i] = Integer.parseInt(eFate.getChildren("choice").get(i).getText());
+            for(int i = 0 ; i < eFate.size() ; i++){
+                fate[i] = Integer.parseInt(eFate.get(i).getText());
             }
 
             eFNames = currentRace.getChild("fNames");
@@ -327,27 +400,26 @@ public class xmlLoader {
                 hairColour[i] = eHairColour.getChildren("colour").get(i).getText();
             }
 
-            eWeight = currentRace.getChild("weightTable");
-            weight = new int[eWeight.getChildren("eWeight").size()];
+            eWeight = currentRace.getChildren("weight");
+            weight = new int[eWeight.size()];
 
-            for(int i = 0 ; i < eWeight.getChildren("eWeight").size() ; i++){
-                weight[i] = Integer.parseInt(eWeight.getChildren("eWeight").get(i).getText());
+            for(int i = 0 ; i < eWeight.size() ; i++){
+                weight[i] = Integer.parseInt(eWeight.get(i).getText());
             }
 
-            eAge = currentRace.getChild("ageTable");
-            age = new int[eAge.getChildren("eAge").size()];
+            eAge = currentRace.getChildren("age");
+            age = new int[eAge.size()];
 
-            for(int i = 0 ; i < eAge.getChildren("eAge").size() ; i++){
-                age[i] = Integer.parseInt(eAge.getChildren("eAge").get(i).getText());
+            for(int i = 0 ; i < eAge.size() ; i++){
+                age[i] = Integer.parseInt(eAge.get(i).getText());
             }
 
             skills = new LinkedList<LinkedList<Skill>>();
-            skillTable = currentRace.getChild("skillsTable");
-            eSkills = skillTable.getChildren("eSkills");
+            skillTable = currentRace.getChildren("skillTable");
 
-            for (Element eSkill : eSkills) {
+            for (Element eSkill : skillTable) {
                 currentSkillSet = new LinkedList<Skill>();
-                eSkillsChoice = eSkill.getChildren("choice");
+                eSkillsChoice = eSkill.getChildren("skill");
                 for (Element anESkillsChoice : eSkillsChoice) {
                     currentSkillSet.add(World.searchSkillByName(anESkillsChoice.getText()));
                 }
@@ -356,12 +428,11 @@ public class xmlLoader {
             }
 
             talents = new LinkedList<LinkedList<Talent>>();
-            talentTable = currentRace.getChild("talentsTable");
-            eTalents = talentTable.getChildren("eTalents");
+            talentTable = currentRace.getChildren("talentTable");
 
-            for (Element eTalent : eTalents) {
+            for (Element eTalent : talentTable) {
                 currentTalentSet = new LinkedList<Talent>();
-                eTalentsChoice = eTalent.getChildren("choice");
+                eTalentsChoice = eTalent.getChildren("talent");
                 for (Element anETalentsChoice : eTalentsChoice) {
                     currentTalentSet.add(World.searchTalentByName(anETalentsChoice.getText()));
                 }
@@ -370,12 +441,11 @@ public class xmlLoader {
             }
 
             weapons = new LinkedList<LinkedList<Weapon>>();
-            weaponTable = currentRace.getChild("weaponsTable");
-            eWeapons = weaponTable.getChildren("eWeapons");
+            weaponTable = currentRace.getChildren("weaponTable");
 
-            for (Element eWeapon : eWeapons) {
+            for (Element eWeapon : weaponTable) {
                 currentWeaponSet = new LinkedList<Weapon>();
-                eWeaponsChoice = eWeapon.getChildren("choice");
+                eWeaponsChoice = eWeapon.getChildren("weapon");
                 for (Element anEWeaponsChoice : eWeaponsChoice) {
                     currentWeaponSet.add(World.searchWeaponByName(anEWeaponsChoice.getText()));
                 }
@@ -386,12 +456,11 @@ public class xmlLoader {
             }
 
             armours = new LinkedList<LinkedList<Armour>>();
-            armourTable = currentRace.getChild("armoursTable");
-            eArmours = armourTable.getChildren("eArmours");
+            armourTable = currentRace.getChildren("armourTable");
 
-            for (Element eArmour : eArmours) {
+            for (Element eArmour : armourTable) {
                 currentArmourSet = new LinkedList<Armour>();
-                eArmoursChoice = eArmour.getChildren("choice");
+                eArmoursChoice = eArmour.getChildren("armour");
                 for (Element anEArmoursChoice : eArmoursChoice) {
                     currentArmourSet.add(World.searchArmourByName(anEArmoursChoice.getText()));
                 }
@@ -402,12 +471,11 @@ public class xmlLoader {
             }
 
             equipments = new LinkedList<LinkedList<Equipment>>();
-            equipmentTable = currentRace.getChild("equipmentsTable");
-            eEquipments = equipmentTable.getChildren("eEquipments");
+            equipmentTable = currentRace.getChildren("equipmentTable");
 
-            for (Element eEquipment : eEquipments) {
+            for (Element eEquipment : equipmentTable) {
                 currentEquipmentSet = new LinkedList<Equipment>();
-                eEquipmentsChoice = eEquipment.getChildren("choice");
+                eEquipmentsChoice = eEquipment.getChildren("equipment");
                 for (Element anEEquipmentsChoice : eEquipmentsChoice) {
                     currentEquipmentSet.add(World.searchEquipmentByName(anEEquipmentsChoice.getText()));
                 }
@@ -417,11 +485,26 @@ public class xmlLoader {
                 }
             }
 
+            birthPlaces = new LinkedList<String>();
+            birthPlacesTable = currentRace.getChildren("birthPlace");
+
+            for(Element eBirthPlace : birthPlacesTable){
+                birthPlaces.add(eBirthPlace.getText());
+            }
+
+            worshipedGods = new LinkedList<God>();
+            worshipedGodsTable = currentRace.getChildren("god");
+
+            for(Element eWorshipedGod : worshipedGodsTable){
+                worshipedGods.add(World.searchGodByName(eWorshipedGod.getText()));
+            }
+
+
             race = new Race(currentRace.getAttributeValue("name"), profile,
                     Integer.parseInt(currentRace.getChild("size").getAttributeValue("F")),
                     Integer.parseInt(currentRace.getChild("size").getAttributeValue("M")),
                     wounds, fate, weight, age, mNames, fNames, hairColour, eyeColour, skills, talents, weapons,
-                    armours, equipments);
+                    armours, equipments, birthPlaces, worshipedGods);
 
             raceLinkedList.add(race);
         }

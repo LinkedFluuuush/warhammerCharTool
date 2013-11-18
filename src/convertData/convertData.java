@@ -45,6 +45,12 @@ public class convertData{
             } else if (file.getName().equals("Races")) {
                 convertRace(file);
                 System.out.println("Conversion des races effectuée.");
+            } else if(file.getName().equals("Dieux")){
+                convertGods(file);
+                System.out.println("Conversion des dieux effectuée.");
+            } else if(file.getName().equals("Signes Astraux")){
+                convertAstralSigns(file);
+                System.out.println("Conversion des signes astraux effectuée.");
             } else {
                 System.out.println("Fichier non reconnu : " + file.getName() + ".");
             }
@@ -318,27 +324,19 @@ public class convertData{
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element wounds = new Element("wounds");
-
                 for (String elt : elts) {
-                    Element choice = new Element("choice");
+                    Element choice = new Element("wounds");
                     choice.setText(elt);
-                    wounds.addContent(choice);
+                    race.addContent(choice);
                 }
-
-                race.addContent(wounds);
-
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element fate = new Element("fate");
-
                 for (String elt : elts) {
-                    Element choice = new Element("choice");
+                    Element choice = new Element("fate");
                     choice.setText(elt);
-                    fate.addContent(choice);
+                    race.addContent(choice);
                 }
-                race.addContent(fate);
 
                 line = br.readLine();
                 elts = line.split(",");
@@ -395,139 +393,137 @@ public class convertData{
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element weightTable = new Element("weightTable");
-
                 for(String weight : elts){
-                    Element eWeight = new Element("eWeight");
+                    Element eWeight = new Element("weight");
                     eWeight.setText(weight);
-                    weightTable.addContent(eWeight);
+                    race.addContent(eWeight);
                 }
-
-                race.addContent(weightTable);
 
                 line = br.readLine();
                 elts = line.split(",");
-
-                Element ageTable = new Element("ageTable");
 
                 for(String age : elts){
-                    Element eAge = new Element("eAge");
+                    Element eAge = new Element("age");
                     eAge.setText(age);
-                    ageTable.addContent(eAge);
+                    race.addContent(eAge);
                 }
-
-                race.addContent(ageTable);
 
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element competencesTable = new Element("skillsTable");
-
                 for(String competences : elts){
-                    Element eCompetences = new Element("eSkills");
+                    Element eCompetences = new Element("skillTable");
 
                     String[] choices = competences.split(":");
 
                     for (String choice1 : choices) {
-                        Element choice = new Element("choice");
+                        Element choice = new Element("skill");
                         choice.setText(choice1);
                         eCompetences.addContent(choice);
                     }
 
-                    competencesTable.addContent(eCompetences);
+                    race.addContent(eCompetences);
                 }
-
-                race.addContent(competencesTable);
 
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element talentsTable = new Element("talentsTable");
-
                 for(String talents : elts){
-                    Element eTalents = new Element("eTalents");
+                    Element eTalents = new Element("talentTable");
 
                     String[] choices = talents.split(":");
 
                     for (String choice1 : choices) {
-                        Element choice = new Element("choice");
+                        Element choice = new Element("talent");
                         choice.setText(choice1);
                         eTalents.addContent(choice);
                     }
 
-                    talentsTable.addContent(eTalents);
+                    race.addContent(eTalents);
                 }
-
-                race.addContent(talentsTable);
 
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element weaponsTable = new Element("weaponsTable");
-
                 for(String weapon : elts){
-                    Element eWeapon = new Element("eWeapons");
+                    Element eWeapon = new Element("weaponTable");
 
                     String[] choices = weapon.split(":");
 
                     for (String choice1 : choices) {
                         if (!choice1.equals("") && choice1 != null) {
-                            Element choice = new Element("choice");
+                            Element choice = new Element("weapon");
                             choice.setText(choice1);
                             eWeapon.addContent(choice);
                         }
                     }
 
-                    weaponsTable.addContent(eWeapon);
+                    race.addContent(eWeapon);
                 }
-
-                race.addContent(weaponsTable);
 
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element armoursTable = new Element("armoursTable");
-
                 for(String armour : elts){
-                    Element eArmours = new Element("eArmours");
+                    Element eArmours = new Element("armourTable");
 
                     String[] choices = armour.split(":");
 
                     for (String choice1 : choices) {
                         if (!choice1.equals("") && choice1 != null) {
-                            Element choice = new Element("choice");
+                            Element choice = new Element("armour");
                             choice.setText(choice1);
                             eArmours.addContent(choice);
                         }
                     }
 
-                    armoursTable.addContent(eArmours);
+                    race.addContent(eArmours);
                 }
-
-                race.addContent(armoursTable);
 
                 line = br.readLine();
                 elts = line.split(",");
 
-                Element equipmentsTable = new Element("equipmentsTable");
-
                 for(String equipment : elts){
-                    Element eEquipments = new Element("eEquipments");
+                    Element eEquipments = new Element("equipmentTable");
 
                     String[] choices = equipment.split(":");
 
                     for (String choice1 : choices) {
                         if (!choice1.equals("") && choice1 != null) {
-                            Element choice = new Element("choice");
+                            Element choice = new Element("equipment");
                             choice.setText(choice1);
                             eEquipments.addContent(choice);
                         }
                     }
 
-                    equipmentsTable.addContent(eEquipments);
+                    race.addContent(eEquipments);
                 }
 
-                race.addContent(equipmentsTable);
+                line = br.readLine();
+                elts = line.split(",");
+
+                for(String birthPlace : elts){
+                    Element eBirthPlace = new Element("birthPlace");
+
+                    if (!birthPlace.equals("") && birthPlace != null) {
+                        eBirthPlace.setText(birthPlace);
+                    }
+
+                    race.addContent(eBirthPlace);
+                }
+
+                line = br.readLine();
+                elts = line.split(",");
+
+                for(String god : elts){
+                    Element eGod = new Element("god");
+
+                    if (!god.equals("") && god != null) {
+                        eGod.setText(god);
+                    }
+
+                    race.addContent(eGod);
+                }
 
                 root.addContent(race);
 
@@ -740,6 +736,91 @@ public class convertData{
         }
     }
 
+    private static void convertGods(File file){
+        System.out.println("Traitement de : " + file.getName());
+
+        Element root = new Element("gods");
+        Document document = new Document(root);
+        Element god;
+        Element domain;
+        Element worshiper;
+
+        String line;
+        String[] elts;
+        String[] elts2;
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            while(br.ready()){
+                line = br.readLine();
+                elts = line.split(":");
+
+                god = new Element("god");
+                god.setAttribute("name", elts[0]);
+
+                elts2 = elts[1].split(",");
+
+                for(String elt : elts2){
+                    domain = new Element("domain");
+                    domain.setText(elt);
+                    god.addContent(domain);
+                }
+
+                elts2 = elts[2].split(",");
+
+                for(String elt : elts2){
+                    worshiper = new Element("worshiper");
+                    worshiper.setText(elt);
+                    god.addContent(worshiper);
+                }
+
+                root.addContent(god);
+            }
+
+            br.close();
+
+            XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+            xmlOutputter.output(document, new FileOutputStream("resources/gods.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void convertAstralSigns(File file){
+        System.out.println("Traitement de : " + file.getName());
+
+        Element root = new Element("astralSigns");
+        Document document = new Document(root);
+        Element sign;
+
+        String line;
+        String[] elts;
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            while(br.ready()){
+                line = br.readLine();
+                elts = line.split(":");
+
+                sign = new Element("astralSign");
+                sign.setAttribute("name", elts[0]);
+                sign.setAttribute("description", elts[1]);
+
+                root.addContent(sign);
+            }
+
+            br.close();
+
+            XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+            xmlOutputter.output(document, new FileOutputStream("resources/astralSigns.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private static int[] convertPrices(int price){
         int[] finalPrice = new int[3];
