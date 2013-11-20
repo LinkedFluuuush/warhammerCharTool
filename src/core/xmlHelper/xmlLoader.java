@@ -257,10 +257,10 @@ public class xmlLoader {
         return godList;
     }
 
-    public static LinkedList<AstralSign> astralSignsLoader(){
-        SAXBuilder sxb = new SAXBuilder();
-        List<Element> astralSigns;
-        Element currentSign;
+   public static LinkedList<AstralSign> astralSignsLoader(){
+            SAXBuilder sxb = new SAXBuilder();
+            List<Element> astralSigns;
+            Element currentSign;
         Iterator<Element> signIterator;
 
         LinkedList<AstralSign> astralSignList = new LinkedList<AstralSign>();
@@ -707,5 +707,32 @@ public class xmlLoader {
         }
 
         return career;
+    }
+
+    public static LinkedList<String> distinguishingsSignsLoader(){
+        SAXBuilder sxb = new SAXBuilder();
+        List<Element> distinguishingSigns;
+        Element currentSign;
+        Iterator<Element> signIterator;
+
+        LinkedList<String> distinguishingSignList = new LinkedList<String>();
+
+        try{
+            document = sxb.build(new File("resources/distinguishingSigns.xml"));
+        }catch (JDOMException ignored) {}
+        catch (IOException ignored) {}
+
+        root = document.getRootElement();
+
+        distinguishingSigns = root.getChildren("distinguishingSign");
+        signIterator = distinguishingSigns.iterator();
+
+        while(signIterator.hasNext()){
+            currentSign = signIterator.next();
+
+            distinguishingSignList.add(currentSign.getText());
+        }
+
+        return distinguishingSignList;
     }
 }

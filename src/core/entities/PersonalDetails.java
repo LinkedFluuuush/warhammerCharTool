@@ -1,5 +1,6 @@
 package core.entities;
 
+import core.World;
 import core.characteristics.Race;
 
 import java.util.LinkedList;
@@ -15,8 +16,7 @@ public class PersonalDetails {
     private boolean male;
     private int age;
     private String birthplace;
-    private String nationality;
-    private String favoriteGod;
+    private God favoriteGod;
     private int height;
     private int weight;
     private String rightEyeColour;
@@ -28,8 +28,7 @@ public class PersonalDetails {
         male = true;
         age = 0;
         birthplace = "Unknown";
-        nationality = "Unknown";
-        favoriteGod = "Unknown";
+        favoriteGod = World.searchGodByName("Sigmar");
         height = 0;
         weight = 0;
         rightEyeColour = "Unknown";
@@ -38,13 +37,12 @@ public class PersonalDetails {
         distinguishingMarks = new LinkedList<String>();
     }
 
-    public PersonalDetails(boolean male, int age, String birthplace, String nationality,
-                           String favoriteGod, int height, int weight, String rightEyeColour, String leftEyeColour,
+    public PersonalDetails(boolean male, int age, String birthplace,
+                           God favoriteGod, int height, int weight, String rightEyeColour, String leftEyeColour,
                            String hairColour, LinkedList<String> distinguishingMarks) {
         this.male = male;
         this.age = age;
         this.birthplace = birthplace;
-        this.nationality = nationality;
         this.favoriteGod = favoriteGod;
         this.height = height;
         this.weight = weight;
@@ -78,19 +76,11 @@ public class PersonalDetails {
         this.birthplace = birthplace;
     }
 
-    public String getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
-    }
-
-    public String getFavoriteGod() {
+    public God getFavoriteGod() {
         return favoriteGod;
     }
 
-    public void setFavoriteGod(String favoriteGod) {
+    public void setFavoriteGod(God favoriteGod) {
         this.favoriteGod = favoriteGod;
     }
 
@@ -152,7 +142,12 @@ public class PersonalDetails {
         }
 
         res += "Age : " + age + "\n";
-        res += "Taille : " + height / 100 + "m" + height % 100 + "\n";
+
+        if(((height % 100) + "").length() == 1)
+            res += "Taille : " + height / 100 + "m0" + height % 100 + "\n";
+        else
+            res += "Taille : " + height / 100 + "m" + height % 100 + "\n";
+
         res += "Poids : " + weight + "kg\n";
         res += "Couleur de cheveux : " + hairColour + "\n";
 
@@ -163,7 +158,6 @@ public class PersonalDetails {
             res += "Couleur de l'oeil gauche : " + leftEyeColour + "\n";
         }
 
-        res += "Nationalité : " + nationality + "\n";
         res += "Lieu de Naissance : " + birthplace + "\n";
 
         res += "Dieu favori : " + favoriteGod + "\n";

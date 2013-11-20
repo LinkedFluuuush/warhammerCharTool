@@ -1,5 +1,6 @@
 package core.entities;
 
+import core.World;
 import core.characteristics.*;
 import core.equipment.Armour;
 import core.equipment.Equipment;
@@ -17,6 +18,7 @@ import java.util.Random;
 public class Character {
     private String name;
     private String player;
+    private String type;
 
     private Race race;
     private Career career;
@@ -52,6 +54,7 @@ public class Character {
         this.money = money;
         this.details = details;
         this.actualWounds = actualWounds;
+        this.type = "NPC";
     }
 
     public Character(String name, String player, Race race, Career career,
@@ -74,6 +77,7 @@ public class Character {
         this.money = money;
         this.details = details;
         this.actualWounds = profile.getW();
+        this.type = "NPC";
     }
 
     public Character(String name, String player, Race race, Career career) {
@@ -81,8 +85,9 @@ public class Character {
         this.player = player;
         this.race = race;
         this.career = career;
+        this.type = "NPC";
 
-        randomPNJ();
+        randomCharacter(type);
 
         this.actualWounds = profile.getW();
     }
@@ -91,8 +96,9 @@ public class Character {
         this.player = player;
         this.race = race;
         this.career = career;
+        this.type = "NPC";
 
-        randomPNJ();
+        randomCharacter(type);
         randomName();
 
         this.actualWounds = profile.getW();
@@ -102,24 +108,49 @@ public class Character {
         this.player = "npc";
         this.race = race;
         this.career = career;
+        this.type = "NPC";
 
-        randomPNJ();
+        randomCharacter(type);
         randomName();
 
         this.actualWounds = profile.getW();
     }
 
     public Character(String name, String player, Race race, Career career,
-                     LinkedList<Career> previousCareers,
+                     LinkedList<Career> previousCareers, Profile profile,
                      LinkedList<Skill> skills, LinkedList<Talent> talents,
                      LinkedList<Weapon> weapons, LinkedList<Armour> armours,
                      LinkedList<Equipment> equipment, Money money,
-                     PersonalDetails details) {
+                     PersonalDetails details, int actualWounds, String type) {
         this.name = name;
         this.player = player;
         this.race = race;
         this.career = career;
         this.previousCareers = previousCareers;
+        this.profile = profile;
+        this.skills = skills;
+        this.talents = talents;
+        this.weapons = weapons;
+        this.armours = armours;
+        this.equipment = equipment;
+        this.money = money;
+        this.details = details;
+        this.actualWounds = actualWounds;
+        this.type = type;
+    }
+
+    public Character(String name, String player, Race race, Career career,
+                     LinkedList<Career> previousCareers, Profile profile,
+                     LinkedList<Skill> skills, LinkedList<Talent> talents,
+                     LinkedList<Weapon> weapons, LinkedList<Armour> armours,
+                     LinkedList<Equipment> equipment, Money money,
+                     PersonalDetails details, String type) {
+        this.name = name;
+        this.player = player;
+        this.race = race;
+        this.career = career;
+        this.previousCareers = previousCareers;
+        this.profile = profile;
         this.skills = skills;
         this.talents = talents;
         this.weapons = weapons;
@@ -128,8 +159,43 @@ public class Character {
         this.money = money;
         this.details = details;
         this.actualWounds = profile.getW();
+        this.type = type;
+    }
 
-        this.profile = randomPNJProfile();
+    public Character(String name, String player, Race race, Career career, String type) {
+        this.name = name;
+        this.player = player;
+        this.race = race;
+        this.career = career;
+        this.type = type;
+
+        randomCharacter(type);
+
+        this.actualWounds = profile.getW();
+    }
+
+    public Character(String player, Race race, Career career, String type) {
+        this.player = player;
+        this.race = race;
+        this.career = career;
+        this.type = type;
+
+        randomCharacter(type);
+        randomName();
+
+        this.actualWounds = profile.getW();
+    }
+
+    public Character(Race race, Career career, String type) {
+        this.player = "npc";
+        this.race = race;
+        this.career = career;
+        this.type = type;
+
+        randomCharacter(type);
+        randomName();
+
+        this.actualWounds = profile.getW();
     }
 
     public void randomName(){
@@ -141,17 +207,19 @@ public class Character {
             this.name = this.race.getfNames()[r.nextInt(this.race.getfNames().length)];
     }
 
-    public void randomPNJ(){
-        this.profile = randomPNJProfile();
+    public void randomCharacter(String type){
+        if(type.equals("PC"))
+            this.profile = randomPCProfile();
+        else
+            this.profile = randomNPCProfile();
         this.details = randomDetails();
         this.skills = randomSkills();
         this.talents = randomTalents();
         randomTrappings();
         this.money = randomMoney();
-
     }
 
-    public Profile randomPNJProfile(){
+    public Profile randomNPCProfile(){
         Random r = new Random();
         Profile raceProfile = this.race.getProfile();
         Profile careerProfile = this.career.getProfile();
@@ -171,7 +239,7 @@ public class Character {
                 careerProfile.getMag());
     }
 
-    public Profile randomPJProfile(){
+    public Profile randomPCProfile(){
         Random r = new Random();
         Profile raceProfile = this.race.getProfile();
         Profile careerProfile = this.career.getProfile();
@@ -206,15 +274,28 @@ public class Character {
 
         String eyeColour = race.getEyeColour()[r.nextInt(race.getEyeColour().length)];
 
+        String birthPlace = this.getRace().getBirthPlaces().get(r.nextInt(this.getRace().getBirthPlaces().size()));
+        God worshipedGod = this.getRace().getWorshipedGods().get(r.nextInt(this.getRace().getWorshipedGods().size()));
+
+        LinkedList<String> distinguishingMarks = new LinkedList<String>();
+        String selectedMark;
+        int nbMarks = r.nextInt(4) + 1;
+
+        for(int i = 0 ; i< nbMarks ; i++){
+            do{
+                selectedMark = World.DISTINGUISHINGSIGNS.get(r.nextInt(World.DISTINGUISHINGSIGNS.size()));
+            } while(distinguishingMarks.contains(selectedMark));
+
+            distinguishingMarks.add(selectedMark);
+        }
+
         return new PersonalDetails(
-                male,
-                race.getAge()[r.nextInt(race.getAge().length)],
-                "Unknown", "Empire", "Ulric",
-                (int)(size + ((r.nextInt(10) + 1) * 2.5)),
+                male, race.getAge()[r.nextInt(race.getAge().length)],
+                birthPlace, worshipedGod, (int)(size + ((r.nextInt(10) + 1) * 2.5)),
                 race.getWeight()[r.nextInt(race.getWeight().length)],
                 eyeColour, eyeColour,
                 race.getHairColour()[r.nextInt(race.getHairColour().length)],
-                new LinkedList<String>()
+                distinguishingMarks
         );
     }
 

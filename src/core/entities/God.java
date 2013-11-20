@@ -32,8 +32,6 @@ public class God {
 
     @Override
     public String toString() {
-        return "God{" +
-                "name='" + name + '\'' +
-                '}';
+        return this.name;
     }
 }

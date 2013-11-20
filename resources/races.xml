@@ -178,10 +178,6 @@
     <god>Taal</god>
     <god>Ulric</god>
     <god>Verena</god>
-    <god>Nurgle</god>
-    <god>Khorne</god>
-    <god>Slaanesh</god>
-    <god>Tzeentch</god>
   </race>
   <race name="Halfing">
     <profile WS="10" BS="30" S="10" T="10" Ag="30" Int="20" WP="20" Fel="30" M="4" />
@@ -383,16 +379,196 @@
     <birthPlace>Le Moot</birthPlace>
     <birthPlace>Le Moot</birthPlace>
     <birthPlace>Le Moot</birthPlace>
-    <birthPlace>Averland</birthPlace>
-    <birthPlace>Hochland</birthPlace>
-    <birthPlace>Middenland</birthPlace>
-    <birthPlace>Nordland</birthPlace>
-    <birthPlace>Ostermark</birthPlace>
-    <birthPlace>Ostland</birthPlace>
-    <birthPlace>Reikland</birthPlace>
-    <birthPlace>Stirland</birthPlace>
-    <birthPlace>Talabecland</birthPlace>
-    <birthPlace>Wissenland</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Le Moot</birthPlace>
+    <birthPlace>Averland (Cité)</birthPlace>
+    <birthPlace>Averland (Ville prospère)</birthPlace>
+    <birthPlace>Averland (Bourg)</birthPlace>
+    <birthPlace>Averland (Ville fortifiée)</birthPlace>
+    <birthPlace>Averland (Village agricole)</birthPlace>
+    <birthPlace>Averland (Village pauvre)</birthPlace>
+    <birthPlace>Averland (Petite communauté)</birthPlace>
+    <birthPlace>Averland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Averland (Ferme de culture)</birthPlace>
+    <birthPlace>Averland (Taudis)</birthPlace>
+    <birthPlace>Hochland (Cité)</birthPlace>
+    <birthPlace>Hochland (Ville prospère)</birthPlace>
+    <birthPlace>Hochland (Bourg)</birthPlace>
+    <birthPlace>Hochland (Ville fortifiée)</birthPlace>
+    <birthPlace>Hochland (Village agricole)</birthPlace>
+    <birthPlace>Hochland (Village pauvre)</birthPlace>
+    <birthPlace>Hochland (Petite communauté)</birthPlace>
+    <birthPlace>Hochland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Hochland (Ferme de culture)</birthPlace>
+    <birthPlace>Hochland (Taudis)</birthPlace>
+    <birthPlace>Middenland (Cité)</birthPlace>
+    <birthPlace>Middenland (Ville prospère)</birthPlace>
+    <birthPlace>Middenland (Bourg)</birthPlace>
+    <birthPlace>Middenland (Ville fortifiée)</birthPlace>
+    <birthPlace>Middenland (Village agricole)</birthPlace>
+    <birthPlace>Middenland (Village pauvre)</birthPlace>
+    <birthPlace>Middenland (Petite communauté)</birthPlace>
+    <birthPlace>Middenland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Middenland (Ferme de culture)</birthPlace>
+    <birthPlace>Middenland (Taudis)</birthPlace>
+    <birthPlace>Nordland (Cité)</birthPlace>
+    <birthPlace>Nordland (Ville prospère)</birthPlace>
+    <birthPlace>Nordland (Bourg)</birthPlace>
+    <birthPlace>Nordland (Ville fortifiée)</birthPlace>
+    <birthPlace>Nordland (Village agricole)</birthPlace>
+    <birthPlace>Nordland (Village pauvre)</birthPlace>
+    <birthPlace>Nordland (Petite communauté)</birthPlace>
+    <birthPlace>Nordland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Nordland (Ferme de culture)</birthPlace>
+    <birthPlace>Nordland (Taudis)</birthPlace>
+    <birthPlace>Ostermark (Cité)</birthPlace>
+    <birthPlace>Ostermark (Ville prospère)</birthPlace>
+    <birthPlace>Ostermark (Bourg)</birthPlace>
+    <birthPlace>Ostermark (Ville fortifiée)</birthPlace>
+    <birthPlace>Ostermark (Village agricole)</birthPlace>
+    <birthPlace>Ostermark (Village pauvre)</birthPlace>
+    <birthPlace>Ostermark (Petite communauté)</birthPlace>
+    <birthPlace>Ostermark (Ferme d'élevage)</birthPlace>
+    <birthPlace>Ostermark (Ferme de culture)</birthPlace>
+    <birthPlace>Ostermark (Taudis)</birthPlace>
+    <birthPlace>Ostland (Cité)</birthPlace>
+    <birthPlace>Ostland (Ville prospère)</birthPlace>
+    <birthPlace>Ostland (Bourg)</birthPlace>
+    <birthPlace>Ostland (Ville fortifiée)</birthPlace>
+    <birthPlace>Ostland (Village agricole)</birthPlace>
+    <birthPlace>Ostland (Village pauvre)</birthPlace>
+    <birthPlace>Ostland (Petite communauté)</birthPlace>
+    <birthPlace>Ostland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Ostland (Ferme de culture)</birthPlace>
+    <birthPlace>Ostland (Taudis)</birthPlace>
+    <birthPlace>Reikland (Cité)</birthPlace>
+    <birthPlace>Reikland (Ville prospère)</birthPlace>
+    <birthPlace>Reikland (Bourg)</birthPlace>
+    <birthPlace>Reikland (Ville fortifiée)</birthPlace>
+    <birthPlace>Reikland (Village agricole)</birthPlace>
+    <birthPlace>Reikland (Village pauvre)</birthPlace>
+    <birthPlace>Reikland (Petite communauté)</birthPlace>
+    <birthPlace>Reikland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Reikland (Ferme de culture)</birthPlace>
+    <birthPlace>Reikland (Taudis)</birthPlace>
+    <birthPlace>Stirland (Cité)</birthPlace>
+    <birthPlace>Stirland (Ville prospère)</birthPlace>
+    <birthPlace>Stirland (Bourg)</birthPlace>
+    <birthPlace>Stirland (Ville fortifiée)</birthPlace>
+    <birthPlace>Stirland (Village agricole)</birthPlace>
+    <birthPlace>Stirland (Village pauvre)</birthPlace>
+    <birthPlace>Stirland (Petite communauté)</birthPlace>
+    <birthPlace>Stirland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Stirland (Ferme de culture)</birthPlace>
+    <birthPlace>Stirland (Taudis)</birthPlace>
+    <birthPlace>Talabecland (Cité)</birthPlace>
+    <birthPlace>Talabecland (Ville prospère)</birthPlace>
+    <birthPlace>Talabecland (Bourg)</birthPlace>
+    <birthPlace>Talabecland (Ville fortifiée)</birthPlace>
+    <birthPlace>Talabecland (Village agricole)</birthPlace>
+    <birthPlace>Talabecland (Village pauvre)</birthPlace>
+    <birthPlace>Talabecland (Petite communauté)</birthPlace>
+    <birthPlace>Talabecland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Talabecland (Ferme de culture)</birthPlace>
+    <birthPlace>Talabecland (Taudis)</birthPlace>
+    <birthPlace>Wissenland (Cité)</birthPlace>
+    <birthPlace>Wissenland (Ville prospère)</birthPlace>
+    <birthPlace>Wissenland (Bourg)</birthPlace>
+    <birthPlace>Wissenland (Ville fortifiée)</birthPlace>
+    <birthPlace>Wissenland (Village agricole)</birthPlace>
+    <birthPlace>Wissenland (Village pauvre)</birthPlace>
+    <birthPlace>Wissenland (Petite communauté)</birthPlace>
+    <birthPlace>Wissenland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Wissenland (Ferme de culture)</birthPlace>
+    <birthPlace>Wissenland (Taudis)</birthPlace>
     <god>Manann</god>
     <god>Morr</god>
     <god>Myrmidia</god>
@@ -403,10 +579,6 @@
     <god>Taal</god>
     <god>Ulric</god>
     <god>Verena</god>
-    <god>Nurgle</god>
-    <god>Khorne</god>
-    <god>Slaanesh</god>
-    <god>Tzeentch</god>
   </race>
   <race name="Humain">
     <profile WS="20" BS="20" S="20" T="20" Ag="20" Int="20" WP="20" Fel="20" M="4" />
@@ -606,16 +778,106 @@
     <equipmentTable>
       <equipment>Couverts en bois</equipment>
     </equipmentTable>
-    <birthPlace>Averland</birthPlace>
-    <birthPlace>Hochland</birthPlace>
-    <birthPlace>Middenland</birthPlace>
-    <birthPlace>Nordland</birthPlace>
-    <birthPlace>Ostermark</birthPlace>
-    <birthPlace>Ostland</birthPlace>
-    <birthPlace>Reikland</birthPlace>
-    <birthPlace>Stirland</birthPlace>
-    <birthPlace>Talabecland</birthPlace>
-    <birthPlace>Wissenland</birthPlace>
+    <birthPlace>Averland (Cité)</birthPlace>
+    <birthPlace>Averland (Ville prospère)</birthPlace>
+    <birthPlace>Averland (Bourg)</birthPlace>
+    <birthPlace>Averland (Ville fortifiée)</birthPlace>
+    <birthPlace>Averland (Village agricole)</birthPlace>
+    <birthPlace>Averland (Village pauvre)</birthPlace>
+    <birthPlace>Averland (Petite communauté)</birthPlace>
+    <birthPlace>Averland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Averland (Ferme de culture)</birthPlace>
+    <birthPlace>Averland (Taudis)</birthPlace>
+    <birthPlace>Hochland (Cité)</birthPlace>
+    <birthPlace>Hochland (Ville prospère)</birthPlace>
+    <birthPlace>Hochland (Bourg)</birthPlace>
+    <birthPlace>Hochland (Ville fortifiée)</birthPlace>
+    <birthPlace>Hochland (Village agricole)</birthPlace>
+    <birthPlace>Hochland (Village pauvre)</birthPlace>
+    <birthPlace>Hochland (Petite communauté)</birthPlace>
+    <birthPlace>Hochland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Hochland (Ferme de culture)</birthPlace>
+    <birthPlace>Hochland (Taudis)</birthPlace>
+    <birthPlace>Middenland (Cité)</birthPlace>
+    <birthPlace>Middenland (Ville prospère)</birthPlace>
+    <birthPlace>Middenland (Bourg)</birthPlace>
+    <birthPlace>Middenland (Ville fortifiée)</birthPlace>
+    <birthPlace>Middenland (Village agricole)</birthPlace>
+    <birthPlace>Middenland (Village pauvre)</birthPlace>
+    <birthPlace>Middenland (Petite communauté)</birthPlace>
+    <birthPlace>Middenland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Middenland (Ferme de culture)</birthPlace>
+    <birthPlace>Middenland (Taudis)</birthPlace>
+    <birthPlace>Nordland (Cité)</birthPlace>
+    <birthPlace>Nordland (Ville prospère)</birthPlace>
+    <birthPlace>Nordland (Bourg)</birthPlace>
+    <birthPlace>Nordland (Ville fortifiée)</birthPlace>
+    <birthPlace>Nordland (Village agricole)</birthPlace>
+    <birthPlace>Nordland (Village pauvre)</birthPlace>
+    <birthPlace>Nordland (Petite communauté)</birthPlace>
+    <birthPlace>Nordland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Nordland (Ferme de culture)</birthPlace>
+    <birthPlace>Nordland (Taudis)</birthPlace>
+    <birthPlace>Ostermark (Cité)</birthPlace>
+    <birthPlace>Ostermark (Ville prospère)</birthPlace>
+    <birthPlace>Ostermark (Bourg)</birthPlace>
+    <birthPlace>Ostermark (Ville fortifiée)</birthPlace>
+    <birthPlace>Ostermark (Village agricole)</birthPlace>
+    <birthPlace>Ostermark (Village pauvre)</birthPlace>
+    <birthPlace>Ostermark (Petite communauté)</birthPlace>
+    <birthPlace>Ostermark (Ferme d'élevage)</birthPlace>
+    <birthPlace>Ostermark (Ferme de culture)</birthPlace>
+    <birthPlace>Ostermark (Taudis)</birthPlace>
+    <birthPlace>Ostland (Cité)</birthPlace>
+    <birthPlace>Ostland (Ville prospère)</birthPlace>
+    <birthPlace>Ostland (Bourg)</birthPlace>
+    <birthPlace>Ostland (Ville fortifiée)</birthPlace>
+    <birthPlace>Ostland (Village agricole)</birthPlace>
+    <birthPlace>Ostland (Village pauvre)</birthPlace>
+    <birthPlace>Ostland (Petite communauté)</birthPlace>
+    <birthPlace>Ostland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Ostland (Ferme de culture)</birthPlace>
+    <birthPlace>Ostland (Taudis)</birthPlace>
+    <birthPlace>Reikland (Cité)</birthPlace>
+    <birthPlace>Reikland (Ville prospère)</birthPlace>
+    <birthPlace>Reikland (Bourg)</birthPlace>
+    <birthPlace>Reikland (Ville fortifiée)</birthPlace>
+    <birthPlace>Reikland (Village agricole)</birthPlace>
+    <birthPlace>Reikland (Village pauvre)</birthPlace>
+    <birthPlace>Reikland (Petite communauté)</birthPlace>
+    <birthPlace>Reikland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Reikland (Ferme de culture)</birthPlace>
+    <birthPlace>Reikland (Taudis)</birthPlace>
+    <birthPlace>Stirland (Cité)</birthPlace>
+    <birthPlace>Stirland (Ville prospère)</birthPlace>
+    <birthPlace>Stirland (Bourg)</birthPlace>
+    <birthPlace>Stirland (Ville fortifiée)</birthPlace>
+    <birthPlace>Stirland (Village agricole)</birthPlace>
+    <birthPlace>Stirland (Village pauvre)</birthPlace>
+    <birthPlace>Stirland (Petite communauté)</birthPlace>
+    <birthPlace>Stirland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Stirland (Ferme de culture)</birthPlace>
+    <birthPlace>Stirland (Taudis)</birthPlace>
+    <birthPlace>Talabecland (Cité)</birthPlace>
+    <birthPlace>Talabecland (Ville prospère)</birthPlace>
+    <birthPlace>Talabecland (Bourg)</birthPlace>
+    <birthPlace>Talabecland (Ville fortifiée)</birthPlace>
+    <birthPlace>Talabecland (Village agricole)</birthPlace>
+    <birthPlace>Talabecland (Village pauvre)</birthPlace>
+    <birthPlace>Talabecland (Petite communauté)</birthPlace>
+    <birthPlace>Talabecland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Talabecland (Ferme de culture)</birthPlace>
+    <birthPlace>Talabecland (Taudis)</birthPlace>
+    <birthPlace>Wissenland (Cité)</birthPlace>
+    <birthPlace>Wissenland (Ville prospère)</birthPlace>
+    <birthPlace>Wissenland (Bourg)</birthPlace>
+    <birthPlace>Wissenland (Ville fortifiée)</birthPlace>
+    <birthPlace>Wissenland (Village agricole)</birthPlace>
+    <birthPlace>Wissenland (Village pauvre)</birthPlace>
+    <birthPlace>Wissenland (Petite communauté)</birthPlace>
+    <birthPlace>Wissenland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Wissenland (Ferme de culture)</birthPlace>
+    <birthPlace>Wissenland (Taudis)</birthPlace>
     <god>Manann</god>
     <god>Morr</god>
     <god>Myrmidia</god>
@@ -626,10 +888,6 @@
     <god>Taal</god>
     <god>Ulric</god>
     <god>Verena</god>
-    <god>Nurgle</god>
-    <god>Khorne</god>
-    <god>Slaanesh</god>
-    <god>Tzeentch</god>
   </race>
   <race name="Nain">
     <profile WS="30" BS="20" S="20" T="30" Ag="10" Int="20" WP="20" Fel="10" M="3" />
@@ -820,9 +1078,5 @@
     <god>Taal</god>
     <god>Ulric</god>
     <god>Verena</god>
-    <god>Nurgle</god>
-    <god>Khorne</god>
-    <god>Slaanesh</god>
-    <god>Tzeentch</god>
   </race>
 </races>

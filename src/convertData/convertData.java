@@ -51,6 +51,9 @@ public class convertData{
             } else if(file.getName().equals("Signes Astraux")){
                 convertAstralSigns(file);
                 System.out.println("Conversion des signes astraux effectuée.");
+            } else if(file.getName().equals("Signes Distinctifs")){
+                convertDistinguishingSigns(file);
+                System.out.println("Conversion des signes distinctifs effectuée.");
             } else {
                 System.out.println("Fichier non reconnu : " + file.getName() + ".");
             }
@@ -815,6 +818,38 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/astralSigns.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void convertDistinguishingSigns(File file){
+        System.out.println("Traitement de : " + file.getName());
+
+        Element root = new Element("distinguishingSigns");
+        Document document = new Document(root);
+        Element sign;
+
+        String line;
+        String[] elts;
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            while(br.ready()){
+                line = br.readLine();
+
+                sign = new Element("distinguishingSign");
+                sign.setText(line);
+
+                root.addContent(sign);
+            }
+
+            br.close();
+
+            XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+            xmlOutputter.output(document, new FileOutputStream("resources/distinguishingSigns.xml"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

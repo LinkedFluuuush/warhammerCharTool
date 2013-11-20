@@ -32,6 +32,7 @@ public class World {
     public static LinkedList<Career> CAREERS;
     public static LinkedList<God> GODS;
     public static LinkedList<AstralSign> ASTRALSIGNS;
+    public static LinkedList<String> DISTINGUISHINGSIGNS;
 
     public static void loadAll(){
         SKILLS = xmlLoader.skillLoader();
@@ -41,6 +42,7 @@ public class World {
         EQUIPMENTS = xmlLoader.equipmentLoader();
         GODS = xmlLoader.godLoader();
         ASTRALSIGNS = xmlLoader.astralSignsLoader();
+        DISTINGUISHINGSIGNS = xmlLoader.distinguishingsSignsLoader();
         RACES = xmlLoader.raceLoader();
         CAREERS = xmlLoader.careerLoader();
 
@@ -113,6 +115,16 @@ public class World {
         for (AstralSign ASTRALSIGN : ASTRALSIGNS) {
             if (ASTRALSIGN.getName().equals(name)) {
                 return ASTRALSIGN;
+            }
+        }
+
+        return null;
+    }
+
+    public static String searchDistinguishingSignByName(String name){
+        for (String DISTINGUISHINGSIGN : DISTINGUISHINGSIGNS) {
+            if (DISTINGUISHINGSIGN.equals(name)) {
+                return DISTINGUISHINGSIGN;
             }
         }
 

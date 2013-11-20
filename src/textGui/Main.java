@@ -1,6 +1,7 @@
 package textGui;
 
 import core.*;
+import core.entities.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,10 +16,22 @@ public class Main {
     public static void main(String[] args){
         World.loadAll();
 
-        //core.entities.Character randomCharacter = new Character("Random Player", World.searchRaceByName("Humain"), World.searchCareerByName("Agitateur"));
+        core.entities.Character randomCharacter = new core.entities.Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
 
-        //System.out.println(randomCharacter);
+        System.out.println(randomCharacter);
 
-        System.out.println(World.ASTRALSIGNS);
+//        System.out.println(World.searchRaceByName("Halfing").getBirthPlaces());
+
+        /*String[] regions = {"Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Averland","Hochland","Middenland","Nordland","Ostermark","Ostland","Reikland","Stirland","Talabecland","Wissenland"};
+        String[] villes = {"Cité", "Ville prospère", "Bourg", "Ville fortifiée", "Village agricole", "Village pauvre", "Petite communauté", "Ferme d'élevage", "Ferme de culture", "Taudis"};
+
+        for(String s : regions){
+            for(String s2 : villes){
+                if(!s.equals("Le Moot"))
+                    System.out.print(s + " (" + s2 +"),");
+                else
+                    System.out.print(s +",");
+            }
+        }*/
     }
 }
