@@ -40,9 +40,7 @@
         <choice>Fuite</choice>
       </eTalents>
     </talentsTable>
-    <weaponsTable>
-      <eWeapons />
-    </weaponsTable>
+    <weaponsTable />
     <armoursTable>
       <eArmours>
         <choice>Veste de cuir</choice>
@@ -53,23 +51,13 @@
         <choice>Vetements confortables</choice>
       </eEquipments>
     </equipmentsTable>
-    <accessTable>
-      <accessCareer>Bandit de grand chemin</accessCareer>
-      <accessCareer>Bourgeois</accessCareer>
-      <accessCareer>Capitaine</accessCareer>
-      <accessCareer>Etudiant</accessCareer>
-      <accessCareer>Fanatique</accessCareer>
-      <accessCareer>Héraut</accessCareer>
-      <accessCareer>Scribe</accessCareer>
-      <accessCareer>Serviteur</accessCareer>
-    </accessTable>
-    <openingTable>
-      <openingCareer>Charlatan</openingCareer>
-      <openingCareer>Démagogue</openingCareer>
-      <openingCareer>Escroc</openingCareer>
-      <openingCareer>Fanatique</openingCareer>
-      <openingCareer>Hors-la-loi</openingCareer>
-      <openingCareer>Politicien</openingCareer>
-    </openingTable>
+    <accessTable />
+    <openingTable />
+    <availableRaces>
+      <race>Elfe</race>
+      <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
+    </availableRaces>
   </career>
 </careers>

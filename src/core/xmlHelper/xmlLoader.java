@@ -257,7 +257,7 @@ public class xmlLoader {
         return godList;
     }
 
-   public static LinkedList<AstralSign> astralSignsLoader(){
+    public static LinkedList<AstralSign> astralSignsLoader(){
             SAXBuilder sxb = new SAXBuilder();
             List<Element> astralSigns;
             Element currentSign;
@@ -529,26 +529,33 @@ public class xmlLoader {
         List<Element> eSkillsChoice;
         LinkedList<Skill> currentSkillSet;
         LinkedList<LinkedList<Skill>> skills;
+
         Element talentTable;
         List<Element> eTalents;
         List<Element> eTalentsChoice;
         LinkedList<Talent> currentTalentSet;
         LinkedList<LinkedList<Talent>> talents;
+
         Element weaponTable;
         List<Element> eWeapons;
         List<Element> eWeaponsChoice;
         LinkedList<Weapon> currentWeaponSet;
         LinkedList<LinkedList<Weapon>> weapons;
+
         Element armourTable;
         List<Element> eArmours;
         List<Element> eArmoursChoice;
         LinkedList<Armour> currentArmourSet;
         LinkedList<LinkedList<Armour>> armours;
+
         Element equipmentTable;
         List<Element> eEquipments;
         List<Element> eEquipmentsChoice;
         LinkedList<Equipment> currentEquipmentSet;
         LinkedList<LinkedList<Equipment>> equipments;
+
+        Element racesTable;
+        LinkedList<Race> availableRaces;
 
         try{
             document = sxb.build(new File("resources/careers.xml"));
@@ -653,7 +660,23 @@ public class xmlLoader {
                 }
             }
 
-            career = new Career(currentCareer.getAttributeValue("name"), profile, skills, talents, equipments, weapons, armours, Integer.parseInt(currentCareer.getAttributeValue("type")));
+            racesTable = currentCareer.getChild("availableRaces");
+
+            if(racesTable == null){
+                availableRaces = World.RACES;
+            } else {
+                if(racesTable.getChildren("race").isEmpty()){
+                    availableRaces = World.RACES;
+                } else {
+                    availableRaces = new LinkedList<Race>();
+
+                    for(Element race : racesTable.getChildren("race")){
+                        availableRaces.add(World.searchRaceByName(race.getText()));
+                    }
+                }
+            }
+
+            career = new Career(currentCareer.getAttributeValue("name"), profile, skills, talents, equipments, weapons, armours, availableRaces, Integer.parseInt(currentCareer.getAttributeValue("type")));
 
             careerLinkedList.add(career);
         }
@@ -683,18 +706,35 @@ public class xmlLoader {
         List<Element> eAccessCareers = currentCareer.getChild("accessTable").getChildren();
 
         for(Element element : eAccessCareers){
-            accessCareer.add(World.searchCareerByName(element.getText()));
+            Career currentAccess = World.searchCareerByName(element.getText());
+            if(currentAccess != null){
+                accessCareer.add(World.searchCareerByName(element.getText()));
+
+                if(!currentAccess.getOpeningCareers().contains(career)){
+                    currentAccess.addOpeningCareer(career);
+                }
+            }
         }
         LinkedList<Career> openingCareer = new LinkedList<Career>();
 
         List<Element> eOpeningCareers = currentCareer.getChild("openingTable").getChildren();
 
         for(Element element : eOpeningCareers){
-            openingCareer.add(World.searchCareerByName(element.getText()));
+            Career currentOpening = World.searchCareerByName(element.getText());
+
+            if(currentOpening != null){
+                openingCareer.add(currentOpening);
+
+                if(!currentOpening.getAccessCareers().contains(career)){
+                    currentOpening.addAccessCareer(career);
+                }
+            }
         }
 
         career.setAccessCareers(accessCareer);
         career.setOpeningCareers(openingCareer);
+
+        xmlSaver.saveCareers();
     }
 
     private static Element searchElementCareerByName(List<Element> careers, String name){

@@ -18,7 +18,7 @@ public class Main {
 
         core.entities.Character randomCharacter = new core.entities.Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
 
-        System.out.println(randomCharacter);
+//        System.out.println(World.CAREERS.get(0).getAvailableRaces());
 
 //        System.out.println(World.searchRaceByName("Halfing").getBirthPlaces());
 

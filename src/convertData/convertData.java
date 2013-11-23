@@ -725,6 +725,20 @@ public class convertData{
 
                 career.setAttribute("type", line.charAt(0) + "");
 
+                if(br.ready()){
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    Element availableRaces = new Element("availableRaces");
+
+                    for(String s : elts){
+                        Element choice = new Element("race");
+                        choice.setText(s);
+                        availableRaces.addContent(choice);
+                    }
+
+                    career.addContent(availableRaces);
+                }
                 root.addContent(career);
 
             } catch (FileNotFoundException ignored) {

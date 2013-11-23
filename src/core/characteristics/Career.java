@@ -25,9 +25,11 @@ public class Career {
     private LinkedList<Career> accessCareers;
     private LinkedList<Career> openingCareers;
 
+    private LinkedList<Race> availableRaces;
+
     public Career(String name, Profile profile, LinkedList<LinkedList<Skill>> skills,
                   LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
-                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, int type) {
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, LinkedList<Race> availableRaces, int type) {
         this.name = name;
         this.profile = profile;
         this.skills = skills;
@@ -35,6 +37,7 @@ public class Career {
         this.equipments = equipments;
         this.weapons = weapons;
         this.armours = armours;
+        this.availableRaces = availableRaces;
         this.type = type;
     }
 
@@ -42,7 +45,7 @@ public class Career {
                   int fel, int a, int w, int m, int mag,
                   LinkedList<LinkedList<Skill>> skills,
                   LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
-                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, int type) {
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, LinkedList<Race> availableRaces, int type) {
         this.name = name;
         this.profile = new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag);
         this.skills = skills;
@@ -50,6 +53,7 @@ public class Career {
         this.equipments = equipments;
         this.weapons = weapons;
         this.armours = armours;
+        this.availableRaces = availableRaces;
         this.type = type;
     }
 
@@ -57,32 +61,76 @@ public class Career {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Profile getProfile() {
         return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public LinkedList<LinkedList<Skill>> getSkills() {
         return skills;
     }
 
+    public void setSkills(LinkedList<LinkedList<Skill>> skills) {
+        this.skills = skills;
+    }
+
     public LinkedList<LinkedList<Talent>> getTalents() {
         return talents;
+    }
+
+    public void setTalents(LinkedList<LinkedList<Talent>> talents) {
+        this.talents = talents;
     }
 
     public LinkedList<LinkedList<Equipment>> getEquipments() {
         return equipments;
     }
 
+    public void setEquipments(LinkedList<LinkedList<Equipment>> equipments) {
+        this.equipments = equipments;
+    }
+
     public LinkedList<LinkedList<Weapon>> getWeapons() {
         return weapons;
+    }
+
+    public void setWeapons(LinkedList<LinkedList<Weapon>> weapons) {
+        this.weapons = weapons;
     }
 
     public LinkedList<LinkedList<Armour>> getArmours() {
         return armours;
     }
 
-    public int getType() {
-        return type;
+    public void setArmours(LinkedList<LinkedList<Armour>> armours) {
+        this.armours = armours;
+    }
+
+    public LinkedList<Career> getAccessCareers() {
+        return accessCareers;
+    }
+
+    public void setAccessCareers(LinkedList<Career> accessCareers) {
+        this.accessCareers = accessCareers;
+    }
+
+    public void addAccessCareer(Career career){
+        this.accessCareers.add(career);
     }
 
     public LinkedList<Career> getOpeningCareers() {
@@ -93,12 +141,16 @@ public class Career {
         this.openingCareers = openingCareers;
     }
 
-    public LinkedList<Career> getAccessCareers() {
-        return accessCareers;
+    public void addOpeningCareer(Career career){
+        this.openingCareers.add(career);
     }
 
-    public void setAccessCareers(LinkedList<Career> accessCareers) {
-        this.accessCareers = accessCareers;
+    public LinkedList<Race> getAvailableRaces() {
+        return availableRaces;
+    }
+
+    public void setAvailableRaces(LinkedList<Race> availableRaces) {
+        this.availableRaces = availableRaces;
     }
 
     @Override
