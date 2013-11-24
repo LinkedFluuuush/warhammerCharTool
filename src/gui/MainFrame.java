@@ -20,12 +20,13 @@ public class MainFrame extends JFrame {
         super();
 
         this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         JPanel rootPane = new JPanel(new GridLayout(2, 2));
 
         Character randomCharacter = new Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
 
-        rootPane.add(new CharacterPanel(randomCharacter));
+        rootPane.add(new CharacterPanel());
         rootPane.add(new CharacterPanel());
         rootPane.add(new CharacterPanel());
         rootPane.add(new CharacterPanel());

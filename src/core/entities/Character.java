@@ -6,6 +6,7 @@ import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Money;
 import core.equipment.Weapon;
+import gui.actionListeners.removeCharacterAL;
 
 import javax.swing.*;
 import java.awt.*;
@@ -613,19 +614,21 @@ public class Character {
     }
 
     public JPanel toPanel(){
-        JPanel panel = new JPanel(new GridLayout(10, 1));
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         JPanel titlePanel = new JPanel();
-        titlePanel.add(new JLabel(this.getName() + ", " + this.getCareer().getName()));
-
-        JPanel racePanel = new JPanel(new GridLayout(2, 1));
-        racePanel.add(new JLabel("Carrière : " + this.getCareer().getName()));
-        racePanel.add(new JLabel("Race : " + this.getRace().getName()));
+        titlePanel.add(new JLabel(this.getName() + ", " + this.getRace().getName() + " " + this.getCareer().getName()));
 
         JPanel detailsPanel = this.getDetails().toPanel();
-        //JPanel profilePanel = this.getProfile().toPanel();
+        detailsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+
+        JPanel profilePanel = this.getProfile().toPanel();
+        detailsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
         JPanel skillsPanel = new JPanel();
+        skillsPanel.setLayout(new BoxLayout(skillsPanel, BoxLayout.X_AXIS));
+        skillsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
         skillsPanel.add(new JLabel("Compétences : "));
 
         String s = "";
@@ -635,9 +638,11 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        skillsPanel.add(new JLabel(s));
+        skillsPanel.add(new JTextArea(s));
 
         JPanel talentsPanel = new JPanel();
+        talentsPanel.setLayout(new BoxLayout(talentsPanel, BoxLayout.X_AXIS));
+        talentsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
         talentsPanel.add(new JLabel("Talents : "));
 
         s = "";
@@ -647,9 +652,12 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        talentsPanel.add(new JLabel(s));
+        talentsPanel.add(new JTextArea(s));
 
         JPanel armourPanel = new JPanel();
+        armourPanel.setLayout(new BoxLayout(armourPanel, BoxLayout.X_AXIS));
+        armourPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+
         armourPanel.add(new JLabel("Armures : "));
 
         s = "";
@@ -659,10 +667,13 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        armourPanel.add(new JLabel(s));
+        armourPanel.add(new JTextArea(s));
 
         JPanel armourLevelPanel = new JPanel();
-        armourPanel.add(new JLabel("Points d'armure : "));
+        armourLevelPanel.setLayout(new BoxLayout(armourLevelPanel, BoxLayout.X_AXIS));
+        armourLevelPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+
+        armourLevelPanel.add(new JLabel("Points d'armure : "));
 
         s = "";
         int head = 0, arms = 0, body = 0, legs = 0;
@@ -683,9 +694,12 @@ public class Character {
 
         s += "Tête : " + head + ", Bras : " + arms + ", Corps : " + body + ", Jambes : " + legs;
 
-        armourLevelPanel.add(new JLabel(s));
+        armourLevelPanel.add(new JTextArea(s));
 
         JPanel weaponsPanel = new JPanel();
+        weaponsPanel.setLayout(new BoxLayout(weaponsPanel, BoxLayout.X_AXIS));
+        weaponsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
+
         weaponsPanel.add(new JLabel("Armes : "));
 
         s = "";
@@ -695,9 +709,10 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        weaponsPanel.add(new JLabel(s));
+        weaponsPanel.add(new JTextArea(s));
 
         JPanel equipmentsPanel = new JPanel();
+        equipmentsPanel.setLayout(new BoxLayout(equipmentsPanel, BoxLayout.X_AXIS));
         equipmentsPanel.add(new JLabel("Dotations : "));
 
         s = "";
@@ -707,18 +722,34 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        equipmentsPanel.add(new JLabel(s));
+        equipmentsPanel.add(new JTextArea(s));
+        equipmentsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
         panel.add(titlePanel);
-        panel.add(racePanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
         panel.add(detailsPanel);
-        //panel.add(profilePanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
+        panel.add(profilePanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
         panel.add(skillsPanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
         panel.add(talentsPanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
         panel.add(armourPanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
         panel.add(armourLevelPanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
         panel.add(weaponsPanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
         panel.add(equipmentsPanel);
+        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
+
+        JButton removeButton = new JButton("Effacer le personnage");
+
+        removeButton.addActionListener(new removeCharacterAL());
+
+        panel.add(removeButton);
+
 
         return panel;
     }

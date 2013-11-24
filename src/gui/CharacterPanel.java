@@ -1,8 +1,10 @@
 package gui;
 
 import core.entities.Character;
+import gui.actionListeners.removeCharacterAL;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * User: Linked
@@ -15,6 +17,8 @@ public class CharacterPanel extends JPanel {
     public CharacterPanel(Character character){
         super();
 
+        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+
         this.character = character;
 
         applyCharacter();
@@ -22,6 +26,8 @@ public class CharacterPanel extends JPanel {
 
     public CharacterPanel(){
         super();
+
+        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         this.character = null;
 
@@ -37,10 +43,16 @@ public class CharacterPanel extends JPanel {
     }
 
     public void applyCharacter(){
+        this.removeAll();
+
         if(this.character == null){
-            this.add(new JButton("Créer un personnage"));
+            this.add(new CreateCharacterPanel());
         } else {
-            this.add(character.toPanel());
+            JPanel panel = character.toPanel();
+            this.add(panel);
         }
+
+        this.revalidate();
+        this.repaint();
     }
 }

@@ -176,9 +176,12 @@ public class PersonalDetails {
     }
 
     public JPanel toPanel(){
-        JPanel panel = new JPanel(new GridLayout(3, 1));
+        JPanel panel = new JPanel();
+
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         JPanel arrayPanel = new JPanel(new GridLayout(4, 2));
+        arrayPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         arrayPanel.add(new JLabel("Age : " + age));
 
@@ -202,7 +205,10 @@ public class PersonalDetails {
 
         panel.add(arrayPanel);
 
-        panel.add(new JLabel("Ville de Naissance : " + birthplace));
+        JLabel birthLabel = new JLabel("Ville de Naissance : " + birthplace);
+        birthLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+
+        panel.add(birthLabel);
 
         String s = "Signes distinctifs : ";
 
@@ -212,7 +218,12 @@ public class PersonalDetails {
 
         s = s.substring(0, s.length() - 2);
 
-        panel.add(new JLabel(s));
+        JLabel signsLabel = new JLabel(s);
+        signsLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+
+        panel.add(signsLabel);
+
+        panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         return panel;
     }

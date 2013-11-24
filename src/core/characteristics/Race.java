@@ -141,6 +141,10 @@ public class Race {
 
     @Override
     public String toString(){
+        return this.getName();
+    }
+
+    public String allToString(){
         String res = "Race : " + name + "\n";
         res += profile + "\n";
         res += "Compétences : \n";

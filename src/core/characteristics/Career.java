@@ -155,6 +155,10 @@ public class Career {
 
     @Override
     public String toString(){
+        return this.getName();
+    }
+
+    public String allToString(){
         String res = "Carrière : " + name + " (Carrière";
 
         if(type == 1){

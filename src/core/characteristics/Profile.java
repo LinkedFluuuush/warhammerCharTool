@@ -1,5 +1,8 @@
 package core.characteristics;
 
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Linked
@@ -243,5 +246,48 @@ public class Profile {
         res += this.getA() + "\t" + this.getW() + "\t" + this.getSb() + "\t" + this.getTb() + "\t" + this.getM() +
                 "\t" + this.getMag() + "\t" + this.getIp() + "\t" + this.getFp() + "\n";
         return res;
+    }
+
+    public JPanel toPanel(){
+        JPanel panel = new JPanel(new GridLayout(4, 8));
+        panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+
+        panel.add(new JLabel("CC"));
+        panel.add(new JLabel("CT"));
+        panel.add(new JLabel("F"));
+        panel.add(new JLabel("E"));
+        panel.add(new JLabel("Ag"));
+        panel.add(new JLabel("Int"));
+        panel.add(new JLabel("FM"));
+        panel.add(new JLabel("Soc"));
+
+        panel.add(new JTextArea("" + this.getWs()));
+        panel.add(new JTextArea("" + this.getBs()));
+        panel.add(new JTextArea("" + this.getS()));
+        panel.add(new JTextArea("" + this.getT()));
+        panel.add(new JTextArea("" + this.getAg()));
+        panel.add(new JTextArea("" + this.getIntel()));
+        panel.add(new JTextArea("" + this.getWp()));
+        panel.add(new JTextArea("" + this.getFel()));
+
+        panel.add(new JLabel("A"));
+        panel.add(new JLabel("B"));
+        panel.add(new JLabel("BF"));
+        panel.add(new JLabel("BE"));
+        panel.add(new JLabel("M"));
+        panel.add(new JLabel("Mag"));
+        panel.add(new JLabel("PF"));
+        panel.add(new JLabel("PD"));
+
+        panel.add(new JTextArea("" + this.getA()));
+        panel.add(new JTextArea("" + this.getW()));
+        panel.add(new JTextArea("" + this.getSb()));
+        panel.add(new JTextArea("" + this.getTb()));
+        panel.add(new JTextArea("" + this.getM()));
+        panel.add(new JTextArea("" + this.getMag()));
+        panel.add(new JTextArea("" + this.getIp()));
+        panel.add(new JTextArea("" + this.getFp()));
+
+        return panel;
     }
 }
