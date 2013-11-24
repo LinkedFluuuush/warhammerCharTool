@@ -1,7 +1,6 @@
-package textGui;
+package textOut;
 
 import core.*;
-import core.entities.*;
 
 /**
  * Created with IntelliJ IDEA.

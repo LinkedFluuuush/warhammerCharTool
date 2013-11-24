@@ -1,4 +1,4 @@
-package textGui;
+package textOut;
 
 import core.equipment.Money;
 
