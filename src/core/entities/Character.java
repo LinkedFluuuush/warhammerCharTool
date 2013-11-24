@@ -7,6 +7,8 @@ import core.equipment.Equipment;
 import core.equipment.Money;
 import core.equipment.Weapon;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -276,6 +278,7 @@ public class Character {
 
         String birthPlace = this.getRace().getBirthPlaces().get(r.nextInt(this.getRace().getBirthPlaces().size()));
         God worshipedGod = this.getRace().getWorshipedGods().get(r.nextInt(this.getRace().getWorshipedGods().size()));
+        AstralSign astralSign = World.ASTRALSIGNS.get(r.nextInt(World.ASTRALSIGNS.size()));
 
         LinkedList<String> distinguishingMarks = new LinkedList<String>();
         String selectedMark;
@@ -294,7 +297,7 @@ public class Character {
                 birthPlace, worshipedGod, (int)(size + ((r.nextInt(10) + 1) * 2.5)),
                 race.getWeight()[r.nextInt(race.getWeight().length)],
                 eyeColour, eyeColour,
-                race.getHairColour()[r.nextInt(race.getHairColour().length)],
+                race.getHairColour()[r.nextInt(race.getHairColour().length)], astralSign,
                 distinguishingMarks
         );
     }
@@ -607,5 +610,116 @@ public class Character {
                 "Corps : " + bodyArmour + ", Jambe gauche : " + legsArmour + ", Jambe droite  : " + legsArmour;
 
         return res;
+    }
+
+    public JPanel toPanel(){
+        JPanel panel = new JPanel(new GridLayout(10, 1));
+
+        JPanel titlePanel = new JPanel();
+        titlePanel.add(new JLabel(this.getName() + ", " + this.getCareer().getName()));
+
+        JPanel racePanel = new JPanel(new GridLayout(2, 1));
+        racePanel.add(new JLabel("Carrière : " + this.getCareer().getName()));
+        racePanel.add(new JLabel("Race : " + this.getRace().getName()));
+
+        JPanel detailsPanel = this.getDetails().toPanel();
+        //JPanel profilePanel = this.getProfile().toPanel();
+
+        JPanel skillsPanel = new JPanel();
+        skillsPanel.add(new JLabel("Compétences : "));
+
+        String s = "";
+        for(Skill skill : this.getSkills()){
+            s += skill.getName() + ", ";
+        }
+
+        s = s.substring(0, s.length() - 2);
+
+        skillsPanel.add(new JLabel(s));
+
+        JPanel talentsPanel = new JPanel();
+        talentsPanel.add(new JLabel("Talents : "));
+
+        s = "";
+        for(Talent talent : this.getTalents()){
+            s += talent.getName() + ", ";
+        }
+
+        s = s.substring(0, s.length() - 2);
+
+        talentsPanel.add(new JLabel(s));
+
+        JPanel armourPanel = new JPanel();
+        armourPanel.add(new JLabel("Armures : "));
+
+        s = "";
+        for(Armour armour : this.getArmours()){
+            s += armour.getName() + ", ";
+        }
+
+        s = s.substring(0, s.length() - 2);
+
+        armourPanel.add(new JLabel(s));
+
+        JPanel armourLevelPanel = new JPanel();
+        armourPanel.add(new JLabel("Points d'armure : "));
+
+        s = "";
+        int head = 0, arms = 0, body = 0, legs = 0;
+        for(Armour armour : this.getArmours()){
+            if (armour.getCoveredZones().contains("Tête")){
+                head++;
+            }
+            if (armour.getCoveredZones().contains("Bras")){
+                arms++;
+            }
+            if (armour.getCoveredZones().contains("Corps")){
+                body++;
+            }
+            if (armour.getCoveredZones().contains("Jambes")){
+                legs++;
+            }
+        }
+
+        s += "Tête : " + head + ", Bras : " + arms + ", Corps : " + body + ", Jambes : " + legs;
+
+        armourLevelPanel.add(new JLabel(s));
+
+        JPanel weaponsPanel = new JPanel();
+        weaponsPanel.add(new JLabel("Armes : "));
+
+        s = "";
+        for(Weapon weapon : this.getWeapons()){
+            s += weapon.getName() + ", ";
+        }
+
+        s = s.substring(0, s.length() - 2);
+
+        weaponsPanel.add(new JLabel(s));
+
+        JPanel equipmentsPanel = new JPanel();
+        equipmentsPanel.add(new JLabel("Dotations : "));
+
+        s = "";
+        for(Equipment equipment : this.getEquipment()){
+            s += equipment.getName() + ", ";
+        }
+
+        s = s.substring(0, s.length() - 2);
+
+        equipmentsPanel.add(new JLabel(s));
+
+        panel.add(titlePanel);
+        panel.add(racePanel);
+        panel.add(detailsPanel);
+        //panel.add(profilePanel);
+        panel.add(skillsPanel);
+        panel.add(talentsPanel);
+        panel.add(armourPanel);
+        panel.add(armourLevelPanel);
+        panel.add(weaponsPanel);
+        panel.add(equipmentsPanel);
+
+        return panel;
     }
 }

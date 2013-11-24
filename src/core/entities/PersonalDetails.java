@@ -3,6 +3,8 @@ package core.entities;
 import core.World;
 import core.characteristics.Race;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.LinkedList;
 
 /**
@@ -22,6 +24,7 @@ public class PersonalDetails {
     private String rightEyeColour;
     private String leftEyeColour;
     private String hairColour;
+    private AstralSign astralSign;
     private LinkedList<String> distinguishingMarks;
 
     public PersonalDetails(){
@@ -39,7 +42,7 @@ public class PersonalDetails {
 
     public PersonalDetails(boolean male, int age, String birthplace,
                            God favoriteGod, int height, int weight, String rightEyeColour, String leftEyeColour,
-                           String hairColour, LinkedList<String> distinguishingMarks) {
+                           String hairColour, AstralSign astralSign, LinkedList<String> distinguishingMarks) {
         this.male = male;
         this.age = age;
         this.birthplace = birthplace;
@@ -49,6 +52,7 @@ public class PersonalDetails {
         this.rightEyeColour = rightEyeColour;
         this.leftEyeColour = leftEyeColour;
         this.hairColour = hairColour;
+        this.astralSign = astralSign;
         this.distinguishingMarks = distinguishingMarks;
     }
 
@@ -169,5 +173,47 @@ public class PersonalDetails {
         }
 
         return res;
+    }
+
+    public JPanel toPanel(){
+        JPanel panel = new JPanel(new GridLayout(3, 1));
+
+        JPanel arrayPanel = new JPanel(new GridLayout(4, 2));
+
+        arrayPanel.add(new JLabel("Age : " + age));
+
+        String sMale = male?"Masculin":"Féminin";
+        arrayPanel.add(new JLabel("Sexe : " + sMale));
+
+        arrayPanel.add(new JLabel("Couleur des yeux : " + leftEyeColour));
+
+        if(((height % 100) + "").length() == 1)
+            arrayPanel.add(new JLabel("Taille : " + height / 100 + "m0" + height % 100));
+        else
+            arrayPanel.add(new JLabel("Taille : " + height / 100 + "m" + height % 100));
+
+        arrayPanel.add(new JLabel("Coucleur des cheveux : " + hairColour));
+
+        arrayPanel.add(new JLabel("Poids : " + weight + "kg"));
+
+        arrayPanel.add(new JLabel("Signe Astral : " + astralSign.getName()));
+
+        arrayPanel.add(new JLabel("Dieu Favori : " + favoriteGod.getName()));
+
+        panel.add(arrayPanel);
+
+        panel.add(new JLabel("Ville de Naissance : " + birthplace));
+
+        String s = "Signes distinctifs : ";
+
+        for(String sign : distinguishingMarks){
+            s += sign + ", ";
+        }
+
+        s = s.substring(0, s.length() - 2);
+
+        panel.add(new JLabel(s));
+
+        return panel;
     }
 }
