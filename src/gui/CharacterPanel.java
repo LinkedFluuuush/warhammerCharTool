@@ -40,7 +40,7 @@ public class CharacterPanel extends JPanel {
         if(this.character == null){
             this.add(new JButton("Créer un personnage"));
         } else {
-            this.add(new JLabel(character.toString()));
+            this.add(character.toPanel());
         }
     }
 }
