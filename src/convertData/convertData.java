@@ -554,195 +554,201 @@ public class convertData{
         String[] elts;
 
         for(File f : careersFiles){
-            System.out.println("Traitement de : " + f.getName());
+            if(f.getName().endsWith("~")){
+                System.out.println("Fichier ignoré : " + f.getName());
+            } else {
+                System.out.println("Traitement de : " + f.getName());
 
-            career = new Element("career");
-            career.setAttribute("name", f.getName());
+                career = new Element("career");
+                career.setAttribute("name", f.getName());
 
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(f));
+                try {
+                    BufferedReader br = new BufferedReader(new FileReader(f));
 
-                line = br.readLine();
-                elts = line.split(",");
-
-                Element profile = new Element("profile");
-
-                profile.setAttribute("WS", elts[0]);
-                profile.setAttribute("BS", elts[1]);
-                profile.setAttribute("S", elts[2]);
-                profile.setAttribute("T", elts[3]);
-                profile.setAttribute("Ag", elts[4]);
-                profile.setAttribute("Int", elts[5]);
-                profile.setAttribute("WP", elts[6]);
-                profile.setAttribute("Fel", elts[7]);
-                profile.setAttribute("A", elts[8]);
-                profile.setAttribute("W", elts[9]);
-                profile.setAttribute("M", elts[10]);
-                profile.setAttribute("Mag", elts[11]);
-
-                career.addContent(profile);
-
-                line = br.readLine();
-                elts = line.split(",");
-
-                Element competencesTable = new Element("skillsTable");
-
-                for(String competences : elts){
-                    Element eCompetences = new Element("eSkills");
-
-                    String[] choices = competences.split(":");
-
-                    for (String choice1 : choices) {
-                        Element choice = new Element("choice");
-                        choice.setText(choice1);
-                        eCompetences.addContent(choice);
-                    }
-
-                    competencesTable.addContent(eCompetences);
-                }
-
-                career.addContent(competencesTable);
-
-                line = br.readLine();
-                elts = line.split(",");
-
-                Element talentsTable = new Element("talentsTable");
-
-                for(String talents : elts){
-                    Element eTalents = new Element("eTalents");
-
-                    String[] choices = talents.split(":");
-
-                    for (String choice1 : choices) {
-                        Element choice = new Element("choice");
-                        choice.setText(choice1);
-                        eTalents.addContent(choice);
-                    }
-
-                    talentsTable.addContent(eTalents);
-                }
-
-                career.addContent(talentsTable);
-
-                line = br.readLine();
-                elts = line.split(",");
-
-                Element weaponsTable = new Element("weaponsTable");
-
-                for(String weapon : elts){
-                    Element eWeapon = new Element("eWeapons");
-
-                    String[] choices = weapon.split(":");
-
-                    for (String choice1 : choices) {
-                        if (!choice1.equals("") && choice1 != null) {
-                            Element choice = new Element("choice");
-                            choice.setText(choice1);
-                            eWeapon.addContent(choice);
-                        }
-                    }
-
-                    weaponsTable.addContent(eWeapon);
-                }
-
-                career.addContent(weaponsTable);
-
-                line = br.readLine();
-                elts = line.split(",");
-
-                Element armoursTable = new Element("armoursTable");
-
-                for(String armour : elts){
-                    Element eArmours = new Element("eArmours");
-
-                    String[] choices = armour.split(":");
-
-                    for (String choice1 : choices) {
-                        if (!choice1.equals("") && choice1 != null) {
-                            Element choice = new Element("choice");
-                            choice.setText(choice1);
-                            eArmours.addContent(choice);
-                        }
-                    }
-
-                    armoursTable.addContent(eArmours);
-                }
-
-                career.addContent(armoursTable);
-
-                line = br.readLine();
-                elts = line.split(",");
-
-                Element equipmentsTable = new Element("equipmentsTable");
-
-                for(String equipment : elts){
-                    Element eEquipments = new Element("eEquipments");
-
-                    String[] choices = equipment.split(":");
-
-                    for (String choice1 : choices) {
-                        if (!choice1.equals("") && choice1 != null) {
-                            Element choice = new Element("choice");
-                            choice.setText(choice1);
-                            eEquipments.addContent(choice);
-                        }
-                    }
-
-                    equipmentsTable.addContent(eEquipments);
-                }
-
-                career.addContent(equipmentsTable);
-
-                Element accessTable = new Element("accessTable");
-                Element accessCareer;
-
-                line = br.readLine();
-                elts = line.split(",");
-
-                for(String access : elts){
-                    accessCareer = new Element("accessCareer");
-                    accessCareer.setText(access);
-                    accessTable.addContent(accessCareer);
-                }
-
-                career.addContent(accessTable);
-
-                Element openingTable = new Element("openingTable");
-                Element openingCareer;
-
-                line = br.readLine();
-                elts = line.split(",");
-
-                for(String opening : elts){
-                    openingCareer = new Element("openingCareer");
-                    openingCareer.setText(opening);
-                    openingTable.addContent(openingCareer);
-                }
-
-                career.addContent(openingTable);
-
-                line = br.readLine();
-
-                career.setAttribute("type", line.charAt(0) + "");
-
-                if(br.ready()){
                     line = br.readLine();
                     elts = line.split(",");
 
-                    Element availableRaces = new Element("availableRaces");
+                    Element profile = new Element("profile");
 
-                    for(String s : elts){
-                        Element choice = new Element("race");
-                        choice.setText(s);
-                        availableRaces.addContent(choice);
+                    profile.setAttribute("WS", elts[0]);
+                    profile.setAttribute("BS", elts[1]);
+                    profile.setAttribute("S", elts[2]);
+                    profile.setAttribute("T", elts[3]);
+                    profile.setAttribute("Ag", elts[4]);
+                    profile.setAttribute("Int", elts[5]);
+                    profile.setAttribute("WP", elts[6]);
+                    profile.setAttribute("Fel", elts[7]);
+                    profile.setAttribute("A", elts[8]);
+                    profile.setAttribute("W", elts[9]);
+                    profile.setAttribute("M", elts[10]);
+                    profile.setAttribute("Mag", elts[11]);
+
+                    career.addContent(profile);
+
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    Element competencesTable = new Element("skillsTable");
+
+                    for(String competences : elts){
+                        Element eCompetences = new Element("eSkills");
+
+                        String[] choices = competences.split(":");
+
+                        for (String choice1 : choices) {
+                            Element choice = new Element("choice");
+                            choice.setText(choice1);
+                            eCompetences.addContent(choice);
+                        }
+
+                        competencesTable.addContent(eCompetences);
                     }
 
-                    career.addContent(availableRaces);
-                }
-                root.addContent(career);
+                    career.addContent(competencesTable);
 
-            } catch (FileNotFoundException ignored) {
-            } catch (IOException ignored) {
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    Element talentsTable = new Element("talentsTable");
+
+                    for(String talents : elts){
+                        Element eTalents = new Element("eTalents");
+
+                        String[] choices = talents.split(":");
+
+                        for (String choice1 : choices) {
+                            Element choice = new Element("choice");
+                            choice.setText(choice1);
+                            eTalents.addContent(choice);
+                        }
+
+                        talentsTable.addContent(eTalents);
+                    }
+
+                    career.addContent(talentsTable);
+
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    Element weaponsTable = new Element("weaponsTable");
+
+                    for(String weapon : elts){
+                        Element eWeapon = new Element("eWeapons");
+
+                        String[] choices = weapon.split(":");
+
+                        for (String choice1 : choices) {
+                            if (!choice1.equals("") && choice1 != null) {
+                                Element choice = new Element("choice");
+                                choice.setText(choice1);
+                                eWeapon.addContent(choice);
+                            }
+                        }
+
+                        weaponsTable.addContent(eWeapon);
+                    }
+
+                    career.addContent(weaponsTable);
+
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    Element armoursTable = new Element("armoursTable");
+
+                    for(String armour : elts){
+                        Element eArmours = new Element("eArmours");
+
+                        String[] choices = armour.split(":");
+
+                        for (String choice1 : choices) {
+                            if (!choice1.equals("") && choice1 != null) {
+                                Element choice = new Element("choice");
+                                choice.setText(choice1);
+                                eArmours.addContent(choice);
+                            }
+                        }
+
+                        armoursTable.addContent(eArmours);
+                    }
+
+                    career.addContent(armoursTable);
+
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    Element equipmentsTable = new Element("equipmentsTable");
+
+                    for(String equipment : elts){
+                        Element eEquipments = new Element("eEquipments");
+
+                        String[] choices = equipment.split(":");
+
+                        for (String choice1 : choices) {
+                            if (!choice1.equals("") && choice1 != null) {
+                                Element choice = new Element("choice");
+                                choice.setText(choice1);
+                                eEquipments.addContent(choice);
+                            }
+                        }
+
+                        equipmentsTable.addContent(eEquipments);
+                    }
+
+                    career.addContent(equipmentsTable);
+
+                    Element accessTable = new Element("accessTable");
+                    Element accessCareer;
+
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    for(String access : elts){
+                        accessCareer = new Element("accessCareer");
+                        accessCareer.setText(access);
+                        accessTable.addContent(accessCareer);
+                    }
+
+                    career.addContent(accessTable);
+
+                    Element openingTable = new Element("openingTable");
+                    Element openingCareer;
+
+                    line = br.readLine();
+                    elts = line.split(",");
+
+                    for(String opening : elts){
+                        openingCareer = new Element("openingCareer");
+                        openingCareer.setText(opening);
+                        openingTable.addContent(openingCareer);
+                    }
+
+                    career.addContent(openingTable);
+
+                    line = br.readLine();
+
+                    career.setAttribute("type", line.charAt(0) + "");
+
+                    if(br.ready()){
+                        line = br.readLine();
+                        elts = line.split(",");
+
+                        Element availableRaces = new Element("availableRaces");
+
+                        for(String s : elts){
+                            if(!s.equals("")){
+                                Element choice = new Element("race");
+                                choice.setText(s);
+                                availableRaces.addContent(choice);
+                            }
+                        }
+
+                        career.addContent(availableRaces);
+                    }
+                    root.addContent(career);
+
+                } catch (FileNotFoundException ignored) {
+                } catch (IOException ignored) {
+                }
             }
         }
 

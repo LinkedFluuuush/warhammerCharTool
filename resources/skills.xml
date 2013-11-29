@@ -8,9 +8,9 @@
   <skill name="Déguisement" characteristics="Fel" />
   <skill name="Déplacement silencieux" characteristics="Ag" />
   <skill name="Dissimulation" characteristics="Ag" />
-  <skill name="Équitation" characteristics="Ag" />
+  <skill name="Equitation" characteristics="Ag" />
   <skill name="Escalade" characteristics="S" />
-  <skill name="Évaluation" characteristics="Int" />
+  <skill name="Evaluation" characteristics="Int" />
   <skill name="Fouille" characteristics="Int" />
   <skill name="Intimidation" characteristics="S" />
   <skill name="Jeu" characteristics="Int" />
@@ -98,7 +98,7 @@
   <skill name="Métier (apothicaire)" characteristics="Int" />
   <skill name="Métier (arquebusier)" characteristics="Ag" />
   <skill name="Métier (artiste)" characteristics="Ag" />
-  <skill name="Métier (brasseur) Int" />
+  <skill name="Métier (brasseur)" characteristics="Int" />
   <skill name="Métier (calligraphe)" characteristics="Ag" />
   <skill name="Métier (cartographe)" characteristics="Ag" />
   <skill name="Métier (charpentier)" characteristics="Ag" />

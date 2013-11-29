@@ -58,6 +58,8 @@ public class xmlSaver {
         Element choice;
 
         for(Career aCareer : World.CAREERS){
+            System.out.println(aCareer);
+
             career = new Element("career");
             career.setAttribute("name", aCareer.getName());
             career.setAttribute("type", aCareer.getType()+"");
@@ -171,6 +173,7 @@ public class xmlSaver {
             availableRaces = new Element("availableRaces");
 
             for(Race aAvailableRace : aCareer.getAvailableRaces()){
+                System.out.println(aAvailableRace);
                 race = new Element("race");
                 race.setText(aAvailableRace.getName());
                 availableRaces.addContent(race);

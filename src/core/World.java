@@ -10,6 +10,7 @@ import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Weapon;
 import core.xmlHelper.xmlLoader;
+import core.xmlHelper.xmlSaver;
 
 import java.util.LinkedList;
 
@@ -47,8 +48,10 @@ public class World {
         CAREERS = xmlLoader.careerLoader();
 
         for(Career career : CAREERS){
+            System.out.println(career);
             xmlLoader.careerLinker(career);
         }
+        xmlSaver.saveCareers();
     }
 
     public static Skill searchSkillByName(String name){
@@ -57,6 +60,8 @@ public class World {
                 return SKILL;
             }
         }
+
+        System.out.println("Compétence non reconnue : " + name);
 
         return null;
     }
@@ -68,6 +73,8 @@ public class World {
             }
         }
 
+        System.out.println("Talent non reconnu : " + name);
+
         return null;
     }
 
@@ -77,6 +84,8 @@ public class World {
                 return WEAPON;
             }
         }
+
+        System.out.println("Arme non reconnue : " + name);
 
         return null;
     }
@@ -88,6 +97,8 @@ public class World {
             }
         }
 
+        System.out.println("Armure non reconnue : " + name);
+
         return null;
     }
 
@@ -97,6 +108,8 @@ public class World {
                 return EQUIPMENT;
             }
         }
+
+        System.out.println("Equipement non reconnu : " + name);
 
         return null;
     }
@@ -108,6 +121,8 @@ public class World {
             }
         }
 
+        System.out.println("Dieu non reconnu : " + name);
+
         return null;
     }
 
@@ -117,6 +132,8 @@ public class World {
                 return ASTRALSIGN;
             }
         }
+
+        System.out.println("Signe non reconnu : " + name);
 
         return null;
     }
@@ -128,6 +145,8 @@ public class World {
             }
         }
 
+        System.out.println("Marque non reconnue : " + name);
+
         return null;
     }
 
@@ -136,6 +155,10 @@ public class World {
             if (RACE.getName().equals(name)) {
                 return RACE;
             }
+        }
+
+        if(!name.equals("")){
+            System.out.println("Race non reconnue : " + name);
         }
 
         return null;
@@ -147,6 +170,8 @@ public class World {
                 return CAREER;
             }
         }
+
+        System.out.println("Carrière non reconnue : " + name);
 
         return null;
     }

@@ -33,8 +33,7 @@ Filet:60:720:Armes paralysantes:0:4:8:2:Immobilisante
 Fouet:40:480:Armes paralysantes:BF-4:6:0:1:Immobilisante,Rapide
 Fronde:10:960:Lance-pierres:3:16:32:1:Aucun
 Fustibale:50:1440:Lance-pierres:4:24:48:2:Aucun
-Hache de jet:40:1200:Armes de jet:BF-2:8:0:1:Aucun
-Marteau de jet:40:1200:Armes de jet:BF-2:8:0:1:Aucun
+Hache/Marteau de jet:40:1200:Armes de jet:BF-2:8:0:1:Aucun
 Javelot:30:300:Aucun:BF-1:8:16:1:Aucun
 Lance:50:2400:Aucun:BF:8:0:1:Aucun
 Lasso:10:240:Armes paralysantes:0:8:0:1:Immobilisante

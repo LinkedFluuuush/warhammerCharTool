@@ -3,7 +3,7 @@ package gui;
 import core.World;
 import core.characteristics.Career;
 import core.characteristics.Race;
-import gui.actionListeners.createCharacterAL;
+import gui.listeners.characterListener.createCharacterAL;
 
 import javax.swing.*;
 

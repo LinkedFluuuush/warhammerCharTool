@@ -1,4 +1,4 @@
-package gui.actionListeners;
+package gui.listeners.characterListener;
 
 import gui.CharacterPanel;
 

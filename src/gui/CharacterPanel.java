@@ -1,7 +1,6 @@
 package gui;
 
 import core.entities.Character;
-import gui.actionListeners.removeCharacterAL;
 
 import javax.swing.*;
 import java.awt.*;
@@ -50,9 +49,19 @@ public class CharacterPanel extends JPanel {
         } else {
             JPanel panel = character.toPanel();
             this.add(panel);
+            //this.setPreferredSize(new Dimension(??, 500));
+            //TODO : redimensionner l'image de fond
         }
 
         this.revalidate();
         this.repaint();
+    }
+
+    public void paintComponent(Graphics g){
+        if(this.character == null){
+
+        } else {
+            g.drawImage(new ImageIcon("./resources/imgs/OneChar.png").getImage(), 0, 0, null);
+        }
     }
 }

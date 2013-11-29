@@ -89,7 +89,8 @@
   <weapon name="Bolas" enc="20" group="Armes paralysantes" damage="1" lowRange="8" highRange="16" reload="1" goldenCrowns="0" silverShillings="7" brassPennies="0">
     <attribute>Immobilisante</attribute>
   </weapon>
-  <weapon name="Dague/Etoile de jet" enc="10" group="Armes de jet" damage="BF-3" lowRange="6" highRange="12" reload="1" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <weapon name="Dague de jet" enc="10" group="Armes de jet" damage="BF-3" lowRange="6" highRange="12" reload="1" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <weapon name="Etoile de jet" enc="10" group="Armes de jet" damage="BF-3" lowRange="6" highRange="12" reload="1" goldenCrowns="30" silverShillings="0" brassPennies="0" />
   <weapon name="Filet" enc="60" group="Armes paralysantes" damage="0" lowRange="4" highRange="8" reload="2" goldenCrowns="3" silverShillings="0" brassPennies="0">
     <attribute>Immobilisante</attribute>
   </weapon>
@@ -99,7 +100,8 @@
   </weapon>
   <weapon name="Fronde" enc="10" group="Lance-pierres" damage="3" lowRange="16" highRange="32" reload="1" goldenCrowns="4" silverShillings="0" brassPennies="0" />
   <weapon name="Fustibale" enc="50" group="Lance-pierres" damage="4" lowRange="24" highRange="48" reload="2" goldenCrowns="6" silverShillings="0" brassPennies="0" />
-  <weapon name="Hache/Marteau de jet" enc="40" group="Armes de jet" damage="BF-2" lowRange="8" highRange="0" reload="1" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <weapon name="Hache de jet" enc="40" group="Armes de jet" damage="BF-2" lowRange="8" highRange="0" reload="1" goldenCrowns="5" silverShillings="0" brassPennies="0" />
+  <weapon name="Marteau de jet" enc="40" group="Armes de jet" damage="BF-2" lowRange="8" highRange="0" reload="1" goldenCrowns="5" silverShillings="0" brassPennies="0" />
   <weapon name="Javelot" enc="30" group="Aucun" damage="BF-1" lowRange="8" highRange="16" reload="1" goldenCrowns="1" silverShillings="5" brassPennies="0" />
   <weapon name="Lance" enc="50" group="Aucun" damage="BF" lowRange="8" highRange="0" reload="1" goldenCrowns="10" silverShillings="0" brassPennies="0" />
   <weapon name="Lasso" enc="10" group="Armes paralysantes" damage="0" lowRange="8" highRange="0" reload="1" goldenCrowns="1" silverShillings="0" brassPennies="0">

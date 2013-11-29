@@ -6,7 +6,7 @@ import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Money;
 import core.equipment.Weapon;
-import gui.actionListeners.removeCharacterAL;
+import gui.listeners.characterListener.removeCharacterAL;
 
 import javax.swing.*;
 import java.awt.*;
@@ -307,6 +307,10 @@ public class Character {
         LinkedList<Skill> newSkills = new LinkedList<Skill>();
         Random r = new Random();
 
+        for(LinkedList<Skill> skillChoice : race.getSkills()){
+            newSkills.add(skillChoice.get(r.nextInt(skillChoice.size())));
+        }
+
         for(LinkedList<Skill> skillChoice : career.getSkills()){
             newSkills.add(skillChoice.get(r.nextInt(skillChoice.size())));
         }
@@ -317,6 +321,10 @@ public class Character {
     public LinkedList<Talent> randomTalents(){
         LinkedList<Talent> newTalents = new LinkedList<Talent>();
         Random r = new Random();
+
+        for(LinkedList<Talent> talentChoice : race.getTalents()){
+            newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
+        }
 
         for(LinkedList<Talent> talentChoice : career.getTalents()){
             newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
@@ -638,7 +646,10 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        skillsPanel.add(new JTextArea(s));
+        JTextArea textArea = new JTextArea(s);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        skillsPanel.add(textArea);
 
         JPanel talentsPanel = new JPanel();
         talentsPanel.setLayout(new BoxLayout(talentsPanel, BoxLayout.X_AXIS));
@@ -652,7 +663,10 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        talentsPanel.add(new JTextArea(s));
+        textArea = new JTextArea(s);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        talentsPanel.add(textArea);
 
         JPanel armourPanel = new JPanel();
         armourPanel.setLayout(new BoxLayout(armourPanel, BoxLayout.X_AXIS));
@@ -667,7 +681,10 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        armourPanel.add(new JTextArea(s));
+        textArea = new JTextArea(s);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        armourPanel.add(textArea);
 
         JPanel armourLevelPanel = new JPanel();
         armourLevelPanel.setLayout(new BoxLayout(armourLevelPanel, BoxLayout.X_AXIS));
@@ -694,7 +711,10 @@ public class Character {
 
         s += "Tête : " + head + ", Bras : " + arms + ", Corps : " + body + ", Jambes : " + legs;
 
-        armourLevelPanel.add(new JTextArea(s));
+        textArea = new JTextArea(s);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        armourLevelPanel.add(textArea);
 
         JPanel weaponsPanel = new JPanel();
         weaponsPanel.setLayout(new BoxLayout(weaponsPanel, BoxLayout.X_AXIS));
@@ -709,7 +729,10 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        weaponsPanel.add(new JTextArea(s));
+        textArea = new JTextArea(s);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        weaponsPanel.add(textArea);
 
         JPanel equipmentsPanel = new JPanel();
         equipmentsPanel.setLayout(new BoxLayout(equipmentsPanel, BoxLayout.X_AXIS));
@@ -722,7 +745,10 @@ public class Character {
 
         s = s.substring(0, s.length() - 2);
 
-        equipmentsPanel.add(new JTextArea(s));
+        textArea = new JTextArea(s);
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        equipmentsPanel.add(textArea);
         equipmentsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
         panel.add(titlePanel);
@@ -745,11 +771,9 @@ public class Character {
         panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
 
         JButton removeButton = new JButton("Effacer le personnage");
-
+        removeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         removeButton.addActionListener(new removeCharacterAL());
-
         panel.add(removeButton);
-
 
         return panel;
     }

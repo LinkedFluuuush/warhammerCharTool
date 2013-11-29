@@ -1,5 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <careers>
+  <career name="Apprenti Sorcier" type="1">
+    <profile WS="0" BS="0" S="0" T="0" Ag="5" Int="10" WP="15" Fel="5" A="0" W="2" M="0" Mag="1" />
+    <skillsTable>
+      <eSkills>
+        <choice>Connaissances académiques (magie)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Focalisation</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Fouille</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Langage mystique (magick)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Langue (classique)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Lire/écrire</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Perception</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Sens de la magie</choice>
+      </eSkills>
+    </skillsTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Harmonie aethyrique</choice>
+        <choice>Mains agiles</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Intelligent</choice>
+        <choice>Résistance accrue</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Magie commune (Occulte)</choice>
+      </eTalents>
+    </talentsTable>
+    <weaponsTable>
+      <eWeapons>
+        <choice>Bâton</choice>
+      </eWeapons>
+    </weaponsTable>
+    <armoursTable />
+    <equipmentsTable>
+      <eEquipments>
+        <choice>Sac à dos</choice>
+      </eEquipments>
+      <eEquipments>
+        <choice>Livre imprimé</choice>
+      </eEquipments>
+    </equipmentsTable>
+    <accessTable />
+    <openingTable />
+    <availableRaces>
+      <race>Humain</race>
+      <race>Elfe</race>
+    </availableRaces>
+  </career>
+  <career name="Bateleur" type="1">
+    <profile WS="5" BS="10" S="0" T="0" Ag="10" Int="0" WP="5" Fel="10" A="0" W="2" M="0" Mag="0" />
+    <skillsTable>
+      <eSkills>
+        <choice>Charisme</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Commérage</choice>
+        <choice>Evaluation</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Connaissances générales (Empire)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Expression artistique (acrobate)</choice>
+        <choice>Expression artistique (acteur)</choice>
+        <choice>Expression artistique (bouffon)</choice>
+        <choice>Expression artistique (chanteur)</choice>
+        <choice>Expression artistique (chiromancien)</choice>
+        <choice>Expression artistique (clown)</choice>
+        <choice>Expression artistique (comédien)</choice>
+        <choice>Expression artistique (conteur)</choice>
+        <choice>Expression artistique (cracheur de feu)</choice>
+        <choice>Expression artistique (danseur)</choice>
+        <choice>Expression artistique (jongleur)</choice>
+        <choice>Expression artistique (mime)</choice>
+        <choice>Expression artistique (musicien)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Expression artistique (acrobate)</choice>
+        <choice>Expression artistique (acteur)</choice>
+        <choice>Expression artistique (bouffon)</choice>
+        <choice>Expression artistique (chanteur)</choice>
+        <choice>Expression artistique (chiromancien)</choice>
+        <choice>Expression artistique (clown)</choice>
+        <choice>Expression artistique (comédien)</choice>
+        <choice>Expression artistique (conteur)</choice>
+        <choice>Expression artistique (cracheur de feu)</choice>
+        <choice>Expression artistique (danseur)</choice>
+        <choice>Expression artistique (jongleur)</choice>
+        <choice>Expression artistique (mime)</choice>
+        <choice>Expression artistique (musicien)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Langue (reikspiel)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Natation</choice>
+        <choice>Soins des animaux</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Perception</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Baratin</choice>
+        <choice>Emprise sur les animaux</choice>
+        <choice>Dressage</choice>
+        <choice>Equitation</choice>
+        <choice>Escalade</choice>
+        <choice>Escamotage</choice>
+        <choice>Hypnotisme</choice>
+        <choice>Ventriloquie</choice>
+      </eSkills>
+    </skillsTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Acrobatie équestre</choice>
+        <choice>Adresse au tir</choice>
+        <choice>Eloquence</choice>
+        <choice>Force accrue</choice>
+        <choice>Imitation</choice>
+        <choice>Lutte</choice>
+        <choice>Maitrise (armes de jet)</choice>
+        <choice>Réflexes éclair</choice>
+        <choice>Sur ses gardes</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Acrobatie équestre</choice>
+        <choice>Adresse au tir</choice>
+        <choice>Eloquence</choice>
+        <choice>Force accrue</choice>
+        <choice>Imitation</choice>
+        <choice>Lutte</choice>
+        <choice>Maitrise (armes de jet)</choice>
+        <choice>Réflexes éclair</choice>
+        <choice>Sur ses gardes</choice>
+      </eTalents>
+    </talentsTable>
+    <weaponsTable>
+      <eWeapons>
+        <choice>Dague de jet</choice>
+        <choice>Hache de jet</choice>
+      </eWeapons>
+      <eWeapons>
+        <choice>Dague de jet</choice>
+        <choice>Hache de jet</choice>
+      </eWeapons>
+      <eWeapons>
+        <choice>Dague de jet</choice>
+        <choice>Hache de jet</choice>
+      </eWeapons>
+    </weaponsTable>
+    <armoursTable>
+      <eArmours>
+        <choice>Gilet de cuir</choice>
+      </eArmours>
+    </armoursTable>
+    <equipmentsTable>
+      <eEquipments>
+        <choice>Instrument de musique</choice>
+      </eEquipments>
+      <eEquipments>
+        <choice>Outils d'artisan</choice>
+      </eEquipments>
+      <eEquipments>
+        <choice>Costume de scène</choice>
+        <choice>Vetements confortables</choice>
+      </eEquipments>
+    </equipmentsTable>
+    <accessTable />
+    <openingTable />
+    <availableRaces>
+      <race>Elfe</race>
+      <race>Nain</race>
+      <race>Humain</race>
+      <race>Halfing</race>
+    </availableRaces>
+  </career>
   <career name="Agitateur" type="1">
     <profile WS="5" BS="5" S="0" T="0" Ag="5" Int="10" WP="0" Fel="10" A="0" W="2" M="0" Mag="0" />
     <skillsTable>
@@ -54,10 +244,180 @@
     <accessTable />
     <openingTable />
     <availableRaces>
+      <race>Nain</race>
+      <race>Humain</race>
       <race>Elfe</race>
       <race>Halfing</race>
-      <race>Humain</race>
+    </availableRaces>
+  </career>
+  <career name="Artisan" type="1">
+    <profile WS="0" BS="0" S="5" T="5" Ag="10" Int="5" WP="10" Fel="0" A="0" W="2" M="0" Mag="0" />
+    <skillsTable>
+      <eSkills>
+        <choice>Commérage</choice>
+        <choice>Soins des animaux</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Conduite d'attelages</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Evaluation</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Langage secret (guilde)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Lire/écrire</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Marchandage</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Métier (apothicaire)</choice>
+        <choice>Métier (arquebusier)</choice>
+        <choice>Métier (artiste)</choice>
+        <choice>Métier (brasseur)</choice>
+        <choice>Métier (calligraphe)</choice>
+        <choice>Métier (cartographe)</choice>
+        <choice>Métier (charpentier)</choice>
+        <choice>Métier (charpentier naval)</choice>
+        <choice>Métier (cordonnier)</choice>
+        <choice>Métier (cristallier)</choice>
+        <choice>Métier (cuisinier)</choice>
+        <choice>Métier (embaumeur)</choice>
+        <choice>Métier (fabricant d'arcs)</choice>
+        <choice>Métier (fabricant d'armes)</choice>
+        <choice>Métier (fabricant d'armures)</choice>
+        <choice>Métier (fabricant de bougies)</choice>
+        <choice>Métier (fermier)</choice>
+        <choice>Métier (forgeron)</choice>
+        <choice>Métier (herboriste)</choice>
+        <choice>Métier (maçon)</choice>
+        <choice>Métier (marchand)</choice>
+        <choice>Métier (meunier)</choice>
+        <choice>Métier (mineur)</choice>
+        <choice>Métier (orfèvre)</choice>
+        <choice>Métier (prospecteur)</choice>
+        <choice>Métier (tailleur)</choice>
+        <choice>Métier (tanneur)</choice>
+        <choice>Métier (tonnelier)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Métier (apothicaire)</choice>
+        <choice>Métier (arquebusier)</choice>
+        <choice>Métier (artiste)</choice>
+        <choice>Métier (brasseur)</choice>
+        <choice>Métier (calligraphe)</choice>
+        <choice>Métier (cartographe)</choice>
+        <choice>Métier (charpentier)</choice>
+        <choice>Métier (charpentier naval)</choice>
+        <choice>Métier (cordonnier)</choice>
+        <choice>Métier (cristallier)</choice>
+        <choice>Métier (cuisinier)</choice>
+        <choice>Métier (embaumeur)</choice>
+        <choice>Métier (fabricant d'arcs)</choice>
+        <choice>Métier (fabricant d'armes)</choice>
+        <choice>Métier (fabricant d'armures)</choice>
+        <choice>Métier (fabricant de bougies)</choice>
+        <choice>Métier (fermier)</choice>
+        <choice>Métier (forgeron)</choice>
+        <choice>Métier (herboriste)</choice>
+        <choice>Métier (maçon)</choice>
+        <choice>Métier (marchand)</choice>
+        <choice>Métier (meunier)</choice>
+        <choice>Métier (mineur)</choice>
+        <choice>Métier (orfèvre)</choice>
+        <choice>Métier (prospecteur)</choice>
+        <choice>Métier (tailleur)</choice>
+        <choice>Métier (tanneur)</choice>
+        <choice>Métier (tonnelier)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Perception</choice>
+      </eSkills>
+    </skillsTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Dur en affaires</choice>
+        <choice>Intelligent</choice>
+      </eTalents>
+    </talentsTable>
+    <weaponsTable />
+    <armoursTable>
+      <eArmours>
+        <choice>Gilet de cuir</choice>
+      </eArmours>
+    </armoursTable>
+    <equipmentsTable />
+    <accessTable />
+    <openingTable />
+    <availableRaces>
+      <race>Elfe</race>
       <race>Nain</race>
+      <race>Humain</race>
+      <race>Halfing</race>
+    </availableRaces>
+  </career>
+  <career name="Batelier" type="1">
+    <profile WS="10" BS="5" S="5" T="5" Ag="10" Int="5" WP="0" Fel="0" A="0" W="2" M="0" Mag="0" />
+    <skillsTable>
+      <eSkills>
+        <choice>Canotage</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Commérage</choice>
+        <choice>Résistance à l'alcool</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Connaissances générales (Empire)</choice>
+        <choice>Connaissances générales (Kislev)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Langage secret (rôdeur)</choice>
+        <choice>Langue (kislevien)</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Natation</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Navigation</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Orientation</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Perception</choice>
+      </eSkills>
+      <eSkills>
+        <choice>Survie</choice>
+      </eSkills>
+    </skillsTable>
+    <talentsTable>
+      <eTalents>
+        <choice>Grand voyageur</choice>
+      </eTalents>
+      <eTalents>
+        <choice>Sens de l'orientation</choice>
+      </eTalents>
+    </talentsTable>
+    <weaponsTable />
+    <armoursTable>
+      <eArmours>
+        <choice>Veste de cuir</choice>
+      </eArmours>
+    </armoursTable>
+    <equipmentsTable>
+      <eEquipments>
+        <choice>Bateau a rames</choice>
+      </eEquipments>
+    </equipmentsTable>
+    <accessTable />
+    <openingTable />
+    <availableRaces>
+      <race>Elfe</race>
+      <race>Nain</race>
+      <race>Humain</race>
+      <race>Halfing</race>
     </availableRaces>
   </career>
 </careers>

@@ -261,7 +261,23 @@ public class Profile {
         panel.add(new JLabel("FM"));
         panel.add(new JLabel("Soc"));
 
-        panel.add(new JTextArea("" + this.getWs()));
+        JLabel buttonMinus = new JLabel("-", SwingConstants.CENTER);
+        buttonMinus.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+        JLabel buttonPlus = new JLabel("+", SwingConstants.CENTER);
+        buttonPlus.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+
+        buttonMinus.setSize(new Dimension(15, 15));
+        buttonPlus.setSize(new Dimension(15, 15));
+
+        //buttonMinus.addMouseListener();
+
+        JPanel panelWs = new JPanel(new GridLayout(1, 3));
+        panelWs.add(buttonMinus);
+        panelWs.add(new JTextArea("" + this.getWs()));
+        panelWs.add(buttonPlus);
+
+        panel.add(panelWs);
+
         panel.add(new JTextArea("" + this.getBs()));
         panel.add(new JTextArea("" + this.getS()));
         panel.add(new JTextArea("" + this.getT()));

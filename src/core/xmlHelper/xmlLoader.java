@@ -665,7 +665,7 @@ public class xmlLoader {
             if(racesTable == null){
                 availableRaces = World.RACES;
             } else {
-                if(racesTable.getChildren("race").isEmpty()){
+                if(racesTable.getChildren("race") == null || racesTable.getChildren("race").isEmpty()){
                     availableRaces = World.RACES;
                 } else {
                     availableRaces = new LinkedList<Race>();
@@ -701,7 +701,13 @@ public class xmlLoader {
 
         currentCareer = searchElementCareerByName(careers, career.getName());
 
-        LinkedList<Career> accessCareer = new LinkedList<Career>();
+        LinkedList<Career> accessCareer;
+
+        if(career.getAccessCareers() == null || career.getAccessCareers().isEmpty()) {
+            accessCareer = new LinkedList<Career>();
+        } else {
+            accessCareer = career.getAccessCareers();
+        }
 
         List<Element> eAccessCareers = currentCareer.getChild("accessTable").getChildren();
 
@@ -715,7 +721,16 @@ public class xmlLoader {
                 }
             }
         }
-        LinkedList<Career> openingCareer = new LinkedList<Career>();
+
+        career.setAccessCareers(accessCareer);
+
+        LinkedList<Career> openingCareer;
+
+        if(career.getOpeningCareers() == null || career.getOpeningCareers().isEmpty()) {
+            openingCareer = new LinkedList<Career>();
+        } else {
+            openingCareer = career.getOpeningCareers();
+        }
 
         List<Element> eOpeningCareers = currentCareer.getChild("openingTable").getChildren();
 
@@ -731,10 +746,7 @@ public class xmlLoader {
             }
         }
 
-        career.setAccessCareers(accessCareer);
         career.setOpeningCareers(openingCareer);
-
-        xmlSaver.saveCareers();
     }
 
     private static Element searchElementCareerByName(List<Element> careers, String name){
