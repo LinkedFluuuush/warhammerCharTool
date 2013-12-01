@@ -116,6 +116,7 @@ public class Character {
         randomCharacter(type);
         randomName();
 
+        this.previousCareers = new LinkedList<Career>();
         this.actualWounds = profile.getW();
     }
 
@@ -297,9 +298,8 @@ public class Character {
                 male, race.getAge()[r.nextInt(race.getAge().length)],
                 birthPlace, worshipedGod, (int)(size + ((r.nextInt(10) + 1) * 2.5)),
                 race.getWeight()[r.nextInt(race.getWeight().length)],
-                eyeColour, eyeColour,
-                race.getHairColour()[r.nextInt(race.getHairColour().length)], astralSign,
-                distinguishingMarks
+                eyeColour, race.getHairColour()[r.nextInt(race.getHairColour().length)],
+                astralSign, distinguishingMarks
         );
     }
 
@@ -679,7 +679,9 @@ public class Character {
             s += armour.getName() + ", ";
         }
 
-        s = s.substring(0, s.length() - 2);
+        if(s.length() >= 2){
+            s = s.substring(0, s.length() - 2);
+        }
 
         textArea = new JTextArea(s);
         textArea.setLineWrap(true);
@@ -727,7 +729,9 @@ public class Character {
             s += weapon.getName() + ", ";
         }
 
-        s = s.substring(0, s.length() - 2);
+        if(s.length() >= 2){
+            s = s.substring(0, s.length() - 2);
+        }
 
         textArea = new JTextArea(s);
         textArea.setLineWrap(true);
@@ -743,7 +747,9 @@ public class Character {
             s += equipment.getName() + ", ";
         }
 
-        s = s.substring(0, s.length() - 2);
+        if(s.length() >= 2){
+            s = s.substring(0, s.length() - 2);
+        }
 
         textArea = new JTextArea(s);
         textArea.setLineWrap(true);

@@ -24,9 +24,6 @@ public class AstralSign {
 
     @Override
     public String toString() {
-        return "AstralSign{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return name;
     }
 }

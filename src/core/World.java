@@ -48,7 +48,6 @@ public class World {
         CAREERS = xmlLoader.careerLoader();
 
         for(Career career : CAREERS){
-            System.out.println(career);
             xmlLoader.careerLinker(career);
         }
         xmlSaver.saveCareers();

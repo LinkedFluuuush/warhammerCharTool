@@ -21,8 +21,7 @@ public class PersonalDetails {
     private God favoriteGod;
     private int height;
     private int weight;
-    private String rightEyeColour;
-    private String leftEyeColour;
+    private String eyeColour;
     private String hairColour;
     private AstralSign astralSign;
     private LinkedList<String> distinguishingMarks;
@@ -34,14 +33,13 @@ public class PersonalDetails {
         favoriteGod = World.searchGodByName("Sigmar");
         height = 0;
         weight = 0;
-        rightEyeColour = "Unknown";
-        leftEyeColour = rightEyeColour;
+        eyeColour = "Unknown";
         hairColour = "Unknown";
         distinguishingMarks = new LinkedList<String>();
     }
 
     public PersonalDetails(boolean male, int age, String birthplace,
-                           God favoriteGod, int height, int weight, String rightEyeColour, String leftEyeColour,
+                           God favoriteGod, int height, int weight, String eyeColour,
                            String hairColour, AstralSign astralSign, LinkedList<String> distinguishingMarks) {
         this.male = male;
         this.age = age;
@@ -49,8 +47,7 @@ public class PersonalDetails {
         this.favoriteGod = favoriteGod;
         this.height = height;
         this.weight = weight;
-        this.rightEyeColour = rightEyeColour;
-        this.leftEyeColour = leftEyeColour;
+        this.eyeColour = eyeColour;
         this.hairColour = hairColour;
         this.astralSign = astralSign;
         this.distinguishingMarks = distinguishingMarks;
@@ -104,20 +101,12 @@ public class PersonalDetails {
         this.weight = weight;
     }
 
-    public String getRightEyeColour() {
-        return rightEyeColour;
-    }
+   public String getEyeColour() {
+       return eyeColour;
+   }
 
-    public void setRightEyeColour(String rightEyeColour) {
-        this.rightEyeColour = rightEyeColour;
-    }
-
-    public String getLeftEyeColour() {
-        return leftEyeColour;
-    }
-
-    public void setLeftEyeColour(String leftEyeColour) {
-        this.leftEyeColour = leftEyeColour;
+    public void setEyeColour(String eyeColour){
+        this.eyeColour = eyeColour;
     }
 
     public String getHairColour() {
@@ -134,6 +123,14 @@ public class PersonalDetails {
 
     public void setDistinguishingMarks(LinkedList<String> distinguishingMarks) {
         this.distinguishingMarks = distinguishingMarks;
+    }
+
+    public AstralSign getAstralSign() {
+        return astralSign;
+    }
+
+    public void setAstralSign(AstralSign astralSign) {
+        this.astralSign = astralSign;
     }
 
     public String toString(){
@@ -155,12 +152,7 @@ public class PersonalDetails {
         res += "Poids : " + weight + "kg\n";
         res += "Couleur de cheveux : " + hairColour + "\n";
 
-        if(leftEyeColour.equals(rightEyeColour)){
-            res += "Couleur des yeux : " + leftEyeColour + "\n";
-        } else {
-            res += "Couleur de l'oeil droit : " + rightEyeColour + "\n";
-            res += "Couleur de l'oeil gauche : " + leftEyeColour + "\n";
-        }
+        res += "Couleur des yeux : " + eyeColour + "\n";
 
         res += "Lieu de Naissance : " + birthplace + "\n";
 
@@ -188,7 +180,7 @@ public class PersonalDetails {
         String sMale = male?"Masculin":"Féminin";
         arrayPanel.add(new JLabel("Sexe : " + sMale));
 
-        arrayPanel.add(new JLabel("Couleur des yeux : " + leftEyeColour));
+        arrayPanel.add(new JLabel("Couleur des yeux : " + eyeColour));
 
         if(((height % 100) + "").length() == 1)
             arrayPanel.add(new JLabel("Taille : " + height / 100 + "m0" + height % 100));

@@ -19,20 +19,19 @@ public class MainFrame extends JFrame {
     public MainFrame(){
         super();
 
+        this.setTitle("NPC Generator");
+
         this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        JPanel rootPane = new JPanel(/*new GridLayout(2, 2)*/);
-
         Character randomCharacter = new Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
 
-        rootPane.add(new CharacterPanel());
+        this.addAllPanels();
+
         /*rootPane.add(new CharacterPanel());
         rootPane.add(new CharacterPanel());
+        rootPane.add(new CharacterPanel());
         rootPane.add(new CharacterPanel());*/
-
-        this.setContentPane(rootPane);
-
     }
 
     public static void main(String[] args){
@@ -40,5 +39,22 @@ public class MainFrame extends JFrame {
 
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
+    }
+
+    public void addAllPanels(){
+        Toolkit t = this.getToolkit();
+        Dimension dim = new Dimension(t.getScreenSize());
+        int nbV = (int)dim.getHeight() / 500;
+        int nbH = (int)dim.getWidth() / 784;
+
+        JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
+
+        for(int i = 0; i < nbV ; i++){
+            for (int j = 0; j < nbH ; j++){
+                rootPane.add(new CharacterPanel());
+            }
+        }
+
+        this.setContentPane(rootPane);
     }
 }
