@@ -1,11 +1,18 @@
 package gui;
 
 import core.characteristics.Career;
+import core.characteristics.Skill;
+import core.characteristics.Talent;
 import core.entities.Character;
+import core.equipment.Armour;
+import core.equipment.Equipment;
+import core.equipment.Weapon;
 import gui.listeners.characterListener.removeCharacterAL;
+import listeners.removeParentML;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.LinkedList;
 
 /**
  * User: Linked
@@ -45,6 +52,7 @@ public class CharacterPanel extends JPanel {
 
     public void applyCharacter(){
         this.removeAll();
+        this.setBackground(Color.WHITE);
 
         if(this.character == null){
             this.setLayout(new FlowLayout());
@@ -227,11 +235,212 @@ public class CharacterPanel extends JPanel {
 
         this.add(textAreaMarks);
 
+        JLabel labelSkills = generateLabelSkills();
+        labelSkills.setBounds(initH + 410, initV + 45, 355, 110);
+
+        JLabel labelTalents = generateLabelTalents();
+        labelTalents.setBounds(initH + 410, initV + 170, 355, 55);
+
+        JLabel labelArmours = generateLabelArmours();
+        labelArmours.setBounds(initH + 410, initV + 255, 215, 55);
+
+        JLabel labelWeapons = generateLabelWeapons();
+        labelWeapons.setBounds(initH + 410, initV + 330, 215, 55);
+
+        JLabel labelEquipment = generateLabelEquipments();
+        labelEquipment.setBounds(initH + 410, initV + 405, 215, 75);
+
+        this.add(labelSkills);
+        this.add(labelTalents);
+        this.add(labelArmours);
+        this.add(labelWeapons);
+        this.add(labelEquipment);
+
+        this.generateArmourLevels();
+
         JButton removeButton = new JButton("Effacer le personnage");
         removeButton.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
         removeButton.setMargin(new Insets(2, 5, 2, 5));
         removeButton.addActionListener(new removeCharacterAL());
         removeButton.setBounds(initH + 620, initV + 450, 140, 30);
         this.add(removeButton);
+    }
+
+    public JLabel generateLabelSkills(){
+        JLabel labelSkills = new JLabel();
+
+        String allSkills = "";
+        int level;
+        LinkedList<Skill> skills = (LinkedList<Skill>)character.getSkills().clone();
+        Skill skill;
+        while(!skills.isEmpty()){
+            skill = skills.pop();
+            if(!allSkills.contains(skill.getName())){
+                level = 0;
+                while(skills.contains(skill)){
+                    level += 10;
+                    skills.removeFirstOccurrence(skill);
+                }
+
+                allSkills += skill.getName();
+
+                if(level != 0){
+                    allSkills += " (+" + level + ")";
+                }
+
+                allSkills += ", ";
+            }
+        }
+
+        if(allSkills.length() >= 2){
+            allSkills = allSkills.substring(0, allSkills.length() - 2);
+        }
+
+        labelSkills.setText("<html><span>" + allSkills + "</span></html>");
+        labelSkills.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
+        labelSkills.setVerticalTextPosition(SwingConstants.TOP);
+
+        return labelSkills;
+    }
+
+    public JLabel generateLabelTalents(){
+        JLabel labelTalents = new JLabel();
+
+        String allTalents = "";
+        LinkedList<Talent> talents = (LinkedList<Talent>)character.getTalents().clone();
+        Talent talent;
+        while(!talents.isEmpty()){
+            talent = talents.pop();
+            if(!allTalents.contains(talent.getName())){
+                allTalents += talent.getName() + ", ";
+            }
+        }
+
+        if(allTalents.length() >= 2){
+            allTalents = allTalents.substring(0, allTalents.length() - 2);
+        }
+
+        labelTalents.setText("<html><span>" + allTalents + "</span></html>");
+        labelTalents.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
+        labelTalents.setVerticalTextPosition(SwingConstants.TOP);
+
+        return labelTalents;
+    }
+
+    public JLabel generateLabelArmours(){
+        JLabel labelArmours = new JLabel();
+
+        String allArmours = "";
+        LinkedList<Armour> armours = (LinkedList<Armour>)character.getArmours().clone();
+        Armour armour;
+        while(!armours.isEmpty()){
+            armour = armours.pop();
+            if(!allArmours.contains(armour.getName())){
+                allArmours += armour.getName() + ", ";
+            }
+        }
+
+        if(allArmours.length() >= 2){
+            allArmours = allArmours.substring(0, allArmours.length() - 2);
+        }
+
+        labelArmours.setText("<html><span>" + allArmours + "</span></html>");
+        labelArmours.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
+        labelArmours.setVerticalTextPosition(SwingConstants.TOP);
+
+        return labelArmours;
+    }
+
+    public JLabel generateLabelWeapons(){
+        JLabel labelWeapons = new JLabel();
+
+        String allWeapons = "";
+        LinkedList<Weapon> weapons = (LinkedList<Weapon>)character.getWeapons().clone();
+        Weapon weapon;
+        while(!weapons.isEmpty()){
+            weapon = weapons.pop();
+            if(!allWeapons.contains(weapon.getName())){
+                allWeapons += weapon.getName() + ", ";
+            }
+        }
+
+        if(allWeapons.length() >= 2){
+            allWeapons = allWeapons.substring(0, allWeapons.length() - 2);
+        }
+
+        labelWeapons.setText("<html><span>" + allWeapons + "</span></html>");
+        labelWeapons.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
+        labelWeapons.setVerticalTextPosition(SwingConstants.TOP);
+
+        return labelWeapons;
+    }
+
+    public JLabel generateLabelEquipments(){
+        JLabel labelEquipments = new JLabel();
+
+        String allEquipments = "";
+        LinkedList<Equipment> equipments = (LinkedList<Equipment>)character.getEquipment().clone();
+        Equipment equipment;
+        while(!equipments.isEmpty()){
+            equipment = equipments.pop();
+            if(!allEquipments.contains(equipment.getName())){
+                allEquipments += equipment.getName() + ", ";
+            }
+        }
+
+        if(allEquipments.length() >= 2){
+            allEquipments = allEquipments.substring(0, allEquipments.length() - 2);
+        }
+
+        labelEquipments.setText("<html><span>" + allEquipments + "</span></html>");
+        labelEquipments.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
+        labelEquipments.setVerticalTextPosition(SwingConstants.TOP);
+
+        return labelEquipments;
+    }
+
+    public void generateArmourLevels(){
+        int initH = (int)this.getSize().getWidth()/2 - 392;
+        int initV = (int)this.getSize().getHeight()/2 - 250;
+
+        int headLevel = 0, armLevel = 0, bodyLevel = 0, legLevel = 0;
+
+        for(Armour armour : character.getArmours()){
+            if(armour.getCoveredZones().contains("Tête")){
+                headLevel += armour.getArmourLevel();
+            }
+            if(armour.getCoveredZones().contains("Bras")){
+                armLevel += armour.getArmourLevel();
+            }
+            if(armour.getCoveredZones().contains("Corps")){
+                bodyLevel += armour.getArmourLevel();
+            }
+            if(armour.getCoveredZones().contains("Jambe")){
+                legLevel += armour.getArmourLevel();
+            }
+        }
+
+        JLabel headLabel = new JLabel(headLevel + "");
+        JLabel leftArmLabel = new JLabel(armLevel + "");
+        JLabel rightArmLabel = new JLabel(armLevel + "");
+        JLabel bodyLabel = new JLabel(bodyLevel + "");
+        JLabel leftLegLabel = new JLabel(legLevel + "");
+        JLabel rightLegLabel = new JLabel(legLevel + "");
+
+        headLabel.setBounds(initH + 637, initV + 259, 25, 10);
+        this.add(headLabel);
+
+        rightArmLabel.setBounds(initH + 637, initV + 357, 25, 10);
+        this.add(rightArmLabel);
+        leftArmLabel.setBounds(initH + 732, initV + 358, 25, 10);
+        this.add(leftArmLabel);
+
+        bodyLabel.setBounds(initH + 732, initV + 289, 25, 10);
+        this.add(bodyLabel);
+
+        rightLegLabel.setBounds(initH + 637, initV + 423, 25, 10);
+        this.add(rightLegLabel);
+        leftLegLabel.setBounds(initH + 732, initV + 424, 25, 10);
+        this.add(leftLegLabel);
     }
 }

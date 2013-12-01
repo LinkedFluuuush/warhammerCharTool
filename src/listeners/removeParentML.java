@@ -1,4 +1,4 @@
-package gui.listeners.profileListener;
+package listeners;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;
@@ -7,22 +7,24 @@ import java.awt.event.MouseListener;
 /**
  * Created with IntelliJ IDEA.
  * User: linked
- * Date: 25/11/13
- * Time: 15:03
- *
+ * Date: 01/12/13
+ * Time: 20:24
  * @author Jean-Baptiste Louvet jbaptiste.louvet@gmail.com
  * @version 1.0
  */
-public class buttonMinusListener implements MouseListener {
+public class removeParentML implements MouseListener{
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        JPanel sourcePanel = (JPanel)((JLabel)mouseEvent.getSource()).getParent();
-
+        JComponent sourceParent = (JComponent)((JComponent)mouseEvent.getSource()).getParent();
+        JPanel panelParent = ((JPanel)sourceParent.getParent());
+        panelParent.remove(sourceParent);
+        panelParent.revalidate();
+        panelParent.repaint();
     }
 
     @Override
     public void mousePressed(MouseEvent mouseEvent) {
-
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
