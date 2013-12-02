@@ -15,6 +15,7 @@ public class removeCharacterAL implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         CharacterPanel characterPanel = (CharacterPanel)((JButton)e.getSource()).getParent();
+        characterPanel.setPreviousCharacter(characterPanel.getCharacter());
         characterPanel.setCharacter(null);
         characterPanel.applyCharacter();
     }

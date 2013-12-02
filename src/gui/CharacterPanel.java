@@ -1,12 +1,16 @@
 package gui;
 
+import core.World;
 import core.characteristics.Career;
+import core.characteristics.Race;
 import core.characteristics.Skill;
 import core.characteristics.Talent;
 import core.entities.Character;
 import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Weapon;
+import gui.listeners.characterListener.createCharacterAL;
+import gui.listeners.characterListener.recoverCharacterAL;
 import gui.listeners.characterListener.removeCharacterAL;
 import listeners.removeParentML;
 
@@ -21,6 +25,7 @@ import java.util.LinkedList;
  */
 public class CharacterPanel extends JPanel {
     private Character character;
+    private Character previousCharacter;
 
     public CharacterPanel(Character character){
         super();
@@ -50,21 +55,49 @@ public class CharacterPanel extends JPanel {
         this.character = character;
     }
 
+    public Character getPreviousCharacter() {
+        return previousCharacter;
+    }
+
+    public void setPreviousCharacter(Character previousCharacter) {
+        this.previousCharacter = previousCharacter;
+    }
+
     public void applyCharacter(){
         this.removeAll();
         this.setBackground(Color.WHITE);
+        this.repaint();
 
         if(this.character == null){
             this.setLayout(new FlowLayout());
-            this.add(new CreateCharacterPanel());
-            this.repaint();
+
+            JComboBox<Race> comboRace = new JComboBox<Race>();
+            for(Race r : World.RACES){
+                comboRace.addItem(r);
+            }
+
+            JComboBox<Career> comboCareer = new JComboBox<Career>();
+            for(Career c : World.CAREERS){
+                comboCareer.addItem(c);
+            }
+
+            this.add(comboRace);
+            this.add(comboCareer);
+
+            JButton create = new JButton("Créer un nouveau personnage");
+            create.addActionListener(new createCharacterAL(comboRace, comboCareer, this));
+            this.add(create);
+
+            JButton recover = new JButton("Récupérer le dernier personnage");
+            recover.addActionListener(new recoverCharacterAL());
+            this.add(recover);
+
             this.revalidate();
         } else {
             this.setLayout(null);
             //JPanel panel = character.toPanel();
             //this.add(panel);
             this.setMinimumSize(new Dimension(784, 500));
-            this.repaint();
 
             this.createCharacter();
         }
@@ -75,16 +108,13 @@ public class CharacterPanel extends JPanel {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
 
-        int initH = (int)this.getSize().getWidth()/2 - 392;
-        int initV = (int)this.getSize().getHeight()/2 - 250;
+        if(this.character != null){
+            int initH = (int)this.getSize().getWidth()/2 - 392;
+            int initV = (int)this.getSize().getHeight()/2 - 250;
 
-        if(this.character == null){
-
-        } else {
             g.drawImage(new ImageIcon("./resources/imgs/OneChar.png").getImage(),
-                    (int)this.getSize().getWidth()/2 - 392,
-                    (int)this.getSize().getHeight()/2 - 250, null);
-            //g.drawRect(initH + 60, initV + 83, 310, 17);
+                (int)this.getSize().getWidth()/2 - 392,
+                (int)this.getSize().getHeight()/2 - 250, null);
         }
     }
 

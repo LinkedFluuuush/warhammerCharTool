@@ -24,14 +24,7 @@ public class MainFrame extends JFrame {
         this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        Character randomCharacter = new Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
-
         this.addAllPanels();
-
-        /*rootPane.add(new CharacterPanel());
-        rootPane.add(new CharacterPanel());
-        rootPane.add(new CharacterPanel());
-        rootPane.add(new CharacterPanel());*/
     }
 
     public static void main(String[] args){

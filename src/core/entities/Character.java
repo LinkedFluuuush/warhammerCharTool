@@ -221,6 +221,9 @@ public class Character {
         this.talents = randomTalents();
         randomTrappings();
         this.money = randomMoney();
+        this.previousCareers = career.getRandomPreviousCareers(0, 0, new LinkedList<Career>(), new LinkedList<LinkedList<Career>>());
+
+        System.out.println("Previous careers : " + previousCareers);
     }
 
     public Profile randomNPCProfile(){

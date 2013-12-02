@@ -153,6 +153,31 @@ public class Career {
         this.availableRaces = availableRaces;
     }
 
+    public LinkedList<Career> getRandomPreviousCareers(int depth, int minDepth, LinkedList<Career> previousCareers, LinkedList<LinkedList<Career>> allPossibilities){
+        for(Career career : this.getAccessCareers()){
+            if(this.type != 1){
+                depth++;
+                previousCareers.add(career);
+                return career.getRandomPreviousCareers(depth, minDepth, previousCareers, allPossibilities);
+            }
+
+            if(depth < minDepth){
+                minDepth = depth;
+            }
+
+            allPossibilities.add(previousCareers);
+            previousCareers = new LinkedList<Career>();
+        }
+
+        for(LinkedList<Career> aPossibility : allPossibilities){
+            if(aPossibility.size() == minDepth){
+                previousCareers = aPossibility;
+            }
+        }
+
+        return previousCareers;
+    }
+
     @Override
     public String toString(){
         return this.getName();
