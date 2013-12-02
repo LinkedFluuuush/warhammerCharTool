@@ -40,6 +40,8 @@ public class MainFrame extends JFrame {
         int nbV = (int)dim.getHeight() / 500;
         int nbH = (int)dim.getWidth() / 784;
 
+        JTabbedPane tabbedPane = new JTabbedPane();
+
         JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
 
         for(int i = 0; i < nbV ; i++){
@@ -48,6 +50,9 @@ public class MainFrame extends JFrame {
             }
         }
 
-        this.setContentPane(rootPane);
+        tabbedPane.add(rootPane);
+        tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), "New Character");
+
+        this.setContentPane(tabbedPane);
     }
 }

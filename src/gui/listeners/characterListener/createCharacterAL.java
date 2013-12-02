@@ -34,5 +34,9 @@ public class createCharacterAL implements ActionListener {
 
         characterPanel.setCharacter(character);
         characterPanel.applyCharacter();
+
+        JTabbedPane tabbedPane = (JTabbedPane)characterPanel.getParent().getParent();
+        tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), characterPanel.getCharacter().getRace()
+                + " " + characterPanel.getCharacter().getCareer());
     }
 }
