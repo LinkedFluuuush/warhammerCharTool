@@ -1,4 +1,4 @@
-package listeners;
+package gui.listeners;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;

@@ -2,6 +2,7 @@ package gui;
 
 import core.World;
 import core.entities.Character;
+import gui.menu.MainMenu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,6 +17,8 @@ import java.awt.*;
  * @version 1.0
  */
 public class MainFrame extends JFrame {
+    public JTabbedPane tabbedPane;
+
     public MainFrame(){
         super();
 
@@ -23,6 +26,8 @@ public class MainFrame extends JFrame {
 
         this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        this.setJMenuBar(new MainMenu(this));
 
         this.addAllPanels();
     }
@@ -40,7 +45,7 @@ public class MainFrame extends JFrame {
         int nbV = (int)dim.getHeight() / 500;
         int nbH = (int)dim.getWidth() / 784;
 
-        JTabbedPane tabbedPane = new JTabbedPane();
+        tabbedPane = new JTabbedPane();
 
         JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
 

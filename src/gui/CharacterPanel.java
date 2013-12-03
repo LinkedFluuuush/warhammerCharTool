@@ -12,7 +12,6 @@ import core.equipment.Weapon;
 import gui.listeners.characterListener.createCharacterAL;
 import gui.listeners.characterListener.recoverCharacterAL;
 import gui.listeners.characterListener.removeCharacterAL;
-import listeners.removeParentML;
 
 import javax.swing.*;
 import java.awt.*;
