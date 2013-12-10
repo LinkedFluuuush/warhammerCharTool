@@ -85,7 +85,7 @@
   <skill name="Langue (estalien)" characteristics="Int" />
   <skill name="Langue (halfing)" characteristics="Int" />
   <skill name="Langue (khazalid)" characteristics="Int" />
-  <skill name="Langue (kislevien)" characteristics="Int" />
+  <skill name="Langue (kislevarin)" characteristics="Int" />
   <skill name="Langue (norse)" characteristics="Int" />
   <skill name="Langue (reikspiel)" characteristics="Int" />
   <skill name="Langue (tiléen)" characteristics="Int" />

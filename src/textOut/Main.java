@@ -15,9 +15,9 @@ public class Main {
     public static void main(String[] args){
         World.loadAll();
 
-        core.entities.Character randomCharacter = new core.entities.Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
+//        core.entities.Character randomCharacter = new core.entities.Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
 
-        System.out.println(randomCharacter);
+//        System.out.println(randomCharacter);
 
 //        System.out.println(World.CAREERS.get(0).getAvailableRaces());
 

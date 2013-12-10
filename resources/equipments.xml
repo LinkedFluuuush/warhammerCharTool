@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <equipments>
   <equipment name="Atours royaux" enc="50" goldenCrowns="100" silverShillings="0" brassPennies="0" />
-  <equipment name="Atours de nobles" enc="30" goldenCrowns="50" silverShillings="0" brassPennies="0" />
+  <equipment name="Atours de noble" enc="30" goldenCrowns="50" silverShillings="0" brassPennies="0" />
   <equipment name="Beaux atours" enc="20" goldenCrowns="10" silverShillings="0" brassPennies="0" />
   <equipment name="Vetements confortables" enc="15" goldenCrowns="3" silverShillings="0" brassPennies="0" />
   <equipment name="Vetements communs" enc="15" goldenCrowns="1" silverShillings="0" brassPennies="0" />
@@ -9,13 +9,16 @@
   <equipment name="Haillons" enc="5" goldenCrowns="0" silverShillings="0" brassPennies="1" />
   <equipment name="Uniforme" enc="15" goldenCrowns="15" silverShillings="0" brassPennies="0" />
   <equipment name="Cape" enc="10" goldenCrowns="5" silverShillings="0" brassPennies="0" />
-  <equipment name="Capuchon ou masque" enc="2" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Capuchon" enc="2" goldenCrowns="0" silverShillings="10" brassPennies="0" />
+  <equipment name="Masque" enc="2" goldenCrowns="0" silverShillings="10" brassPennies="0" />
   <equipment name="Chapeau à larges bords" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
   <equipment name="Chapeau simple" enc="1" goldenCrowns="0" silverShillings="10" brassPennies="0" />
   <equipment name="Costume de scène" enc="10" goldenCrowns="5" silverShillings="0" brassPennies="0" />
   <equipment name="Pardessus" enc="15" goldenCrowns="10" silverShillings="0" brassPennies="0" />
-  <equipment name="Robe/Chasuble" enc="25" goldenCrowns="15" silverShillings="0" brassPennies="0" />
+  <equipment name="Robe" enc="25" goldenCrowns="15" silverShillings="0" brassPennies="0" />
+  <equipment name="Chasuble" enc="25" goldenCrowns="15" silverShillings="0" brassPennies="0" />
   <equipment name="Bouteille d'alcool fort" enc="5" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Bouteille de vin de table" enc="5" goldenCrowns="0" silverShillings="1" brassPennies="0" />
   <equipment name="Tonnelet d'ale" enc="30" goldenCrowns="0" silverShillings="1" brassPennies="6" />
   <equipment name="Tonnelet de bière" enc="30" goldenCrowns="0" silverShillings="3" brassPennies="0" />
   <equipment name="Ration(la semaine)" enc="50" goldenCrowns="0" silverShillings="6" brassPennies="0" />
@@ -46,7 +49,7 @@
   <equipment name="Cadenas" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
   <equipment name="Chope en bois" enc="5" goldenCrowns="0" silverShillings="10" brassPennies="0" />
   <equipment name="Chope en étain" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
-  <equipment name="Corde, 20mètres" enc="50" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Corde(20mètres)" enc="50" goldenCrowns="1" silverShillings="0" brassPennies="0" />
   <equipment name="Couverts en argent" enc="3" goldenCrowns="15" silverShillings="0" brassPennies="0" />
   <equipment name="Couverts en bois" enc="2" goldenCrowns="0" silverShillings="5" brassPennies="0" />
   <equipment name="Couverts en métal" enc="4" goldenCrowns="3" silverShillings="0" brassPennies="0" />
@@ -62,6 +65,15 @@
   <equipment name="Parchemin" enc="0" goldenCrowns="0" silverShillings="1" brassPennies="0" />
   <equipment name="Parfum" enc="0" goldenCrowns="1" silverShillings="0" brassPennies="0" />
   <equipment name="Symbole religieux" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Manann)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Morr)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Myrmidia)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Shallya)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Sigmar)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Ranald)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Taal et Rhya)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Ulric)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Symbole religieux (Verena)" enc="5" goldenCrowns="1" silverShillings="0" brassPennies="0" />
   <equipment name="Tente" enc="20" goldenCrowns="0" silverShillings="15" brassPennies="0" />
   <equipment name="Accessoires de calligraphie" enc="5" goldenCrowns="10" silverShillings="0" brassPennies="0" />
   <equipment name="Accessoires de déguisement" enc="10" goldenCrowns="0" silverShillings="10" brassPennies="0" />
@@ -118,4 +130,31 @@
   <equipment name="Carreaux(5)" enc="10" goldenCrowns="0" silverShillings="2" brassPennies="0" />
   <equipment name="Flèches(5)" enc="10" goldenCrowns="0" silverShillings="1" brassPennies="0" />
   <equipment name="Poudre(1 tir)" enc="1" goldenCrowns="0" silverShillings="3" brassPennies="0" />
+  <equipment name="Cheval de selle" enc="0" goldenCrowns="80" silverShillings="0" brassPennies="0" />
+  <equipment name="Destrier" enc="0" goldenCrowns="500" silverShillings="0" brassPennies="0" />
+  <equipment name="Cheval de guerre" enc="0" goldenCrowns="300" silverShillings="0" brassPennies="0" />
+  <equipment name="Poney" enc="0" goldenCrowns="50" silverShillings="0" brassPennies="0" />
+  <equipment name="Diligence" enc="0" goldenCrowns="500" silverShillings="0" brassPennies="0" />
+  <equipment name="Chariot" enc="0" goldenCrowns="90" silverShillings="0" brassPennies="0" />
+  <equipment name="Carriole" enc="0" goldenCrowns="50" silverShillings="0" brassPennies="0" />
+  <equipment name="Navire" enc="0" goldenCrowns="12000" silverShillings="0" brassPennies="0" />
+  <equipment name="Embarcation fluviale" enc="0" goldenCrowns="600" silverShillings="0" brassPennies="0" />
+  <equipment name="Bateau à rames" enc="900" goldenCrowns="90" silverShillings="0" brassPennies="0" />
+  <equipment name="Boeuf" enc="0" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <equipment name="Canasson" enc="0" goldenCrowns="25" silverShillings="0" brassPennies="0" />
+  <equipment name="Ane" enc="0" goldenCrowns="25" silverShillings="0" brassPennies="0" />
+  <equipment name="Mule" enc="0" goldenCrowns="25" silverShillings="0" brassPennies="0" />
+  <equipment name="Chat" enc="0" goldenCrowns="0" silverShillings="1" brassPennies="0" />
+  <equipment name="Cheval de bâts" enc="0" goldenCrowns="40" silverShillings="0" brassPennies="0" />
+  <equipment name="Chèvre" enc="0" goldenCrowns="2" silverShillings="0" brassPennies="0" />
+  <equipment name="Petit chien" enc="0" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Chien de guerre" enc="0" goldenCrowns="30" silverShillings="0" brassPennies="0" />
+  <equipment name="Chien de race" enc="0" goldenCrowns="3" silverShillings="0" brassPennies="0" />
+  <equipment name="Faucon" enc="0" goldenCrowns="80" silverShillings="0" brassPennies="0" />
+  <equipment name="Mouton" enc="0" goldenCrowns="2" silverShillings="0" brassPennies="0" />
+  <equipment name="Pigeon voyageur" enc="0" goldenCrowns="1" silverShillings="0" brassPennies="0" />
+  <equipment name="Porc" enc="0" goldenCrowns="3" silverShillings="0" brassPennies="0" />
+  <equipment name="Poule" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="5" />
+  <equipment name="Vache" enc="0" goldenCrowns="10" silverShillings="0" brassPennies="0" />
+  <equipment name="Bijoux d'une valeur de 6d10Co" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="0" />
 </equipments>

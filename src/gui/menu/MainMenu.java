@@ -56,8 +56,43 @@ public class MainMenu extends JMenuBar{
             }
         });
 
+        JMenuItem menuFichierRemoveCharacter = new JMenuItem("Retirer le personnage");
+        menuFichierRemoveCharacter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, InputEvent.CTRL_DOWN_MASK));
+        menuFichierRemoveCharacter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                JTabbedPane tabbedPane = mainFrame.tabbedPane;
+                if(tabbedPane.getSelectedIndex() < 0){
+                    tabbedPane.remove(tabbedPane.getSelectedIndex());
+                }
+            }
+        });
+
+        JMenuItem menuFichierQuit = new JMenuItem("Quitter");
+        menuFichierQuit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_DOWN_MASK));
+        menuFichierQuit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.exit(0);
+            }
+        });
+
         menuFichier.add(menuFichierAddCharacter);
+        menuFichier.add(menuFichierRemoveCharacter);
+        menuFichier.addSeparator();
+        menuFichier.add(menuFichierQuit);
+
+        JMenu menuHelp = new JMenu("Aide");
+
+        JMenuItem menuHelpDoc = new JMenuItem("Documentation");
+
+        JMenuItem menuHelpAbout = new JMenuItem("À propos");
+
+        menuHelp.add(menuHelpDoc);
+        menuHelp.addSeparator();
+        menuHelp.add(menuHelpAbout);
 
         this.add(menuFichier);
+        this.add(menuHelp);
     }
 }

@@ -1,5 +1,5 @@
 Atours royaux:50:24000
-Atours de nobles:30:12000
+Atours de noble:30:12000
 Beaux atours:20:2400
 Vetements confortables:15:720
 Vetements communs:15:240
@@ -7,13 +7,16 @@ Piètres vetements:10:120
 Haillons:5:1
 Uniforme:15:3600
 Cape:10:1200
-Capuchon ou masque:2:120
+Capuchon:2:120
+Masque:2:120
 Chapeau à larges bords:5:240
 Chapeau simple:1:120
 Costume de scène:10:1200
 Pardessus:15:2400
-Robe/Chasuble:25:3600
+Robe:25:3600
+Chasuble:25:3600
 Bouteille d'alcool fort:5:12
+Bouteille de vin de table:5:12
 Tonnelet d'ale:30:18
 Tonnelet de bière:30:36
 Ration(la semaine):50:72
@@ -60,6 +63,15 @@ Paquet de cartes:1:240
 Parchemin:0:12
 Parfum:0:240
 Symbole religieux:5:240
+Symbole religieux (Manann):5:240
+Symbole religieux (Morr):5:240
+Symbole religieux (Myrmidia):5:240
+Symbole religieux (Shallya):5:240
+Symbole religieux (Sigmar):5:240
+Symbole religieux (Ranald):5:240
+Symbole religieux (Taal et Rhya):5:240
+Symbole religieux (Ulric):5:240
+Symbole religieux (Verena):5:240
 Tente:20:180
 Accessoires de calligraphie:5:2400
 Accessoires de déguisement:10:120
@@ -116,3 +128,30 @@ Balles(10):10:12
 Carreaux(5):10:24
 Flèches(5):10:12
 Poudre(1 tir):1:36
+Cheval de selle:0:19200
+Destrier:0:120000
+Cheval de guerre:0:72000
+Poney:0:12000
+Diligence:0:120000
+Chariot:0:21600
+Carriole:0:12000
+Navire:0:2880000
+Embarcation fluviale:0:144000
+Bateau à rames:900:21600
+Boeuf:0:7200
+Canasson:0:6000
+Ane:0:6000
+Mule:0:6000
+Chat:0:12
+Cheval de bâts:0:9600
+Chèvre:0:480
+Petit chien:0:2400
+Chien de guerre:0:7200
+Chien de race:0:720
+Faucon:0:19200
+Mouton:0:480
+Pigeon voyageur:0:240
+Porc:0:720
+Poule:0:5
+Vache:0:2400
+Bijoux d'une valeur de 6d10Co:0:0

@@ -15,6 +15,7 @@ import org.jdom2.input.SAXBuilder;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -285,6 +286,7 @@ public class xmlLoader {
     }
 
     public static LinkedList<Race> raceLoader(){
+        System.out.println("Loading races");
         SAXBuilder sxb = new SAXBuilder();
         List<Element> races;
         Element currentRace;
@@ -350,6 +352,7 @@ public class xmlLoader {
 
         while(iteratorRaces.hasNext()){
             currentRace = iteratorRaces.next();
+            System.out.println("\tLoading " + currentRace.getAttributeValue("name"));
 
             eProfile = currentRace.getChild("profile");
             profile = new Profile(Integer.parseInt(eProfile.getAttributeValue("WS")), Integer.parseInt(eProfile.getAttributeValue("BS")),
@@ -509,10 +512,12 @@ public class xmlLoader {
             raceLinkedList.add(race);
         }
 
+        System.out.println("\n");
         return raceLinkedList;
     }
 
     public static LinkedList<Career> careerLoader(){
+        System.out.println("Loading careers");
         SAXBuilder sxb = new SAXBuilder();
         List<Element> careers;
         Element currentCareer;
@@ -569,6 +574,7 @@ public class xmlLoader {
 
         while(iteratorCareers.hasNext()){
             currentCareer = iteratorCareers.next();
+            System.out.println("\tLoading " + currentCareer.getAttributeValue("name"));
 
             eProfile = currentCareer.getChild("profile");
             profile = new Profile(Integer.parseInt(eProfile.getAttributeValue("WS")),
@@ -680,11 +686,15 @@ public class xmlLoader {
 
             careerLinkedList.add(career);
         }
+        System.out.println("\n");
+
+        Collections.sort(careerLinkedList);
 
         return careerLinkedList;
     }
 
     public static void careerLinker(Career career){
+        System.out.println("Linking career : " + career.getName());
         SAXBuilder sxb = new SAXBuilder();
         List<Element> careers;
         Element currentCareer;

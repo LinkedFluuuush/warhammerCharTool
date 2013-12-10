@@ -32,7 +32,10 @@
     <attribute>Précise</attribute>
     <attribute>Rapide</attribute>
   </weapon>
-  <weapon name="Gantelet/Coup de poing" enc="1" group="Aucun" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="1" silverShillings="0" brassPennies="0">
+  <weapon name="Gantelet" enc="1" group="Aucun" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="1" silverShillings="0" brassPennies="0">
+    <attribute>Assomante</attribute>
+  </weapon>
+  <weapon name="Coups-de-poing" enc="1" group="Aucun" damage="BF-3" lowRange="0" highRange="0" reload="0" goldenCrowns="1" silverShillings="0" brassPennies="0">
     <attribute>Assomante</attribute>
   </weapon>
   <weapon name="Hallebarde" enc="175" group="Armes lourdes" damage="BF" lowRange="0" highRange="0" reload="0" goldenCrowns="15" silverShillings="0" brassPennies="0">

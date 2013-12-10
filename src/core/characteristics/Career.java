@@ -11,7 +11,7 @@ import java.util.LinkedList;
  * Date: 12/11/13
  * Time: 15:20
  */
-public class Career {
+public class Career implements Comparable{
     private String name;
     private Profile profile;
     private int type;
@@ -39,6 +39,8 @@ public class Career {
         this.armours = armours;
         this.availableRaces = availableRaces;
         this.type = type;
+        this.accessCareers = new LinkedList<Career>();
+        this.openingCareers = new LinkedList<Career>();
     }
 
     public Career(String name, int ws, int bs, int s, int t, int ag, int intel, int wp,
@@ -55,6 +57,8 @@ public class Career {
         this.armours = armours;
         this.availableRaces = availableRaces;
         this.type = type;
+        this.accessCareers = new LinkedList<Career>();
+        this.openingCareers = new LinkedList<Career>();
     }
 
     public String getName() {
@@ -304,5 +308,12 @@ public class Career {
         }
 
         return res;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Career c = (Career)o;
+
+        return this.getName().compareTo(c.getName());
     }
 }

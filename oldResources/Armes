@@ -8,7 +8,8 @@ Dague:10:240:Aucun:BF-3:0:0:0:Aucun
 Demi-lance:75:4800:Armes de cavalerie:BF:0:0:0:Epuisante,Percutante,Rapide
 Fléau d'armes:95:3600:Fléaux:BF+1:0:0:0:Epuisante,Percutante
 Fleuret:40:4320:Armes d'escrime:BF-2:0:0:0:Précise,Rapide
-Gantelet/Coup de poing:1:240:Aucun:BF-3:0:0:0:Assomante
+Gantelet:1:240:Aucun:BF-3:0:0:0:Assomante
+Coups-de-poing:1:240:Aucun:BF-3:0:0:0:Assomante
 Hallebarde:175:3600:Armes lourdes:BF:0:0:0:Spéciale
 Lance:50:2400:Aucun:BF:0:0:0:Rapide
 Lance de cavalerie:100:3600:Armes de cavalerie:BF+1:0:0:0:Epuisante,Percutante,Rapide
