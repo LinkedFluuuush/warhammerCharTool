@@ -70,7 +70,7 @@
       <race>Halfing</race>
     </availableRaces>
   </career>
-  <career name="Apprenti Sorcier" type="1">
+  <career name="Apprenti sorcier" type="1">
     <profile WS="0" BS="0" S="0" T="0" Ag="5" Int="10" WP="15" Fel="5" A="0" W="2" M="0" Mag="1" />
     <skillsTable>
       <eSkills>
@@ -251,9 +251,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Bateleur" type="1">
@@ -387,9 +387,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Batelier" type="1">
@@ -457,9 +457,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Berserk Norse" type="1">
@@ -522,9 +522,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Bourgeois" type="1">
@@ -592,14 +592,16 @@
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Artisan</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Artisan</openingCareer>
       <openingCareer>Milicien</openingCareer>
       <openingCareer>Valet</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Bûcheron" type="1">
@@ -667,9 +669,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Charbonnier" type="1">
@@ -740,15 +742,16 @@
     <openingTable>
       <openingCareer>Bûcheron</openingCareer>
       <openingCareer>Bûcheron</openingCareer>
+      <openingCareer>Bûcheron</openingCareer>
       <openingCareer>Chasseur</openingCareer>
       <openingCareer>Mineur</openingCareer>
       <openingCareer>Vagabond</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Chasseur" type="1">
@@ -823,9 +826,12 @@
       <accessCareer>Charbonnier</accessCareer>
       <accessCareer>Bûcheron</accessCareer>
       <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
       <accessCareer>Gardien Tribal</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
@@ -836,9 +842,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Chasseur de primes" type="1">
@@ -915,6 +921,7 @@
     <accessTable>
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Mercenaire</accessCareer>
@@ -927,9 +934,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Chiffonnier" type="1">
@@ -996,9 +1003,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Chirurgien barbier" type="1">
@@ -1070,14 +1077,15 @@
     </accessTable>
     <openingTable>
       <openingCareer>Artisan</openingCareer>
+      <openingCareer>Artisan</openingCareer>
       <openingCareer>Trafiquant de cadavres</openingCareer>
       <openingCareer>Vagabond</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Cocher" type="1">
@@ -1186,9 +1194,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Collecteur de taxes" type="1">
@@ -1255,6 +1263,7 @@
     <accessTable>
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Cocher</accessCareer>
+      <accessCareer>Cocher</accessCareer>
       <accessCareer>Patrouilleur</accessCareer>
       <accessCareer>Régisseur</accessCareer>
     </accessTable>
@@ -1267,9 +1276,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Combattant des tunnels" type="1">
@@ -1434,6 +1443,10 @@
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Batelier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Batelier</accessCareer>
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Marin</accessCareer>
@@ -1448,15 +1461,17 @@
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Batelier</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Batelier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Marin</openingCareer>
       <openingCareer>Passeur</openingCareer>
       <openingCareer>Voleur</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Coupe-jarret" type="1">
@@ -1523,9 +1538,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Diestro Estalien" type="1">
@@ -1589,9 +1604,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Eclaireur" type="1">
@@ -1684,14 +1699,15 @@
     <openingTable>
       <openingCareer>Cocher</openingCareer>
       <openingCareer>Cocher</openingCareer>
+      <openingCareer>Cocher</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Patrouilleur</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Ecuyer" type="1">
@@ -1778,9 +1794,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Emissaire Elfe" type="1">
@@ -1842,6 +1858,7 @@
       </eEquipments>
     </equipmentsTable>
     <accessTable>
+      <accessCareer>Artisan</accessCareer>
       <accessCareer>Artisan</accessCareer>
       <accessCareer>Etudiant</accessCareer>
     </accessTable>
@@ -1921,6 +1938,10 @@
       <accessCareer>Bateleur</accessCareer>
       <accessCareer>Diestro Estalien</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Marin</accessCareer>
       <accessCareer>Noble</accessCareer>
       <accessCareer>Valet</accessCareer>
@@ -1929,15 +1950,16 @@
     <openingTable>
       <openingCareer>Bateleur</openingCareer>
       <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Bateleur</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Serviteur</openingCareer>
       <openingCareer>Voleur</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Etudiant" type="1">
@@ -2027,6 +2049,7 @@
     <accessTable>
       <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Noble</accessCareer>
       <accessCareer>Pilleur de tombes</accessCareer>
       <accessCareer>Valet</accessCareer>
@@ -2034,11 +2057,14 @@
     </accessTable>
     <openingTable>
       <openingCareer>Agitateur</openingCareer>
-      <openingCareer>Apprenti Sorcier</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Emissaire Elfe</openingCareer>
       <openingCareer>Agitateur</openingCareer>
-      <openingCareer>Apprenti Sorcier</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Emissaire Elfe</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Emissaire Elfe</openingCareer>
       <openingCareer>Initié (Manann)</openingCareer>
@@ -2053,9 +2079,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Fanatique" type="1">
@@ -2114,6 +2140,8 @@
       <accessCareer>Artisan</accessCareer>
       <accessCareer>Agitateur</accessCareer>
       <accessCareer>Artisan</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Artisan</accessCareer>
       <accessCareer>Paysan</accessCareer>
       <accessCareer>Initié (Manann)</accessCareer>
       <accessCareer>Initié (Morr)</accessCareer>
@@ -2126,6 +2154,7 @@
       <accessCareer>Initié (Verena)</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Agitateur</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
@@ -2141,9 +2170,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Garde" type="1">
@@ -2214,15 +2243,16 @@
     <openingTable>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Artisan</openingCareer>
+      <openingCareer>Artisan</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Patrouilleur</openingCareer>
       <openingCareer>Soldat</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Garde du corps" type="1">
@@ -2290,10 +2320,13 @@
       <accessCareer>Diestro Estalien</accessCareer>
       <accessCareer>Coupe-jarret</accessCareer>
       <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
       <accessCareer>Geôlier</accessCareer>
       <accessCareer>Mercenaire</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Geôlier</openingCareer>
@@ -2303,9 +2336,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Gardien Tribal" type="1">
@@ -2367,9 +2400,12 @@
     </equipmentsTable>
     <accessTable>
       <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
       <accessCareer>Messager</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Chasseur</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Vagabond</openingCareer>
@@ -2437,9 +2473,12 @@
     <accessTable>
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Ratier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Garde</openingCareer>
+      <openingCareer>Garde du corps</openingCareer>
       <openingCareer>Garde</openingCareer>
       <openingCareer>Garde du corps</openingCareer>
       <openingCareer>Garde</openingCareer>
@@ -2449,9 +2488,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Gladiateur" type="1">
@@ -2519,9 +2558,13 @@
       <accessCareer>Berserk Norse</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
       <accessCareer>Spadassin</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
@@ -2530,9 +2573,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Hors-la-loi" type="1">
@@ -2616,6 +2659,13 @@
       <accessCareer>Ecuyer</accessCareer>
       <accessCareer>Escroc</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Ecuyer</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Matelot</accessCareer>
       <accessCareer>Mercenaire</accessCareer>
       <accessCareer>Milicien</accessCareer>
@@ -2629,9 +2679,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Manann)" type="1">
@@ -2692,19 +2742,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Morr)" type="1">
@@ -2765,19 +2819,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Myrmidia)" type="1">
@@ -2838,19 +2896,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Ranald)" type="1">
@@ -2911,19 +2973,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Shallya)" type="1">
@@ -2988,19 +3054,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Sigmar)" type="1">
@@ -3061,19 +3131,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Taal et Rhya)" type="1">
@@ -3134,19 +3208,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Ulric)" type="1">
@@ -3207,19 +3285,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Initié (Verena)" type="1">
@@ -3280,19 +3362,23 @@
     <accessTable>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Scribe</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Kossar Kislevite" type="1">
@@ -3363,13 +3449,15 @@
     <openingTable>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Marin" type="1">
@@ -3439,6 +3527,10 @@
       <accessCareer>Berserk Norse</accessCareer>
       <accessCareer>Contrebandier</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Passeur</accessCareer>
       <accessCareer>Pêcheur</accessCareer>
     </accessTable>
@@ -3447,13 +3539,15 @@
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Escroc</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Escroc</openingCareer>
       <openingCareer>Matelot</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Matelot" type="1">
@@ -3528,6 +3622,8 @@
       <accessCareer>Marin</accessCareer>
       <accessCareer>Batelier</accessCareer>
       <accessCareer>Marin</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Marin</accessCareer>
       <accessCareer>Pêcheur</accessCareer>
     </accessTable>
     <openingTable>
@@ -3537,12 +3633,15 @@
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Coupe-jarret</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Coupe-jarret</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Mercanti" type="1">
@@ -3618,9 +3717,13 @@
     </equipmentsTable>
     <accessTable>
       <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
       <accessCareer>Serviteur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
@@ -3632,9 +3735,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Mercenaire" type="1">
@@ -3730,12 +3833,24 @@
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Kossar Kislevite</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Chasseur de primes</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Eclaireur</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Gladiateur</accessCareer>
+      <accessCareer>Kossar Kislevite</accessCareer>
       <accessCareer>Milicien</accessCareer>
       <accessCareer>Mineur</accessCareer>
       <accessCareer>Soldat</accessCareer>
       <accessCareer>Sentinelle Halfing</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Garde du corps</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Garde du corps</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
@@ -3746,9 +3861,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Messager" type="1">
@@ -3828,14 +3943,17 @@
       <openingCareer>Cocher</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Gardien Tribal</openingCareer>
+      <openingCareer>Cocher</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Gardien Tribal</openingCareer>
       <openingCareer>Patrouilleur</openingCareer>
       <openingCareer>Soldat</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Milicien" type="1">
@@ -3936,6 +4054,9 @@
       <accessCareer>Artisan</accessCareer>
       <accessCareer>Bourgeois</accessCareer>
       <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Artisan</accessCareer>
+      <accessCareer>Bourgeois</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
       <accessCareer>Paysan</accessCareer>
       <accessCareer>Pêcheur</accessCareer>
       <accessCareer>Régisseur</accessCareer>
@@ -3947,14 +4068,17 @@
       <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Messager</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
+      <openingCareer>Messager</openingCareer>
       <openingCareer>Voleur</openingCareer>
       <openingCareer>Sentinelle Halfing</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Mineur" type="1">
@@ -4026,8 +4150,14 @@
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Charbonnier</accessCareer>
       <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
@@ -4039,9 +4169,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Noble" type="1">
@@ -4121,8 +4251,12 @@
     <accessTable>
       <accessCareer>Ecuyer</accessCareer>
       <accessCareer>Ecuyer</accessCareer>
+      <accessCareer>Ecuyer</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Ecuyer</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
       <openingCareer>Ecuyer</openingCareer>
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Etudiant</openingCareer>
@@ -4132,9 +4266,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Passeur" type="1">
@@ -4236,8 +4370,14 @@
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Collecteur de taxes</accessCareer>
       <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Batelier</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Marin</openingCareer>
       <openingCareer>Batelier</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Marin</openingCareer>
@@ -4248,9 +4388,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Patrouilleur" type="1">
@@ -4369,8 +4509,17 @@
       <accessCareer>Garde</accessCareer>
       <accessCareer>Messager</accessCareer>
       <accessCareer>Passeur</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Eclaireur</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Messager</accessCareer>
+      <accessCareer>Passeur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Collecteur de taxes</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Messager</openingCareer>
       <openingCareer>Collecteur de taxes</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
@@ -4382,9 +4531,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Paysan" type="1">
@@ -4459,6 +4608,12 @@
       <openingCareer>Milicien</openingCareer>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Milicien</openingCareer>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Milicien</openingCareer>
@@ -4467,9 +4622,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Pilleur de tombes" type="1">
@@ -4547,10 +4702,13 @@
     <accessTable>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Porterune</accessCareer>
       <accessCareer>Voleur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Etudiant</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
@@ -4560,9 +4718,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Porterune" type="1">
@@ -4633,8 +4791,11 @@
     <accessTable>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Pilleur de tombes</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Pilleur de tombes</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
@@ -4706,8 +4867,13 @@
       <accessCareer>Paysan</accessCareer>
       <accessCareer>Batelier</accessCareer>
       <accessCareer>Paysan</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Paysan</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Marin</openingCareer>
+      <openingCareer>Matelot</openingCareer>
+      <openingCareer>Milicien</openingCareer>
       <openingCareer>Marin</openingCareer>
       <openingCareer>Matelot</openingCareer>
       <openingCareer>Milicien</openingCareer>
@@ -4717,9 +4883,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Ratier" type="1">
@@ -4794,9 +4960,15 @@
       <accessCareer>Geôlier</accessCareer>
       <accessCareer>Pilleur de tombes</accessCareer>
       <accessCareer>Porterune</accessCareer>
+      <accessCareer>Geôlier</accessCareer>
+      <accessCareer>Pilleur de tombes</accessCareer>
+      <accessCareer>Porterune</accessCareer>
       <accessCareer>Trafiquant de cadavres</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Geôlier</openingCareer>
       <openingCareer>Chiffonnier</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Geôlier</openingCareer>
@@ -4807,9 +4979,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Régisseur" type="1">
@@ -4880,8 +5052,13 @@
       <accessCareer>Geôlier</accessCareer>
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Geôlier</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Geôlier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Collecteur de taxes</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Milicien</openingCareer>
       <openingCareer>Collecteur de taxes</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Milicien</openingCareer>
@@ -4892,9 +5069,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Scribe" type="1">
@@ -4984,7 +5161,7 @@
       </eEquipments>
     </equipmentsTable>
     <accessTable>
-      <accessCareer>Apprenti Sorcier</accessCareer>
+      <accessCareer>Apprenti sorcier</accessCareer>
       <accessCareer>Initié (Manann)</accessCareer>
       <accessCareer>Initié (Morr)</accessCareer>
       <accessCareer>Initié (Myrmidia)</accessCareer>
@@ -4994,10 +5171,21 @@
       <accessCareer>Initié (Taal et Rhya)</accessCareer>
       <accessCareer>Initié (Ulric)</accessCareer>
       <accessCareer>Initié (Verena)</accessCareer>
+      <accessCareer>Apprenti sorcier</accessCareer>
+      <accessCareer>Initié (Manann)</accessCareer>
+      <accessCareer>Initié (Morr)</accessCareer>
+      <accessCareer>Initié (Myrmidia)</accessCareer>
+      <accessCareer>Initié (Ranald)</accessCareer>
+      <accessCareer>Initié (Shallya)</accessCareer>
+      <accessCareer>Initié (Sigmar)</accessCareer>
+      <accessCareer>Initié (Taal et Rhya)</accessCareer>
+      <accessCareer>Initié (Ulric)</accessCareer>
+      <accessCareer>Initié (Verena)</accessCareer>
+      <accessCareer>Apprenti sorcier</accessCareer>
     </accessTable>
     <openingTable>
       <openingCareer>Agitateur</openingCareer>
-      <openingCareer>Apprenti Sorcier</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
       <openingCareer>Initié (Manann)</openingCareer>
       <openingCareer>Initié (Morr)</openingCareer>
       <openingCareer>Initié (Myrmidia)</openingCareer>
@@ -5008,13 +5196,23 @@
       <openingCareer>Initié (Ulric)</openingCareer>
       <openingCareer>Initié (Verena)</openingCareer>
       <openingCareer>Agitateur</openingCareer>
-      <openingCareer>Apprenti Sorcier</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Initié (Manann)</openingCareer>
+      <openingCareer>Initié (Morr)</openingCareer>
+      <openingCareer>Initié (Myrmidia)</openingCareer>
+      <openingCareer>Initié (Ranald)</openingCareer>
+      <openingCareer>Initié (Shallya)</openingCareer>
+      <openingCareer>Initié (Sigmar)</openingCareer>
+      <openingCareer>Initié (Taal et Rhya)</openingCareer>
+      <openingCareer>Initié (Ulric)</openingCareer>
+      <openingCareer>Initié (Verena)</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Sentinelle Halfing" type="1">
@@ -5087,8 +5285,13 @@
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Collecteur de taxes</accessCareer>
       <accessCareer>Milicien</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Milicien</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Vagabond</openingCareer>
@@ -5169,8 +5372,15 @@
       <accessCareer>Escroc</accessCareer>
       <accessCareer>Mercanti</accessCareer>
       <accessCareer>Paysan</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Mercanti</accessCareer>
+      <accessCareer>Paysan</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Bourgeois</openingCareer>
+      <openingCareer>Mercanti</openingCareer>
+      <openingCareer>Messager</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Bourgeois</openingCareer>
       <openingCareer>Mercanti</openingCareer>
@@ -5184,9 +5394,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Soldat" type="1">
@@ -5298,8 +5508,15 @@
       <accessCareer>Collecteur de taxes</accessCareer>
       <accessCareer>Garde</accessCareer>
       <accessCareer>Messager</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Messager</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Garde</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Garde</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
@@ -5310,9 +5527,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Sorcier de village" type="1">
@@ -5367,7 +5584,7 @@
     </equipmentsTable>
     <accessTable />
     <openingTable>
-      <openingCareer>Apprenti Sorcier</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Initié (Manann)</openingCareer>
       <openingCareer>Initié (Morr)</openingCareer>
@@ -5378,6 +5595,18 @@
       <openingCareer>Initié (Taal et Rhya)</openingCareer>
       <openingCareer>Initié (Ulric)</openingCareer>
       <openingCareer>Initié (Verena)</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Initié (Manann)</openingCareer>
+      <openingCareer>Initié (Morr)</openingCareer>
+      <openingCareer>Initié (Myrmidia)</openingCareer>
+      <openingCareer>Initié (Ranald)</openingCareer>
+      <openingCareer>Initié (Shallya)</openingCareer>
+      <openingCareer>Initié (Sigmar)</openingCareer>
+      <openingCareer>Initié (Taal et Rhya)</openingCareer>
+      <openingCareer>Initié (Ulric)</openingCareer>
+      <openingCareer>Initié (Verena)</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Vagabond</openingCareer>
     </openingTable>
@@ -5460,8 +5689,15 @@
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Régisseur</accessCareer>
+      <accessCareer>Chasseur de primes</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Gladiateur</accessCareer>
+      <accessCareer>Régisseur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Coupe-jarret</openingCareer>
+      <openingCareer>Gladiateur</openingCareer>
       <openingCareer>Coupe-jarret</openingCareer>
       <openingCareer>Gladiateur</openingCareer>
       <openingCareer>Coupe-jarret</openingCareer>
@@ -5470,9 +5706,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Trafiquant de cadavres" type="1">
@@ -5539,8 +5775,13 @@
       <accessCareer>Chiffonnier</accessCareer>
       <accessCareer>Chirurgien barbier</accessCareer>
       <accessCareer>Ratier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Chirurgien barbier</accessCareer>
+      <accessCareer>Ratier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Etudiant</openingCareer>
+      <openingCareer>Ratier</openingCareer>
       <openingCareer>Ratier</openingCareer>
       <openingCareer>Etudiant</openingCareer>
       <openingCareer>Ratier</openingCareer>
@@ -5548,9 +5789,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Tueur de trolls" type="1">
@@ -5604,6 +5845,7 @@
       </eEquipments>
     </equipmentsTable>
     <accessTable>
+      <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
     </accessTable>
@@ -5683,6 +5925,17 @@
     <accessTable>
       <accessCareer>Bateleur</accessCareer>
       <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Chirurgien barbier</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Gardien Tribal</accessCareer>
+      <accessCareer>Hors-la-loi</accessCareer>
+      <accessCareer>Mercanti</accessCareer>
+      <accessCareer>Sentinelle Halfing</accessCareer>
+      <accessCareer>Soldat</accessCareer>
+      <accessCareer>Sorcier de village</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
       <accessCareer>Chirurgien barbier</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Gardien Tribal</accessCareer>
@@ -5707,13 +5960,18 @@
       <openingCareer>Bûcheron</openingCareer>
       <openingCareer>Chiffonnier</openingCareer>
       <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Bûcheron</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Bûcheron</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
       <openingCareer>Voleur</openingCareer>
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Valet" type="1">
@@ -5783,8 +6041,13 @@
       <accessCareer>Serviteur</accessCareer>
       <accessCareer>Bourgeois</accessCareer>
       <accessCareer>Serviteur</accessCareer>
+      <accessCareer>Bourgeois</accessCareer>
+      <accessCareer>Serviteur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Ecuyer</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
       <openingCareer>Ecuyer</openingCareer>
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Etudiant</openingCareer>
@@ -5794,9 +6057,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
   <career name="Voleur" type="1">
@@ -5887,8 +6150,23 @@
       <accessCareer>Spadassin</accessCareer>
       <accessCareer>Trafiquant de cadavres</accessCareer>
       <accessCareer>Vagabond</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Hors-la-loi</accessCareer>
+      <accessCareer>Milicien</accessCareer>
+      <accessCareer>Pilleur de tombes</accessCareer>
+      <accessCareer>Ratier</accessCareer>
+      <accessCareer>Serviteur</accessCareer>
+      <accessCareer>Spadassin</accessCareer>
+      <accessCareer>Trafiquant de cadavres</accessCareer>
+      <accessCareer>Vagabond</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Pilleur de tombes</openingCareer>
       <openingCareer>Bateleur</openingCareer>
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Pilleur de tombes</openingCareer>
@@ -5898,9 +6176,9 @@
     </openingTable>
     <availableRaces>
       <race>Elfe</race>
-      <race>Nain</race>
-      <race>Humain</race>
       <race>Halfing</race>
+      <race>Humain</race>
+      <race>Nain</race>
     </availableRaces>
   </career>
 </careers>

@@ -19,6 +19,10 @@ import java.io.*;
  */
 public class convertData{
     public static void main(String[] args){
+        convertAll();
+    }
+
+    public static void convertAll(){
         File mainFolder = new File("oldResources");
         File[] files = mainFolder.listFiles();
 

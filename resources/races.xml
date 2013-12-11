@@ -179,505 +179,6 @@
     <god>Ulric</god>
     <god>Verena</god>
   </race>
-  <race name="Nain">
-    <profile WS="30" BS="20" S="20" T="30" Ag="10" Int="20" WP="20" Fel="10" M="3" />
-    <size F="125" M="130" />
-    <wounds>11</wounds>
-    <wounds>12</wounds>
-    <wounds>13</wounds>
-    <wounds>14</wounds>
-    <fate>1</fate>
-    <fate>2</fate>
-    <fate>3</fate>
-    <fNames>
-      <name>Anika</name>
-      <name>Asta</name>
-      <name>Astrid</name>
-      <name>Berta</name>
-      <name>Birgit</name>
-      <name>Dagmar</name>
-      <name>Elsa</name>
-      <name>Erika</name>
-      <name>Franziska</name>
-      <name>Gréta</name>
-      <name>Hunni</name>
-      <name>Ingrid</name>
-      <name>Janna</name>
-      <name>Karin</name>
-      <name>Pétra</name>
-      <name>Sigrid</name>
-      <name>Sigrun</name>
-      <name>Silma</name>
-      <name>Thylda</name>
-      <name>Ulla</name>
-    </fNames>
-    <mNames>
-      <name>Bardin</name>
-      <name>Brokk</name>
-      <name>Dimzad</name>
-      <name>Durak</name>
-      <name>Garil</name>
-      <name>Gottri</name>
-      <name>Grundi</name>
-      <name>Hargin</name>
-      <name>Imrak</name>
-      <name>Kargun</name>
-      <name>Jotunn</name>
-      <name>Magnar</name>
-      <name>Mordrin</name>
-      <name>Nargond</name>
-      <name>Orzad</name>
-      <name>Ragnar</name>
-      <name>Snorri</name>
-      <name>Storri</name>
-      <name>Thingrim</name>
-      <name>Urgrim</name>
-    </mNames>
-    <hairColour>
-      <colour>Blond cendré</colour>
-      <colour>Blond</colour>
-      <colour>Roux</colour>
-      <colour>Auburn</colour>
-      <colour>Châtain clair</colour>
-      <colour>Châtain</colour>
-      <colour>Châtain</colour>
-      <colour>Brun</colour>
-      <colour>Bleu foncé</colour>
-      <colour>Noir</colour>
-    </hairColour>
-    <eyeColour>
-      <colour>Gris clair</colour>
-      <colour>Bleu</colour>
-      <colour>Cuivre</colour>
-      <colour>Marron clair</colour>
-      <colour>Marron clair</colour>
-      <colour>Marron</colour>
-      <colour>Marron</colour>
-      <colour>Marron foncé</colour>
-      <colour>Marron foncé</colour>
-      <colour>Mauve</colour>
-    </eyeColour>
-    <weight>40</weight>
-    <weight>43</weight>
-    <weight>45</weight>
-    <weight>47</weight>
-    <weight>49</weight>
-    <weight>52</weight>
-    <weight>54</weight>
-    <weight>56</weight>
-    <weight>59</weight>
-    <weight>61</weight>
-    <weight>63</weight>
-    <weight>65</weight>
-    <weight>68</weight>
-    <weight>70</weight>
-    <weight>72</weight>
-    <weight>74</weight>
-    <weight>77</weight>
-    <weight>79</weight>
-    <weight>81</weight>
-    <weight>83</weight>
-    <age>20</age>
-    <age>25</age>
-    <age>30</age>
-    <age>35</age>
-    <age>40</age>
-    <age>45</age>
-    <age>50</age>
-    <age>55</age>
-    <age>60</age>
-    <age>65</age>
-    <age>70</age>
-    <age>75</age>
-    <age>80</age>
-    <age>85</age>
-    <age>90</age>
-    <age>95</age>
-    <age>100</age>
-    <age>105</age>
-    <age>110</age>
-    <age>115</age>
-    <skillTable>
-      <skill>Connaissances générales (nains)</skill>
-    </skillTable>
-    <skillTable>
-      <skill>Langue (reikspiel)</skill>
-    </skillTable>
-    <skillTable>
-      <skill>Langue (khazalid)</skill>
-    </skillTable>
-    <skillTable>
-      <skill>Métier (forgeron)</skill>
-      <skill>Métier (maçon)</skill>
-      <skill>Métier (mineur)</skill>
-    </skillTable>
-    <talentTable>
-      <talent>Fureur vengeresse</talent>
-    </talentTable>
-    <talentTable>
-      <talent>Résistance à la magie</talent>
-    </talentTable>
-    <talentTable>
-      <talent>Robuste</talent>
-    </talentTable>
-    <talentTable>
-      <talent>Savoir-faire nain</talent>
-    </talentTable>
-    <talentTable>
-      <talent>Valeureux</talent>
-    </talentTable>
-    <talentTable>
-      <talent>Vision nocturne</talent>
-    </talentTable>
-    <weaponTable>
-      <weapon>Dague</weapon>
-    </weaponTable>
-    <weaponTable>
-      <weapon>Arme à une main</weapon>
-    </weaponTable>
-    <armourTable />
-    <equipmentTable>
-      <equipment>Vetements communs</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Cape</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Sac à dos</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Couverture</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Couverts en bois</equipment>
-    </equipmentTable>
-    <birthPlace>Karak Norn (Montagnes Grises)</birthPlace>
-    <birthPlace>Karak Izor (La Voûte)</birthPlace>
-    <birthPlace>Karak Hirn (Montagnes Noires)</birthPlace>
-    <birthPlace>Karak Kadrin (Montagnes du bord du Monde)</birthPlace>
-    <birthPlace>Karaz-a-Karak (Montagnes du Bord du Monde)</birthPlace>
-    <birthPlace>Zhufbar (Montagnes du Bord du Monde)</birthPlace>
-    <birthPlace>Barak Varr (Golfe Noir)</birthPlace>
-    <god>Manann</god>
-    <god>Morr</god>
-    <god>Myrmidia</god>
-    <god>Ranald</god>
-    <god>Rhya</god>
-    <god>Shallya</god>
-    <god>Sigmar</god>
-    <god>Taal</god>
-    <god>Ulric</god>
-    <god>Verena</god>
-  </race>
-  <race name="Humain">
-    <profile WS="20" BS="20" S="20" T="20" Ag="20" Int="20" WP="20" Fel="20" M="4" />
-    <size F="152" M="160" />
-    <wounds>10</wounds>
-    <wounds>11</wounds>
-    <wounds>12</wounds>
-    <wounds>13</wounds>
-    <fate>2</fate>
-    <fate>3</fate>
-    <fate>3</fate>
-    <fNames>
-      <name>Alexa</name>
-      <name>Alfrida</name>
-      <name>Béatrix</name>
-      <name>Bianka</name>
-      <name>Carlott</name>
-      <name>Elfrida</name>
-      <name>Élise</name>
-      <name>Gabrielle</name>
-      <name>Gretchen</name>
-      <name>Hanna</name>
-      <name>Ilsa</name>
-      <name>Klara</name>
-      <name>Jarla</name>
-      <name>Ludmilla</name>
-      <name>Mathilde</name>
-      <name>Régina</name>
-      <name>Solveig</name>
-      <name>Théodora</name>
-      <name>Ulrike</name>
-      <name>Wertha</name>
-    </fNames>
-    <mNames>
-      <name>Adelbert</name>
-      <name>Albrecht</name>
-      <name>Berthold</name>
-      <name>Dieter</name>
-      <name>Eckhardt</name>
-      <name>Félix</name>
-      <name>Gottfried</name>
-      <name>Gustav</name>
-      <name>Heinz</name>
-      <name>Johann</name>
-      <name>Konrad</name>
-      <name>Leopold</name>
-      <name>Magnus</name>
-      <name>Otto</name>
-      <name>Pieter</name>
-      <name>Rudiger</name>
-      <name>Siegfried</name>
-      <name>Ulrich</name>
-      <name>Waldemar</name>
-      <name>Wolfgang</name>
-    </mNames>
-    <hairColour>
-      <colour>Blond cendré</colour>
-      <colour>Paille</colour>
-      <colour>Blond</colour>
-      <colour>Auburn</colour>
-      <colour>Châtain clair</colour>
-      <colour>Châtain</colour>
-      <colour>Châtain</colour>
-      <colour>Brun</colour>
-      <colour>Noir</colour>
-    </hairColour>
-    <eyeColour>
-      <colour>Gris clair</colour>
-      <colour>Gris-bleu</colour>
-      <colour>Bleu</colour>
-      <colour>Vert</colour>
-      <colour>Cuivre</colour>
-      <colour>Marron clair</colour>
-      <colour>Marron</colour>
-      <colour>Marron foncé</colour>
-      <colour>Mauve</colour>
-      <colour>Noir</colour>
-    </eyeColour>
-    <weight>47</weight>
-    <weight>49</weight>
-    <weight>52</weight>
-    <weight>54</weight>
-    <weight>56</weight>
-    <weight>59</weight>
-    <weight>61</weight>
-    <weight>63</weight>
-    <weight>65</weight>
-    <weight>68</weight>
-    <weight>70</weight>
-    <weight>72</weight>
-    <weight>74</weight>
-    <weight>77</weight>
-    <weight>79</weight>
-    <weight>81</weight>
-    <weight>86</weight>
-    <weight>90</weight>
-    <weight>95</weight>
-    <weight>99</weight>
-    <age>16</age>
-    <age>17</age>
-    <age>18</age>
-    <age>19</age>
-    <age>20</age>
-    <age>21</age>
-    <age>22</age>
-    <age>23</age>
-    <age>24</age>
-    <age>25</age>
-    <age>26</age>
-    <age>27</age>
-    <age>28</age>
-    <age>29</age>
-    <age>30</age>
-    <age>31</age>
-    <age>32</age>
-    <age>33</age>
-    <age>34</age>
-    <age>35</age>
-    <skillTable>
-      <skill>Commérage</skill>
-    </skillTable>
-    <skillTable>
-      <skill>Connaissances générales (Empire)</skill>
-    </skillTable>
-    <skillTable>
-      <skill>Langue (reikspiel)</skill>
-    </skillTable>
-    <talentTable>
-      <talent>Acuité auditive</talent>
-      <talent>Acuité visuelle</talent>
-      <talent>Ambidextre</talent>
-      <talent>Calcul mental</talent>
-      <talent>Chance</talent>
-      <talent>Course à pied</talent>
-      <talent>Dur à cuire</talent>
-      <talent>Force accrue</talent>
-      <talent>Guerrier né</talent>
-      <talent>Imitation</talent>
-      <talent>Intelligent</talent>
-      <talent>Réflexes éclair</talent>
-      <talent>Résistance à la magie</talent>
-      <talent>Résistance accrue</talent>
-      <talent>Résistance aux maladies</talent>
-      <talent>Résistance aux poisons</talent>
-      <talent>Robuste</talent>
-      <talent>Sain d'esprit</talent>
-      <talent>Sang-froid</talent>
-      <talent>Sixième sens</talent>
-      <talent>Sociable</talent>
-      <talent>Tireur d'élite</talent>
-      <talent>Vision nocturne</talent>
-    </talentTable>
-    <talentTable>
-      <talent>Acuité auditive</talent>
-      <talent>Acuité visuelle</talent>
-      <talent>Ambidextre</talent>
-      <talent>Calcul mental</talent>
-      <talent>Chance</talent>
-      <talent>Course à pied</talent>
-      <talent>Dur à cuire</talent>
-      <talent>Force accrue</talent>
-      <talent>Guerrier né</talent>
-      <talent>Imitation</talent>
-      <talent>Intelligent</talent>
-      <talent>Réflexes éclair</talent>
-      <talent>Résistance à la magie</talent>
-      <talent>Résistance accrue</talent>
-      <talent>Résistance aux maladies</talent>
-      <talent>Résistance aux poisons</talent>
-      <talent>Robuste</talent>
-      <talent>Sain d'esprit</talent>
-      <talent>Sang-froid</talent>
-      <talent>Sixième sens</talent>
-      <talent>Sociable</talent>
-      <talent>Tireur d'élite</talent>
-      <talent>Vision nocturne</talent>
-    </talentTable>
-    <weaponTable>
-      <weapon>Dague</weapon>
-    </weaponTable>
-    <weaponTable>
-      <weapon>Arme à une main</weapon>
-    </weaponTable>
-    <armourTable />
-    <equipmentTable>
-      <equipment>Vetements communs</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Cape</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Sac à dos</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Couverture</equipment>
-    </equipmentTable>
-    <equipmentTable>
-      <equipment>Couverts en bois</equipment>
-    </equipmentTable>
-    <birthPlace>Averland (Cité)</birthPlace>
-    <birthPlace>Averland (Ville prospère)</birthPlace>
-    <birthPlace>Averland (Bourg)</birthPlace>
-    <birthPlace>Averland (Ville fortifiée)</birthPlace>
-    <birthPlace>Averland (Village agricole)</birthPlace>
-    <birthPlace>Averland (Village pauvre)</birthPlace>
-    <birthPlace>Averland (Petite communauté)</birthPlace>
-    <birthPlace>Averland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Averland (Ferme de culture)</birthPlace>
-    <birthPlace>Averland (Taudis)</birthPlace>
-    <birthPlace>Hochland (Cité)</birthPlace>
-    <birthPlace>Hochland (Ville prospère)</birthPlace>
-    <birthPlace>Hochland (Bourg)</birthPlace>
-    <birthPlace>Hochland (Ville fortifiée)</birthPlace>
-    <birthPlace>Hochland (Village agricole)</birthPlace>
-    <birthPlace>Hochland (Village pauvre)</birthPlace>
-    <birthPlace>Hochland (Petite communauté)</birthPlace>
-    <birthPlace>Hochland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Hochland (Ferme de culture)</birthPlace>
-    <birthPlace>Hochland (Taudis)</birthPlace>
-    <birthPlace>Middenland (Cité)</birthPlace>
-    <birthPlace>Middenland (Ville prospère)</birthPlace>
-    <birthPlace>Middenland (Bourg)</birthPlace>
-    <birthPlace>Middenland (Ville fortifiée)</birthPlace>
-    <birthPlace>Middenland (Village agricole)</birthPlace>
-    <birthPlace>Middenland (Village pauvre)</birthPlace>
-    <birthPlace>Middenland (Petite communauté)</birthPlace>
-    <birthPlace>Middenland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Middenland (Ferme de culture)</birthPlace>
-    <birthPlace>Middenland (Taudis)</birthPlace>
-    <birthPlace>Nordland (Cité)</birthPlace>
-    <birthPlace>Nordland (Ville prospère)</birthPlace>
-    <birthPlace>Nordland (Bourg)</birthPlace>
-    <birthPlace>Nordland (Ville fortifiée)</birthPlace>
-    <birthPlace>Nordland (Village agricole)</birthPlace>
-    <birthPlace>Nordland (Village pauvre)</birthPlace>
-    <birthPlace>Nordland (Petite communauté)</birthPlace>
-    <birthPlace>Nordland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Nordland (Ferme de culture)</birthPlace>
-    <birthPlace>Nordland (Taudis)</birthPlace>
-    <birthPlace>Ostermark (Cité)</birthPlace>
-    <birthPlace>Ostermark (Ville prospère)</birthPlace>
-    <birthPlace>Ostermark (Bourg)</birthPlace>
-    <birthPlace>Ostermark (Ville fortifiée)</birthPlace>
-    <birthPlace>Ostermark (Village agricole)</birthPlace>
-    <birthPlace>Ostermark (Village pauvre)</birthPlace>
-    <birthPlace>Ostermark (Petite communauté)</birthPlace>
-    <birthPlace>Ostermark (Ferme d'élevage)</birthPlace>
-    <birthPlace>Ostermark (Ferme de culture)</birthPlace>
-    <birthPlace>Ostermark (Taudis)</birthPlace>
-    <birthPlace>Ostland (Cité)</birthPlace>
-    <birthPlace>Ostland (Ville prospère)</birthPlace>
-    <birthPlace>Ostland (Bourg)</birthPlace>
-    <birthPlace>Ostland (Ville fortifiée)</birthPlace>
-    <birthPlace>Ostland (Village agricole)</birthPlace>
-    <birthPlace>Ostland (Village pauvre)</birthPlace>
-    <birthPlace>Ostland (Petite communauté)</birthPlace>
-    <birthPlace>Ostland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Ostland (Ferme de culture)</birthPlace>
-    <birthPlace>Ostland (Taudis)</birthPlace>
-    <birthPlace>Reikland (Cité)</birthPlace>
-    <birthPlace>Reikland (Ville prospère)</birthPlace>
-    <birthPlace>Reikland (Bourg)</birthPlace>
-    <birthPlace>Reikland (Ville fortifiée)</birthPlace>
-    <birthPlace>Reikland (Village agricole)</birthPlace>
-    <birthPlace>Reikland (Village pauvre)</birthPlace>
-    <birthPlace>Reikland (Petite communauté)</birthPlace>
-    <birthPlace>Reikland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Reikland (Ferme de culture)</birthPlace>
-    <birthPlace>Reikland (Taudis)</birthPlace>
-    <birthPlace>Stirland (Cité)</birthPlace>
-    <birthPlace>Stirland (Ville prospère)</birthPlace>
-    <birthPlace>Stirland (Bourg)</birthPlace>
-    <birthPlace>Stirland (Ville fortifiée)</birthPlace>
-    <birthPlace>Stirland (Village agricole)</birthPlace>
-    <birthPlace>Stirland (Village pauvre)</birthPlace>
-    <birthPlace>Stirland (Petite communauté)</birthPlace>
-    <birthPlace>Stirland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Stirland (Ferme de culture)</birthPlace>
-    <birthPlace>Stirland (Taudis)</birthPlace>
-    <birthPlace>Talabecland (Cité)</birthPlace>
-    <birthPlace>Talabecland (Ville prospère)</birthPlace>
-    <birthPlace>Talabecland (Bourg)</birthPlace>
-    <birthPlace>Talabecland (Ville fortifiée)</birthPlace>
-    <birthPlace>Talabecland (Village agricole)</birthPlace>
-    <birthPlace>Talabecland (Village pauvre)</birthPlace>
-    <birthPlace>Talabecland (Petite communauté)</birthPlace>
-    <birthPlace>Talabecland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Talabecland (Ferme de culture)</birthPlace>
-    <birthPlace>Talabecland (Taudis)</birthPlace>
-    <birthPlace>Wissenland (Cité)</birthPlace>
-    <birthPlace>Wissenland (Ville prospère)</birthPlace>
-    <birthPlace>Wissenland (Bourg)</birthPlace>
-    <birthPlace>Wissenland (Ville fortifiée)</birthPlace>
-    <birthPlace>Wissenland (Village agricole)</birthPlace>
-    <birthPlace>Wissenland (Village pauvre)</birthPlace>
-    <birthPlace>Wissenland (Petite communauté)</birthPlace>
-    <birthPlace>Wissenland (Ferme d'élevage)</birthPlace>
-    <birthPlace>Wissenland (Ferme de culture)</birthPlace>
-    <birthPlace>Wissenland (Taudis)</birthPlace>
-    <god>Manann</god>
-    <god>Morr</god>
-    <god>Myrmidia</god>
-    <god>Ranald</god>
-    <god>Rhya</god>
-    <god>Shallya</god>
-    <god>Sigmar</god>
-    <god>Taal</god>
-    <god>Ulric</god>
-    <god>Verena</god>
-  </race>
   <race name="Halfing">
     <profile WS="10" BS="30" S="10" T="10" Ag="30" Int="20" WP="20" Fel="30" M="4" />
     <size F="95" M="100" />
@@ -1068,6 +569,505 @@
     <birthPlace>Wissenland (Ferme d'élevage)</birthPlace>
     <birthPlace>Wissenland (Ferme de culture)</birthPlace>
     <birthPlace>Wissenland (Taudis)</birthPlace>
+    <god>Manann</god>
+    <god>Morr</god>
+    <god>Myrmidia</god>
+    <god>Ranald</god>
+    <god>Rhya</god>
+    <god>Shallya</god>
+    <god>Sigmar</god>
+    <god>Taal</god>
+    <god>Ulric</god>
+    <god>Verena</god>
+  </race>
+  <race name="Humain">
+    <profile WS="20" BS="20" S="20" T="20" Ag="20" Int="20" WP="20" Fel="20" M="4" />
+    <size F="152" M="160" />
+    <wounds>10</wounds>
+    <wounds>11</wounds>
+    <wounds>12</wounds>
+    <wounds>13</wounds>
+    <fate>2</fate>
+    <fate>3</fate>
+    <fate>3</fate>
+    <fNames>
+      <name>Alexa</name>
+      <name>Alfrida</name>
+      <name>Béatrix</name>
+      <name>Bianka</name>
+      <name>Carlott</name>
+      <name>Elfrida</name>
+      <name>Élise</name>
+      <name>Gabrielle</name>
+      <name>Gretchen</name>
+      <name>Hanna</name>
+      <name>Ilsa</name>
+      <name>Klara</name>
+      <name>Jarla</name>
+      <name>Ludmilla</name>
+      <name>Mathilde</name>
+      <name>Régina</name>
+      <name>Solveig</name>
+      <name>Théodora</name>
+      <name>Ulrike</name>
+      <name>Wertha</name>
+    </fNames>
+    <mNames>
+      <name>Adelbert</name>
+      <name>Albrecht</name>
+      <name>Berthold</name>
+      <name>Dieter</name>
+      <name>Eckhardt</name>
+      <name>Félix</name>
+      <name>Gottfried</name>
+      <name>Gustav</name>
+      <name>Heinz</name>
+      <name>Johann</name>
+      <name>Konrad</name>
+      <name>Leopold</name>
+      <name>Magnus</name>
+      <name>Otto</name>
+      <name>Pieter</name>
+      <name>Rudiger</name>
+      <name>Siegfried</name>
+      <name>Ulrich</name>
+      <name>Waldemar</name>
+      <name>Wolfgang</name>
+    </mNames>
+    <hairColour>
+      <colour>Blond cendré</colour>
+      <colour>Paille</colour>
+      <colour>Blond</colour>
+      <colour>Auburn</colour>
+      <colour>Châtain clair</colour>
+      <colour>Châtain</colour>
+      <colour>Châtain</colour>
+      <colour>Brun</colour>
+      <colour>Noir</colour>
+    </hairColour>
+    <eyeColour>
+      <colour>Gris clair</colour>
+      <colour>Gris-bleu</colour>
+      <colour>Bleu</colour>
+      <colour>Vert</colour>
+      <colour>Cuivre</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron</colour>
+      <colour>Marron foncé</colour>
+      <colour>Mauve</colour>
+      <colour>Noir</colour>
+    </eyeColour>
+    <weight>47</weight>
+    <weight>49</weight>
+    <weight>52</weight>
+    <weight>54</weight>
+    <weight>56</weight>
+    <weight>59</weight>
+    <weight>61</weight>
+    <weight>63</weight>
+    <weight>65</weight>
+    <weight>68</weight>
+    <weight>70</weight>
+    <weight>72</weight>
+    <weight>74</weight>
+    <weight>77</weight>
+    <weight>79</weight>
+    <weight>81</weight>
+    <weight>86</weight>
+    <weight>90</weight>
+    <weight>95</weight>
+    <weight>99</weight>
+    <age>16</age>
+    <age>17</age>
+    <age>18</age>
+    <age>19</age>
+    <age>20</age>
+    <age>21</age>
+    <age>22</age>
+    <age>23</age>
+    <age>24</age>
+    <age>25</age>
+    <age>26</age>
+    <age>27</age>
+    <age>28</age>
+    <age>29</age>
+    <age>30</age>
+    <age>31</age>
+    <age>32</age>
+    <age>33</age>
+    <age>34</age>
+    <age>35</age>
+    <skillTable>
+      <skill>Commérage</skill>
+    </skillTable>
+    <skillTable>
+      <skill>Connaissances générales (Empire)</skill>
+    </skillTable>
+    <skillTable>
+      <skill>Langue (reikspiel)</skill>
+    </skillTable>
+    <talentTable>
+      <talent>Acuité auditive</talent>
+      <talent>Acuité visuelle</talent>
+      <talent>Ambidextre</talent>
+      <talent>Calcul mental</talent>
+      <talent>Chance</talent>
+      <talent>Course à pied</talent>
+      <talent>Dur à cuire</talent>
+      <talent>Force accrue</talent>
+      <talent>Guerrier né</talent>
+      <talent>Imitation</talent>
+      <talent>Intelligent</talent>
+      <talent>Réflexes éclair</talent>
+      <talent>Résistance à la magie</talent>
+      <talent>Résistance accrue</talent>
+      <talent>Résistance aux maladies</talent>
+      <talent>Résistance aux poisons</talent>
+      <talent>Robuste</talent>
+      <talent>Sain d'esprit</talent>
+      <talent>Sang-froid</talent>
+      <talent>Sixième sens</talent>
+      <talent>Sociable</talent>
+      <talent>Tireur d'élite</talent>
+      <talent>Vision nocturne</talent>
+    </talentTable>
+    <talentTable>
+      <talent>Acuité auditive</talent>
+      <talent>Acuité visuelle</talent>
+      <talent>Ambidextre</talent>
+      <talent>Calcul mental</talent>
+      <talent>Chance</talent>
+      <talent>Course à pied</talent>
+      <talent>Dur à cuire</talent>
+      <talent>Force accrue</talent>
+      <talent>Guerrier né</talent>
+      <talent>Imitation</talent>
+      <talent>Intelligent</talent>
+      <talent>Réflexes éclair</talent>
+      <talent>Résistance à la magie</talent>
+      <talent>Résistance accrue</talent>
+      <talent>Résistance aux maladies</talent>
+      <talent>Résistance aux poisons</talent>
+      <talent>Robuste</talent>
+      <talent>Sain d'esprit</talent>
+      <talent>Sang-froid</talent>
+      <talent>Sixième sens</talent>
+      <talent>Sociable</talent>
+      <talent>Tireur d'élite</talent>
+      <talent>Vision nocturne</talent>
+    </talentTable>
+    <weaponTable>
+      <weapon>Dague</weapon>
+    </weaponTable>
+    <weaponTable>
+      <weapon>Arme à une main</weapon>
+    </weaponTable>
+    <armourTable />
+    <equipmentTable>
+      <equipment>Vetements communs</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Cape</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Sac à dos</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Couverture</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Couverts en bois</equipment>
+    </equipmentTable>
+    <birthPlace>Averland (Cité)</birthPlace>
+    <birthPlace>Averland (Ville prospère)</birthPlace>
+    <birthPlace>Averland (Bourg)</birthPlace>
+    <birthPlace>Averland (Ville fortifiée)</birthPlace>
+    <birthPlace>Averland (Village agricole)</birthPlace>
+    <birthPlace>Averland (Village pauvre)</birthPlace>
+    <birthPlace>Averland (Petite communauté)</birthPlace>
+    <birthPlace>Averland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Averland (Ferme de culture)</birthPlace>
+    <birthPlace>Averland (Taudis)</birthPlace>
+    <birthPlace>Hochland (Cité)</birthPlace>
+    <birthPlace>Hochland (Ville prospère)</birthPlace>
+    <birthPlace>Hochland (Bourg)</birthPlace>
+    <birthPlace>Hochland (Ville fortifiée)</birthPlace>
+    <birthPlace>Hochland (Village agricole)</birthPlace>
+    <birthPlace>Hochland (Village pauvre)</birthPlace>
+    <birthPlace>Hochland (Petite communauté)</birthPlace>
+    <birthPlace>Hochland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Hochland (Ferme de culture)</birthPlace>
+    <birthPlace>Hochland (Taudis)</birthPlace>
+    <birthPlace>Middenland (Cité)</birthPlace>
+    <birthPlace>Middenland (Ville prospère)</birthPlace>
+    <birthPlace>Middenland (Bourg)</birthPlace>
+    <birthPlace>Middenland (Ville fortifiée)</birthPlace>
+    <birthPlace>Middenland (Village agricole)</birthPlace>
+    <birthPlace>Middenland (Village pauvre)</birthPlace>
+    <birthPlace>Middenland (Petite communauté)</birthPlace>
+    <birthPlace>Middenland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Middenland (Ferme de culture)</birthPlace>
+    <birthPlace>Middenland (Taudis)</birthPlace>
+    <birthPlace>Nordland (Cité)</birthPlace>
+    <birthPlace>Nordland (Ville prospère)</birthPlace>
+    <birthPlace>Nordland (Bourg)</birthPlace>
+    <birthPlace>Nordland (Ville fortifiée)</birthPlace>
+    <birthPlace>Nordland (Village agricole)</birthPlace>
+    <birthPlace>Nordland (Village pauvre)</birthPlace>
+    <birthPlace>Nordland (Petite communauté)</birthPlace>
+    <birthPlace>Nordland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Nordland (Ferme de culture)</birthPlace>
+    <birthPlace>Nordland (Taudis)</birthPlace>
+    <birthPlace>Ostermark (Cité)</birthPlace>
+    <birthPlace>Ostermark (Ville prospère)</birthPlace>
+    <birthPlace>Ostermark (Bourg)</birthPlace>
+    <birthPlace>Ostermark (Ville fortifiée)</birthPlace>
+    <birthPlace>Ostermark (Village agricole)</birthPlace>
+    <birthPlace>Ostermark (Village pauvre)</birthPlace>
+    <birthPlace>Ostermark (Petite communauté)</birthPlace>
+    <birthPlace>Ostermark (Ferme d'élevage)</birthPlace>
+    <birthPlace>Ostermark (Ferme de culture)</birthPlace>
+    <birthPlace>Ostermark (Taudis)</birthPlace>
+    <birthPlace>Ostland (Cité)</birthPlace>
+    <birthPlace>Ostland (Ville prospère)</birthPlace>
+    <birthPlace>Ostland (Bourg)</birthPlace>
+    <birthPlace>Ostland (Ville fortifiée)</birthPlace>
+    <birthPlace>Ostland (Village agricole)</birthPlace>
+    <birthPlace>Ostland (Village pauvre)</birthPlace>
+    <birthPlace>Ostland (Petite communauté)</birthPlace>
+    <birthPlace>Ostland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Ostland (Ferme de culture)</birthPlace>
+    <birthPlace>Ostland (Taudis)</birthPlace>
+    <birthPlace>Reikland (Cité)</birthPlace>
+    <birthPlace>Reikland (Ville prospère)</birthPlace>
+    <birthPlace>Reikland (Bourg)</birthPlace>
+    <birthPlace>Reikland (Ville fortifiée)</birthPlace>
+    <birthPlace>Reikland (Village agricole)</birthPlace>
+    <birthPlace>Reikland (Village pauvre)</birthPlace>
+    <birthPlace>Reikland (Petite communauté)</birthPlace>
+    <birthPlace>Reikland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Reikland (Ferme de culture)</birthPlace>
+    <birthPlace>Reikland (Taudis)</birthPlace>
+    <birthPlace>Stirland (Cité)</birthPlace>
+    <birthPlace>Stirland (Ville prospère)</birthPlace>
+    <birthPlace>Stirland (Bourg)</birthPlace>
+    <birthPlace>Stirland (Ville fortifiée)</birthPlace>
+    <birthPlace>Stirland (Village agricole)</birthPlace>
+    <birthPlace>Stirland (Village pauvre)</birthPlace>
+    <birthPlace>Stirland (Petite communauté)</birthPlace>
+    <birthPlace>Stirland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Stirland (Ferme de culture)</birthPlace>
+    <birthPlace>Stirland (Taudis)</birthPlace>
+    <birthPlace>Talabecland (Cité)</birthPlace>
+    <birthPlace>Talabecland (Ville prospère)</birthPlace>
+    <birthPlace>Talabecland (Bourg)</birthPlace>
+    <birthPlace>Talabecland (Ville fortifiée)</birthPlace>
+    <birthPlace>Talabecland (Village agricole)</birthPlace>
+    <birthPlace>Talabecland (Village pauvre)</birthPlace>
+    <birthPlace>Talabecland (Petite communauté)</birthPlace>
+    <birthPlace>Talabecland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Talabecland (Ferme de culture)</birthPlace>
+    <birthPlace>Talabecland (Taudis)</birthPlace>
+    <birthPlace>Wissenland (Cité)</birthPlace>
+    <birthPlace>Wissenland (Ville prospère)</birthPlace>
+    <birthPlace>Wissenland (Bourg)</birthPlace>
+    <birthPlace>Wissenland (Ville fortifiée)</birthPlace>
+    <birthPlace>Wissenland (Village agricole)</birthPlace>
+    <birthPlace>Wissenland (Village pauvre)</birthPlace>
+    <birthPlace>Wissenland (Petite communauté)</birthPlace>
+    <birthPlace>Wissenland (Ferme d'élevage)</birthPlace>
+    <birthPlace>Wissenland (Ferme de culture)</birthPlace>
+    <birthPlace>Wissenland (Taudis)</birthPlace>
+    <god>Manann</god>
+    <god>Morr</god>
+    <god>Myrmidia</god>
+    <god>Ranald</god>
+    <god>Rhya</god>
+    <god>Shallya</god>
+    <god>Sigmar</god>
+    <god>Taal</god>
+    <god>Ulric</god>
+    <god>Verena</god>
+  </race>
+  <race name="Nain">
+    <profile WS="30" BS="20" S="20" T="30" Ag="10" Int="20" WP="20" Fel="10" M="3" />
+    <size F="125" M="130" />
+    <wounds>11</wounds>
+    <wounds>12</wounds>
+    <wounds>13</wounds>
+    <wounds>14</wounds>
+    <fate>1</fate>
+    <fate>2</fate>
+    <fate>3</fate>
+    <fNames>
+      <name>Anika</name>
+      <name>Asta</name>
+      <name>Astrid</name>
+      <name>Berta</name>
+      <name>Birgit</name>
+      <name>Dagmar</name>
+      <name>Elsa</name>
+      <name>Erika</name>
+      <name>Franziska</name>
+      <name>Gréta</name>
+      <name>Hunni</name>
+      <name>Ingrid</name>
+      <name>Janna</name>
+      <name>Karin</name>
+      <name>Pétra</name>
+      <name>Sigrid</name>
+      <name>Sigrun</name>
+      <name>Silma</name>
+      <name>Thylda</name>
+      <name>Ulla</name>
+    </fNames>
+    <mNames>
+      <name>Bardin</name>
+      <name>Brokk</name>
+      <name>Dimzad</name>
+      <name>Durak</name>
+      <name>Garil</name>
+      <name>Gottri</name>
+      <name>Grundi</name>
+      <name>Hargin</name>
+      <name>Imrak</name>
+      <name>Kargun</name>
+      <name>Jotunn</name>
+      <name>Magnar</name>
+      <name>Mordrin</name>
+      <name>Nargond</name>
+      <name>Orzad</name>
+      <name>Ragnar</name>
+      <name>Snorri</name>
+      <name>Storri</name>
+      <name>Thingrim</name>
+      <name>Urgrim</name>
+    </mNames>
+    <hairColour>
+      <colour>Blond cendré</colour>
+      <colour>Blond</colour>
+      <colour>Roux</colour>
+      <colour>Auburn</colour>
+      <colour>Châtain clair</colour>
+      <colour>Châtain</colour>
+      <colour>Châtain</colour>
+      <colour>Brun</colour>
+      <colour>Bleu foncé</colour>
+      <colour>Noir</colour>
+    </hairColour>
+    <eyeColour>
+      <colour>Gris clair</colour>
+      <colour>Bleu</colour>
+      <colour>Cuivre</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron clair</colour>
+      <colour>Marron</colour>
+      <colour>Marron</colour>
+      <colour>Marron foncé</colour>
+      <colour>Marron foncé</colour>
+      <colour>Mauve</colour>
+    </eyeColour>
+    <weight>40</weight>
+    <weight>43</weight>
+    <weight>45</weight>
+    <weight>47</weight>
+    <weight>49</weight>
+    <weight>52</weight>
+    <weight>54</weight>
+    <weight>56</weight>
+    <weight>59</weight>
+    <weight>61</weight>
+    <weight>63</weight>
+    <weight>65</weight>
+    <weight>68</weight>
+    <weight>70</weight>
+    <weight>72</weight>
+    <weight>74</weight>
+    <weight>77</weight>
+    <weight>79</weight>
+    <weight>81</weight>
+    <weight>83</weight>
+    <age>20</age>
+    <age>25</age>
+    <age>30</age>
+    <age>35</age>
+    <age>40</age>
+    <age>45</age>
+    <age>50</age>
+    <age>55</age>
+    <age>60</age>
+    <age>65</age>
+    <age>70</age>
+    <age>75</age>
+    <age>80</age>
+    <age>85</age>
+    <age>90</age>
+    <age>95</age>
+    <age>100</age>
+    <age>105</age>
+    <age>110</age>
+    <age>115</age>
+    <skillTable>
+      <skill>Connaissances générales (nains)</skill>
+    </skillTable>
+    <skillTable>
+      <skill>Langue (reikspiel)</skill>
+    </skillTable>
+    <skillTable>
+      <skill>Langue (khazalid)</skill>
+    </skillTable>
+    <skillTable>
+      <skill>Métier (forgeron)</skill>
+      <skill>Métier (maçon)</skill>
+      <skill>Métier (mineur)</skill>
+    </skillTable>
+    <talentTable>
+      <talent>Fureur vengeresse</talent>
+    </talentTable>
+    <talentTable>
+      <talent>Résistance à la magie</talent>
+    </talentTable>
+    <talentTable>
+      <talent>Robuste</talent>
+    </talentTable>
+    <talentTable>
+      <talent>Savoir-faire nain</talent>
+    </talentTable>
+    <talentTable>
+      <talent>Valeureux</talent>
+    </talentTable>
+    <talentTable>
+      <talent>Vision nocturne</talent>
+    </talentTable>
+    <weaponTable>
+      <weapon>Dague</weapon>
+    </weaponTable>
+    <weaponTable>
+      <weapon>Arme à une main</weapon>
+    </weaponTable>
+    <armourTable />
+    <equipmentTable>
+      <equipment>Vetements communs</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Cape</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Sac à dos</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Couverture</equipment>
+    </equipmentTable>
+    <equipmentTable>
+      <equipment>Couverts en bois</equipment>
+    </equipmentTable>
+    <birthPlace>Karak Norn (Montagnes Grises)</birthPlace>
+    <birthPlace>Karak Izor (La Voûte)</birthPlace>
+    <birthPlace>Karak Hirn (Montagnes Noires)</birthPlace>
+    <birthPlace>Karak Kadrin (Montagnes du bord du Monde)</birthPlace>
+    <birthPlace>Karaz-a-Karak (Montagnes du Bord du Monde)</birthPlace>
+    <birthPlace>Zhufbar (Montagnes du Bord du Monde)</birthPlace>
+    <birthPlace>Barak Varr (Golfe Noir)</birthPlace>
     <god>Manann</god>
     <god>Morr</god>
     <god>Myrmidia</god>
