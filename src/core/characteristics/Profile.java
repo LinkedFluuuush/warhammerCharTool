@@ -306,4 +306,11 @@ public class Profile {
 
         return panel;
     }
+
+    @Override
+    public Profile clone(){
+        return new Profile(this.getWs(),this.getBs(),this.getS(),this.getT(),this.getAg(),this.getIntel(),this.getWp(),
+                this.getFel(),this.getA(),this.getW(),this.getSb(),this.getTb(),this.getM(),this.getMag(),this.getIp(),
+                this.getFp());
+    }
 }

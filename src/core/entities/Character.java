@@ -27,6 +27,7 @@ public class Character {
     private Career career;
     private LinkedList<Career> previousCareers;
     private Profile profile;
+    private Profile basicProfile;
     private LinkedList<Skill> skills;
     private LinkedList<Talent> talents;
     private LinkedList<Weapon> weapons;
@@ -213,55 +214,59 @@ public class Character {
 
     public void randomCharacter(String type){
         if(type.equals("PC"))
-            this.profile = randomPCProfile();
+            this.basicProfile = randomPCProfile();
         else
-            this.profile = randomNPCProfile();
+            this.basicProfile = randomNPCProfile();
+
+        //this.profile = basicProfile.clone();
+
+
         this.details = randomDetails();
-        this.skills = randomSkills();
-        this.talents = randomTalents();
-        randomTrappings();
+
         this.money = randomMoney();
         this.previousCareers = career.getRandomPreviousCareers(0, 0, new LinkedList<Career>(), new LinkedList<LinkedList<Career>>());
+
+        this.applyCareers();
+        System.out.println(this.basicProfile);
+
     }
 
     public Profile randomNPCProfile(){
         Random r = new Random();
         Profile raceProfile = this.race.getProfile();
-        Profile careerProfile = this.career.getProfile();
 
         return new Profile(
-                raceProfile.getWs() + (r.nextInt(10) + 1) + careerProfile.getWs(),
-                raceProfile.getBs() + (r.nextInt(10) + 1) + careerProfile.getBs(),
-                raceProfile.getS() + (r.nextInt(10) + 1) + careerProfile.getS(),
-                raceProfile.getT() + (r.nextInt(10) + 1) + careerProfile.getT(),
-                raceProfile.getAg() + (r.nextInt(10) + 1) + careerProfile.getAg(),
-                raceProfile.getIntel() + (r.nextInt(10) + 1) + careerProfile.getIntel(),
-                raceProfile.getWp() + (r.nextInt(10) + 1) + careerProfile.getWp(),
-                raceProfile.getFel() + (r.nextInt(10) + 1) + careerProfile.getFel(),
-                1 + careerProfile.getA(),
-                race.getWounds()[r.nextInt(race.getWounds().length)] + careerProfile.getW(),
-                raceProfile.getM() + careerProfile.getM(),
-                careerProfile.getMag());
+                raceProfile.getWs() + (r.nextInt(10) + 1),
+                raceProfile.getBs() + (r.nextInt(10) + 1),
+                raceProfile.getS() + (r.nextInt(10) + 1),
+                raceProfile.getT() + (r.nextInt(10) + 1),
+                raceProfile.getAg() + (r.nextInt(10) + 1),
+                raceProfile.getIntel() + (r.nextInt(10) + 1),
+                raceProfile.getWp() + (r.nextInt(10) + 1),
+                raceProfile.getFel() + (r.nextInt(10) + 1),
+                1,
+                race.getWounds()[r.nextInt(race.getWounds().length)],
+                raceProfile.getM(),
+                0);
     }
 
     public Profile randomPCProfile(){
         Random r = new Random();
         Profile raceProfile = this.race.getProfile();
-        Profile careerProfile = this.career.getProfile();
 
         Profile newProfile = new Profile(
-                raceProfile.getWs() + (r.nextInt(10) + 1) + careerProfile.getWs(),
-                raceProfile.getBs() + (r.nextInt(10) + 1) + careerProfile.getBs(),
-                raceProfile.getS() + (r.nextInt(10) + 1) + careerProfile.getS(),
-                raceProfile.getT() + (r.nextInt(10) + 1) + careerProfile.getT(),
-                raceProfile.getAg() + (r.nextInt(10) + 1) + careerProfile.getAg(),
-                raceProfile.getIntel() + (r.nextInt(10) + 1) + careerProfile.getIntel(),
-                raceProfile.getWp() + (r.nextInt(10) + 1) + careerProfile.getWp(),
-                raceProfile.getFel() + (r.nextInt(10) + 1) + careerProfile.getFel(),
-                1 + careerProfile.getA(),
-                race.getWounds()[r.nextInt(race.getWounds().length)] + careerProfile.getW(),
-                raceProfile.getM() + careerProfile.getM(),
-                careerProfile.getMag());
+                raceProfile.getWs() + (r.nextInt(10) + 1),
+                raceProfile.getBs() + (r.nextInt(10) + 1),
+                raceProfile.getS() + (r.nextInt(10) + 1),
+                raceProfile.getT() + (r.nextInt(10) + 1),
+                raceProfile.getAg() + (r.nextInt(10) + 1),
+                raceProfile.getIntel() + (r.nextInt(10) + 1),
+                raceProfile.getWp() + (r.nextInt(10) + 1),
+                raceProfile.getFel() + (r.nextInt(10) + 1),
+                1,
+                race.getWounds()[r.nextInt(race.getWounds().length)],
+                raceProfile.getM(),
+                0);
 
         newProfile.setFp(race.getFate()[r.nextInt(race.getFate().length)]);
 
@@ -304,12 +309,134 @@ public class Character {
         );
     }
 
+    public void applyCareers(){
+        this.profile = applyCareersProfile();
+        this.skills = randomSkills();
+        this.talents = randomTalents();
+        randomTrappings();
+    }
+
+    public Profile applyCareersProfile(){
+        Random r = new Random();
+
+        Profile newProfile = basicProfile.clone();
+
+        for(Career career1 : previousCareers){
+            if(basicProfile.getWs() + career1.getProfile().getWs() >= newProfile.getWs()){
+                newProfile.setWs(basicProfile.getWs() + career1.getProfile().getWs());
+            }
+
+            if(basicProfile.getBs() + career1.getProfile().getBs() >= newProfile.getBs()){
+                newProfile.setBs(basicProfile.getBs() + career1.getProfile().getBs());
+            }
+
+            if(basicProfile.getS() + career1.getProfile().getS() >= newProfile.getS()){
+                newProfile.setS(basicProfile.getS() + career1.getProfile().getS());
+            }
+
+            if(basicProfile.getT() + career1.getProfile().getT() >= newProfile.getT()){
+                newProfile.setT(basicProfile.getT() + career1.getProfile().getT());
+            }
+
+            if(basicProfile.getAg() + career1.getProfile().getAg() >= newProfile.getAg()){
+                newProfile.setAg(basicProfile.getAg() + career1.getProfile().getAg());
+            }
+
+            if(basicProfile.getIntel() + career1.getProfile().getIntel() >= newProfile.getIntel()){
+                newProfile.setIntel(basicProfile.getIntel() + career1.getProfile().getIntel());
+            }
+
+            if(basicProfile.getWp() + career1.getProfile().getWp() >= newProfile.getWp()){
+                newProfile.setWp(basicProfile.getWp() + career1.getProfile().getWp());
+            }
+
+            if(basicProfile.getFel() + career1.getProfile().getFel() >= newProfile.getFel()){
+                newProfile.setFel(basicProfile.getFel() + career1.getProfile().getFel());
+            }
+
+            if(basicProfile.getA() + career1.getProfile().getA() >= newProfile.getA()){
+                newProfile.setA(basicProfile.getA() + career1.getProfile().getA());
+            }
+
+            if(basicProfile.getW() + career1.getProfile().getW() >= newProfile.getW()){
+                newProfile.setW(basicProfile.getW() + career1.getProfile().getW());
+            }
+
+            if(basicProfile.getM() + career1.getProfile().getM() >= newProfile.getM()){
+                newProfile.setM(basicProfile.getM() + career1.getProfile().getM());
+            }
+
+            if(basicProfile.getMag() + career1.getProfile().getMag() >= newProfile.getMag()){
+                newProfile.setMag(basicProfile.getMag() + career1.getProfile().getMag());
+            }
+        }
+
+        if(basicProfile.getWs() + this.getCareer().getProfile().getWs() >= newProfile.getWs()){
+            newProfile.setWs(basicProfile.getWs() + this.getCareer().getProfile().getWs());
+        }
+
+        if(basicProfile.getBs() + this.getCareer().getProfile().getBs() >= newProfile.getBs()){
+            newProfile.setBs(basicProfile.getBs() + this.getCareer().getProfile().getBs());
+        }
+
+        if(basicProfile.getS() + this.getCareer().getProfile().getS() >= newProfile.getS()){
+            newProfile.setS(basicProfile.getS() + this.getCareer().getProfile().getS());
+        }
+
+        if(basicProfile.getT() + this.getCareer().getProfile().getT() >= newProfile.getT()){
+            newProfile.setT(basicProfile.getT() + this.getCareer().getProfile().getT());
+        }
+
+        if(basicProfile.getAg() + this.getCareer().getProfile().getAg() >= newProfile.getAg()){
+            newProfile.setAg(basicProfile.getAg() + this.getCareer().getProfile().getAg());
+        }
+
+        if(basicProfile.getIntel() + this.getCareer().getProfile().getIntel() >= newProfile.getIntel()){
+            newProfile.setIntel(basicProfile.getIntel() + this.getCareer().getProfile().getIntel());
+        }
+
+        if(basicProfile.getWp() + this.getCareer().getProfile().getWp() >= newProfile.getWp()){
+            newProfile.setWp(basicProfile.getWp() + this.getCareer().getProfile().getWp());
+        }
+
+        if(basicProfile.getFel() + this.getCareer().getProfile().getFel() >= newProfile.getFel()){
+            newProfile.setFel(basicProfile.getFel() + this.getCareer().getProfile().getFel());
+        }
+
+        if(basicProfile.getA() + this.getCareer().getProfile().getA() >= newProfile.getA()){
+            newProfile.setA(basicProfile.getA() + this.getCareer().getProfile().getA());
+        }
+
+        if(basicProfile.getW() + this.getCareer().getProfile().getW() >= newProfile.getW()){
+            newProfile.setW(basicProfile.getW() + this.getCareer().getProfile().getW());
+        }
+
+        if(basicProfile.getM() + this.getCareer().getProfile().getM() >= newProfile.getM()){
+            newProfile.setM(basicProfile.getM() + this.getCareer().getProfile().getM());
+        }
+
+        if(basicProfile.getMag() + this.getCareer().getProfile().getMag() >= newProfile.getMag()){
+            newProfile.setMag(basicProfile.getMag() + this.getCareer().getProfile().getMag());
+        }
+
+        newProfile.setSb(newProfile.getS() / 10);
+        newProfile.setTb(newProfile.getT() / 10);
+
+        return newProfile;
+    }
+
     public LinkedList<Skill> randomSkills(){
         LinkedList<Skill> newSkills = new LinkedList<Skill>();
         Random r = new Random();
 
         for(LinkedList<Skill> skillChoice : race.getSkills()){
             newSkills.add(skillChoice.get(r.nextInt(skillChoice.size())));
+        }
+
+        for(Career career1 : this.previousCareers){
+            for(LinkedList<Skill> skillChoice : career1.getSkills()){
+                newSkills.add(skillChoice.get(r.nextInt(skillChoice.size())));
+            }
         }
 
         for(LinkedList<Skill> skillChoice : career.getSkills()){
@@ -327,6 +454,12 @@ public class Character {
             newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
         }
 
+        for(Career career1 : this.previousCareers){
+            for(LinkedList<Talent> talentChoice : career1.getTalents()){
+                newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
+            }
+        }
+
         for(LinkedList<Talent> talentChoice : career.getTalents()){
             newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
         }
@@ -339,6 +472,12 @@ public class Character {
 
         LinkedList<Weapon> newWeapons = new LinkedList<Weapon>();
 
+        for(Career career1 : this.previousCareers){
+            for(LinkedList<Weapon> weaponChoice : career1.getWeapons()){
+                newWeapons.add(weaponChoice.get(r.nextInt(weaponChoice.size())));
+            }
+        }
+
         for(LinkedList<Weapon> weaponChoice : career.getWeapons()){
             newWeapons.add(weaponChoice.get(r.nextInt(weaponChoice.size())));
         }
@@ -349,13 +488,33 @@ public class Character {
 
         LinkedList<Armour> newArmours = new LinkedList<Armour>();
 
+        for(Career career1 : this.previousCareers){
+            for(LinkedList<Armour> armourChoice : career1.getArmours()){
+                newArmours.add(armourChoice.get(r.nextInt(armourChoice.size())));
+            }
+        }
+
         for(LinkedList<Armour> armourChoice : career.getArmours()){
+            newArmours.add(armourChoice.get(r.nextInt(armourChoice.size())));
+        }
+
+        for(LinkedList<Armour> armourChoice : race.getArmours()){
             newArmours.add(armourChoice.get(r.nextInt(armourChoice.size())));
         }
 
         LinkedList<Equipment> newEquipment = new LinkedList<Equipment>();
 
+        for(Career career1 : this.previousCareers){
+            for(LinkedList<Equipment> equipmentChoice : career1.getEquipments()){
+                newEquipment.add(equipmentChoice.get(r.nextInt(equipmentChoice.size())));
+            }
+        }
+
         for(LinkedList<Equipment> equipmentChoice : career.getEquipments()){
+            newEquipment.add(equipmentChoice.get(r.nextInt(equipmentChoice.size())));
+        }
+
+        for(LinkedList<Equipment> equipmentChoice : race.getEquipments()){
             newEquipment.add(equipmentChoice.get(r.nextInt(equipmentChoice.size())));
         }
 
