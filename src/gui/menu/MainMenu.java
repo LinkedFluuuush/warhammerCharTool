@@ -1,5 +1,7 @@
 package gui.menu;
 
+import convertData.convertData;
+import core.World;
 import gui.CharacterPanel;
 import gui.MainFrame;
 import sun.security.jgss.krb5.Krb5Util;
@@ -77,8 +79,32 @@ public class MainMenu extends JMenuBar{
             }
         });
 
+        JMenu menuFichierData = new JMenu("Données");
+
+        JMenuItem menuFichierReload = new JMenuItem("Recharger les fichiers");
+        menuFichierQuit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                World.loadAll();
+            }
+        });
+
+        JMenuItem menuFichierConvert = new JMenuItem("Reconvertir les fichiers");
+        menuFichierQuit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                convertData.convertAll();
+                World.loadAll();
+            }
+        });
+
+        menuFichierData.add(menuFichierReload);
+        menuFichierData.add(menuFichierConvert);
+
         menuFichier.add(menuFichierAddCharacter);
         menuFichier.add(menuFichierRemoveCharacter);
+        menuFichier.addSeparator();
+        menuFichier.add(menuFichierData);
         menuFichier.addSeparator();
         menuFichier.add(menuFichierQuit);
 

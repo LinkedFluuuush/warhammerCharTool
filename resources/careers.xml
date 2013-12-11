@@ -594,6 +594,10 @@
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Artisan</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Artisan</openingCareer>
       <openingCareer>Milicien</openingCareer>
       <openingCareer>Valet</openingCareer>
     </openingTable>
@@ -743,6 +747,8 @@
       <openingCareer>Bûcheron</openingCareer>
       <openingCareer>Bûcheron</openingCareer>
       <openingCareer>Bûcheron</openingCareer>
+      <openingCareer>Bûcheron</openingCareer>
+      <openingCareer>Bûcheron</openingCareer>
       <openingCareer>Chasseur</openingCareer>
       <openingCareer>Mineur</openingCareer>
       <openingCareer>Vagabond</openingCareer>
@@ -828,9 +834,15 @@
       <accessCareer>Charbonnier</accessCareer>
       <accessCareer>Bûcheron</accessCareer>
       <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
       <accessCareer>Gardien Tribal</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
@@ -919,6 +931,8 @@
       </eEquipments>
     </equipmentsTable>
     <accessTable>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Chasseur</accessCareer>
@@ -1076,6 +1090,8 @@
       <accessCareer>Initié (Verena)</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Artisan</openingCareer>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Trafiquant de cadavres</openingCareer>
@@ -1264,6 +1280,8 @@
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Cocher</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Cocher</accessCareer>
       <accessCareer>Patrouilleur</accessCareer>
       <accessCareer>Régisseur</accessCareer>
     </accessTable>
@@ -1447,6 +1465,14 @@
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Batelier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Batelier</accessCareer>
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Marin</accessCareer>
@@ -1457,6 +1483,10 @@
       <accessCareer>Régisseur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Batelier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Batelier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Batelier</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Batelier</openingCareer>
@@ -1700,6 +1730,8 @@
       <openingCareer>Cocher</openingCareer>
       <openingCareer>Cocher</openingCareer>
       <openingCareer>Cocher</openingCareer>
+      <openingCareer>Cocher</openingCareer>
+      <openingCareer>Cocher</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Patrouilleur</openingCareer>
     </openingTable>
@@ -1860,6 +1892,8 @@
     <accessTable>
       <accessCareer>Artisan</accessCareer>
       <accessCareer>Artisan</accessCareer>
+      <accessCareer>Artisan</accessCareer>
+      <accessCareer>Artisan</accessCareer>
       <accessCareer>Etudiant</accessCareer>
     </accessTable>
     <openingTable>
@@ -1942,12 +1976,22 @@
       <accessCareer>Bateleur</accessCareer>
       <accessCareer>Diestro Estalien</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Marin</accessCareer>
       <accessCareer>Noble</accessCareer>
       <accessCareer>Valet</accessCareer>
       <accessCareer>Voleur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Bateleur</openingCareer>
       <openingCareer>Bateleur</openingCareer>
       <openingCareer>Bateleur</openingCareer>
       <openingCareer>Bateleur</openingCareer>
@@ -2050,12 +2094,22 @@
       <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Noble</accessCareer>
       <accessCareer>Pilleur de tombes</accessCareer>
       <accessCareer>Valet</accessCareer>
       <accessCareer>Trafiquant de cadavres</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Emissaire Elfe</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Emissaire Elfe</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Apprenti sorcier</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -2142,6 +2196,10 @@
       <accessCareer>Artisan</accessCareer>
       <accessCareer>Agitateur</accessCareer>
       <accessCareer>Artisan</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Artisan</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Artisan</accessCareer>
       <accessCareer>Paysan</accessCareer>
       <accessCareer>Initié (Manann)</accessCareer>
       <accessCareer>Initié (Morr)</accessCareer>
@@ -2154,6 +2212,8 @@
       <accessCareer>Initié (Verena)</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Agitateur</openingCareer>
@@ -2244,6 +2304,8 @@
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Artisan</openingCareer>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Artisan</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Patrouilleur</openingCareer>
       <openingCareer>Soldat</openingCareer>
@@ -2322,10 +2384,16 @@
       <accessCareer>Diestro Estalien</accessCareer>
       <accessCareer>Coupe-jarret</accessCareer>
       <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
       <accessCareer>Geôlier</accessCareer>
       <accessCareer>Mercenaire</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
@@ -2401,9 +2469,15 @@
     <accessTable>
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
       <accessCareer>Messager</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Chasseur</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Chasseur</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Chasseur</openingCareer>
@@ -2474,9 +2548,15 @@
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Ratier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Garde</openingCareer>
+      <openingCareer>Garde du corps</openingCareer>
+      <openingCareer>Garde</openingCareer>
+      <openingCareer>Garde du corps</openingCareer>
       <openingCareer>Garde</openingCareer>
       <openingCareer>Garde du corps</openingCareer>
       <openingCareer>Garde</openingCareer>
@@ -2561,9 +2641,17 @@
       <accessCareer>Berserk Norse</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
       <accessCareer>Spadassin</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
@@ -2666,6 +2754,20 @@
       <accessCareer>Ecuyer</accessCareer>
       <accessCareer>Escroc</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Ecuyer</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Agitateur</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Ecuyer</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Matelot</accessCareer>
       <accessCareer>Mercenaire</accessCareer>
       <accessCareer>Milicien</accessCareer>
@@ -2744,10 +2846,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -2821,10 +2931,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -2898,10 +3016,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -2975,10 +3101,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -3056,10 +3190,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -3133,10 +3275,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -3210,10 +3360,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -3287,10 +3445,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -3364,10 +3530,18 @@
       <accessCareer>Fanatique</accessCareer>
       <accessCareer>Etudiant</accessCareer>
       <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
+      <accessCareer>Etudiant</accessCareer>
+      <accessCareer>Fanatique</accessCareer>
       <accessCareer>Scribe</accessCareer>
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Chirurgien barbier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
       <openingCareer>Fanatique</openingCareer>
       <openingCareer>Chirurgien barbier</openingCareer>
@@ -3447,6 +3621,10 @@
     </equipmentsTable>
     <accessTable />
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
@@ -3531,10 +3709,22 @@
       <accessCareer>Berserk Norse</accessCareer>
       <accessCareer>Contrebandier</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Passeur</accessCareer>
       <accessCareer>Pêcheur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Escroc</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
@@ -3624,9 +3814,19 @@
       <accessCareer>Marin</accessCareer>
       <accessCareer>Batelier</accessCareer>
       <accessCareer>Marin</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Marin</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Marin</accessCareer>
       <accessCareer>Pêcheur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Coupe-jarret</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Coupe-jarret</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Coupe-jarret</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
@@ -3718,9 +3918,17 @@
     <accessTable>
       <accessCareer>Chiffonnier</accessCareer>
       <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
       <accessCareer>Serviteur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
@@ -3841,12 +4049,36 @@
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Kossar Kislevite</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Chasseur de primes</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Eclaireur</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Gladiateur</accessCareer>
+      <accessCareer>Kossar Kislevite</accessCareer>
+      <accessCareer>Berserk Norse</accessCareer>
+      <accessCareer>Chasseur de primes</accessCareer>
+      <accessCareer>Coupe-jarret</accessCareer>
+      <accessCareer>Eclaireur</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Gladiateur</accessCareer>
+      <accessCareer>Kossar Kislevite</accessCareer>
       <accessCareer>Milicien</accessCareer>
       <accessCareer>Mineur</accessCareer>
       <accessCareer>Soldat</accessCareer>
       <accessCareer>Sentinelle Halfing</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Garde du corps</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Garde du corps</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Garde du corps</openingCareer>
@@ -3937,6 +4169,12 @@
       <accessCareer>Serviteur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Cocher</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Gardien Tribal</openingCareer>
+      <openingCareer>Cocher</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Gardien Tribal</openingCareer>
       <openingCareer>Cocher</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Gardien Tribal</openingCareer>
@@ -4057,11 +4295,23 @@
       <accessCareer>Artisan</accessCareer>
       <accessCareer>Bourgeois</accessCareer>
       <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Artisan</accessCareer>
+      <accessCareer>Bourgeois</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Artisan</accessCareer>
+      <accessCareer>Bourgeois</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
       <accessCareer>Paysan</accessCareer>
       <accessCareer>Pêcheur</accessCareer>
       <accessCareer>Régisseur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
+      <openingCareer>Messager</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
+      <openingCareer>Messager</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Messager</openingCareer>
@@ -4152,8 +4402,20 @@
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Charbonnier</accessCareer>
       <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
@@ -4252,8 +4514,16 @@
       <accessCareer>Ecuyer</accessCareer>
       <accessCareer>Ecuyer</accessCareer>
       <accessCareer>Ecuyer</accessCareer>
+      <accessCareer>Ecuyer</accessCareer>
+      <accessCareer>Ecuyer</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Ecuyer</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
+      <openingCareer>Ecuyer</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
       <openingCareer>Ecuyer</openingCareer>
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Etudiant</openingCareer>
@@ -4373,8 +4643,20 @@
       <accessCareer>Cocher</accessCareer>
       <accessCareer>Collecteur de taxes</accessCareer>
       <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Batelier</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Marin</openingCareer>
+      <openingCareer>Batelier</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Marin</openingCareer>
       <openingCareer>Batelier</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Marin</openingCareer>
@@ -4514,8 +4796,26 @@
       <accessCareer>Garde</accessCareer>
       <accessCareer>Messager</accessCareer>
       <accessCareer>Passeur</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Eclaireur</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Messager</accessCareer>
+      <accessCareer>Passeur</accessCareer>
+      <accessCareer>Cocher</accessCareer>
+      <accessCareer>Eclaireur</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Messager</accessCareer>
+      <accessCareer>Passeur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Collecteur de taxes</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Messager</openingCareer>
+      <openingCareer>Collecteur de taxes</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Messager</openingCareer>
       <openingCareer>Collecteur de taxes</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
@@ -4600,6 +4900,18 @@
     </equipmentsTable>
     <accessTable />
     <openingTable>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Milicien</openingCareer>
+      <openingCareer>Artisan</openingCareer>
+      <openingCareer>Charbonnier</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Fanatique</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Milicien</openingCareer>
       <openingCareer>Artisan</openingCareer>
       <openingCareer>Charbonnier</openingCareer>
       <openingCareer>Chiffonnier</openingCareer>
@@ -4703,10 +5015,16 @@
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Porterune</accessCareer>
       <accessCareer>Voleur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Etudiant</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
@@ -4792,8 +5110,14 @@
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
       <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
+      <accessCareer>Combattant des tunnels</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Pilleur de tombes</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Pilleur de tombes</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Pilleur de tombes</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
@@ -4869,8 +5193,18 @@
       <accessCareer>Paysan</accessCareer>
       <accessCareer>Batelier</accessCareer>
       <accessCareer>Paysan</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Paysan</accessCareer>
+      <accessCareer>Batelier</accessCareer>
+      <accessCareer>Paysan</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Marin</openingCareer>
+      <openingCareer>Matelot</openingCareer>
+      <openingCareer>Milicien</openingCareer>
+      <openingCareer>Marin</openingCareer>
+      <openingCareer>Matelot</openingCareer>
+      <openingCareer>Milicien</openingCareer>
       <openingCareer>Marin</openingCareer>
       <openingCareer>Matelot</openingCareer>
       <openingCareer>Milicien</openingCareer>
@@ -4963,9 +5297,21 @@
       <accessCareer>Geôlier</accessCareer>
       <accessCareer>Pilleur de tombes</accessCareer>
       <accessCareer>Porterune</accessCareer>
+      <accessCareer>Geôlier</accessCareer>
+      <accessCareer>Pilleur de tombes</accessCareer>
+      <accessCareer>Porterune</accessCareer>
+      <accessCareer>Geôlier</accessCareer>
+      <accessCareer>Pilleur de tombes</accessCareer>
+      <accessCareer>Porterune</accessCareer>
       <accessCareer>Trafiquant de cadavres</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Geôlier</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Combattant des tunnels</openingCareer>
+      <openingCareer>Geôlier</openingCareer>
       <openingCareer>Chiffonnier</openingCareer>
       <openingCareer>Combattant des tunnels</openingCareer>
       <openingCareer>Geôlier</openingCareer>
@@ -5054,8 +5400,18 @@
       <accessCareer>Geôlier</accessCareer>
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Geôlier</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Geôlier</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Geôlier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Collecteur de taxes</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Milicien</openingCareer>
+      <openingCareer>Collecteur de taxes</openingCareer>
+      <openingCareer>Contrebandier</openingCareer>
+      <openingCareer>Milicien</openingCareer>
       <openingCareer>Collecteur de taxes</openingCareer>
       <openingCareer>Contrebandier</openingCareer>
       <openingCareer>Milicien</openingCareer>
@@ -5182,8 +5538,50 @@
       <accessCareer>Initié (Ulric)</accessCareer>
       <accessCareer>Initié (Verena)</accessCareer>
       <accessCareer>Apprenti sorcier</accessCareer>
+      <accessCareer>Initié (Manann)</accessCareer>
+      <accessCareer>Initié (Morr)</accessCareer>
+      <accessCareer>Initié (Myrmidia)</accessCareer>
+      <accessCareer>Initié (Ranald)</accessCareer>
+      <accessCareer>Initié (Shallya)</accessCareer>
+      <accessCareer>Initié (Sigmar)</accessCareer>
+      <accessCareer>Initié (Taal et Rhya)</accessCareer>
+      <accessCareer>Initié (Ulric)</accessCareer>
+      <accessCareer>Initié (Verena)</accessCareer>
+      <accessCareer>Apprenti sorcier</accessCareer>
+      <accessCareer>Initié (Manann)</accessCareer>
+      <accessCareer>Initié (Morr)</accessCareer>
+      <accessCareer>Initié (Myrmidia)</accessCareer>
+      <accessCareer>Initié (Ranald)</accessCareer>
+      <accessCareer>Initié (Shallya)</accessCareer>
+      <accessCareer>Initié (Sigmar)</accessCareer>
+      <accessCareer>Initié (Taal et Rhya)</accessCareer>
+      <accessCareer>Initié (Ulric)</accessCareer>
+      <accessCareer>Initié (Verena)</accessCareer>
+      <accessCareer>Apprenti sorcier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Initié (Manann)</openingCareer>
+      <openingCareer>Initié (Morr)</openingCareer>
+      <openingCareer>Initié (Myrmidia)</openingCareer>
+      <openingCareer>Initié (Ranald)</openingCareer>
+      <openingCareer>Initié (Shallya)</openingCareer>
+      <openingCareer>Initié (Sigmar)</openingCareer>
+      <openingCareer>Initié (Taal et Rhya)</openingCareer>
+      <openingCareer>Initié (Ulric)</openingCareer>
+      <openingCareer>Initié (Verena)</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Initié (Manann)</openingCareer>
+      <openingCareer>Initié (Morr)</openingCareer>
+      <openingCareer>Initié (Myrmidia)</openingCareer>
+      <openingCareer>Initié (Ranald)</openingCareer>
+      <openingCareer>Initié (Shallya)</openingCareer>
+      <openingCareer>Initié (Sigmar)</openingCareer>
+      <openingCareer>Initié (Taal et Rhya)</openingCareer>
+      <openingCareer>Initié (Ulric)</openingCareer>
+      <openingCareer>Initié (Verena)</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Apprenti sorcier</openingCareer>
       <openingCareer>Initié (Manann)</openingCareer>
@@ -5288,8 +5686,18 @@
       <accessCareer>Chasseur</accessCareer>
       <accessCareer>Collecteur de taxes</accessCareer>
       <accessCareer>Milicien</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Milicien</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Milicien</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
+      <openingCareer>Chasseur de primes</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Chasseur de primes</openingCareer>
@@ -5375,8 +5783,22 @@
       <accessCareer>Escroc</accessCareer>
       <accessCareer>Mercanti</accessCareer>
       <accessCareer>Paysan</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Mercanti</accessCareer>
+      <accessCareer>Paysan</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Mercanti</accessCareer>
+      <accessCareer>Paysan</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Bourgeois</openingCareer>
+      <openingCareer>Mercanti</openingCareer>
+      <openingCareer>Messager</openingCareer>
+      <openingCareer>Agitateur</openingCareer>
+      <openingCareer>Bourgeois</openingCareer>
+      <openingCareer>Mercanti</openingCareer>
+      <openingCareer>Messager</openingCareer>
       <openingCareer>Agitateur</openingCareer>
       <openingCareer>Bourgeois</openingCareer>
       <openingCareer>Mercanti</openingCareer>
@@ -5512,8 +5934,22 @@
       <accessCareer>Collecteur de taxes</accessCareer>
       <accessCareer>Garde</accessCareer>
       <accessCareer>Messager</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Messager</accessCareer>
+      <accessCareer>Chasseur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Garde</accessCareer>
+      <accessCareer>Messager</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Garde</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
+      <openingCareer>Eclaireur</openingCareer>
+      <openingCareer>Garde</openingCareer>
+      <openingCareer>Mercenaire</openingCareer>
       <openingCareer>Eclaireur</openingCareer>
       <openingCareer>Garde</openingCareer>
       <openingCareer>Mercenaire</openingCareer>
@@ -5584,6 +6020,28 @@
     </equipmentsTable>
     <accessTable />
     <openingTable>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Initié (Manann)</openingCareer>
+      <openingCareer>Initié (Morr)</openingCareer>
+      <openingCareer>Initié (Myrmidia)</openingCareer>
+      <openingCareer>Initié (Ranald)</openingCareer>
+      <openingCareer>Initié (Shallya)</openingCareer>
+      <openingCareer>Initié (Sigmar)</openingCareer>
+      <openingCareer>Initié (Taal et Rhya)</openingCareer>
+      <openingCareer>Initié (Ulric)</openingCareer>
+      <openingCareer>Initié (Verena)</openingCareer>
+      <openingCareer>Apprenti sorcier</openingCareer>
+      <openingCareer>Hors-la-loi</openingCareer>
+      <openingCareer>Initié (Manann)</openingCareer>
+      <openingCareer>Initié (Morr)</openingCareer>
+      <openingCareer>Initié (Myrmidia)</openingCareer>
+      <openingCareer>Initié (Ranald)</openingCareer>
+      <openingCareer>Initié (Shallya)</openingCareer>
+      <openingCareer>Initié (Sigmar)</openingCareer>
+      <openingCareer>Initié (Taal et Rhya)</openingCareer>
+      <openingCareer>Initié (Ulric)</openingCareer>
+      <openingCareer>Initié (Verena)</openingCareer>
       <openingCareer>Apprenti sorcier</openingCareer>
       <openingCareer>Hors-la-loi</openingCareer>
       <openingCareer>Initié (Manann)</openingCareer>
@@ -5694,8 +6152,22 @@
       <accessCareer>Garde du corps</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Régisseur</accessCareer>
+      <accessCareer>Chasseur de primes</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Gladiateur</accessCareer>
+      <accessCareer>Régisseur</accessCareer>
+      <accessCareer>Chasseur de primes</accessCareer>
+      <accessCareer>Diestro Estalien</accessCareer>
+      <accessCareer>Garde du corps</accessCareer>
+      <accessCareer>Gladiateur</accessCareer>
+      <accessCareer>Régisseur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Coupe-jarret</openingCareer>
+      <openingCareer>Gladiateur</openingCareer>
+      <openingCareer>Coupe-jarret</openingCareer>
+      <openingCareer>Gladiateur</openingCareer>
       <openingCareer>Coupe-jarret</openingCareer>
       <openingCareer>Gladiateur</openingCareer>
       <openingCareer>Coupe-jarret</openingCareer>
@@ -5778,8 +6250,18 @@
       <accessCareer>Chiffonnier</accessCareer>
       <accessCareer>Chirurgien barbier</accessCareer>
       <accessCareer>Ratier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Chirurgien barbier</accessCareer>
+      <accessCareer>Ratier</accessCareer>
+      <accessCareer>Chiffonnier</accessCareer>
+      <accessCareer>Chirurgien barbier</accessCareer>
+      <accessCareer>Ratier</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Etudiant</openingCareer>
+      <openingCareer>Ratier</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
+      <openingCareer>Ratier</openingCareer>
       <openingCareer>Etudiant</openingCareer>
       <openingCareer>Ratier</openingCareer>
       <openingCareer>Ratier</openingCareer>
@@ -5845,6 +6327,8 @@
       </eEquipments>
     </equipmentsTable>
     <accessTable>
+      <accessCareer>Gladiateur</accessCareer>
+      <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
       <accessCareer>Gladiateur</accessCareer>
@@ -5936,6 +6420,28 @@
       <accessCareer>Sorcier de village</accessCareer>
       <accessCareer>Bateleur</accessCareer>
       <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Chirurgien barbier</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Gardien Tribal</accessCareer>
+      <accessCareer>Hors-la-loi</accessCareer>
+      <accessCareer>Mercanti</accessCareer>
+      <accessCareer>Sentinelle Halfing</accessCareer>
+      <accessCareer>Soldat</accessCareer>
+      <accessCareer>Sorcier de village</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
+      <accessCareer>Charbonnier</accessCareer>
+      <accessCareer>Chirurgien barbier</accessCareer>
+      <accessCareer>Emissaire Elfe</accessCareer>
+      <accessCareer>Gardien Tribal</accessCareer>
+      <accessCareer>Hors-la-loi</accessCareer>
+      <accessCareer>Mercanti</accessCareer>
+      <accessCareer>Sentinelle Halfing</accessCareer>
+      <accessCareer>Soldat</accessCareer>
+      <accessCareer>Sorcier de village</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Bûcheron</accessCareer>
       <accessCareer>Chirurgien barbier</accessCareer>
       <accessCareer>Emissaire Elfe</accessCareer>
       <accessCareer>Gardien Tribal</accessCareer>
@@ -5956,6 +6462,12 @@
       <accessCareer>Sorcier de village</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Bûcheron</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
+      <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Bûcheron</openingCareer>
+      <openingCareer>Chiffonnier</openingCareer>
       <openingCareer>Bateleur</openingCareer>
       <openingCareer>Bûcheron</openingCareer>
       <openingCareer>Chiffonnier</openingCareer>
@@ -6043,8 +6555,18 @@
       <accessCareer>Serviteur</accessCareer>
       <accessCareer>Bourgeois</accessCareer>
       <accessCareer>Serviteur</accessCareer>
+      <accessCareer>Bourgeois</accessCareer>
+      <accessCareer>Serviteur</accessCareer>
+      <accessCareer>Bourgeois</accessCareer>
+      <accessCareer>Serviteur</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Ecuyer</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
+      <openingCareer>Ecuyer</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Etudiant</openingCareer>
       <openingCareer>Ecuyer</openingCareer>
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Etudiant</openingCareer>
@@ -6162,8 +6684,38 @@
       <accessCareer>Spadassin</accessCareer>
       <accessCareer>Trafiquant de cadavres</accessCareer>
       <accessCareer>Vagabond</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Hors-la-loi</accessCareer>
+      <accessCareer>Milicien</accessCareer>
+      <accessCareer>Pilleur de tombes</accessCareer>
+      <accessCareer>Ratier</accessCareer>
+      <accessCareer>Serviteur</accessCareer>
+      <accessCareer>Spadassin</accessCareer>
+      <accessCareer>Trafiquant de cadavres</accessCareer>
+      <accessCareer>Vagabond</accessCareer>
+      <accessCareer>Bateleur</accessCareer>
+      <accessCareer>Collecteur de taxes</accessCareer>
+      <accessCareer>Contrebandier</accessCareer>
+      <accessCareer>Escroc</accessCareer>
+      <accessCareer>Hors-la-loi</accessCareer>
+      <accessCareer>Milicien</accessCareer>
+      <accessCareer>Pilleur de tombes</accessCareer>
+      <accessCareer>Ratier</accessCareer>
+      <accessCareer>Serviteur</accessCareer>
+      <accessCareer>Spadassin</accessCareer>
+      <accessCareer>Trafiquant de cadavres</accessCareer>
+      <accessCareer>Vagabond</accessCareer>
     </accessTable>
     <openingTable>
+      <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Pilleur de tombes</openingCareer>
+      <openingCareer>Bateleur</openingCareer>
+      <openingCareer>Escroc</openingCareer>
+      <openingCareer>Pilleur de tombes</openingCareer>
       <openingCareer>Bateleur</openingCareer>
       <openingCareer>Escroc</openingCareer>
       <openingCareer>Pilleur de tombes</openingCareer>
