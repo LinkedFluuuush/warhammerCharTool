@@ -13,13 +13,16 @@ import core.*;
  */
 public class Main {
     public static void main(String[] args){
-        World.loadAll();
+//        World.loadAll();
 
-//        core.entities.Character randomCharacter = new core.entities.Character("Random Player", World.searchRaceByName("Halfing"), World.searchCareerByName("Agitateur"), "PC");
+        World.loadDistinguishingSigns();
+        World.loadAstralSign("Le Trait du Peintre");
 
-//        System.out.println(randomCharacter);
+        core.entities.Character randomCharacter = new core.entities.Character("Random Player", World.loadRace("Halfing"), World.loadCareer("Agitateur"), "PC");
 
-//        System.out.println(World.CAREERS.get(0).getAvailableRaces());
+        System.out.println(randomCharacter);
+
+//        System.out.println(World.careers.get(0).getAvailableRaces());
 
 //        System.out.println(World.searchRaceByName("Halfing").getBirthPlaces());
 

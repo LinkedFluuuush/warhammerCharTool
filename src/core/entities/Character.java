@@ -224,11 +224,10 @@ public class Character {
         this.details = randomDetails();
 
         this.money = randomMoney();
-        this.previousCareers = career.getRandomPreviousCareers(0, 0, new LinkedList<Career>(), new LinkedList<LinkedList<Career>>());
+//        this.previousCareers = career.getRandomPreviousCareers(0, 0, new LinkedList<Career>(), new LinkedList<LinkedList<Career>>());
+        this.previousCareers = new LinkedList<>();
 
         this.applyCareers();
-        System.out.println(this.basicProfile);
-
     }
 
     public Profile randomNPCProfile(){

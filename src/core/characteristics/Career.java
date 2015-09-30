@@ -1,5 +1,6 @@
 package core.characteristics;
 
+import core.World;
 import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Weapon;
@@ -22,14 +23,14 @@ public class Career implements Comparable{
     private LinkedList<LinkedList<Weapon>> weapons;
     private LinkedList<LinkedList<Armour>> armours;
 
-    private LinkedList<Career> accessCareers;
-    private LinkedList<Career> openingCareers;
+    private LinkedList<String> accessCareers;
+    private LinkedList<String> openingCareers;
 
-    private LinkedList<Race> availableRaces;
+    private LinkedList<String> availableRaces;
 
     public Career(String name, Profile profile, LinkedList<LinkedList<Skill>> skills,
                   LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
-                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, LinkedList<Race> availableRaces, int type) {
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, LinkedList<String> availableRaces, int type) {
         this.name = name;
         this.profile = profile;
         this.skills = skills;
@@ -39,15 +40,15 @@ public class Career implements Comparable{
         this.armours = armours;
         this.availableRaces = availableRaces;
         this.type = type;
-        this.accessCareers = new LinkedList<Career>();
-        this.openingCareers = new LinkedList<Career>();
+        this.accessCareers = new LinkedList<String>();
+        this.openingCareers = new LinkedList<String>();
     }
 
     public Career(String name, int ws, int bs, int s, int t, int ag, int intel, int wp,
                   int fel, int a, int w, int m, int mag,
                   LinkedList<LinkedList<Skill>> skills,
                   LinkedList<LinkedList<Talent>> talents, LinkedList<LinkedList<Equipment>> equipments,
-                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, LinkedList<Race> availableRaces, int type) {
+                  LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours, LinkedList<String> availableRaces, int type) {
         this.name = name;
         this.profile = new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag);
         this.skills = skills;
@@ -57,8 +58,8 @@ public class Career implements Comparable{
         this.armours = armours;
         this.availableRaces = availableRaces;
         this.type = type;
-        this.accessCareers = new LinkedList<Career>();
-        this.openingCareers = new LinkedList<Career>();
+        this.accessCareers = new LinkedList<String>();
+        this.openingCareers = new LinkedList<String>();
     }
 
     public String getName() {
@@ -125,43 +126,45 @@ public class Career implements Comparable{
         this.armours = armours;
     }
 
-    public LinkedList<Career> getAccessCareers() {
+    public LinkedList<String> getAccessCareers() {
         return accessCareers;
     }
 
-    public void setAccessCareers(LinkedList<Career> accessCareers) {
+    public void setAccessCareers(LinkedList<String> accessCareers) {
         this.accessCareers = accessCareers;
     }
 
-    public void addAccessCareer(Career career){
+    public void addAccessCareer(String career){
         this.accessCareers.add(career);
     }
 
-    public LinkedList<Career> getOpeningCareers() {
+    public LinkedList<String> getOpeningCareers() {
         return openingCareers;
     }
 
-    public void setOpeningCareers(LinkedList<Career> openingCareers) {
+    public void setOpeningCareers(LinkedList<String> openingCareers) {
         this.openingCareers = openingCareers;
     }
 
-    public void addOpeningCareer(Career career){
+    public void addOpeningCareer(String career){
         this.openingCareers.add(career);
     }
 
-    public LinkedList<Race> getAvailableRaces() {
+    public LinkedList<String> getAvailableRaces() {
         return availableRaces;
     }
 
-    public void setAvailableRaces(LinkedList<Race> availableRaces) {
+    public void setAvailableRaces(LinkedList<String> availableRaces) {
         this.availableRaces = availableRaces;
     }
 
-    public LinkedList<Career> getRandomPreviousCareers(int depth, int minDepth, LinkedList<Career> previousCareers, LinkedList<LinkedList<Career>> allPossibilities){
-        for(Career career : this.getAccessCareers()){
+    public LinkedList<String> getRandomPreviousCareers(int depth, int minDepth, LinkedList<String> previousCareers, LinkedList<LinkedList<String>> allPossibilities){
+        Career career;
+        for(String careerName : this.getAccessCareers()){
             if(this.type != 1){
+                career = World.loadCareer(careerName);
                 depth++;
-                previousCareers.add(career);
+                previousCareers.add(careerName);
                 return career.getRandomPreviousCareers(depth, minDepth, previousCareers, allPossibilities);
             }
 
@@ -170,10 +173,10 @@ public class Career implements Comparable{
             }
 
             allPossibilities.add(previousCareers);
-            previousCareers = new LinkedList<Career>();
+            previousCareers = new LinkedList<String>();
         }
 
-        for(LinkedList<Career> aPossibility : allPossibilities){
+        for(LinkedList<String> aPossibility : allPossibilities){
             if(aPossibility.size() == minDepth){
                 previousCareers = aPossibility;
             }
@@ -289,7 +292,7 @@ public class Career implements Comparable{
         res += "Accès : \n";
 
         for(int i = 0; i < accessCareers.size() ; i++){
-            res += accessCareers.get(i).getName();
+            res += World.loadCareer(accessCareers.get(i)).getName();
 
             if (i < accessCareers.size() - 1){
                 res += ", ";
@@ -300,7 +303,7 @@ public class Career implements Comparable{
         res += "Débouchés : \n";
 
         for(int i = 0; i < openingCareers.size() ; i++){
-            res += openingCareers.get(i).getName();
+            res += World.loadCareer(openingCareers.get(i)).getName();
 
             if (i < openingCareers.size() - 1){
                 res += ", ";

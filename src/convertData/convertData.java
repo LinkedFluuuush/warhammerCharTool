@@ -42,7 +42,7 @@ public class convertData{
                 System.out.println("Conversion des objets effectuée.");
             } else if (file.getName().equals("Talents")) {
                 convertTalents(file);
-                System.out.println("Conversion des talents effectuée.");
+                System.out.println("Conversion des TALENTS effectuée.");
             } else if (file.getName().equals("Carrieres")) {
                 convertCareers(file);
                 System.out.println("Conversion des carrières effectuée.");
