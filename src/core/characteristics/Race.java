@@ -28,20 +28,20 @@ public class Race {
     private String[] hairColour;
     private String[] eyeColour;
 
-    private LinkedList<LinkedList<Skill>> skills;
-    private LinkedList<LinkedList<Talent>> talents;
-    private LinkedList<LinkedList<Weapon>> weapons;
-    private LinkedList<LinkedList<Armour>> armours;
-    private LinkedList<LinkedList<Equipment>> equipments;
+    private LinkedList<LinkedList<String>> skills;
+    private LinkedList<LinkedList<String>> talents;
+    private LinkedList<LinkedList<String>> weapons;
+    private LinkedList<LinkedList<String>> armours;
+    private LinkedList<LinkedList<String>> equipments;
 
     LinkedList<String> birthPlaces;
-    LinkedList<God> worshipedGods;
+    LinkedList<String> worshipedGods;
 
     public Race(String name, Profile profile, int fSize, int mSize, int[] wounds, int[] fate, int[] weight, int[] age,
                 String[] mNames, String[] fNames, String[] hairColour, String[] eyeColour,
-                LinkedList<LinkedList<Skill>> skills, LinkedList<LinkedList<Talent>> talents,
-                LinkedList<LinkedList<Weapon>> weapons, LinkedList<LinkedList<Armour>> armours,
-                LinkedList<LinkedList<Equipment>> equipments, LinkedList<String> birthPlaces, LinkedList<God> worshipedGods) {
+                LinkedList<LinkedList<String>> skills, LinkedList<LinkedList<String>> talents,
+                LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours,
+                LinkedList<LinkedList<String>> equipments, LinkedList<String> birthPlaces, LinkedList<String> worshipedGods) {
         this.name = name;
         this.profile = profile;
         this.fSize = fSize;
@@ -111,23 +111,23 @@ public class Race {
         return eyeColour;
     }
 
-    public LinkedList<LinkedList<Skill>> getSkills() {
+    public LinkedList<LinkedList<String>> getSkills() {
         return skills;
     }
 
-    public LinkedList<LinkedList<Talent>> getTalents() {
+    public LinkedList<LinkedList<String>> getTalents() {
         return talents;
     }
 
-    public LinkedList<LinkedList<Weapon>> getWeapons() {
+    public LinkedList<LinkedList<String>> getWeapons() {
         return weapons;
     }
 
-    public LinkedList<LinkedList<Armour>> getArmours() {
+    public LinkedList<LinkedList<String>> getArmours() {
         return armours;
     }
 
-    public LinkedList<LinkedList<Equipment>> getEquipments() {
+    public LinkedList<LinkedList<String>> getEquipments() {
         return equipments;
     }
 
@@ -135,7 +135,7 @@ public class Race {
         return birthPlaces;
     }
 
-    public LinkedList<God> getWorshipedGods() {
+    public LinkedList<String> getWorshipedGods() {
         return worshipedGods;
     }
 
@@ -151,7 +151,7 @@ public class Race {
 
         for(int i = 0; i < skills.size() ; i++){
             for (int j = 0 ; j < skills.get(i).size() ; j++){
-                res += skills.get(i).get(j).getName();
+                res += skills.get(i).get(j);
 
                 if(j < skills.get(i).size() - 1){
                     res += " ou ";
@@ -169,7 +169,7 @@ public class Race {
 
         for(int i = 0; i < talents.size() ; i++){
             for (int j = 0 ; j < talents.get(i).size() ; j++){
-                res += talents.get(i).get(j).getName();
+                res += talents.get(i).get(j);
 
                 if(j < talents.get(i).size() - 1){
                     res += " ou ";
@@ -187,7 +187,7 @@ public class Race {
 
         for(int i = 0; i < equipments.size() ; i++){
             for (int j = 0 ; j < equipments.get(i).size() ; j++){
-                res += equipments.get(i).get(j).getName();
+                res += equipments.get(i).get(j);
 
                 if(j < equipments.get(i).size() - 1){
                     res += " ou ";
@@ -205,7 +205,7 @@ public class Race {
 
         for(int i = 0; i < armours.size() ; i++){
             for (int j = 0 ; j < armours.get(i).size() ; j++){
-                res += armours.get(i).get(j).getName();
+                res += armours.get(i).get(j);
 
                 if(j < armours.get(i).size() - 1){
                     res += " ou ";
@@ -223,7 +223,7 @@ public class Race {
 
         for(int i = 0; i < weapons.size() ; i++){
             for (int j = 0 ; j < weapons.get(i).size() ; j++){
-                res += weapons.get(i).get(j).getName();
+                res += weapons.get(i).get(j);
 
                 if(j < weapons.get(i).size() - 1){
                     res += " ou ";

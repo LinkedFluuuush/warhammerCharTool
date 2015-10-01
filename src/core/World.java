@@ -55,6 +55,8 @@ public class World {
     }
 
     public static void loadAll(){
+        LOADER = new xmlLoader();
+
         SKILLS = (HashMap<String, Skill>) LOADER.nameLoader("skill");
         TALENTS = (HashMap<String, Talent>) LOADER.nameLoader("talent");
         WEAPONS = (HashMap<String, Weapon>) LOADER.nameLoader("weapon");

@@ -13,18 +13,18 @@ import core.*;
  */
 public class Main {
     public static void main(String[] args){
-//        World.loadAll();
+        World.loadAll();
 
-        World.loadDistinguishingSigns();
-        World.loadAstralSign("Le Trait du Peintre");
+//        World.loadDistinguishingSigns();
+//        World.loadAstralSign("Le Trait du Peintre");
 
-        core.entities.Character randomCharacter = new core.entities.Character("Random Player", World.loadRace("Halfing"), World.loadCareer("Agitateur"), "PC");
+//        core.entities.Character randomCharacter = new core.entities.Character("Random Player", "Halfing", "Agitateur", "PC");
 
-        System.out.println(randomCharacter);
+//        System.out.println(randomCharacter);
 
 //        System.out.println(World.careers.get(0).getAvailableRaces());
 
-//        System.out.println(World.searchRaceByName("Halfing").getBirthPlaces());
+        System.out.println(World.loadRace("Halfing").getBirthPlaces());
 
         /*String[] regions = {"Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Le Moot", "Averland","Hochland","Middenland","Nordland","Ostermark","Ostland","Reikland","Stirland","Talabecland","Wissenland"};
         String[] villes = {"Cité", "Ville prospère", "Bourg", "Ville fortifiée", "Village agricole", "Village pauvre", "Petite communauté", "Ferme d'élevage", "Ferme de culture", "Taudis"};

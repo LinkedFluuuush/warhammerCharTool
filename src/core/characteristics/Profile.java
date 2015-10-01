@@ -248,7 +248,7 @@ public class Profile {
         return res;
     }
 
-    public JPanel toPanel(){
+/*    public JPanel toPanel(){
         JPanel panel = new JPanel(new GridLayout(4, 8));
         panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
@@ -305,7 +305,7 @@ public class Profile {
         panel.add(new JTextArea("" + this.getFp()));
 
         return panel;
-    }
+    }*/
 
     @Override
     public Profile clone(){

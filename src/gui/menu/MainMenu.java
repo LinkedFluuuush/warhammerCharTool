@@ -89,17 +89,17 @@ public class MainMenu extends JMenuBar{
             }
         });
 
-        JMenuItem menuFichierConvert = new JMenuItem("Reconvertir les fichiers");
+        /*JMenuItem menuFichierConvert = new JMenuItem("Reconvertir les fichiers");
         menuFichierQuit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 convertData.convertAll();
                 World.loadAll();
             }
-        });
+        });*/
 
         menuFichierData.add(menuFichierReload);
-        menuFichierData.add(menuFichierConvert);
+        //menuFichierData.add(menuFichierConvert);
 
         menuFichier.add(menuFichierAddCharacter);
         menuFichier.add(menuFichierRemoveCharacter);

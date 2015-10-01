@@ -27,8 +27,8 @@ public class createCharacterAL implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Race race = (Race)comboRace.getSelectedItem();
-        Career career = (Career)comboCareer.getSelectedItem();
+        String race = (String)comboRace.getSelectedItem();
+        String career = (String)comboCareer.getSelectedItem();
 
         Character character = new Character(race, career);
 

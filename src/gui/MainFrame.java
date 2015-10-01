@@ -24,7 +24,8 @@ public class MainFrame extends JFrame {
 
         this.setTitle("NPC Generator");
 
-        this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
+        this.setMinimumSize(new Dimension(789,573));
+//        this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         this.setJMenuBar(new MainMenu(this));
@@ -40,22 +41,22 @@ public class MainFrame extends JFrame {
     }
 
     public void addAllPanels(){
-        Toolkit t = this.getToolkit();
+        /*Toolkit t = this.getToolkit();
         Dimension dim = new Dimension(t.getScreenSize());
         int nbV = (int)dim.getHeight() / 500;
-        int nbH = (int)dim.getWidth() / 784;
+        int nbH = (int)dim.getWidth() / 784;*/
 
         tabbedPane = new JTabbedPane();
 
-        JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
+        /*JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
 
         for(int i = 0; i < nbV ; i++){
             for (int j = 0; j < nbH ; j++){
                 rootPane.add(new CharacterPanel());
             }
-        }
+        }*/
 
-        tabbedPane.add(rootPane);
+        tabbedPane.add(new CharacterPanel());
         tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), "New Character");
 
         this.setContentPane(tabbedPane);

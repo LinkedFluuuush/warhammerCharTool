@@ -809,40 +809,39 @@ public class xmlLoader implements dataLoader{
 
     public HashMap<String, ? extends Object> nameLoader(String name){
         HashMap<String, ? extends Object> map;
-        switch (name){
-            case "skill":
-                map = new HashMap<String, Skill>();
-                break;
-            case "talent":
-                map = new HashMap<String, Talent>();
-                break;
-            case "equipment":
-                map = new HashMap<String, Equipment>();
-                break;
-            case "weapon":
-                map = new HashMap<String, Weapon>();
-                break;
-            case "armour":
-                map = new HashMap<String, Armour>();
-                break;
-            case "god":
-                map = new HashMap<String, God>();
-                break;
-            case "astralSign":
-                map = new HashMap<String, AstralSign>();
-                break;
-            case "race":
-                map = new HashMap<String, Race>();
-                break;
-            case "career":
-                map = new HashMap<String, Career>();
-                break;
-            case "distinguishingSign":
-                map = new HashMap<String, String>();
-                break;
-            default :
-                System.err.println("Error : name not found : " + name);
-                return null;
+        if (name.equals("skill")) {
+            map = new HashMap<String, Skill>();
+
+        } else if (name.equals("talent")) {
+            map = new HashMap<String, Talent>();
+
+        } else if (name.equals("equipment")) {
+            map = new HashMap<String, Equipment>();
+
+        } else if (name.equals("weapon")) {
+            map = new HashMap<String, Weapon>();
+
+        } else if (name.equals("armour")) {
+            map = new HashMap<String, Armour>();
+
+        } else if (name.equals("god")) {
+            map = new HashMap<String, God>();
+
+        } else if (name.equals("astralSign")) {
+            map = new HashMap<String, AstralSign>();
+
+        } else if (name.equals("race")) {
+            map = new HashMap<String, Race>();
+
+        } else if (name.equals("career")) {
+            map = new HashMap<String, Career>();
+
+        } else if (name.equals("distinguishingSign")) {
+            map = new HashMap<String, String>();
+
+        } else {
+            System.err.println("Error : name not found : " + name);
+            return null;
         }
 
 
@@ -1137,28 +1136,28 @@ public class xmlLoader implements dataLoader{
 
         List<Element> skillTable;
         List<Element> eSkillsChoice;
-        LinkedList<Skill> currentSkillSet;
-        LinkedList<LinkedList<Skill>> skills;
+        LinkedList<String> currentSkillSet;
+        LinkedList<LinkedList<String>> skills;
         List<Element> talentTable;
         List<Element> eTalentsChoice;
-        LinkedList<Talent> currentTalentSet;
-        LinkedList<LinkedList<Talent>> talents;
+        LinkedList<String> currentTalentSet;
+        LinkedList<LinkedList<String>> talents;
         List<Element> weaponTable;
         List<Element> eWeaponsChoice;
-        LinkedList<Weapon> currentWeaponSet;
-        LinkedList<LinkedList<Weapon>> weapons;
+        LinkedList<String> currentWeaponSet;
+        LinkedList<LinkedList<String>> weapons;
         List<Element> armourTable;
         List<Element> eArmoursChoice;
-        LinkedList<Armour> currentArmourSet;
-        LinkedList<LinkedList<Armour>> armours;
+        LinkedList<String> currentArmourSet;
+        LinkedList<LinkedList<String>> armours;
         List<Element> equipmentTable;
         List<Element> eEquipmentsChoice;
-        LinkedList<Equipment> currentEquipmentSet;
-        LinkedList<LinkedList<Equipment>> equipments;
+        LinkedList<String> currentEquipmentSet;
+        LinkedList<LinkedList<String>> equipments;
 
         LinkedList<String> birthPlaces;
         List<Element> birthPlacesTable;
-        LinkedList<God> worshipedGods;
+        LinkedList<String> worshipedGods;
         List<Element> worshipedGodsTable;
 
         SAXBuilder sxb = new SAXBuilder();
@@ -1238,40 +1237,40 @@ public class xmlLoader implements dataLoader{
                     age[i] = Integer.parseInt(eAge.get(i).getText());
                 }
 
-                skills = new LinkedList<LinkedList<Skill>>();
+                skills = new LinkedList<LinkedList<String>>();
                 skillTable = currentRace.getChildren("skillTable");
 
                 for (Element eSkill : skillTable) {
-                    currentSkillSet = new LinkedList<Skill>();
+                    currentSkillSet = new LinkedList<String>();
                     eSkillsChoice = eSkill.getChildren("skill");
                     for (Element anESkillsChoice : eSkillsChoice) {
-                        currentSkillSet.add(World.loadSkill(anESkillsChoice.getText()));
+                        currentSkillSet.add(anESkillsChoice.getText());
                     }
 
                     skills.add(currentSkillSet);
                 }
 
-                talents = new LinkedList<LinkedList<Talent>>();
+                talents = new LinkedList<LinkedList<String>>();
                 talentTable = currentRace.getChildren("talentTable");
 
                 for (Element eTalent : talentTable) {
-                    currentTalentSet = new LinkedList<Talent>();
+                    currentTalentSet = new LinkedList<String>();
                     eTalentsChoice = eTalent.getChildren("talent");
                     for (Element anETalentsChoice : eTalentsChoice) {
-                        currentTalentSet.add(World.loadTalent(anETalentsChoice.getText()));
+                        currentTalentSet.add(anETalentsChoice.getText());
                     }
 
                     talents.add(currentTalentSet);
                 }
 
-                weapons = new LinkedList<LinkedList<Weapon>>();
+                weapons = new LinkedList<LinkedList<String>>();
                 weaponTable = currentRace.getChildren("weaponTable");
 
                 for (Element eWeapon : weaponTable) {
-                    currentWeaponSet = new LinkedList<Weapon>();
+                    currentWeaponSet = new LinkedList<String>();
                     eWeaponsChoice = eWeapon.getChildren("weapon");
                     for (Element anEWeaponsChoice : eWeaponsChoice) {
-                        currentWeaponSet.add(World.loadWeapon(anEWeaponsChoice.getText()));
+                        currentWeaponSet.add(anEWeaponsChoice.getText());
                     }
 
                     if (currentWeaponSet.size() != 0) {
@@ -1279,14 +1278,14 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                armours = new LinkedList<LinkedList<Armour>>();
+                armours = new LinkedList<LinkedList<String>>();
                 armourTable = currentRace.getChildren("armourTable");
 
                 for (Element eArmour : armourTable) {
-                    currentArmourSet = new LinkedList<Armour>();
+                    currentArmourSet = new LinkedList<String>();
                     eArmoursChoice = eArmour.getChildren("armour");
                     for (Element anEArmoursChoice : eArmoursChoice) {
-                        currentArmourSet.add(World.loadArmour(anEArmoursChoice.getText()));
+                        currentArmourSet.add(anEArmoursChoice.getText());
                     }
 
                     if (currentArmourSet.size() != 0) {
@@ -1294,14 +1293,14 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                equipments = new LinkedList<LinkedList<Equipment>>();
+                equipments = new LinkedList<LinkedList<String>>();
                 equipmentTable = currentRace.getChildren("equipmentTable");
 
                 for (Element eEquipment : equipmentTable) {
-                    currentEquipmentSet = new LinkedList<Equipment>();
+                    currentEquipmentSet = new LinkedList<String>();
                     eEquipmentsChoice = eEquipment.getChildren("equipment");
                     for (Element anEEquipmentsChoice : eEquipmentsChoice) {
-                        currentEquipmentSet.add(World.loadEquipment(anEEquipmentsChoice.getText()));
+                        currentEquipmentSet.add(anEEquipmentsChoice.getText());
                     }
 
                     if (currentEquipmentSet.size() != 0) {
@@ -1316,11 +1315,11 @@ public class xmlLoader implements dataLoader{
                     birthPlaces.add(eBirthPlace.getText());
                 }
 
-                worshipedGods = new LinkedList<God>();
+                worshipedGods = new LinkedList<String>();
                 worshipedGodsTable = currentRace.getChildren("god");
 
                 for(Element eWorshipedGod : worshipedGodsTable){
-                    worshipedGods.add(World.loadGod(eWorshipedGod.getText()));
+                    worshipedGods.add(eWorshipedGod.getText());
                 }
 
 
@@ -1347,32 +1346,32 @@ public class xmlLoader implements dataLoader{
         Element skillTable;
         List<Element> eSkills;
         List<Element> eSkillsChoice;
-        LinkedList<Skill> currentSkillSet;
-        LinkedList<LinkedList<Skill>> skills;
+        LinkedList<String> currentSkillSet;
+        LinkedList<LinkedList<String>> skills;
 
         Element talentTable;
         List<Element> eTalents;
         List<Element> eTalentsChoice;
-        LinkedList<Talent> currentTalentSet;
-        LinkedList<LinkedList<Talent>> talents;
+        LinkedList<String> currentTalentSet;
+        LinkedList<LinkedList<String>> talents;
 
         Element weaponTable;
         List<Element> eWeapons;
         List<Element> eWeaponsChoice;
-        LinkedList<Weapon> currentWeaponSet;
-        LinkedList<LinkedList<Weapon>> weapons;
+        LinkedList<String> currentWeaponSet;
+        LinkedList<LinkedList<String>> weapons;
 
         Element armourTable;
         List<Element> eArmours;
         List<Element> eArmoursChoice;
-        LinkedList<Armour> currentArmourSet;
-        LinkedList<LinkedList<Armour>> armours;
+        LinkedList<String> currentArmourSet;
+        LinkedList<LinkedList<String>> armours;
 
         Element equipmentTable;
         List<Element> eEquipments;
         List<Element> eEquipmentsChoice;
-        LinkedList<Equipment> currentEquipmentSet;
-        LinkedList<LinkedList<Equipment>> equipments;
+        LinkedList<String> currentEquipmentSet;
+        LinkedList<LinkedList<String>> equipments;
 
         Element racesTable;
         LinkedList<String> availableRaces;
@@ -1405,43 +1404,43 @@ public class xmlLoader implements dataLoader{
                         Integer.parseInt(eProfile.getAttributeValue("M")),
                         Integer.parseInt(eProfile.getAttributeValue("Mag")));
 
-                skills = new LinkedList<LinkedList<Skill>>();
+                skills = new LinkedList<LinkedList<String>>();
                 skillTable = currentCareer.getChild("skillsTable");
                 eSkills = skillTable.getChildren("eSkills");
 
                 for (Element eSkill : eSkills) {
-                    currentSkillSet = new LinkedList<Skill>();
+                    currentSkillSet = new LinkedList<String>();
                     eSkillsChoice = eSkill.getChildren("choice");
                     for (Element anESkillsChoice : eSkillsChoice) {
-                        currentSkillSet.add(World.loadSkill(anESkillsChoice.getText()));
+                        currentSkillSet.add(anESkillsChoice.getText());
                     }
 
                     skills.add(currentSkillSet);
                 }
 
-                talents = new LinkedList<LinkedList<Talent>>();
+                talents = new LinkedList<LinkedList<String>>();
                 talentTable = currentCareer.getChild("talentsTable");
                 eTalents = talentTable.getChildren("eTalents");
 
                 for (Element eTalent : eTalents) {
-                    currentTalentSet = new LinkedList<Talent>();
+                    currentTalentSet = new LinkedList<String>();
                     eTalentsChoice = eTalent.getChildren("choice");
                     for (Element anETalentsChoice : eTalentsChoice) {
-                        currentTalentSet.add(World.loadTalent(anETalentsChoice.getText()));
+                        currentTalentSet.add(anETalentsChoice.getText());
                     }
 
                     talents.add(currentTalentSet);
                 }
 
-                weapons = new LinkedList<LinkedList<Weapon>>();
+                weapons = new LinkedList<LinkedList<String>>();
                 weaponTable = currentCareer.getChild("weaponsTable");
                 eWeapons = weaponTable.getChildren("eWeapons");
 
                 for (Element eWeapon : eWeapons) {
-                    currentWeaponSet = new LinkedList<Weapon>();
+                    currentWeaponSet = new LinkedList<String>();
                     eWeaponsChoice = eWeapon.getChildren("choice");
                     for (Element anEWeaponsChoice : eWeaponsChoice) {
-                        currentWeaponSet.add(World.loadWeapon(anEWeaponsChoice.getText()));
+                        currentWeaponSet.add(anEWeaponsChoice.getText());
                     }
 
                     if (currentWeaponSet.size() != 0) {
@@ -1449,15 +1448,15 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                armours = new LinkedList<LinkedList<Armour>>();
+                armours = new LinkedList<LinkedList<String>>();
                 armourTable = currentCareer.getChild("armoursTable");
                 eArmours = armourTable.getChildren("eArmours");
 
                 for (Element eArmour : eArmours) {
-                    currentArmourSet = new LinkedList<Armour>();
+                    currentArmourSet = new LinkedList<String>();
                     eArmoursChoice = eArmour.getChildren("choice");
                     for (Element anEArmoursChoice : eArmoursChoice) {
-                        currentArmourSet.add(World.loadArmour(anEArmoursChoice.getText()));
+                        currentArmourSet.add(anEArmoursChoice.getText());
                     }
 
                     if (currentArmourSet.size() != 0) {
@@ -1465,15 +1464,15 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                equipments = new LinkedList<LinkedList<Equipment>>();
+                equipments = new LinkedList<LinkedList<String>>();
                 equipmentTable = currentCareer.getChild("equipmentsTable");
                 eEquipments = equipmentTable.getChildren("eEquipments");
 
                 for (Element eEquipment : eEquipments) {
-                    currentEquipmentSet = new LinkedList<Equipment>();
+                    currentEquipmentSet = new LinkedList<String>();
                     eEquipmentsChoice = eEquipment.getChildren("choice");
                     for (Element anEEquipmentsChoice : eEquipmentsChoice) {
-                        currentEquipmentSet.add(World.loadEquipment(anEEquipmentsChoice.getText()));
+                        currentEquipmentSet.add(anEEquipmentsChoice.getText());
                     }
 
                     if (currentEquipmentSet.size() != 0) {

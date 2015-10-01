@@ -18,19 +18,19 @@ public class PersonalDetails {
     private boolean male;
     private int age;
     private String birthplace;
-    private God favoriteGod;
+    private String favoriteGod;
     private int height;
     private int weight;
     private String eyeColour;
     private String hairColour;
-    private AstralSign astralSign;
+    private String astralSign;
     private LinkedList<String> distinguishingMarks;
 
     public PersonalDetails(){
         male = true;
         age = 0;
         birthplace = "Unknown";
-        favoriteGod = World.searchGodByName("Sigmar");
+        favoriteGod = "Sigmar";
         height = 0;
         weight = 0;
         eyeColour = "Unknown";
@@ -39,8 +39,8 @@ public class PersonalDetails {
     }
 
     public PersonalDetails(boolean male, int age, String birthplace,
-                           God favoriteGod, int height, int weight, String eyeColour,
-                           String hairColour, AstralSign astralSign, LinkedList<String> distinguishingMarks) {
+                           String favoriteGod, int height, int weight, String eyeColour,
+                           String hairColour, String astralSign, LinkedList<String> distinguishingMarks) {
         this.male = male;
         this.age = age;
         this.birthplace = birthplace;
@@ -77,11 +77,11 @@ public class PersonalDetails {
         this.birthplace = birthplace;
     }
 
-    public God getFavoriteGod() {
+    public String getFavoriteGod() {
         return favoriteGod;
     }
 
-    public void setFavoriteGod(God favoriteGod) {
+    public void setFavoriteGod(String favoriteGod) {
         this.favoriteGod = favoriteGod;
     }
 
@@ -125,11 +125,11 @@ public class PersonalDetails {
         this.distinguishingMarks = distinguishingMarks;
     }
 
-    public AstralSign getAstralSign() {
+    public String getAstralSign() {
         return astralSign;
     }
 
-    public void setAstralSign(AstralSign astralSign) {
+    public void setAstralSign(String astralSign) {
         this.astralSign = astralSign;
     }
 
@@ -167,7 +167,7 @@ public class PersonalDetails {
         return res;
     }
 
-    public JPanel toPanel(){
+/*    public JPanel toPanel(){
         JPanel panel = new JPanel();
 
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -191,9 +191,9 @@ public class PersonalDetails {
 
         arrayPanel.add(new JLabel("Poids : " + weight + "kg"));
 
-        arrayPanel.add(new JLabel("Signe Astral : " + astralSign.getName()));
+        arrayPanel.add(new JLabel("Signe Astral : " + astralSign));
 
-        arrayPanel.add(new JLabel("Dieu Favori : " + favoriteGod.getName()));
+        arrayPanel.add(new JLabel("Dieu Favori : " + favoriteGod));
 
         panel.add(arrayPanel);
 
@@ -218,5 +218,5 @@ public class PersonalDetails {
         panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         return panel;
-    }
+    }*/
 }

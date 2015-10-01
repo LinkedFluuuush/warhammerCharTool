@@ -57,7 +57,9 @@ public class xmlSaver {
 
         Element choice;
 
-        for(Career aCareer : World.CAREERS){
+        Career aCareer;
+        for(String aCareerName : World.CAREERS.keySet()){
+            aCareer = World.loadCareer(aCareerName);
             career = new Element("career");
             career.setAttribute("name", aCareer.getName());
             career.setAttribute("type", aCareer.getType()+"");
@@ -80,11 +82,11 @@ public class xmlSaver {
 
             skillTable = new Element("skillsTable");
 
-            for(LinkedList<Skill> skillList : aCareer.getSkills()){
+            for(LinkedList<String> skillList : aCareer.getSkills()){
                 eSkill = new Element("eSkills");
-                for(Skill aSkill : skillList){
+                for(String aSkill : skillList){
                     choice = new Element("choice");
-                    choice.setText(aSkill.getName());
+                    choice.setText(aSkill);
                     eSkill.addContent(choice);
                 }
                 skillTable.addContent(eSkill);
@@ -94,11 +96,11 @@ public class xmlSaver {
 
             talentTable = new Element("talentsTable");
 
-            for(LinkedList<Talent> talentList : aCareer.getTalents()){
+            for(LinkedList<String> talentList : aCareer.getTalents()){
                 eTalent = new Element("eTalents");
-                for(Talent aTalent : talentList){
+                for(String aTalent : talentList){
                     choice = new Element("choice");
-                    choice.setText(aTalent.getName());
+                    choice.setText(aTalent);
                     eTalent.addContent(choice);
                 }
                 talentTable.addContent(eTalent);
@@ -108,11 +110,11 @@ public class xmlSaver {
 
             weaponTable = new Element("weaponsTable");
 
-            for(LinkedList<Weapon> weaponList : aCareer.getWeapons()){
+            for(LinkedList<String> weaponList : aCareer.getWeapons()){
                 eWeapon = new Element("eWeapons");
-                for(Weapon aSkill : weaponList){
+                for(String aWeapon : weaponList){
                     choice = new Element("choice");
-                    choice.setText(aSkill.getName());
+                    choice.setText(aWeapon);
                     eWeapon.addContent(choice);
                 }
                 weaponTable.addContent(eWeapon);
@@ -122,11 +124,11 @@ public class xmlSaver {
 
             armourTable = new Element("armoursTable");
 
-            for(LinkedList<Armour> armourList : aCareer.getArmours()){
+            for(LinkedList<String> armourList : aCareer.getArmours()){
                 eArmour = new Element("eArmours");
-                for(Armour aArmour : armourList){
+                for(String aArmour : armourList){
                     choice = new Element("choice");
-                    choice.setText(aArmour.getName());
+                    choice.setText(aArmour);
                     eArmour.addContent(choice);
                 }
                 armourTable.addContent(eArmour);
@@ -136,11 +138,11 @@ public class xmlSaver {
 
             equipmentTable = new Element("equipmentsTable");
 
-            for(LinkedList<Equipment> equipmentList : aCareer.getEquipments()){
+            for(LinkedList<String> equipmentList : aCareer.getEquipments()){
                 eEquipment = new Element("eEquipments");
-                for(Equipment aEquipment : equipmentList){
+                for(String aEquipment : equipmentList){
                     choice = new Element("choice");
-                    choice.setText(aEquipment.getName());
+                    choice.setText(aEquipment);
                     eEquipment.addContent(choice);
                 }
                 equipmentTable.addContent(eEquipment);
@@ -150,9 +152,9 @@ public class xmlSaver {
 
             accessTable = new Element("accessTable");
 
-            for(Career aAccessCareer : aCareer.getAccessCareers()){
+            for(String aAccessCareer : aCareer.getAccessCareers()){
                 accessCareer = new Element("accessCareer");
-                accessCareer.setText(aAccessCareer.getName());
+                accessCareer.setText(aAccessCareer);
                 accessTable.addContent(accessCareer);
             }
 
@@ -160,9 +162,9 @@ public class xmlSaver {
 
             openingTable = new Element("openingTable");
 
-            for(Career aOpeningCareer : aCareer.getOpeningCareers()){
+            for(String aOpeningCareer : aCareer.getOpeningCareers()){
                 openingCareer = new Element("openingCareer");
-                openingCareer.setText(aOpeningCareer.getName());
+                openingCareer.setText(aOpeningCareer);
                 openingTable.addContent(openingCareer);
             }
 
@@ -170,9 +172,9 @@ public class xmlSaver {
 
             availableRaces = new Element("availableRaces");
 
-            for(Race aAvailableRace : aCareer.getAvailableRaces()){
+            for(String aAvailableRace : aCareer.getAvailableRaces()){
                 race = new Element("race");
-                race.setText(aAvailableRace.getName());
+                race.setText(aAvailableRace);
                 availableRaces.addContent(race);
             }
 
