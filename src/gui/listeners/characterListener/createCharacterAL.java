@@ -15,13 +15,15 @@ import java.awt.event.ActionListener;
  * Time: 23:30
  */
 public class createCharacterAL implements ActionListener {
-    private JComboBox<Race> comboRace;
-    private JComboBox<Career> comboCareer;
+    private JComboBox<String> comboRace;
+    private JComboBox<String> comboCareer;
+    private JTextArea nameArea;
     private CharacterPanel characterPanel;
 
-    public createCharacterAL(JComboBox<Race> comboRace, JComboBox<Career> comboCareer, CharacterPanel characterPanel) {
+    public createCharacterAL(JComboBox<String> comboRace, JComboBox<String> comboCareer, JTextArea nameArea, CharacterPanel characterPanel) {
         this.comboRace = comboRace;
         this.comboCareer = comboCareer;
+        this.nameArea = nameArea;
         this.characterPanel = characterPanel;
     }
 
@@ -29,14 +31,15 @@ public class createCharacterAL implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String race = (String)comboRace.getSelectedItem();
         String career = (String)comboCareer.getSelectedItem();
+        String name = nameArea.getText();
 
-        Character character = new Character(race, career);
+        Character character = new Character(name, "NPC", race, career, "NPC");
 
         characterPanel.setCharacter(character);
         characterPanel.applyCharacter();
 
-        JTabbedPane tabbedPane = (JTabbedPane)characterPanel.getParent().getParent();
-        tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), characterPanel.getCharacter().getRace()
+        JTabbedPane tabbedPane = (JTabbedPane)characterPanel.getParent();
+        tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), characterPanel.getCharacter().getName() + " - " + characterPanel.getCharacter().getRace()
                 + " " + characterPanel.getCharacter().getCareer());
     }
 }

@@ -15,6 +15,7 @@ import gui.listeners.characterListener.removeCharacterAL;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Collections;
 import java.util.LinkedList;
 
 /**
@@ -69,30 +70,47 @@ public class CharacterPanel extends JPanel {
         this.setLayout(null);
         this.setMinimumSize(new Dimension(784, 500));
 
-/*        JComboBox<String> comboRace = new JComboBox<String>();
-        for(String r : World.RACES.keySet()){
+        JTextArea nameArea = new JTextArea(1, 20);
+        nameArea.setBounds(60,25,315,16);
+        nameArea.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+
+        JComboBox<String> comboRace = new JComboBox<>();
+        LinkedList<String> raceSorted = new LinkedList<>(World.RACES.keySet());
+        Collections.sort(raceSorted);
+
+        for(String r : raceSorted){
             comboRace.addItem(r);
         }
 
-        JComboBox<String> comboCareer = new JComboBox<String>();
-        for(String c : World.CAREERS.keySet()){
+        comboRace.setBounds(58,70,315,25);
+
+        JComboBox<String> comboCareer = new JComboBox<>();
+        LinkedList<String> careerSorted = new LinkedList<>(World.CAREERS.keySet());
+        Collections.sort(careerSorted);
+        for(String c : careerSorted){
             comboCareer.addItem(c);
         }
 
+        comboCareer.setBounds(80,44,293,25);
+
+        this.add(nameArea);
         this.add(comboRace);
         this.add(comboCareer);
 
         JButton create = new JButton("Créer un nouveau personnage");
-//        create.addActionListener(new createCharacterAL(comboRace, comboCareer, this));
+        create.addActionListener(new createCharacterAL(comboRace, comboCareer, nameArea, this));
+
+        create.setBounds(650,465,110,25);
+
         this.add(create);
 
-        JButton recover = new JButton("Récupérer le dernier personnage");
-//        recover.addActionListener(new recoverCharacterAL());
-        this.add(recover);
+/*        JButton recover = new JButton("Récupérer le dernier personnage");
+        recover.addActionListener(new recoverCharacterAL());
+        this.add(recover);*/
 
         if(this.character != null){
             this.createCharacter();
-        }*/
+        }
 
         this.repaint();
         this.revalidate();

@@ -19,7 +19,7 @@ public class removeCharacterAL implements ActionListener {
         characterPanel.setCharacter(null);
         characterPanel.applyCharacter();
 
-        JTabbedPane tabbedPane = (JTabbedPane)characterPanel.getParent().getParent();
+        JTabbedPane tabbedPane = (JTabbedPane)characterPanel.getParent();
         tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), "New Character");
 
     }
