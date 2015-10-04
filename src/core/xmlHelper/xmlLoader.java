@@ -1036,7 +1036,7 @@ public class xmlLoader implements dataLoader{
                         Integer.parseInt(currentArmour.getAttributeValue("silverShillings")),
                         Integer.parseInt(currentArmour.getAttributeValue("brassPennies"))),
                         Integer.parseInt(currentArmour.getAttributeValue("enc")),
-                        Integer.parseInt(currentArmour.getAttributeValue("armourLevel")), zones);
+                        Integer.parseInt(currentArmour.getAttributeValue("armourLevel")), zones, currentArmour.getAttributeValue("armourType"));
             }
         }
 

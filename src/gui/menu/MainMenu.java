@@ -33,27 +33,16 @@ public class MainMenu extends JMenuBar{
     private void generateMenu(){
         JMenu menuFichier = new JMenu("Fichier");
         JMenuItem menuFichierAddCharacter = new JMenuItem("Ajouter un personnage");
-        menuFichierAddCharacter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_DOWN_MASK));
+        menuFichierAddCharacter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T, InputEvent.CTRL_DOWN_MASK));
         menuFichierAddCharacter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                Toolkit t = mainFrame.getToolkit();
-                Dimension dim = new Dimension(t.getScreenSize());
-                int nbV = (int)dim.getHeight() / 500;
-                int nbH = (int)dim.getWidth() / 784;
-
                 JTabbedPane tabbedPane = mainFrame.tabbedPane;
 
-                JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
+                CharacterPanel characterPanel = new CharacterPanel();
 
-                for(int i = 0; i < nbV ; i++){
-                    for (int j = 0; j < nbH ; j++){
-                        rootPane.add(new CharacterPanel());
-                    }
-                }
-
-                tabbedPane.add(rootPane);
-                tabbedPane.setSelectedComponent(rootPane);
+                tabbedPane.add(characterPanel);
+                tabbedPane.setSelectedComponent(characterPanel);
                 tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), "New Character");
             }
         });
@@ -64,7 +53,7 @@ public class MainMenu extends JMenuBar{
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 JTabbedPane tabbedPane = mainFrame.tabbedPane;
-                if(tabbedPane.getSelectedIndex() < 0){
+                if(tabbedPane.getTabCount() > 0){
                     tabbedPane.remove(tabbedPane.getSelectedIndex());
                 }
             }

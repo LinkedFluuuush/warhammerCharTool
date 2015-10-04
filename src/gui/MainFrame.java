@@ -24,7 +24,6 @@ public class MainFrame extends JFrame {
 
         this.setTitle("NPC Generator");
 
-        this.setMinimumSize(new Dimension(789,573));
 //        this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,6 +36,10 @@ public class MainFrame extends JFrame {
         World.loadAll();
 
         MainFrame mainFrame = new MainFrame();
+
+        mainFrame.pack();
+        mainFrame.setLocationRelativeTo(null);
+
         mainFrame.setVisible(true);
     }
 
@@ -47,6 +50,7 @@ public class MainFrame extends JFrame {
         int nbH = (int)dim.getWidth() / 784;*/
 
         tabbedPane = new JTabbedPane();
+        tabbedPane.setMinimumSize(new Dimension(784, 500));
 
         /*JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
 

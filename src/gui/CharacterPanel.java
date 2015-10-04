@@ -1,20 +1,18 @@
 package gui;
 
 import core.World;
-import core.characteristics.Career;
-import core.characteristics.Race;
-import core.characteristics.Skill;
-import core.characteristics.Talent;
 import core.entities.Character;
 import core.equipment.Armour;
 import core.equipment.Equipment;
+import core.equipment.Money;
 import core.equipment.Weapon;
+import gui.listeners.characterListener.addToCharacterAL;
 import gui.listeners.characterListener.createCharacterAL;
-import gui.listeners.characterListener.recoverCharacterAL;
-import gui.listeners.characterListener.removeCharacterAL;
+import gui.listeners.updateComboBoxesAL;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 
@@ -27,12 +25,71 @@ public class CharacterPanel extends JPanel {
     private Character character;
     private Character previousCharacter;
 
+    /* Character elements */
+    JButton createCharacterButton;
+    JTextArea nameArea;
+    JComboBox<String> comboRace;
+    JComboBox<String> comboCareer;
+
+    /* Main profile elements */
+    JTextArea wsArea;
+    JTextArea bsArea;
+    JTextArea sArea;
+    JTextArea tArea;
+    JTextArea agArea;
+    JTextArea intArea;
+    JTextArea wpArea;
+    JTextArea felArea;
+
+    /* Second profile elements */
+    JTextArea aArea;
+    JTextArea wArea;
+    JTextArea sbArea;
+    JTextArea tbArea;
+    JTextArea mArea;
+    JTextArea magArea;
+    JTextArea ipArea;
+    JTextArea fpArea;
+
+    /* Personal profile elements */
+    JTextArea ageArea;
+    JComboBox<String> comboGender;
+    JTextArea eyeColourArea;
+    JTextArea hairColourArea;
+    JTextArea sizeArea;
+    JTextArea weightArea;
+    JComboBox<String> comboAstralSign;
+    JTextArea birthPlaceArea;
+    JComboBox<String> comboGod;
+    JTextArea marksArea;
+
+    /* Skill, Talent, Armour, Weapon and Equipment */
+    JPanel skillPanel;
+    JPanel talentPanel;
+    JPanel armourPanel;
+    JPanel weaponPanel;
+    JPanel equipmentPanel;
+
+    /* Armour level */
+
+    JLabel headArmourLabel;
+    JLabel leftArmArmourLabel;
+    JLabel rightArmArmourLabel;
+    JLabel bodyArmourLabel;
+    JLabel leftLegArmourLabel;
+    JLabel rightLegArmourLabel;
+
+
     public CharacterPanel(Character character){
         super();
 
 //        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         this.character = character;
+
+        this.setLayout(null);
+        this.setMinimumSize(new Dimension(784, 500));
+        this.setPreferredSize(new Dimension(784, 500));
 
         applyCharacter();
     }
@@ -43,6 +100,10 @@ public class CharacterPanel extends JPanel {
 //        this.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         this.character = null;
+
+        this.setLayout(null);
+        this.setMinimumSize(new Dimension(784, 500));
+        this.setPreferredSize(new Dimension(784, 500));
 
         applyCharacter();
     }
@@ -63,50 +124,594 @@ public class CharacterPanel extends JPanel {
         this.previousCharacter = previousCharacter;
     }
 
+    public JButton getCreateCharacterButton() {
+        return createCharacterButton;
+    }
+
+    public void setCreateCharacterButton(JButton createCharacterButton) {
+        this.createCharacterButton = createCharacterButton;
+    }
+
+    public JTextArea getNameArea() {
+        return nameArea;
+    }
+
+    public void setNameArea(JTextArea nameArea) {
+        this.nameArea = nameArea;
+    }
+
+    public JComboBox<String> getComboRace() {
+        return comboRace;
+    }
+
+    public void setComboRace(JComboBox<String> comboRace) {
+        this.comboRace = comboRace;
+    }
+
+    public JComboBox<String> getComboCareer() {
+        return comboCareer;
+    }
+
+    public void setComboCareer(JComboBox<String> comboCareer) {
+        this.comboCareer = comboCareer;
+    }
+
+    public JTextArea getWsArea() {
+        return wsArea;
+    }
+
+    public void setWsArea(JTextArea wsArea) {
+        this.wsArea = wsArea;
+    }
+
+    public JTextArea getBsArea() {
+        return bsArea;
+    }
+
+    public void setBsArea(JTextArea bsArea) {
+        this.bsArea = bsArea;
+    }
+
+    public JTextArea getsArea() {
+        return sArea;
+    }
+
+    public void setsArea(JTextArea sArea) {
+        this.sArea = sArea;
+    }
+
+    public JTextArea gettArea() {
+        return tArea;
+    }
+
+    public void settArea(JTextArea tArea) {
+        this.tArea = tArea;
+    }
+
+    public JTextArea getAgArea() {
+        return agArea;
+    }
+
+    public void setAgArea(JTextArea agArea) {
+        this.agArea = agArea;
+    }
+
+    public JTextArea getIntArea() {
+        return intArea;
+    }
+
+    public void setIntArea(JTextArea intArea) {
+        this.intArea = intArea;
+    }
+
+    public JTextArea getWpArea() {
+        return wpArea;
+    }
+
+    public void setWpArea(JTextArea wpArea) {
+        this.wpArea = wpArea;
+    }
+
+    public JTextArea getFelArea() {
+        return felArea;
+    }
+
+    public void setFelArea(JTextArea felArea) {
+        this.felArea = felArea;
+    }
+
+    public JTextArea getaArea() {
+        return aArea;
+    }
+
+    public void setaArea(JTextArea aArea) {
+        this.aArea = aArea;
+    }
+
+    public JTextArea getwArea() {
+        return wArea;
+    }
+
+    public void setwArea(JTextArea wArea) {
+        this.wArea = wArea;
+    }
+
+    public JTextArea getSbArea() {
+        return sbArea;
+    }
+
+    public void setSbArea(JTextArea sbArea) {
+        this.sbArea = sbArea;
+    }
+
+    public JTextArea getTbArea() {
+        return tbArea;
+    }
+
+    public void setTbArea(JTextArea tbArea) {
+        this.tbArea = tbArea;
+    }
+
+    public JTextArea getmArea() {
+        return mArea;
+    }
+
+    public void setmArea(JTextArea mArea) {
+        this.mArea = mArea;
+    }
+
+    public JTextArea getMagArea() {
+        return magArea;
+    }
+
+    public void setMagArea(JTextArea magArea) {
+        this.magArea = magArea;
+    }
+
+    public JTextArea getIpArea() {
+        return ipArea;
+    }
+
+    public void setIpArea(JTextArea ipArea) {
+        this.ipArea = ipArea;
+    }
+
+    public JTextArea getFpArea() {
+        return fpArea;
+    }
+
+    public void setFpArea(JTextArea fpArea) {
+        this.fpArea = fpArea;
+    }
+
+    public JTextArea getAgeArea() {
+        return ageArea;
+    }
+
+    public void setAgeArea(JTextArea ageArea) {
+        this.ageArea = ageArea;
+    }
+
+    public JComboBox<String> getComboGender() {
+        return comboGender;
+    }
+
+    public void setComboGender(JComboBox<String> comboGender) {
+        this.comboGender = comboGender;
+    }
+
+    public JTextArea getEyeColourArea() {
+        return eyeColourArea;
+    }
+
+    public void setEyeColourArea(JTextArea eyeColourArea) {
+        this.eyeColourArea = eyeColourArea;
+    }
+
+    public JTextArea getHairColourArea() {
+        return hairColourArea;
+    }
+
+    public void setHairColourArea(JTextArea hairColourArea) {
+        this.hairColourArea = hairColourArea;
+    }
+
+    public JTextArea getSizeArea() {
+        return sizeArea;
+    }
+
+    public void setSizeArea(JTextArea sizeArea) {
+        this.sizeArea = sizeArea;
+    }
+
+    public JTextArea getWeightArea() {
+        return weightArea;
+    }
+
+    public void setWeightArea(JTextArea weightArea) {
+        this.weightArea = weightArea;
+    }
+
+    public JComboBox<String> getComboAstralSign() {
+        return comboAstralSign;
+    }
+
+    public void setComboAstralSign(JComboBox<String> comboAstralSign) {
+        this.comboAstralSign = comboAstralSign;
+    }
+
+    public JTextArea getBirthPlaceArea() {
+        return birthPlaceArea;
+    }
+
+    public void setBirthPlaceArea(JTextArea birthPlaceArea) {
+        this.birthPlaceArea = birthPlaceArea;
+    }
+
+    public JComboBox<String> getComboGod() {
+        return comboGod;
+    }
+
+    public void setComboGod(JComboBox<String> comboGod) {
+        this.comboGod = comboGod;
+    }
+
+    public JTextArea getMarksArea() {
+        return marksArea;
+    }
+
+    public void setMarksArea(JTextArea marksArea) {
+        this.marksArea = marksArea;
+    }
+
+    public JPanel getSkillPanel() {
+        return skillPanel;
+    }
+
+    public void setSkillPanel(JPanel skillPanel) {
+        this.skillPanel = skillPanel;
+    }
+
+    public JPanel getTalentPanel() {
+        return talentPanel;
+    }
+
+    public void setTalentPanel(JPanel talentPanel) {
+        this.talentPanel = talentPanel;
+    }
+
+    public JPanel getArmourPanel() {
+        return armourPanel;
+    }
+
+    public void setArmourPanel(JPanel armourPanel) {
+        this.armourPanel = armourPanel;
+    }
+
+    public JPanel getWeaponPanel() {
+        return weaponPanel;
+    }
+
+    public void setWeaponPanel(JPanel weaponPanel) {
+        this.weaponPanel = weaponPanel;
+    }
+
+    public JPanel getEquipmentPanel() {
+        return equipmentPanel;
+    }
+
+    public void setEquipmentPanel(JPanel equipmentPanel) {
+        this.equipmentPanel = equipmentPanel;
+    }
+
     public void applyCharacter(){
         this.removeAll();
         this.setBackground(Color.WHITE);
 
         this.setLayout(null);
         this.setMinimumSize(new Dimension(784, 500));
+        this.setPreferredSize(new Dimension(784, 500));
 
-        JTextArea nameArea = new JTextArea(1, 20);
+        nameArea = new JTextArea(1, 20);
         nameArea.setBounds(60,25,315,16);
-        nameArea.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+//        nameArea.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
-        JComboBox<String> comboRace = new JComboBox<>();
+        comboRace = new JComboBox<>();
         LinkedList<String> raceSorted = new LinkedList<>(World.RACES.keySet());
         Collections.sort(raceSorted);
+
+        comboRace.addItem("");
 
         for(String r : raceSorted){
             comboRace.addItem(r);
         }
 
-        comboRace.setBounds(58,70,315,25);
+        comboRace.addActionListener(new updateComboBoxesAL(this));
+        comboRace.setBounds(58,44,315,25);
 
-        JComboBox<String> comboCareer = new JComboBox<>();
-        LinkedList<String> careerSorted = new LinkedList<>(World.CAREERS.keySet());
+        comboCareer = new JComboBox<>();
+/*        LinkedList<String> careerSorted = new LinkedList<>(World.CAREERS.keySet());
         Collections.sort(careerSorted);
         for(String c : careerSorted){
             comboCareer.addItem(c);
-        }
+        }*/
 
-        comboCareer.setBounds(80,44,293,25);
+        comboCareer.setBounds(80,70,293,25);
 
         this.add(nameArea);
         this.add(comboRace);
         this.add(comboCareer);
 
-        JButton create = new JButton("Créer un nouveau personnage");
-        create.addActionListener(new createCharacterAL(comboRace, comboCareer, nameArea, this));
+        createCharacterButton = new JButton("Générer personnage");
+        createCharacterButton.addActionListener(new createCharacterAL(comboRace, comboCareer, nameArea, this));
 
-        create.setBounds(650,465,110,25);
+        if(comboRace.getSelectedItem().equals("")){
+            createCharacterButton.setEnabled(false);
+        }
 
-        this.add(create);
+        createCharacterButton.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
+        createCharacterButton.setBounds(630, 455, 135, 25);
+
+        this.add(createCharacterButton);
 
 /*        JButton recover = new JButton("Récupérer le dernier personnage");
         recover.addActionListener(new recoverCharacterAL());
         this.add(recover);*/
+
+        wsArea = new JTextArea();
+        wsArea.setBounds(30, 154, 30, 15);
+        bsArea = new JTextArea();
+        bsArea.setBounds(73, 154, 30, 15);
+        sArea = new JTextArea();
+        sArea.setBounds(116, 154, 30, 15);
+        tArea = new JTextArea();
+        tArea.setBounds(159, 154, 30, 15);
+        agArea = new JTextArea();
+        agArea.setBounds(202, 154, 30, 15);
+        intArea = new JTextArea();
+        intArea.setBounds(245, 154, 30, 15);
+        wpArea = new JTextArea();
+        wpArea.setBounds(288, 154, 30, 15);
+        felArea = new JTextArea();
+        felArea.setBounds(331, 154, 30, 15);
+
+        aArea = new JTextArea();
+        aArea.setBounds(30, 220, 30, 15);
+        wArea = new JTextArea();
+        wArea.setBounds(73, 220, 30, 15);
+        sbArea = new JTextArea();
+        sbArea.setBounds(116, 220, 30, 15);
+        tbArea = new JTextArea();
+        tbArea.setBounds(159, 220, 30, 15);
+        mArea = new JTextArea();
+        mArea.setBounds(202, 220, 30, 15);
+        magArea = new JTextArea();
+        magArea.setBounds(245, 220, 30, 15);
+        ipArea = new JTextArea();
+        ipArea.setBounds(288, 220, 30, 15);
+        fpArea = new JTextArea();
+        fpArea.setBounds(331, 220, 30, 15);
+
+        this.add(wsArea);
+        this.add(bsArea);
+        this.add(sArea);
+        this.add(tArea);
+        this.add(agArea);
+        this.add(intArea);
+        this.add(wpArea);
+        this.add(felArea);
+
+        this.add(aArea);
+        this.add(wArea);
+        this.add(sbArea);
+        this.add(tbArea);
+        this.add(mArea);
+        this.add(magArea);
+        this.add(ipArea);
+        this.add(fpArea);
+
+        ageArea = new JTextArea();
+        ageArea.setBounds(55, 250, 165, 17);
+        eyeColourArea = new JTextArea();
+        eyeColourArea.setBounds(125, 275, 95, 17);
+        hairColourArea = new JTextArea();
+        hairColourArea.setBounds(140, 300, 80, 17);
+
+        this.add(ageArea);
+        this.add(eyeColourArea);
+        this.add(hairColourArea);
+
+        comboGender = new JComboBox<String>();
+        comboGender.addItem("");
+        comboGender.addItem("Masculin");
+        comboGender.addItem("Féminin");
+
+        comboGender.setBounds(260, 250, 100, 17);
+
+        sizeArea = new JTextArea();
+        sizeArea.setBounds(260, 275, 100, 17);
+
+        weightArea = new JTextArea();
+        weightArea.setBounds(260, 300, 100, 17);
+
+        this.add(comboGender);
+        this.add(sizeArea);
+        this.add(weightArea);
+
+        comboAstralSign = new JComboBox<String>();
+        ComboboxToolTipRenderer comboAstralSignRenderer = new ComboboxToolTipRenderer();
+        LinkedList<String> astralSignSorted = new LinkedList<>(World.ASTRALSIGNS.keySet());
+        Collections.sort(astralSignSorted);
+        comboAstralSign.setRenderer(comboAstralSignRenderer);
+
+        LinkedList<String> tooltips = new LinkedList<>();
+        comboAstralSign.addItem("");
+        tooltips.add("");
+        for(String as : astralSignSorted){
+            comboAstralSign.addItem(as);
+            tooltips.add(World.loadAstralSign(as).getDescription());
+        }
+
+        comboAstralSignRenderer.setTooltips(tooltips);
+        comboAstralSign.setBounds(95, 323, 265, 17);
+
+        birthPlaceArea = new JTextArea();
+        birthPlaceArea.setBounds(145, 348, 215, 17);
+
+        comboGod = new JComboBox<String>();
+        ComboboxToolTipRenderer comboGodRenderer = new ComboboxToolTipRenderer();
+        LinkedList<String> godSorted = new LinkedList<>(World.GODS.keySet());
+        Collections.sort(godSorted);
+        comboGod.setRenderer(comboGodRenderer);
+
+        tooltips = new LinkedList<>();
+        String domain;
+        LinkedList<String> domains;
+        comboGod.addItem("");
+        tooltips.add("");
+        for(String god : godSorted){
+            domain = "";
+            comboGod.addItem(god);
+            domains = World.loadGod(god).getDomains();
+            for(String aDomain : domains){
+                domain += aDomain + ", ";
+            }
+            tooltips.add(domain.substring(0, domain.length()-2));
+        }
+        comboGodRenderer.setTooltips(tooltips);
+        comboGod.setBounds(85, 373, 275, 17);
+
+        this.add(comboAstralSign);
+        this.add(birthPlaceArea);
+        this.add(comboGod);
+
+        marksArea = new JTextArea();
+        marksArea.setBounds(30, 420, 330, 60);
+        marksArea.setLineWrap(true);
+        marksArea.setWrapStyleWord(true);
+
+        this.add(marksArea);
+
+        JScrollPane scrollPane;
+
+        skillPanel = new JPanel();
+        skillPanel.setLayout(new BoxLayout(skillPanel, BoxLayout.PAGE_AXIS));
+
+        scrollPane = new JScrollPane(skillPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setPreferredSize(new Dimension(350, 95));
+        JPanel mainPanelSkill = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        mainPanelSkill.add(scrollPane);
+        mainPanelSkill.setPreferredSize(new Dimension(355, 100));
+        mainPanelSkill.setBounds(410, 45, 355, 100);
+
+        JButton addSkillButton = new JButton("Ajouter une compétence");
+        addSkillButton.setBounds(575,25,190,20);
+        addSkillButton.addActionListener(new addToCharacterAL("skill", this));
+
+        this.add(addSkillButton);
+
+        talentPanel = new JPanel();
+        talentPanel.setLayout(new BoxLayout(talentPanel, BoxLayout.PAGE_AXIS));
+
+        scrollPane = new JScrollPane(talentPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setPreferredSize(new Dimension(350, 60));
+        JPanel mainPanelTalent = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        mainPanelTalent.add(scrollPane);
+        mainPanelTalent.setPreferredSize(new Dimension(355, 65));
+        mainPanelTalent.setBounds(410, 170, 355, 65);
+
+        JButton addTalentButton = new JButton("Ajouter un talent");
+        addTalentButton.setBounds(575,150,190,20);
+        addTalentButton.addActionListener(new addToCharacterAL("talent", this));
+
+        this.add(addTalentButton);
+
+        armourPanel = new JPanel();
+        armourPanel.setLayout(new BoxLayout(armourPanel, BoxLayout.PAGE_AXIS));
+
+        scrollPane = new JScrollPane(armourPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setPreferredSize(new Dimension(210, 50));
+        JPanel mainPanelArmour = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        mainPanelArmour.add(scrollPane);
+        mainPanelArmour.setPreferredSize(new Dimension(215, 55));
+        mainPanelArmour.setBounds(410, 255, 215, 55);
+
+        JButton addArmourButton = new JButton("Ajouter une armure");
+        addArmourButton.setBounds(470,235,155,20);
+        addArmourButton.addActionListener(new addToCharacterAL("armour", this));
+
+        this.add(addArmourButton);
+
+        weaponPanel = new JPanel();
+        weaponPanel.setLayout(new BoxLayout(weaponPanel, BoxLayout.PAGE_AXIS));
+
+        scrollPane = new JScrollPane(weaponPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setPreferredSize(new Dimension(210, 50));
+        JPanel mainPanelWeapon = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        mainPanelWeapon.add(scrollPane);
+        mainPanelWeapon.setPreferredSize(new Dimension(215, 55));
+        mainPanelWeapon.setBounds(410, 330, 215, 55);
+
+        JButton addWeaponButton = new JButton("Ajouter une arme");
+        addWeaponButton.setBounds(470,310,155,20);
+        addWeaponButton.addActionListener(new addToCharacterAL("weapon", this));
+
+        this.add(addWeaponButton);
+
+        equipmentPanel = new JPanel();
+        equipmentPanel.setLayout(new BoxLayout(equipmentPanel, BoxLayout.PAGE_AXIS));
+
+        scrollPane = new JScrollPane(equipmentPanel);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setPreferredSize(new Dimension(210,70));
+        JPanel mainPanelEquipment = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        mainPanelEquipment.add(scrollPane);
+        mainPanelEquipment.setPreferredSize(new Dimension(215, 75));
+        mainPanelEquipment.setBounds(410, 405, 215, 75);
+
+        JButton addEquipmentButton = new JButton("Ajouter un équipement");
+        addEquipmentButton.setBounds(470,385,155,20);
+        addEquipmentButton.addActionListener(new addToCharacterAL("equipment", this));
+
+        this.add(addEquipmentButton);
+
+        this.add(mainPanelSkill);
+        this.add(mainPanelTalent);
+        this.add(mainPanelArmour);
+        this.add(mainPanelWeapon);
+        this.add(mainPanelEquipment);
+
+        headArmourLabel = new JLabel();
+        headArmourLabel.setBounds(637, 259, 25, 10);
+        this.add(headArmourLabel);
+
+        rightArmArmourLabel = new JLabel();
+        rightArmArmourLabel.setBounds(637, 357, 25, 10);
+        this.add(rightArmArmourLabel);
+        leftArmArmourLabel = new JLabel();
+        leftArmArmourLabel.setBounds(732, 358, 25, 10);
+        this.add(leftArmArmourLabel);
+
+        bodyArmourLabel = new JLabel();
+        bodyArmourLabel.setBounds(732, 289, 25, 10);
+        this.add(bodyArmourLabel);
+
+        rightLegArmourLabel = new JLabel();
+        rightLegArmourLabel.setBounds(637, 423, 25, 10);
+        this.add(rightLegArmourLabel);
+        leftLegArmourLabel = new JLabel();
+        leftLegArmourLabel.setBounds(732, 424, 25, 10);
+        this.add(leftLegArmourLabel);
+
 
         if(this.character != null){
             this.createCharacter();
@@ -124,111 +729,60 @@ public class CharacterPanel extends JPanel {
     }
 
     public void createCharacter(){
-        JTextArea textAreaName = new JTextArea(character.getName());
+        /*JTextArea textAreaName.setText(character.getName());
         textAreaName.setBounds(60, 28, 310, 17);
 
-        this.add(textAreaName);
+        this.add(textAreaName);*/
 
-        JTextArea textAreaWS = new JTextArea(character.getProfile().getWs() + "");
-        textAreaWS.setBounds(30, 154, 30, 15);
-        JTextArea textAreaBS = new JTextArea(character.getProfile().getBs() + "");
-        textAreaBS.setBounds(73, 154, 30, 15);
-        JTextArea textAreaS = new JTextArea(character.getProfile().getS() + "");
-        textAreaS.setBounds(116, 154, 30, 15);
-        JTextArea textAreaT = new JTextArea(character.getProfile().getT() + "");
-        textAreaT.setBounds(159, 154, 30, 15);
-        JTextArea textAreaAg = new JTextArea(character.getProfile().getAg() + "");
-        textAreaAg.setBounds(202, 154, 30, 15);
-        JTextArea textAreaInt = new JTextArea(character.getProfile().getIntel() + "");
-        textAreaInt.setBounds(245, 154, 30, 15);
-        JTextArea textAreaWP = new JTextArea(character.getProfile().getWp() + "");
-        textAreaWP.setBounds(288, 154, 30, 15);
-        JTextArea textAreaFel = new JTextArea(character.getProfile().getFel() + "");
-        textAreaFel.setBounds(331, 154, 30, 15);
+        nameArea.setText(character.getName());
+        comboRace.setSelectedItem(character.getRace());
+        comboCareer.setSelectedItem(character.getCareer());
 
-        JTextArea textAreaA = new JTextArea(character.getProfile().getA() + "");
-        textAreaA.setBounds(30, 220, 30, 15);
-        JTextArea textAreaW = new JTextArea(character.getProfile().getW() + "");
-        textAreaW.setBounds(73, 220, 30, 15);
-        JTextArea textAreaSB = new JTextArea(character.getProfile().getSb() + "");
-        textAreaSB.setBounds(116, 220, 30, 15);
-        JTextArea textAreaTB = new JTextArea(character.getProfile().getTb() + "");
-        textAreaTB.setBounds(159, 220, 30, 15);
-        JTextArea textAreaM = new JTextArea(character.getProfile().getM() + "");
-        textAreaM.setBounds(202, 220, 30, 15);
-        JTextArea textAreaMag = new JTextArea(character.getProfile().getMag() + "");
-        textAreaMag.setBounds(245, 220, 30, 15);
-        JTextArea textAreaIP = new JTextArea(character.getProfile().getIp() + "");
-        textAreaIP.setBounds(288, 220, 30, 15);
-        JTextArea textAreaFP = new JTextArea(character.getProfile().getFp() + "");
-        textAreaFP.setBounds(331, 220, 30, 15);
+        wsArea.setText(character.getProfile().getWs() + "");
+        bsArea.setText(character.getProfile().getBs() + "");
+        sArea.setText(character.getProfile().getS() + "");
+        tArea.setText(character.getProfile().getT() + "");
+        agArea.setText(character.getProfile().getAg() + "");
+        intArea.setText(character.getProfile().getIntel() + "");
+        wpArea.setText(character.getProfile().getWp() + "");
+        felArea.setText(character.getProfile().getFel() + "");
 
-        this.add(textAreaWS);
-        this.add(textAreaBS);
-        this.add(textAreaS);
-        this.add(textAreaT);
-        this.add(textAreaAg);
-        this.add(textAreaInt);
-        this.add(textAreaWP);
-        this.add(textAreaFel);
+        aArea.setText(character.getProfile().getA() + "");
+        wArea.setText(character.getProfile().getW() + "");
+        sbArea.setText(character.getProfile().getSb() + "");
+        tbArea.setText(character.getProfile().getTb() + "");
+        mArea.setText(character.getProfile().getM() + "");
+        magArea.setText(character.getProfile().getMag() + "");
+        ipArea.setText(character.getProfile().getIp() + "");
+        fpArea.setText(character.getProfile().getFp() + "");
 
-        this.add(textAreaA);
-        this.add(textAreaW);
-        this.add(textAreaSB);
-        this.add(textAreaTB);
-        this.add(textAreaM);
-        this.add(textAreaMag);
-        this.add(textAreaIP);
-        this.add(textAreaFP);
+        ageArea.setText(character.getDetails().getAge() + "");
+        eyeColourArea.setText(character.getDetails().getEyeColour() + "");
+        hairColourArea.setText(character.getDetails().getHairColour() + "");
 
-        JTextArea textAreaAge = new JTextArea(character.getDetails().getAge() + "");
-        textAreaAge.setBounds(55, 250, 165, 17);
-        JTextArea textAreaEyeColour = new JTextArea(character.getDetails().getEyeColour() + "");
-        textAreaEyeColour.setBounds(125, 275, 95, 17);
-        JTextArea textAreaHairColour = new JTextArea(character.getDetails().getHairColour() + "");
-        textAreaHairColour.setBounds(140, 300, 80, 17);
-
-        this.add(textAreaAge);
-        this.add(textAreaEyeColour);
-        this.add(textAreaHairColour);
-
-        JTextArea textAreaSex = new JTextArea();
         if(character.getDetails().isMale()){
-            textAreaSex.setText("Masculin");
+            comboGender.setSelectedItem("Masculin");
         } else {
-            textAreaSex.setText("Féminin");
+            comboGender.setSelectedItem("Féminin");
         }
-        textAreaSex.setBounds(260, 250, 100, 17);
 
-        JTextArea textAreaSize = new JTextArea();
         if(((character.getDetails().getHeight() % 100) + "").length() == 1){
-            textAreaSize.setText(character.getDetails().getHeight() / 100 + "m0" +
+            sizeArea.setText(character.getDetails().getHeight() / 100 + "m0" +
                     character.getDetails().getHeight() % 100);
         } else {
-            textAreaSize.setText(character.getDetails().getHeight() / 100 + "m" +
+            sizeArea.setText(character.getDetails().getHeight() / 100 + "m" +
                     character.getDetails().getHeight() % 100);
         }
-        textAreaSize.setBounds(260, 275, 100, 17);
 
-        JTextArea textAreaWeight = new JTextArea(character.getDetails().getWeight() + "kg");
-        textAreaWeight.setBounds(260, 300, 100, 17);
+        weightArea.setText(character.getDetails().getWeight() + "kg");
 
-        this.add(textAreaSex);
-        this.add(textAreaSize);
-        this.add(textAreaWeight);
+        comboAstralSign.setSelectedItem(character.getDetails().getAstralSign());
 
-        JTextArea textAreaAstralSign = new JTextArea(character.getDetails().getAstralSign() + "");
-        textAreaAstralSign.setBounds(95, 323, 265, 17);
-        JTextArea textAreaBirthPlace = new JTextArea(character.getDetails().getBirthplace() + "");
-        textAreaBirthPlace.setBounds(145, 348, 215, 17);
-        JTextArea textAreaGod = new JTextArea(character.getDetails().getFavoriteGod() + "");
-        textAreaGod.setBounds(85, 373, 275, 17);
+        birthPlaceArea.setText(character.getDetails().getBirthplace() + "");
+        birthPlaceArea.setBounds(145, 348, 215, 17);
 
-        this.add(textAreaAstralSign);
-        this.add(textAreaBirthPlace);
-        this.add(textAreaGod);
+        comboGod.setSelectedItem(character.getDetails().getFavoriteGod());
 
-        JTextArea textAreaMarks = new JTextArea();
         String allMarks = "";
         for(String mark : character.getDetails().getDistinguishingMarks()){
             allMarks += mark + ", ";
@@ -236,219 +790,236 @@ public class CharacterPanel extends JPanel {
         if(allMarks.length() >= 2){
             allMarks = allMarks.substring(0, allMarks.length() - 2);
         }
-        textAreaMarks.setText(allMarks);
-        textAreaMarks.setBounds(30, 420, 330, 60);
-        textAreaMarks.setLineWrap(true);
-        textAreaMarks.setWrapStyleWord(true);
+        marksArea.setText(allMarks);
+        marksArea.setLineWrap(true);
+        marksArea.setWrapStyleWord(true);
 
-        this.add(textAreaMarks);
+        generatePanelSkills();
+        generatePanelTalents();
+        generatePanelArmours();
+        generatePanelWeapons();
+        generatePanelEquipments();
 
-/*        JLabel labelSkills = generateLabelSkills();
-        labelSkills.setBounds(410, 45, 355, 110);
+        this.generateArmourLevels();
 
-        JLabel labelTalents = generateLabelTalents();
-        labelTalents.setBounds(410, 170, 355, 55);
-
-        JLabel labelArmours = generateLabelArmours();
-        labelArmours.setBounds(410, 255, 215, 55);
-
-        JLabel labelWeapons = generateLabelWeapons();
-        labelWeapons.setBounds(410, 330, 215, 55);
-
-        JLabel labelEquipment = generateLabelEquipments();
-        labelEquipment.setBounds(410, 405, 215, 75);
-
-        this.add(labelSkills);
-        this.add(labelTalents);
-        this.add(labelArmours);
-        this.add(labelWeapons);
-        this.add(labelEquipment);*/
-
-//        this.generateArmourLevels();
-
-        JButton removeButton = new JButton("Effacer le personnage");
+/*        JButton removeButton = new JButton("Effacer le personnage");
         removeButton.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
         removeButton.setMargin(new Insets(2, 5, 2, 5));
         removeButton.addActionListener(new removeCharacterAL());
         removeButton.setBounds(620, 450, 140, 30);
-        this.add(removeButton);
+        this.add(removeButton);*/
     }
 
-/*    public JLabel generateLabelSkills(){
-        JLabel labelSkills = new JLabel();
-
-        String allSkills = "";
+    public void generatePanelSkills(){
+        JLabel skillLabel;
+        String skillNameLevel;
         int level;
-        LinkedList<Skill> skills = (LinkedList<Skill>)character.getSkills().clone();
-        Skill skill;
+        LinkedList<String> skills = (LinkedList<String>)character.getSkills().clone();
+        Collections.sort(skills);
+        String skillName;
         while(!skills.isEmpty()){
-            skill = skills.pop();
-            if(!allSkills.contains(skill.getName())){
-                level = 0;
-                while(skills.contains(skill)){
-                    level += 10;
-                    skills.removeFirstOccurrence(skill);
-                }
-
-                allSkills += skill.getName();
-
-                if(level != 0){
-                    allSkills += " (+" + level + ")";
-                }
-
-                allSkills += ", ";
+            skillLabel = new JLabel();
+            skillName = skills.pop();
+            level = 0;
+            while(skills.removeFirstOccurrence(skillName)){
+                level ++;
             }
+
+            level *= 10;
+
+            skillNameLevel = skillName;
+
+            if(level != 0){
+                skillNameLevel += "(+" + level + ")";
+            }
+
+            skillNameLevel += " : " + World.loadSkill(skillName).getCharacteristics();
+            skillLabel.setText(skillNameLevel);
+            skillLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+            skillPanel.add(skillLabel);
         }
-
-        if(allSkills.length() >= 2){
-            allSkills = allSkills.substring(0, allSkills.length() - 2);
-        }
-
-        labelSkills.setText("<html><span>" + allSkills + "</span></html>");
-        labelSkills.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
-        labelSkills.setVerticalTextPosition(SwingConstants.TOP);
-
-        return labelSkills;
     }
 
-    public JLabel generateLabelTalents(){
-        JLabel labelTalents = new JLabel();
-
-        String allTalents = "";
-        LinkedList<Talent> talents = (LinkedList<Talent>)character.getTalents().clone();
-        Talent talent;
+    public void generatePanelTalents(){
+        JLabel talentLabel;
+        LinkedList<String> talents = (LinkedList<String>)character.getTalents().clone();
+        Collections.sort(talents);
+        String talentName;
         while(!talents.isEmpty()){
-            talent = talents.pop();
-            if(!allTalents.contains(talent.getName())){
-                allTalents += talent.getName() + ", ";
-            }
+            talentLabel = new JLabel();
+            talentName = talents.pop();
+            while(talents.removeFirstOccurrence(talentName));
+
+            talentLabel.setText(talentName);
+            talentLabel.setToolTipText(World.loadTalent(talentName).getDescription());
+            talentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+            talentPanel.add(talentLabel);
         }
-
-        if(allTalents.length() >= 2){
-            allTalents = allTalents.substring(0, allTalents.length() - 2);
-        }
-
-        labelTalents.setText("<html><span>" + allTalents + "</span></html>");
-        labelTalents.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
-        labelTalents.setVerticalTextPosition(SwingConstants.TOP);
-
-        return labelTalents;
     }
 
-    public JLabel generateLabelArmours(){
-        JLabel labelArmours = new JLabel();
-
-        String allArmours = "";
-        LinkedList<Armour> armours = (LinkedList<Armour>)character.getArmours().clone();
+    public void generatePanelArmours(){
+        JLabel armourLabel;
+        LinkedList<String> armours = (LinkedList<String>)character.getArmours().clone();
+        Collections.sort(armours);
+        String armourName, tooltip;
         Armour armour;
+        LinkedList<String> coveredParts;
         while(!armours.isEmpty()){
-            armour = armours.pop();
-            if(!allArmours.contains(armour.getName())){
-                allArmours += armour.getName() + ", ";
+            armourLabel = new JLabel();
+            armourName = armours.pop();
+            while(armours.removeFirstOccurrence(armourName));
+
+            armourLabel.setText(armourName);
+            tooltip = "";
+            armour = World.loadArmour(armourName);
+            coveredParts = armour.getCoveredZones();
+
+            for(String part : coveredParts){
+                tooltip += part + ", ";
             }
+
+            tooltip = tooltip.substring(0, tooltip.length() - 2);
+
+            tooltip += " : " + armour.getArmourLevel() + " PA";
+
+            armourLabel.setToolTipText(tooltip);
+            armourLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+            armourPanel.add(armourLabel);
         }
-
-        if(allArmours.length() >= 2){
-            allArmours = allArmours.substring(0, allArmours.length() - 2);
-        }
-
-        labelArmours.setText("<html><span>" + allArmours + "</span></html>");
-        labelArmours.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
-        labelArmours.setVerticalTextPosition(SwingConstants.TOP);
-
-        return labelArmours;
     }
 
-    public JLabel generateLabelWeapons(){
-        JLabel labelWeapons = new JLabel();
-
-        String allWeapons = "";
-        LinkedList<Weapon> weapons = (LinkedList<Weapon>)character.getWeapons().clone();
+    public void generatePanelWeapons(){
+        JLabel weaponLabel;
+        LinkedList<String> weapons = (LinkedList<String>)character.getWeapons().clone();
+        Collections.sort(weapons);
+        String weaponName, tooltip;
         Weapon weapon;
+        int reload;
+        LinkedList<String> attributes;
         while(!weapons.isEmpty()){
-            weapon = weapons.pop();
-            if(!allWeapons.contains(weapon.getName())){
-                allWeapons += weapon.getName() + ", ";
+            weaponLabel = new JLabel();
+            weaponName = weapons.pop();
+            while(weapons.removeFirstOccurrence(weaponName));
+
+            weaponLabel.setText(weaponName);
+            tooltip = "";
+            weapon = World.loadWeapon(weaponName);
+
+            tooltip = weapon.getGroup() + " | Dégâts " + weapon.getDamage();
+
+            if(weapon.getLowRange() != 0){
+                tooltip += " | Portée : " + weapon.getLowRange() + " - " + weapon.getHighRange();
+                tooltip += " | Rechargement : ";
+                reload = weapon.getReload();
+                if(reload / 2 != 0){
+                    tooltip += (reload/2);
+                    if(reload%2 != 0){
+                        tooltip += " + " + (reload%2) + "/2";
+                    }
+                } else if(reload%2 != 0){
+                    tooltip += (reload%2) + "/2";
+                }
+
+                tooltip += "A";
             }
+
+            attributes = weapon.getAttributes();
+            if(attributes.size() != 0) {
+                tooltip += " | Attributs : ";
+                for (String attribute : attributes) {
+                    tooltip += attribute + ", ";
+                }
+
+                tooltip = tooltip.substring(0, tooltip.length() - 2);
+            }
+
+            weaponLabel.setToolTipText(tooltip);
+            weaponLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+            weaponPanel.add(weaponLabel);
         }
-
-        if(allWeapons.length() >= 2){
-            allWeapons = allWeapons.substring(0, allWeapons.length() - 2);
-        }
-
-        labelWeapons.setText("<html><span>" + allWeapons + "</span></html>");
-        labelWeapons.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
-        labelWeapons.setVerticalTextPosition(SwingConstants.TOP);
-
-        return labelWeapons;
     }
 
-    public JLabel generateLabelEquipments(){
-        JLabel labelEquipments = new JLabel();
-
-        String allEquipments = "";
-        LinkedList<Equipment> equipments = (LinkedList<Equipment>)character.getEquipment().clone();
+    public void generatePanelEquipments(){
+        JLabel equipmentLabel;
+        LinkedList<String> equipments = (LinkedList<String>)character.getEquipment().clone();
+        Collections.sort(equipments);
+        String equipmentName, tooltip;
         Equipment equipment;
         while(!equipments.isEmpty()){
-            equipment = equipments.pop();
-            if(!allEquipments.contains(equipment.getName())){
-                allEquipments += equipment.getName() + ", ";
-            }
+            equipmentLabel = new JLabel();
+            equipmentName = equipments.pop();
+            while(equipments.removeFirstOccurrence(equipmentName));
+
+            equipmentLabel.setText(equipmentName);
+            equipment = World.loadEquipment(equipmentName);
+
+            tooltip = "Enc : " + equipment.getEnc();
+
+            equipmentLabel.setToolTipText(tooltip);
+            equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+            equipmentPanel.add(equipmentLabel);
         }
 
-        if(allEquipments.length() >= 2){
-            allEquipments = allEquipments.substring(0, allEquipments.length() - 2);
-        }
+        /* Money */
 
-        labelEquipments.setText("<html><span>" + allEquipments + "</span></html>");
-        labelEquipments.setFont(new Font(Font.DIALOG, Font.PLAIN, 10));
-        labelEquipments.setVerticalTextPosition(SwingConstants.TOP);
+        equipmentLabel = new JLabel();
+        Money m = character.getMoney();
+        equipmentLabel.setText("Money : " + m.getGoldenCrowns() + " Co, " + m.getSilverShillings() + " Pa, " + m.getBrassPennies() + " Sc");
 
-        return labelEquipments;
+        equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+        equipmentPanel.add(equipmentLabel);
     }
 
     public void generateArmourLevels(){
-        int initH = (int)this.getSize().getWidth()/2 - 392;
-        int initV = (int)this.getSize().getHeight()/2 - 250;
-
         int headLevel = 0, armLevel = 0, bodyLevel = 0, legLevel = 0;
 
-        for(Armour armour : character.getArmours()){
-            if(armour.getCoveredZones().contains("Tête")){
-                headLevel += armour.getArmourLevel();
-            }
-            if(armour.getCoveredZones().contains("Bras")){
-                armLevel += armour.getArmourLevel();
-            }
-            if(armour.getCoveredZones().contains("Corps")){
-                bodyLevel += armour.getArmourLevel();
-            }
-            if(armour.getCoveredZones().contains("Jambe")){
-                legLevel += armour.getArmourLevel();
+        Armour armour;
+        LinkedList<Component> listArmour = new LinkedList<>(Arrays.asList(this.getArmourPanel().getComponents()));
+        JLabel tempArmourLabel;
+        String armourName;
+
+        for(Component cmp : listArmour){
+            if(cmp.getClass() == JLabel.class) {
+                tempArmourLabel = (JLabel) cmp;
+                armourName = tempArmourLabel.getText();
+
+                armour = World.loadArmour(armourName);
+                if (armour.getCoveredZones().contains("Tête")) {
+                    headLevel += armour.getArmourLevel();
+                }
+                if (armour.getCoveredZones().contains("Bras")) {
+                    armLevel += armour.getArmourLevel();
+                }
+                if (armour.getCoveredZones().contains("Corps")) {
+                    bodyLevel += armour.getArmourLevel();
+                }
+                if (armour.getCoveredZones().contains("Jambes")) {
+                    legLevel += armour.getArmourLevel();
+                }
             }
         }
 
-        JLabel headLabel = new JLabel(headLevel + "");
-        JLabel leftArmLabel = new JLabel(armLevel + "");
-        JLabel rightArmLabel = new JLabel(armLevel + "");
-        JLabel bodyLabel = new JLabel(bodyLevel + "");
-        JLabel leftLegLabel = new JLabel(legLevel + "");
-        JLabel rightLegLabel = new JLabel(legLevel + "");
+        headArmourLabel.setText(headLevel + "");
+        leftArmArmourLabel.setText(armLevel + "");
+        rightArmArmourLabel.setText(armLevel + "");
+        bodyArmourLabel.setText(bodyLevel + "");
+        leftLegArmourLabel.setText(legLevel + "");
+        rightLegArmourLabel.setText(legLevel + "");
 
-        headLabel.setBounds(initH + 637, initV + 259, 25, 10);
-        this.add(headLabel);
+        headArmourLabel.setBounds(637, 259, 25, 10);
+        this.add(headArmourLabel);
 
-        rightArmLabel.setBounds(initH + 637, initV + 357, 25, 10);
-        this.add(rightArmLabel);
-        leftArmLabel.setBounds(initH + 732, initV + 358, 25, 10);
-        this.add(leftArmLabel);
+        rightArmArmourLabel.setBounds(637, 357, 25, 10);
+        this.add(rightArmArmourLabel);
+        leftArmArmourLabel.setBounds(732, 358, 25, 10);
+        this.add(leftArmArmourLabel);
 
-        bodyLabel.setBounds(initH + 732, initV + 289, 25, 10);
-        this.add(bodyLabel);
+        bodyArmourLabel.setBounds(732, 289, 25, 10);
+        this.add(bodyArmourLabel);
 
-        rightLegLabel.setBounds(initH + 637, initV + 423, 25, 10);
-        this.add(rightLegLabel);
-        leftLegLabel.setBounds(initH + 732, initV + 424, 25, 10);
-        this.add(leftLegLabel);
-    }*/
+        rightLegArmourLabel.setBounds(637, 423, 25, 10);
+        this.add(rightLegArmourLabel);
+        leftLegArmourLabel.setBounds(732, 424, 25, 10);
+        this.add(leftLegArmourLabel);
+    }
 }

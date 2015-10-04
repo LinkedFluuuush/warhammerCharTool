@@ -43,7 +43,6 @@ public class Character {
                      LinkedList<String> weapons, LinkedList<String> armours,
                      LinkedList<String> equipment, Money money,
                      PersonalDetails details, int actualWounds) {
-        this.name = name;
         this.player = player;
         this.race = race;
         this.career = career;
@@ -58,6 +57,12 @@ public class Character {
         this.details = details;
         this.actualWounds = actualWounds;
         this.type = "NPC";
+
+        if(name.equals("")){
+            randomName();
+        } else {
+            this.name = name;
+        }
     }
 
     public Character(String name, String player, String race, String career,
@@ -66,7 +71,6 @@ public class Character {
                      LinkedList<String> weapons, LinkedList<String> armours,
                      LinkedList<String> equipment, Money money,
                      PersonalDetails details) {
-        this.name = name;
         this.player = player;
         this.race = race;
         this.career = career;
@@ -81,6 +85,12 @@ public class Character {
         this.details = details;
         this.actualWounds = profile.getW();
         this.type = "NPC";
+
+        if(name.equals("")){
+            randomName();
+        } else {
+            this.name = name;
+        }
     }
 
 /*    public Character(String name, String race, String career) {
@@ -114,7 +124,6 @@ public class Character {
                      LinkedList<String> weapons, LinkedList<String> armours,
                      LinkedList<String> equipment, Money money,
                      PersonalDetails details, int actualWounds, String type) {
-        this.name = name;
         this.player = player;
         this.race = race;
         this.career = career;
@@ -129,6 +138,13 @@ public class Character {
         this.details = details;
         this.actualWounds = actualWounds;
         this.type = type;
+
+        if(name.equals("")){
+            randomName();
+        } else {
+            this.name = name;
+        }
+
     }
 
     public Character(String name, String player, String race, String career,
@@ -137,7 +153,6 @@ public class Character {
                      LinkedList<String> weapons, LinkedList<String> armours,
                      LinkedList<String> equipment, Money money,
                      PersonalDetails details, String type) {
-        this.name = name;
         this.player = player;
         this.race = race;
         this.career = career;
@@ -152,16 +167,28 @@ public class Character {
         this.details = details;
         this.actualWounds = profile.getW();
         this.type = type;
+
+        if(name.equals("")){
+            randomName();
+        } else {
+            this.name = name;
+        }
+
     }
 
     public Character(String name, String player, String race, String career, String type) {
-        this.name = name;
         this.player = player;
         this.race = race;
         this.career = career;
         this.type = type;
 
         randomCharacter(type);
+
+        if(name.equals("")){
+            randomName();
+        } else {
+            this.name = name;
+        }
 
         this.actualWounds = profile.getW();
     }
