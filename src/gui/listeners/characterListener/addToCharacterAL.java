@@ -36,7 +36,7 @@ public class addToCharacterAL implements ActionListener {
 
         switch (toAdd){
             case "skill":
-                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"SÈlection d'une compÈtence", true);
+                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"S√©lection d'une comp√©tence", true);
                 contentPane = dialog.getContentPane();
 
                 /* Panels */
@@ -68,7 +68,7 @@ public class addToCharacterAL implements ActionListener {
                     }
                 }
 
-                comboSkills.addItem("Choisir une compÈtence");
+                comboSkills.addItem("Choisir une comp√©tence");
                 for(String skillName : sortedSkills){
                     comboSkills.addItem(skillName + " : " + World.loadSkill(skillName).getCharacteristics());
                 }
@@ -113,7 +113,7 @@ public class addToCharacterAL implements ActionListener {
                             comboLevels.addItem("+20");
                         }
 
-                        if(comboSkills.getSelectedItem().equals("Choisir une compÈtence")){
+                        if(comboSkills.getSelectedItem().equals("Choisir une comp√©tence")){
                             saveButton.setEnabled(false);
                         } else {
                             saveButton.setEnabled(true);
@@ -195,7 +195,7 @@ public class addToCharacterAL implements ActionListener {
                 dialog.setVisible(true);
                 break;
             case "talent":
-                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"SÈlection d'un talent", true);
+                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"S√©lection d'un talent", true);
                 contentPane = dialog.getContentPane();
 
                 /* Panels */
@@ -277,7 +277,7 @@ public class addToCharacterAL implements ActionListener {
                 dialog.setVisible(true);
                 break;
             case "armour":
-                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"SÈlection d'une armure", true);
+                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"S√©lection d'une armure", true);
                 contentPane = dialog.getContentPane();
 
                 /* Panels */
@@ -401,7 +401,7 @@ public class addToCharacterAL implements ActionListener {
                 dialog.setVisible(true);
                 break;
             case "weapon":
-                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"SÈlection d'une arme", true);
+                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"S√©lection d'une arme", true);
                 contentPane = dialog.getContentPane();
 
                 /* Panels */
@@ -432,10 +432,10 @@ public class addToCharacterAL implements ActionListener {
                     tooltipWeapon = "";
                     weapon = World.loadWeapon(weaponName);
 
-                    tooltipWeapon = weapon.getGroup() + " | DÈg‚ts " + weapon.getDamage();
+                    tooltipWeapon = weapon.getGroup() + " | D√©g√¢ts " + weapon.getDamage();
 
                     if(weapon.getLowRange() != 0){
-                        tooltipWeapon += " | PortÈe : " + weapon.getLowRange() + " - " + weapon.getHighRange();
+                        tooltipWeapon += " | Port√©e : " + weapon.getLowRange() + " - " + weapon.getHighRange();
                         tooltipWeapon += " | Rechargement : ";
                         reload = weapon.getReload();
                         if(reload / 2 != 0){
@@ -485,10 +485,10 @@ public class addToCharacterAL implements ActionListener {
                         String tooltip = "";
                         Weapon weapon = World.loadWeapon(weaponName);
 
-                        tooltip = weapon.getGroup() + " | DÈg‚ts " + weapon.getDamage();
+                        tooltip = weapon.getGroup() + " | D√©g√¢ts " + weapon.getDamage();
 
                         if(weapon.getLowRange() != 0){
-                            tooltip += " | PortÈe : " + weapon.getLowRange() + " - " + weapon.getHighRange();
+                            tooltip += " | Port√©e : " + weapon.getLowRange() + " - " + weapon.getHighRange();
                             tooltip += " | Rechargement : ";
                             int reload = weapon.getReload();
                             if(reload / 2 != 0){
@@ -540,7 +540,7 @@ public class addToCharacterAL implements ActionListener {
                 dialog.setVisible(true);
                 break;
             case "equipment":
-                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"SÈlection d'un objet", true);
+                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"S√©lection d'un objet", true);
                 contentPane = dialog.getContentPane();
 
                 /* Panels */
