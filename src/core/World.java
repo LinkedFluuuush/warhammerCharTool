@@ -11,10 +11,8 @@ import core.equipment.Equipment;
 import core.equipment.Weapon;
 import core.xmlHelper.dataLoader;
 import core.xmlHelper.xmlLoader;
-import core.xmlHelper.xmlSaver;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -219,10 +217,6 @@ public class World {
         return returnDistinguishingSign;
     }
 
-    public static void loadDistinguishingSigns() {
-        //DISTINGUISHINGSIGNS = LOADER.distinguishingsSignsLoader();
-    }
-
     public static Race loadRace(String race) {
         Race returnRace;
 
@@ -261,43 +255,43 @@ public class World {
         return returnCareer;
     }
 
-    public static Skill searchSkillByName(String name){
+    private static Skill searchSkillByName(String name){
         return SKILLS.get(name);
     }
 
-    public static Talent searchTalentByName(String name){
+    private static Talent searchTalentByName(String name){
         return TALENTS.get(name);
     }
 
-    public static Weapon searchWeaponByName(String name){
+    private static Weapon searchWeaponByName(String name){
         return WEAPONS.get(name);
     }
 
-    public static Armour searchArmourByName(String name){
+    private static Armour searchArmourByName(String name){
         return ARMOURS.get(name);
     }
 
-    public static Equipment searchEquipmentByName(String name){
+    private static Equipment searchEquipmentByName(String name){
         return EQUIPMENTS.get(name);
     }
 
-    public static God searchGodByName(String name){
+    private static God searchGodByName(String name){
         return GODS.get(name);
     }
 
-    public static AstralSign searchAstralSignByName(String name){
+    private static AstralSign searchAstralSignByName(String name){
         return ASTRALSIGNS.get(name);
     }
 
-    public static String searchDistinguishingSignByName(String name){
+    private static String searchDistinguishingSignByName(String name){
         return DISTINGUISHINGSIGNS.get(name);
     }
 
-    public static Race searchRaceByName(String name){
+    private static Race searchRaceByName(String name){
         return RACES.get(name);
     }
 
-    public static Career searchCareerByName(String name){
+    private static Career searchCareerByName(String name){
         return CAREERS.get(name);
     }
 }

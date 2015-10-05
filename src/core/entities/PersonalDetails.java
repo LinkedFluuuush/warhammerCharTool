@@ -1,10 +1,5 @@
 package core.entities;
 
-import core.World;
-import core.characteristics.Race;
-
-import javax.swing.*;
-import java.awt.*;
 import java.util.LinkedList;
 
 /**
@@ -35,7 +30,7 @@ public class PersonalDetails {
         weight = 0;
         eyeColour = "Unknown";
         hairColour = "Unknown";
-        distinguishingMarks = new LinkedList<String>();
+        distinguishingMarks = new LinkedList<>();
     }
 
     public PersonalDetails(boolean male, int age, String birthplace,

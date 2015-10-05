@@ -5,7 +5,7 @@ import java.awt.*;
 import java.util.LinkedList;
 
 public class ComboboxToolTipRenderer extends DefaultListCellRenderer {
-    LinkedList tooltips;
+    private LinkedList tooltips;
 
     @Override
     public Component getListCellRendererComponent(JList list, Object value,

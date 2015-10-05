@@ -1,10 +1,5 @@
 package core.characteristics;
 
-import core.entities.God;
-import core.equipment.Armour;
-import core.equipment.Equipment;
-import core.equipment.Weapon;
-
 import java.util.LinkedList;
 
 /**
@@ -34,8 +29,8 @@ public class Race {
     private LinkedList<LinkedList<String>> armours;
     private LinkedList<LinkedList<String>> equipments;
 
-    LinkedList<String> birthPlaces;
-    LinkedList<String> worshipedGods;
+    private LinkedList<String> birthPlaces;
+    private LinkedList<String> worshipedGods;
 
     public Race(String name, Profile profile, int fSize, int mSize, int[] wounds, int[] fate, int[] weight, int[] age,
                 String[] mNames, String[] fNames, String[] hairColour, String[] eyeColour,

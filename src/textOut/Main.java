@@ -1,6 +1,6 @@
 package textOut;
 
-import core.*;
+import core.World;
 
 /**
  * Created with IntelliJ IDEA.

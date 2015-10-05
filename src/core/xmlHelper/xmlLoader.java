@@ -15,7 +15,10 @@ import org.jdom2.input.SAXBuilder;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -807,41 +810,52 @@ public class xmlLoader implements dataLoader{
         return distinguishingSignList;
     }*/
 
-    public HashMap<String, ? extends Object> nameLoader(String name){
-        HashMap<String, ? extends Object> map;
-        if (name.equals("skill")) {
-            map = new HashMap<String, Skill>();
+    public HashMap<String, ?> nameLoader(String name){
+        HashMap<String, ?> map;
+        switch (name) {
+            case "skill":
+                map = new HashMap<String, Skill>();
 
-        } else if (name.equals("talent")) {
-            map = new HashMap<String, Talent>();
+                break;
+            case "talent":
+                map = new HashMap<String, Talent>();
 
-        } else if (name.equals("equipment")) {
-            map = new HashMap<String, Equipment>();
+                break;
+            case "equipment":
+                map = new HashMap<String, Equipment>();
 
-        } else if (name.equals("weapon")) {
-            map = new HashMap<String, Weapon>();
+                break;
+            case "weapon":
+                map = new HashMap<String, Weapon>();
 
-        } else if (name.equals("armour")) {
-            map = new HashMap<String, Armour>();
+                break;
+            case "armour":
+                map = new HashMap<String, Armour>();
 
-        } else if (name.equals("god")) {
-            map = new HashMap<String, God>();
+                break;
+            case "god":
+                map = new HashMap<String, God>();
 
-        } else if (name.equals("astralSign")) {
-            map = new HashMap<String, AstralSign>();
+                break;
+            case "astralSign":
+                map = new HashMap<String, AstralSign>();
 
-        } else if (name.equals("race")) {
-            map = new HashMap<String, Race>();
+                break;
+            case "race":
+                map = new HashMap<String, Race>();
 
-        } else if (name.equals("career")) {
-            map = new HashMap<String, Career>();
+                break;
+            case "career":
+                map = new HashMap<String, Career>();
 
-        } else if (name.equals("distinguishingSign")) {
-            map = new HashMap<String, String>();
+                break;
+            case "distinguishingSign":
+                map = new HashMap<String, String>();
 
-        } else {
-            System.err.println("Error : name not found : " + name);
-            return null;
+                break;
+            default:
+                System.err.println("Error : name not found : " + name);
+                return null;
         }
 
 
@@ -852,8 +866,7 @@ public class xmlLoader implements dataLoader{
 
         try{
             document = sxb.build(new File("resources/" + name +"s.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -883,8 +896,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/skills.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -910,8 +922,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/talents.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -937,8 +948,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/equipments.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -968,8 +978,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/weapons.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -979,7 +988,7 @@ public class xmlLoader implements dataLoader{
         while (iteratorWeapons.hasNext()){
             currentWeapon = iteratorWeapons.next();
             if(currentWeapon.getAttributeValue("name").equals(weapon)){
-                LinkedList<String> attributes = new LinkedList<String>();
+                LinkedList<String> attributes = new LinkedList<>();
 
                 List<Element> eAttributes = currentWeapon.getChildren("attribute");
 
@@ -1012,8 +1021,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/armours.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -1023,7 +1031,7 @@ public class xmlLoader implements dataLoader{
         while (iteratorArmours.hasNext()){
             currentArmour = iteratorArmours.next();
             if(currentArmour.getAttributeValue("name").equals(armour)){
-                LinkedList<String> zones = new LinkedList<String>();
+                LinkedList<String> zones = new LinkedList<>();
 
                 List<Element> eZones = currentArmour.getChildren("zone");
 
@@ -1052,8 +1060,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/gods.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -1063,13 +1070,13 @@ public class xmlLoader implements dataLoader{
         while (iteratorGods.hasNext()){
             currentGod = iteratorGods.next();
             if(currentGod.getAttributeValue("name").equals(god)){
-                LinkedList<String> domains = new LinkedList<String>();
+                LinkedList<String> domains = new LinkedList<>();
                 List<Element> eDomains = currentGod.getChildren("domain");
                 for(Element domain : eDomains){
                     domains.add(domain.getText());
                 }
 
-                LinkedList<String> worshipers = new LinkedList<String>();
+                LinkedList<String> worshipers = new LinkedList<>();
                 List<Element>  eWorshipers = currentGod.getChildren("worshiper");
                 for(Element worshiper : eWorshipers){
                     worshipers.add(worshiper.getText());
@@ -1091,8 +1098,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/astralSigns.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -1163,8 +1169,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/races.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -1237,11 +1242,11 @@ public class xmlLoader implements dataLoader{
                     age[i] = Integer.parseInt(eAge.get(i).getText());
                 }
 
-                skills = new LinkedList<LinkedList<String>>();
+                skills = new LinkedList<>();
                 skillTable = currentRace.getChildren("skillTable");
 
                 for (Element eSkill : skillTable) {
-                    currentSkillSet = new LinkedList<String>();
+                    currentSkillSet = new LinkedList<>();
                     eSkillsChoice = eSkill.getChildren("skill");
                     for (Element anESkillsChoice : eSkillsChoice) {
                         currentSkillSet.add(anESkillsChoice.getText());
@@ -1250,11 +1255,11 @@ public class xmlLoader implements dataLoader{
                     skills.add(currentSkillSet);
                 }
 
-                talents = new LinkedList<LinkedList<String>>();
+                talents = new LinkedList<>();
                 talentTable = currentRace.getChildren("talentTable");
 
                 for (Element eTalent : talentTable) {
-                    currentTalentSet = new LinkedList<String>();
+                    currentTalentSet = new LinkedList<>();
                     eTalentsChoice = eTalent.getChildren("talent");
                     for (Element anETalentsChoice : eTalentsChoice) {
                         currentTalentSet.add(anETalentsChoice.getText());
@@ -1263,11 +1268,11 @@ public class xmlLoader implements dataLoader{
                     talents.add(currentTalentSet);
                 }
 
-                weapons = new LinkedList<LinkedList<String>>();
+                weapons = new LinkedList<>();
                 weaponTable = currentRace.getChildren("weaponTable");
 
                 for (Element eWeapon : weaponTable) {
-                    currentWeaponSet = new LinkedList<String>();
+                    currentWeaponSet = new LinkedList<>();
                     eWeaponsChoice = eWeapon.getChildren("weapon");
                     for (Element anEWeaponsChoice : eWeaponsChoice) {
                         currentWeaponSet.add(anEWeaponsChoice.getText());
@@ -1278,11 +1283,11 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                armours = new LinkedList<LinkedList<String>>();
+                armours = new LinkedList<>();
                 armourTable = currentRace.getChildren("armourTable");
 
                 for (Element eArmour : armourTable) {
-                    currentArmourSet = new LinkedList<String>();
+                    currentArmourSet = new LinkedList<>();
                     eArmoursChoice = eArmour.getChildren("armour");
                     for (Element anEArmoursChoice : eArmoursChoice) {
                         currentArmourSet.add(anEArmoursChoice.getText());
@@ -1293,11 +1298,11 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                equipments = new LinkedList<LinkedList<String>>();
+                equipments = new LinkedList<>();
                 equipmentTable = currentRace.getChildren("equipmentTable");
 
                 for (Element eEquipment : equipmentTable) {
-                    currentEquipmentSet = new LinkedList<String>();
+                    currentEquipmentSet = new LinkedList<>();
                     eEquipmentsChoice = eEquipment.getChildren("equipment");
                     for (Element anEEquipmentsChoice : eEquipmentsChoice) {
                         currentEquipmentSet.add(anEEquipmentsChoice.getText());
@@ -1308,14 +1313,14 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                birthPlaces = new LinkedList<String>();
+                birthPlaces = new LinkedList<>();
                 birthPlacesTable = currentRace.getChildren("birthPlace");
 
                 for(Element eBirthPlace : birthPlacesTable){
                     birthPlaces.add(eBirthPlace.getText());
                 }
 
-                worshipedGods = new LinkedList<String>();
+                worshipedGods = new LinkedList<>();
                 worshipedGodsTable = currentRace.getChildren("god");
 
                 for(Element eWorshipedGod : worshipedGodsTable){
@@ -1379,8 +1384,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/careers.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 
@@ -1404,12 +1408,12 @@ public class xmlLoader implements dataLoader{
                         Integer.parseInt(eProfile.getAttributeValue("M")),
                         Integer.parseInt(eProfile.getAttributeValue("Mag")));
 
-                skills = new LinkedList<LinkedList<String>>();
+                skills = new LinkedList<>();
                 skillTable = currentCareer.getChild("skillsTable");
                 eSkills = skillTable.getChildren("eSkills");
 
                 for (Element eSkill : eSkills) {
-                    currentSkillSet = new LinkedList<String>();
+                    currentSkillSet = new LinkedList<>();
                     eSkillsChoice = eSkill.getChildren("choice");
                     for (Element anESkillsChoice : eSkillsChoice) {
                         currentSkillSet.add(anESkillsChoice.getText());
@@ -1418,12 +1422,12 @@ public class xmlLoader implements dataLoader{
                     skills.add(currentSkillSet);
                 }
 
-                talents = new LinkedList<LinkedList<String>>();
+                talents = new LinkedList<>();
                 talentTable = currentCareer.getChild("talentsTable");
                 eTalents = talentTable.getChildren("eTalents");
 
                 for (Element eTalent : eTalents) {
-                    currentTalentSet = new LinkedList<String>();
+                    currentTalentSet = new LinkedList<>();
                     eTalentsChoice = eTalent.getChildren("choice");
                     for (Element anETalentsChoice : eTalentsChoice) {
                         currentTalentSet.add(anETalentsChoice.getText());
@@ -1432,12 +1436,12 @@ public class xmlLoader implements dataLoader{
                     talents.add(currentTalentSet);
                 }
 
-                weapons = new LinkedList<LinkedList<String>>();
+                weapons = new LinkedList<>();
                 weaponTable = currentCareer.getChild("weaponsTable");
                 eWeapons = weaponTable.getChildren("eWeapons");
 
                 for (Element eWeapon : eWeapons) {
-                    currentWeaponSet = new LinkedList<String>();
+                    currentWeaponSet = new LinkedList<>();
                     eWeaponsChoice = eWeapon.getChildren("choice");
                     for (Element anEWeaponsChoice : eWeaponsChoice) {
                         currentWeaponSet.add(anEWeaponsChoice.getText());
@@ -1448,12 +1452,12 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                armours = new LinkedList<LinkedList<String>>();
+                armours = new LinkedList<>();
                 armourTable = currentCareer.getChild("armoursTable");
                 eArmours = armourTable.getChildren("eArmours");
 
                 for (Element eArmour : eArmours) {
-                    currentArmourSet = new LinkedList<String>();
+                    currentArmourSet = new LinkedList<>();
                     eArmoursChoice = eArmour.getChildren("choice");
                     for (Element anEArmoursChoice : eArmoursChoice) {
                         currentArmourSet.add(anEArmoursChoice.getText());
@@ -1464,12 +1468,12 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                equipments = new LinkedList<LinkedList<String>>();
+                equipments = new LinkedList<>();
                 equipmentTable = currentCareer.getChild("equipmentsTable");
                 eEquipments = equipmentTable.getChildren("eEquipments");
 
                 for (Element eEquipment : eEquipments) {
-                    currentEquipmentSet = new LinkedList<String>();
+                    currentEquipmentSet = new LinkedList<>();
                     eEquipmentsChoice = eEquipment.getChildren("choice");
                     for (Element anEEquipmentsChoice : eEquipmentsChoice) {
                         currentEquipmentSet.add(anEEquipmentsChoice.getText());
@@ -1482,15 +1486,13 @@ public class xmlLoader implements dataLoader{
 
                 racesTable = currentCareer.getChild("availableRaces");
 
-                availableRaces = new LinkedList<String>();
-
                 if(racesTable == null){
-                    availableRaces = (LinkedList<String>) World.RACES.keySet();
+                    availableRaces = new LinkedList<>(World.RACES.keySet());
                 } else {
                     if(racesTable.getChildren("race") == null || racesTable.getChildren("race").isEmpty()){
-                        availableRaces = (LinkedList<String>) World.RACES.keySet();
+                        availableRaces = new LinkedList<>(World.RACES.keySet());
                     } else {
-                        availableRaces = new LinkedList<String>();
+                        availableRaces = new LinkedList<>();
 
                         for(Element race : racesTable.getChildren("race")){
                             availableRaces.add(race.getText());
@@ -1514,8 +1516,7 @@ public class xmlLoader implements dataLoader{
         SAXBuilder sxb = new SAXBuilder();
         try{
             document = sxb.build(new File("resources/distinguishingSigns.xml"));
-        }catch (JDOMException ignored) {}
-        catch (IOException ignored) {}
+        }catch (JDOMException | IOException ignored) {}
 
         root = document.getRootElement();
 

@@ -2,12 +2,6 @@ package core.xmlHelper;
 
 import core.World;
 import core.characteristics.Career;
-import core.characteristics.Race;
-import core.characteristics.Skill;
-import core.characteristics.Talent;
-import core.equipment.Armour;
-import core.equipment.Equipment;
-import core.equipment.Weapon;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;

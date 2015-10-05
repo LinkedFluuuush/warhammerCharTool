@@ -521,7 +521,7 @@ public class CharacterPanel extends JPanel {
         this.add(eyeColourArea);
         this.add(hairColourArea);
 
-        comboGender = new JComboBox<String>();
+        comboGender = new JComboBox<>();
         comboGender.addItem("");
         comboGender.addItem("Masculin");
         comboGender.addItem("Féminin");
@@ -538,7 +538,7 @@ public class CharacterPanel extends JPanel {
         this.add(sizeArea);
         this.add(weightArea);
 
-        comboAstralSign = new JComboBox<String>();
+        comboAstralSign = new JComboBox<>();
         ComboboxToolTipRenderer comboAstralSignRenderer = new ComboboxToolTipRenderer();
         LinkedList<String> astralSignSorted = new LinkedList<>(World.ASTRALSIGNS.keySet());
         Collections.sort(astralSignSorted);
@@ -558,7 +558,7 @@ public class CharacterPanel extends JPanel {
         birthPlaceArea = new JTextArea();
         birthPlaceArea.setBounds(145, 348, 215, 17);
 
-        comboGod = new JComboBox<String>();
+        comboGod = new JComboBox<>();
         ComboboxToolTipRenderer comboGodRenderer = new ComboboxToolTipRenderer();
         LinkedList<String> godSorted = new LinkedList<>(World.GODS.keySet());
         Collections.sort(godSorted);
@@ -902,7 +902,6 @@ public class CharacterPanel extends JPanel {
             while(weapons.removeFirstOccurrence(weaponName));
 
             weaponLabel.setText(weaponName);
-            tooltip = "";
             weapon = World.loadWeapon(weaponName);
 
             tooltip = weapon.getGroup() + " | Dégâts " + weapon.getDamage();

@@ -14,7 +14,7 @@ import java.util.LinkedList;
  * Created by LinkedFluuuush on 03/10/2015.
  */
 public class updateComboBoxesAL implements ActionListener {
-    private CharacterPanel panel;
+    private final CharacterPanel panel;
 
     public updateComboBoxesAL(CharacterPanel panel){
         this.panel = panel;

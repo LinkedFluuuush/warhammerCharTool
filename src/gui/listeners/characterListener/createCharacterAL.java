@@ -1,7 +1,5 @@
 package gui.listeners.characterListener;
 
-import core.characteristics.Career;
-import core.characteristics.Race;
 import core.entities.Character;
 import gui.CharacterPanel;
 
@@ -15,10 +13,10 @@ import java.awt.event.ActionListener;
  * Time: 23:30
  */
 public class createCharacterAL implements ActionListener {
-    private JComboBox<String> comboRace;
-    private JComboBox<String> comboCareer;
-    private JTextArea nameArea;
-    private CharacterPanel characterPanel;
+    private final JComboBox<String> comboRace;
+    private final JComboBox<String> comboCareer;
+    private final JTextArea nameArea;
+    private final CharacterPanel characterPanel;
 
     public createCharacterAL(JComboBox<String> comboRace, JComboBox<String> comboCareer, JTextArea nameArea, CharacterPanel characterPanel) {
         this.comboRace = comboRace;

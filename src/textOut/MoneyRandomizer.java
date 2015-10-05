@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class MoneyRandomizer {
 
-    public static Money randomMoney(int base){
+    private static Money randomMoney(int base){
         Random r = new Random();
         int initialMoney = base;
 

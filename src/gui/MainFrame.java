@@ -1,7 +1,6 @@
 package gui;
 
 import core.World;
-import core.entities.Character;
 import gui.menu.MainMenu;
 
 import javax.swing.*;
@@ -43,7 +42,7 @@ public class MainFrame extends JFrame {
         mainFrame.setVisible(true);
     }
 
-    public void addAllPanels(){
+    private void addAllPanels(){
         /*Toolkit t = this.getToolkit();
         Dimension dim = new Dimension(t.getScreenSize());
         int nbV = (int)dim.getHeight() / 500;

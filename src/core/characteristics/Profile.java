@@ -1,8 +1,5 @@
 package core.characteristics;
 
-import javax.swing.*;
-import java.awt.*;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Linked

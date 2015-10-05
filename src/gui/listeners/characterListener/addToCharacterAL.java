@@ -11,14 +11,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 
 /**
  * Created by LinkedFluuuush on 04/10/2015.
  */
 public class addToCharacterAL implements ActionListener {
-    String toAdd;
-    CharacterPanel panel;
+    private final String toAdd;
+    private final CharacterPanel panel;
 
     public addToCharacterAL(String toAdd, CharacterPanel panel) {
         this.toAdd = toAdd;
@@ -49,7 +51,7 @@ public class addToCharacterAL implements ActionListener {
                 buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
 
                 /* Selection elements */
-                JComboBox<String> comboSkills = new JComboBox<String>();
+                JComboBox<String> comboSkills = new JComboBox<>();
                 LinkedList<String> sortedSkills = new LinkedList<>(World.SKILLS.keySet());
                 Collections.sort(sortedSkills);
 
@@ -75,105 +77,94 @@ public class addToCharacterAL implements ActionListener {
 
                 saveButton.setEnabled(false);
 
-                JComboBox<String> comboLevels = new JComboBox<String>();
+                JComboBox<String> comboLevels = new JComboBox<>();
 
-                comboSkills.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        comboLevels.removeAllItems();
-                        LinkedList<Component> alreadyHaveSkills = new LinkedList<>(Arrays.asList(panel.getSkillPanel().getComponents()));
+                comboSkills.addActionListener(e1 -> {
+                    comboLevels.removeAllItems();
+                    LinkedList<Component> alreadyHaveSkills1 = new LinkedList<>(Arrays.asList(panel.getSkillPanel().getComponents()));
 
-                        JLabel labelSkill = null;
-                        boolean skillFound = false;
-                        String skillName;
-                        for(Component cmp : alreadyHaveSkills){
-                            if(cmp.getClass() == JLabel.class){
-                                labelSkill = (JLabel) cmp;
-                                skillName = labelSkill.getText();
-                                skillName = skillName.replace(" (+10)", "");
-                                skillName = skillName.replace(" (+20)", "");
+                    JLabel labelSkill1 = null;
+                    boolean skillFound = false;
+                    String skillName;
+                    for(Component cmp : alreadyHaveSkills1){
+                        if(cmp.getClass() == JLabel.class){
+                            labelSkill1 = (JLabel) cmp;
+                            skillName = labelSkill1.getText();
+                            skillName = skillName.replace(" (+10)", "");
+                            skillName = skillName.replace(" (+20)", "");
 
-                                if(skillName.equals(comboSkills.getSelectedItem())) {
-                                    skillFound = true;
-                                    break;
-                                }
+                            if(skillName.equals(comboSkills.getSelectedItem())) {
+                                skillFound = true;
+                                break;
                             }
                         }
+                    }
 
-                        if(skillFound){
-                            if(labelSkill.getText().contains("+10")){
-                                comboLevels.addItem("+20");
-                            } else {
-                                comboLevels.addItem("+10");
-                                comboLevels.addItem("+20");
-                            }
+                    if(skillFound){
+                        if(labelSkill1.getText().contains("+10")){
+                            comboLevels.addItem("+20");
                         } else {
-                            comboLevels.addItem("Acquis");
                             comboLevels.addItem("+10");
                             comboLevels.addItem("+20");
                         }
-
-                        if(comboSkills.getSelectedItem().equals("Choisir une compétence")){
-                            saveButton.setEnabled(false);
-                        } else {
-                            saveButton.setEnabled(true);
-                        }
-
-                        dialog.revalidate();
-                        dialog.repaint();
-                        dialog.pack();
+                    } else {
+                        comboLevels.addItem("Acquis");
+                        comboLevels.addItem("+10");
+                        comboLevels.addItem("+20");
                     }
+
+                    if(comboSkills.getSelectedItem().equals("Choisir une compétence")){
+                        saveButton.setEnabled(false);
+                    } else {
+                        saveButton.setEnabled(true);
+                    }
+
+                    dialog.revalidate();
+                    dialog.repaint();
+                    dialog.pack();
                 });
 
                 /* Buttons */
-                cancelButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        dialog.dispose();
-                    }
-                });
+                cancelButton.addActionListener(e1 -> dialog.dispose());
 
-                saveButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        LinkedList<Component> alreadyHaveSkills = new LinkedList<>(Arrays.asList(panel.getSkillPanel().getComponents()));
+                saveButton.addActionListener(e1 -> {
+                    LinkedList<Component> alreadyHaveSkills1 = new LinkedList<>(Arrays.asList(panel.getSkillPanel().getComponents()));
 
-                        JLabel skillLabel;
-                        String skillName;
-                        for(Component cmp : alreadyHaveSkills){
-                            if(cmp.getClass() == JLabel.class){
-                                skillLabel = (JLabel) cmp;
-                                skillName = skillLabel.getText();
-                                skillName = skillName.replace(" (+10)", "");
-                                skillName = skillName.replace(" (+20)", "");
+                    JLabel skillLabel;
+                    String skillName;
+                    for(Component cmp : alreadyHaveSkills1){
+                        if(cmp.getClass() == JLabel.class){
+                            skillLabel = (JLabel) cmp;
+                            skillName = skillLabel.getText();
+                            skillName = skillName.replace(" (+10)", "");
+                            skillName = skillName.replace(" (+20)", "");
 
-                                if(skillName.equals(comboSkills.getSelectedItem())) {
-                                    panel.getSkillPanel().remove(skillLabel);
-                                    break;
-                                }
+                            if(skillName.equals(comboSkills.getSelectedItem())) {
+                                panel.getSkillPanel().remove(skillLabel);
+                                break;
                             }
                         }
-
-                        skillLabel = new JLabel();
-
-                        skillName = ((String) comboSkills.getSelectedItem()).split(" : ")[0];
-                        String skillChar = ((String) comboSkills.getSelectedItem()).split(" : ")[1];
-                        String skillNameLevel = skillName;
-                        String level = (String) comboLevels.getSelectedItem();
-
-                        if(!level.equals("Acquis")){
-                            skillNameLevel += " (" + level + ")";
-                        }
-
-                        skillNameLevel += " : " + skillChar;
-                        skillLabel.setText(skillNameLevel);
-                        skillLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-
-                        panel.getSkillPanel().add(skillLabel);
-                        panel.revalidate();
-                        panel.repaint();
-                        dialog.dispose();
                     }
+
+                    skillLabel = new JLabel();
+
+                    skillName = ((String) comboSkills.getSelectedItem()).split(" : ")[0];
+                    String skillChar = ((String) comboSkills.getSelectedItem()).split(" : ")[1];
+                    String skillNameLevel = skillName;
+                    String level = (String) comboLevels.getSelectedItem();
+
+                    if(!level.equals("Acquis")){
+                        skillNameLevel += " (" + level + ")";
+                    }
+
+                    skillNameLevel += " : " + skillChar;
+                    skillLabel.setText(skillNameLevel);
+                    skillLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+
+                    panel.getSkillPanel().add(skillLabel);
+                    panel.revalidate();
+                    panel.repaint();
+                    dialog.dispose();
                 });
 
                 choicePane.add(comboSkills);
@@ -208,7 +199,7 @@ public class addToCharacterAL implements ActionListener {
                 buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
 
                 /* Selection elements */
-                JComboBox<String> comboTalents = new JComboBox<String>();
+                JComboBox<String> comboTalents = new JComboBox<>();
                 LinkedList<String> sortedTalents = new LinkedList<>(World.TALENTS.keySet());
                 Collections.sort(sortedTalents);
 
@@ -235,29 +226,21 @@ public class addToCharacterAL implements ActionListener {
                 comboTalentRenderer.setTooltips(tooltips);
 
                 /* Buttons */
-                cancelButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        dialog.dispose();
-                    }
-                });
+                cancelButton.addActionListener(e1 -> dialog.dispose());
 
-                saveButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        JLabel talentLabel = new JLabel();
+                saveButton.addActionListener(e1 -> {
+                    JLabel talentLabel = new JLabel();
 
-                        String talentName = (String) comboTalents.getSelectedItem();
+                    String talentName = (String) comboTalents.getSelectedItem();
 
-                        talentLabel.setText(talentName);
-                        talentLabel.setToolTipText(World.loadTalent(talentName).getDescription());
-                        talentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+                    talentLabel.setText(talentName);
+                    talentLabel.setToolTipText(World.loadTalent(talentName).getDescription());
+                    talentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
 
-                        panel.getTalentPanel().add(talentLabel);
-                        panel.revalidate();
-                        panel.repaint();
-                        dialog.dispose();
-                    }
+                    panel.getTalentPanel().add(talentLabel);
+                    panel.revalidate();
+                    panel.repaint();
+                    dialog.dispose();
                 });
 
                 choicePane.add(comboTalents);
@@ -290,7 +273,7 @@ public class addToCharacterAL implements ActionListener {
                 buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
 
                 /* Selection elements */
-                JComboBox<String> comboArmours = new JComboBox<String>();
+                JComboBox<String> comboArmours = new JComboBox<>();
                 LinkedList<String> sortedArmours = new LinkedList<>(World.ARMOURS.keySet());
                 Collections.sort(sortedArmours);
 
@@ -346,42 +329,34 @@ public class addToCharacterAL implements ActionListener {
                 comboArmourRenderer.setTooltips(tooltipsArmour);
 
                 /* Buttons */
-                cancelButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        dialog.dispose();
+                cancelButton.addActionListener(e1 -> dialog.dispose());
+
+                saveButton.addActionListener(e1 -> {
+                    JLabel armourLabel = new JLabel();
+
+                    String armourName = (String) comboArmours.getSelectedItem();
+
+                    armourLabel.setText(armourName);
+                    String tooltip1 = "";
+                    Armour armour1 = World.loadArmour(armourName);
+                    LinkedList<String> coveredParts1 = armour1.getCoveredZones();
+
+                    for(String part : coveredParts1){
+                        tooltip1 += part + ", ";
                     }
-                });
 
-                saveButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        JLabel armourLabel = new JLabel();
+                    tooltip1 = tooltip1.substring(0, tooltip1.length() - 2);
 
-                        String armourName = (String) comboArmours.getSelectedItem();
+                    tooltip1 += " : " + armour1.getArmourLevel() + " PA";
 
-                        armourLabel.setText(armourName);
-                        String tooltip = "";
-                        Armour armour = World.loadArmour(armourName);
-                        LinkedList<String> coveredParts = armour.getCoveredZones();
+                    armourLabel.setToolTipText(tooltip1);
+                    armourLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
 
-                        for(String part : coveredParts){
-                            tooltip += part + ", ";
-                        }
-
-                        tooltip = tooltip.substring(0, tooltip.length() - 2);
-
-                        tooltip += " : " + armour.getArmourLevel() + " PA";
-
-                        armourLabel.setToolTipText(tooltip);
-                        armourLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-
-                        panel.getArmourPanel().add(armourLabel);
-                        panel.generateArmourLevels();
-                        panel.revalidate();
-                        panel.repaint();
-                        dialog.dispose();
-                    }
+                    panel.getArmourPanel().add(armourLabel);
+                    panel.generateArmourLevels();
+                    panel.revalidate();
+                    panel.repaint();
+                    dialog.dispose();
                 });
 
                 choicePane.add(comboArmours);
@@ -414,7 +389,7 @@ public class addToCharacterAL implements ActionListener {
                 buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
 
                 /* Selection elements */
-                JComboBox<String> comboWeapons = new JComboBox<String>();
+                JComboBox<String> comboWeapons = new JComboBox<>();
                 LinkedList<String> sortedWeapons = new LinkedList<>(World.WEAPONS.keySet());
                 Collections.sort(sortedWeapons);
 
@@ -429,7 +404,6 @@ public class addToCharacterAL implements ActionListener {
 
                 for(String weaponName : sortedWeapons){
                     comboWeapons.addItem(weaponName);
-                    tooltipWeapon = "";
                     weapon = World.loadWeapon(weaponName);
 
                     tooltipWeapon = weapon.getGroup() + " | Dégâts " + weapon.getDamage();
@@ -467,60 +441,52 @@ public class addToCharacterAL implements ActionListener {
                 comboWeaponRenderer.setTooltips(tooltipsWeapon);
 
                 /* Buttons */
-                cancelButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        dialog.dispose();
-                    }
-                });
+                cancelButton.addActionListener(e1 -> dialog.dispose());
 
-                saveButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        JLabel weaponLabel = new JLabel();
+                saveButton.addActionListener(e1 -> {
+                    JLabel weaponLabel = new JLabel();
 
-                        String weaponName = (String) comboWeapons.getSelectedItem();
+                    String weaponName = (String) comboWeapons.getSelectedItem();
 
-                        weaponLabel.setText(weaponName);
-                        String tooltip = "";
-                        Weapon weapon = World.loadWeapon(weaponName);
+                    weaponLabel.setText(weaponName);
+                    String tooltip1 = "";
+                    Weapon weapon1 = World.loadWeapon(weaponName);
 
-                        tooltip = weapon.getGroup() + " | Dégâts " + weapon.getDamage();
+                    tooltip1 = weapon1.getGroup() + " | Dégâts " + weapon1.getDamage();
 
-                        if(weapon.getLowRange() != 0){
-                            tooltip += " | Portée : " + weapon.getLowRange() + " - " + weapon.getHighRange();
-                            tooltip += " | Rechargement : ";
-                            int reload = weapon.getReload();
-                            if(reload / 2 != 0){
-                                tooltip += (reload/2);
-                                if(reload%2 != 0){
-                                    tooltip += " + " + (reload%2) + "/2";
-                                }
-                            } else if(reload%2 != 0){
-                                tooltip += (reload%2) + "/2";
+                    if(weapon1.getLowRange() != 0){
+                        tooltip1 += " | Portée : " + weapon1.getLowRange() + " - " + weapon1.getHighRange();
+                        tooltip1 += " | Rechargement : ";
+                        int reload1 = weapon1.getReload();
+                        if(reload1 / 2 != 0){
+                            tooltip1 += (reload1 /2);
+                            if(reload1 %2 != 0){
+                                tooltip1 += " + " + (reload1 %2) + "/2";
                             }
-
-                            tooltip += "A";
+                        } else if(reload1 %2 != 0){
+                            tooltip1 += (reload1 %2) + "/2";
                         }
 
-                        LinkedList<String> attributes = weapon.getAttributes();
-                        if(attributes.size() != 0) {
-                            tooltip += " | Attributs : ";
-                            for (String attribute : attributes) {
-                                tooltip += attribute + ", ";
-                            }
+                        tooltip1 += "A";
+                    }
 
-                            tooltip = tooltip.substring(0, tooltip.length() - 2);
+                    LinkedList<String> attributes1 = weapon1.getAttributes();
+                    if(attributes1.size() != 0) {
+                        tooltip1 += " | Attributs : ";
+                        for (String attribute : attributes1) {
+                            tooltip1 += attribute + ", ";
                         }
 
-                        weaponLabel.setToolTipText(tooltip);
-                        weaponLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-
-                        panel.getWeaponPanel().add(weaponLabel);
-                        panel.revalidate();
-                        panel.repaint();
-                        dialog.dispose();
+                        tooltip1 = tooltip1.substring(0, tooltip1.length() - 2);
                     }
+
+                    weaponLabel.setToolTipText(tooltip1);
+                    weaponLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+
+                    panel.getWeaponPanel().add(weaponLabel);
+                    panel.revalidate();
+                    panel.repaint();
+                    dialog.dispose();
                 });
 
                 choicePane.add(comboWeapons);
@@ -560,7 +526,7 @@ public class addToCharacterAL implements ActionListener {
 
                 JRadioButton selectEquipment = new JRadioButton("Ajouter un objet");
                 selectEquipment.setSelected(true);
-                JComboBox<String> comboEquipment = new JComboBox<String>();
+                JComboBox<String> comboEquipment = new JComboBox<>();
                 LinkedList<String> sortedEquipments = new LinkedList<>(World.EQUIPMENTS.keySet());
                 Collections.sort(sortedEquipments);
 
@@ -627,100 +593,86 @@ public class addToCharacterAL implements ActionListener {
                 selection.add(selectEquipment);
                 selection.add(selectMoney);
 
-                selectEquipment.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        crownArea.setEnabled(false);
-                        shillingArea.setEnabled(false);
-                        pennyArea.setEnabled(false);
+                selectEquipment.addActionListener(e1 -> {
+                    crownArea.setEnabled(false);
+                    shillingArea.setEnabled(false);
+                    pennyArea.setEnabled(false);
 
-                        comboEquipment.setEnabled(true);
-                    }
+                    comboEquipment.setEnabled(true);
                 });
 
-                selectMoney.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        crownArea.setEnabled(true);
-                        shillingArea.setEnabled(true);
-                        pennyArea.setEnabled(true);
+                selectMoney.addActionListener(e1 -> {
+                    crownArea.setEnabled(true);
+                    shillingArea.setEnabled(true);
+                    pennyArea.setEnabled(true);
 
-                        comboEquipment.setEnabled(false);
-                    }
+                    comboEquipment.setEnabled(false);
                 });
 
                 /* Buttons */
-                cancelButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        dialog.dispose();
-                    }
-                });
+                cancelButton.addActionListener(e1 -> dialog.dispose());
 
-                saveButton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        JLabel equipmentLabel = new JLabel();
+                saveButton.addActionListener(e1 -> {
+                    JLabel equipmentLabel = new JLabel();
 
-                        if(selectEquipment.isSelected()) {
-                            String equipmentName = (String) comboEquipment.getSelectedItem();
+                    if(selectEquipment.isSelected()) {
+                        String equipmentName = (String) comboEquipment.getSelectedItem();
 
-                            equipmentLabel.setText(equipmentName);
-                            Equipment equipment = World.loadEquipment(equipmentName);
+                        equipmentLabel.setText(equipmentName);
+                        Equipment equipment1 = World.loadEquipment(equipmentName);
 
-                            String tooltip = "Enc : " + equipment.getEnc();
+                        String tooltip1 = "Enc : " + equipment1.getEnc();
 
-                            equipmentLabel.setToolTipText(tooltip);
-                            equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-                        } else {
-                            if(crownArea.getText().matches("([0-9]+)||(^$)") && shillingArea.getText().matches("([0-9]+)|(^$)") && pennyArea.getText().matches("([0-9]+)|(^$)")) {
-                                JLabel moneyLabel;
-                                String[] moneySplit;
-                                int[] newMoney = {0, 0, 0};
-                                for (Component cmp : panel.getEquipmentPanel().getComponents()) {
-                                    if (cmp.getClass() == JLabel.class) {
-                                        moneyLabel = (JLabel) cmp;
-                                        if (moneyLabel.getText().startsWith("Money")) {
-                                            moneySplit = moneyLabel.getText().split(",");
-                                            newMoney[0] = Integer.parseInt(moneySplit[0].substring(8, moneySplit[0].length() - 3));
-                                            newMoney[1] = Integer.parseInt(moneySplit[1].substring(1, moneySplit[1].length() - 3));
-                                            newMoney[2] = Integer.parseInt(moneySplit[2].substring(1, moneySplit[2].length() - 3));
+                        equipmentLabel.setToolTipText(tooltip1);
+                        equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+                    } else {
+                        if(crownArea.getText().matches("([0-9]+)||(^$)") && shillingArea.getText().matches("([0-9]+)|(^$)") && pennyArea.getText().matches("([0-9]+)|(^$)")) {
+                            JLabel moneyLabel;
+                            String[] moneySplit;
+                            int[] newMoney = {0, 0, 0};
+                            for (Component cmp : panel.getEquipmentPanel().getComponents()) {
+                                if (cmp.getClass() == JLabel.class) {
+                                    moneyLabel = (JLabel) cmp;
+                                    if (moneyLabel.getText().startsWith("Money")) {
+                                        moneySplit = moneyLabel.getText().split(",");
+                                        newMoney[0] = Integer.parseInt(moneySplit[0].substring(8, moneySplit[0].length() - 3));
+                                        newMoney[1] = Integer.parseInt(moneySplit[1].substring(1, moneySplit[1].length() - 3));
+                                        newMoney[2] = Integer.parseInt(moneySplit[2].substring(1, moneySplit[2].length() - 3));
 
-                                            panel.getEquipmentPanel().remove(moneyLabel);
-                                        }
+                                        panel.getEquipmentPanel().remove(moneyLabel);
                                     }
                                 }
-
-                                if(crownArea.getText().equals("")){
-                                    crownArea.setText("0");
-                                }
-
-                                if(shillingArea.getText().equals("")){
-                                    shillingArea.setText("0");
-                                }
-
-                                if(pennyArea.getText().equals("")){
-                                    pennyArea.setText("0");
-                                }
-
-                                newMoney[0] += Integer.parseInt(crownArea.getText());
-                                newMoney[1] += Integer.parseInt(shillingArea.getText());
-                                newMoney[2] += Integer.parseInt(pennyArea.getText());
-
-                                equipmentLabel.setText("Money : " + newMoney[0] + " Co, " + newMoney[1] + " Pa, " + newMoney[2] + " Sc");
-
-                                equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-                            } else {
-                                dialog.dispose();
-                                return;
                             }
-                        }
-                        panel.getEquipmentPanel().add(equipmentLabel);
 
-                        panel.revalidate();
-                        panel.repaint();
-                        dialog.dispose();
+                            if(crownArea.getText().equals("")){
+                                crownArea.setText("0");
+                            }
+
+                            if(shillingArea.getText().equals("")){
+                                shillingArea.setText("0");
+                            }
+
+                            if(pennyArea.getText().equals("")){
+                                pennyArea.setText("0");
+                            }
+
+                            newMoney[0] += Integer.parseInt(crownArea.getText());
+                            newMoney[1] += Integer.parseInt(shillingArea.getText());
+                            newMoney[2] += Integer.parseInt(pennyArea.getText());
+
+                            equipmentLabel.setText("Money : " + newMoney[0] + " Co, " + newMoney[1] + " Pa, " + newMoney[2] + " Sc");
+
+                            equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+                        } else {
+                            dialog.dispose();
+                            return;
+                        }
                     }
+                    panel.getEquipmentPanel().add(equipmentLabel);
+
+                    panel.revalidate();
+                    panel.repaint();
+                    dialog.dispose();
                 });
 
                 choicePane.add(selectEquipmentPanel);
