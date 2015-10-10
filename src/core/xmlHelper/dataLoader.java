@@ -1,20 +1,16 @@
 package core.xmlHelper;
 
-import core.World;
-import core.characteristics.*;
+import core.characteristics.Career;
+import core.characteristics.Race;
+import core.characteristics.Skill;
+import core.characteristics.Talent;
 import core.entities.AstralSign;
 import core.entities.God;
 import core.equipment.Armour;
 import core.equipment.Equipment;
-import core.equipment.Money;
 import core.equipment.Weapon;
-import org.jdom2.Element;
-import org.jdom2.JDOMException;
-import org.jdom2.input.SAXBuilder;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
 
 /**
  * Created by LinkedFluuuush on 29/09/2015.
@@ -44,27 +40,27 @@ public interface dataLoader {
 
     public LinkedList<String> distinguishingsSignsLoader();*/
 
-    public HashMap<String, ? extends Object> nameLoader(String name);
+    HashMap<String, ?> nameLoader(String name);
 
     /* Unit Loaders */
 
-    public Skill skillLoader(String skill);
+    Skill skillLoader(String skill);
 
-    public Talent talentLoader(String talent);
+    Talent talentLoader(String talent);
 
-    public Equipment equipmentLoader(String equipment);
+    Equipment equipmentLoader(String equipment);
 
-    public Weapon weaponLoader(String weapon);
+    Weapon weaponLoader(String weapon);
 
-    public Armour armourLoader(String armour);
+    Armour armourLoader(String armour);
 
-    public God godLoader(String god);
+    God godLoader(String god);
 
-    public AstralSign astralSignsLoader(String astralSign);
+    AstralSign astralSignsLoader(String astralSign);
 
-    public Race raceLoader(String race);
+    Race raceLoader(String race);
 
-    public Career careerLoader(String career);
+    Career careerLoader(String career);
 
-    public String distinguishingsSignsLoader(String distinguishingSign);
+    String distinguishingsSignsLoader(String distinguishingSign);
 }

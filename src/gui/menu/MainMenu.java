@@ -1,15 +1,10 @@
 package gui.menu;
 
-import convertData.convertData;
 import core.World;
 import gui.CharacterPanel;
 import gui.MainFrame;
-import sun.security.jgss.krb5.Krb5Util;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
@@ -23,7 +18,7 @@ import java.awt.event.KeyEvent;
  * @version 1.0
  */
 public class MainMenu extends JMenuBar{
-    private MainFrame mainFrame;
+    private final MainFrame mainFrame;
 
     public MainMenu (MainFrame mainFrame){
         this.mainFrame = mainFrame;
@@ -33,61 +28,34 @@ public class MainMenu extends JMenuBar{
     private void generateMenu(){
         JMenu menuFichier = new JMenu("Fichier");
         JMenuItem menuFichierAddCharacter = new JMenuItem("Ajouter un personnage");
-        menuFichierAddCharacter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, InputEvent.CTRL_DOWN_MASK));
-        menuFichierAddCharacter.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                Toolkit t = mainFrame.getToolkit();
-                Dimension dim = new Dimension(t.getScreenSize());
-                int nbV = (int)dim.getHeight() / 500;
-                int nbH = (int)dim.getWidth() / 784;
+        menuFichierAddCharacter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_T, InputEvent.CTRL_DOWN_MASK));
+        menuFichierAddCharacter.addActionListener(actionEvent -> {
+            JTabbedPane tabbedPane = mainFrame.tabbedPane;
 
-                JTabbedPane tabbedPane = mainFrame.tabbedPane;
+            CharacterPanel characterPanel = new CharacterPanel();
 
-                JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
-
-                for(int i = 0; i < nbV ; i++){
-                    for (int j = 0; j < nbH ; j++){
-                        rootPane.add(new CharacterPanel());
-                    }
-                }
-
-                tabbedPane.add(rootPane);
-                tabbedPane.setSelectedComponent(rootPane);
-                tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), "New Character");
-            }
+            tabbedPane.add(characterPanel);
+            tabbedPane.setSelectedComponent(characterPanel);
+            tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), "New Character");
         });
 
         JMenuItem menuFichierRemoveCharacter = new JMenuItem("Retirer le personnage");
         menuFichierRemoveCharacter.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, InputEvent.CTRL_DOWN_MASK));
-        menuFichierRemoveCharacter.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                JTabbedPane tabbedPane = mainFrame.tabbedPane;
-                if(tabbedPane.getSelectedIndex() < 0){
-                    tabbedPane.remove(tabbedPane.getSelectedIndex());
-                }
+        menuFichierRemoveCharacter.addActionListener(actionEvent -> {
+            JTabbedPane tabbedPane = mainFrame.tabbedPane;
+            if(tabbedPane.getTabCount() > 0){
+                tabbedPane.remove(tabbedPane.getSelectedIndex());
             }
         });
 
         JMenuItem menuFichierQuit = new JMenuItem("Quitter");
         menuFichierQuit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_DOWN_MASK));
-        menuFichierQuit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                System.exit(0);
-            }
-        });
+        menuFichierQuit.addActionListener(actionEvent -> System.exit(0));
 
         JMenu menuFichierData = new JMenu("Données");
 
         JMenuItem menuFichierReload = new JMenuItem("Recharger les fichiers");
-        menuFichierQuit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                World.loadAll();
-            }
-        });
+        menuFichierQuit.addActionListener(actionEvent -> World.loadAll());
 
         /*JMenuItem menuFichierConvert = new JMenuItem("Reconvertir les fichiers");
         menuFichierQuit.addActionListener(new ActionListener() {

@@ -17,12 +17,12 @@ import java.io.*;
  * @author Jean-Baptiste Louvet jbaptiste.louvet@gmail.com
  * @version 1.0
  */
-public class convertData{
+class convertData{
     public static void main(String[] args){
         convertAll();
     }
 
-    public static void convertAll(){
+    private static void convertAll(){
         File mainFolder = new File("oldResources");
         File[] files = mainFolder.listFiles();
 
@@ -112,8 +112,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/weapons.xml"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -162,7 +160,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/armours.xml"));
-        } catch (FileNotFoundException ignored) {
         } catch (IOException ignored) {
         }
     }
@@ -201,7 +198,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/equipments.xml"));
-        } catch (FileNotFoundException ignored) {
         } catch (IOException ignored) {
         }
     }
@@ -250,7 +246,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/skills.xml"));
-        } catch (FileNotFoundException ignored) {
         } catch (IOException ignored) {
         }
     }
@@ -283,7 +278,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/talents.xml"));
-        } catch (FileNotFoundException ignored) {
         } catch (IOException ignored) {
         }
     }
@@ -536,7 +530,6 @@ public class convertData{
 
                 br.close();
 
-            } catch (FileNotFoundException ignored) {
             } catch (IOException ignored) {
             }
         }
@@ -750,7 +743,6 @@ public class convertData{
                     }
                     root.addContent(career);
 
-                } catch (FileNotFoundException ignored) {
                 } catch (IOException ignored) {
                 }
             }
@@ -808,8 +800,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/gods.xml"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -842,8 +832,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/astralSigns.xml"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -857,7 +845,6 @@ public class convertData{
         Element sign;
 
         String line;
-        String[] elts;
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -874,8 +861,6 @@ public class convertData{
 
             XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
             xmlOutputter.output(document, new FileOutputStream("resources/distinguishingSigns.xml"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

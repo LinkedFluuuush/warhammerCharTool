@@ -1,7 +1,6 @@
 package gui;
 
 import core.World;
-import core.entities.Character;
 import gui.menu.MainMenu;
 
 import javax.swing.*;
@@ -24,7 +23,6 @@ public class MainFrame extends JFrame {
 
         this.setTitle("NPC Generator");
 
-        this.setMinimumSize(new Dimension(789,573));
 //        this.setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,16 +35,21 @@ public class MainFrame extends JFrame {
         World.loadAll();
 
         MainFrame mainFrame = new MainFrame();
+
+        mainFrame.pack();
+        mainFrame.setLocationRelativeTo(null);
+
         mainFrame.setVisible(true);
     }
 
-    public void addAllPanels(){
+    private void addAllPanels(){
         /*Toolkit t = this.getToolkit();
         Dimension dim = new Dimension(t.getScreenSize());
         int nbV = (int)dim.getHeight() / 500;
         int nbH = (int)dim.getWidth() / 784;*/
 
         tabbedPane = new JTabbedPane();
+        tabbedPane.setMinimumSize(new Dimension(784, 500));
 
         /*JPanel rootPane = new JPanel(new GridLayout(nbV, nbH));
 

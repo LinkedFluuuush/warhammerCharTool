@@ -1,9 +1,6 @@
 package core.characteristics;
 
 import core.World;
-import core.equipment.Armour;
-import core.equipment.Equipment;
-import core.equipment.Weapon;
 
 import java.util.LinkedList;
 
@@ -40,8 +37,8 @@ public class Career implements Comparable{
         this.armours = armours;
         this.availableRaces = availableRaces;
         this.type = type;
-        this.accessCareers = new LinkedList<String>();
-        this.openingCareers = new LinkedList<String>();
+        this.accessCareers = new LinkedList<>();
+        this.openingCareers = new LinkedList<>();
     }
 
     public Career(String name, int ws, int bs, int s, int t, int ag, int intel, int wp,
@@ -58,8 +55,8 @@ public class Career implements Comparable{
         this.armours = armours;
         this.availableRaces = availableRaces;
         this.type = type;
-        this.accessCareers = new LinkedList<String>();
-        this.openingCareers = new LinkedList<String>();
+        this.accessCareers = new LinkedList<>();
+        this.openingCareers = new LinkedList<>();
     }
 
     public String getName() {
@@ -173,7 +170,7 @@ public class Career implements Comparable{
             }
 
             allPossibilities.add(previousCareers);
-            previousCareers = new LinkedList<String>();
+            previousCareers = new LinkedList<>();
         }
 
         for(LinkedList<String> aPossibility : allPossibilities){
