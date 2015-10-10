@@ -98,7 +98,7 @@ public class CharacterPanel extends JPanel {
         this.add(comboCareer);
 
         JButton create = new JButton("Créer un nouveau personnage");
-        create.addActionListener(new createCharacterAL(comboRace, comboCareer, nameArea, this));
+        create.addActionListener(new createCharacterAL(this));
 
         create.setBounds(650,465,110,25);
 

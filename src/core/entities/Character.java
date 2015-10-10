@@ -3,12 +3,9 @@ package core.entities;
 import core.World;
 import core.characteristics.*;
 import core.equipment.Armour;
-import core.equipment.Equipment;
 import core.equipment.Money;
 import core.equipment.Weapon;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -37,158 +34,27 @@ public class Character {
 
     private int actualWounds;
 
-    public Character(String name, String player, String race, String career,
-                     LinkedList<String> previousCareers, Profile profile,
-                     LinkedList<String> skills, LinkedList<String> talents,
-                     LinkedList<String> weapons, LinkedList<String> armours,
-                     LinkedList<String> equipment, Money money,
-                     PersonalDetails details, int actualWounds) {
+    public Character(String name, String player, String type, String race, String career) {
         this.name = name;
         this.player = player;
+        this.type = type;
         this.race = race;
         this.career = career;
-        this.previousCareers = previousCareers;
-        this.profile = profile;
-        this.skills = skills;
-        this.talents = talents;
-        this.weapons = weapons;
-        this.armours = armours;
-        this.equipment = equipment;
-        this.money = money;
-        this.details = details;
-        this.actualWounds = actualWounds;
-        this.type = "NPC";
+
+        this.randomCharacter(this.type);
     }
-
-    public Character(String name, String player, String race, String career,
-                     LinkedList<String> previousCareers, Profile profile,
-                     LinkedList<String> skills, LinkedList<String> talents,
-                     LinkedList<String> weapons, LinkedList<String> armours,
-                     LinkedList<String> equipment, Money money,
-                     PersonalDetails details) {
-        this.name = name;
-        this.player = player;
-        this.race = race;
-        this.career = career;
-        this.previousCareers = previousCareers;
-        this.profile = profile;
-        this.skills = skills;
-        this.talents = talents;
-        this.weapons = weapons;
-        this.armours = armours;
-        this.equipment = equipment;
-        this.money = money;
-        this.details = details;
-        this.actualWounds = profile.getW();
-        this.type = "NPC";
-    }
-
-/*    public Character(String name, String race, String career) {
-        this.name = name;
-        this.player = "npc";
-        this.race = race;
-        this.career = career;
-        this.type = "NPC";
-
-        randomCharacter(type);
-
-        this.actualWounds = profile.getW();
-    }*/
 
     public Character(String race, String career) {
-        this.player = "npc";
         this.race = race;
         this.career = career;
         this.type = "NPC";
 
-        randomCharacter(type);
-        randomName();
+        this.randomCharacter(this.type);
 
-        this.previousCareers = new LinkedList<String>();
-        this.actualWounds = profile.getW();
+        this.randomName();
     }
 
-    public Character(String name, String player, String race, String career,
-                     LinkedList<String> previousCareers, Profile profile,
-                     LinkedList<String> skills, LinkedList<String> talents,
-                     LinkedList<String> weapons, LinkedList<String> armours,
-                     LinkedList<String> equipment, Money money,
-                     PersonalDetails details, int actualWounds, String type) {
-        this.name = name;
-        this.player = player;
-        this.race = race;
-        this.career = career;
-        this.previousCareers = previousCareers;
-        this.profile = profile;
-        this.skills = skills;
-        this.talents = talents;
-        this.weapons = weapons;
-        this.armours = armours;
-        this.equipment = equipment;
-        this.money = money;
-        this.details = details;
-        this.actualWounds = actualWounds;
-        this.type = type;
-    }
 
-    public Character(String name, String player, String race, String career,
-                     LinkedList<String> previousCareers, Profile profile,
-                     LinkedList<String> skills, LinkedList<String> talents,
-                     LinkedList<String> weapons, LinkedList<String> armours,
-                     LinkedList<String> equipment, Money money,
-                     PersonalDetails details, String type) {
-        this.name = name;
-        this.player = player;
-        this.race = race;
-        this.career = career;
-        this.previousCareers = previousCareers;
-        this.profile = profile;
-        this.skills = skills;
-        this.talents = talents;
-        this.weapons = weapons;
-        this.armours = armours;
-        this.equipment = equipment;
-        this.money = money;
-        this.details = details;
-        this.actualWounds = profile.getW();
-        this.type = type;
-    }
-
-    public Character(String name, String player, String race, String career, String type) {
-        this.name = name;
-        this.player = player;
-        this.race = race;
-        this.career = career;
-        this.type = type;
-
-        randomCharacter(type);
-
-        this.actualWounds = profile.getW();
-    }
-
-    public Character(String player, String race, String career, String type) {
-        this.player = player;
-        this.race = race;
-        this.career = career;
-        this.type = type;
-
-        randomCharacter(type);
-        randomName();
-
-        this.actualWounds = profile.getW();
-    }
-
-    public Character(String race, String career, String type) {
-        this.player = "npc";
-        this.race = race;
-        this.career = career;
-        this.type = type;
-
-        randomCharacter(type);
-        randomName();
-
-        this.actualWounds = profile.getW();
-    }
 
     public void randomName(){
         Random r = new Random();
@@ -782,169 +648,4 @@ public class Character {
 
         return res;
     }
-
-/*    public JPanel toPanel(){
-        JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
-        JPanel titlePanel = new JPanel();
-        titlePanel.add(new JLabel(this.getName() + ", " + this.getRace() + " " + this.getCareer()));
-
-        JPanel detailsPanel = this.getDetails().toPanel();
-        detailsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-
-        JPanel profilePanel = this.getProfile().toPanel();
-        detailsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-
-        JPanel skillsPanel = new JPanel();
-        skillsPanel.setLayout(new BoxLayout(skillsPanel, BoxLayout.X_AXIS));
-        skillsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-        skillsPanel.add(new JLabel("Compétences : "));
-
-        String s = "";
-        for(String skill : this.getSkills()){
-            s += skill + ", ";
-        }
-
-        s = s.substring(0, s.length() - 2);
-
-        JTextArea textArea = new JTextArea(s);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-        skillsPanel.add(textArea);
-
-        JPanel talentsPanel = new JPanel();
-        talentsPanel.setLayout(new BoxLayout(talentsPanel, BoxLayout.X_AXIS));
-        talentsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-        talentsPanel.add(new JLabel("Talents : "));
-
-        s = "";
-        for(String talent : this.getTalents()){
-            s += talent + ", ";
-        }
-
-        s = s.substring(0, s.length() - 2);
-
-        textArea = new JTextArea(s);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-        talentsPanel.add(textArea);
-
-        JPanel armourPanel = new JPanel();
-        armourPanel.setLayout(new BoxLayout(armourPanel, BoxLayout.X_AXIS));
-        armourPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-
-        armourPanel.add(new JLabel("Armures : "));
-
-        s = "";
-        for(String armour : this.getArmours()){
-            s += armour + ", ";
-        }
-
-        if(s.length() >= 2){
-            s = s.substring(0, s.length() - 2);
-        }
-
-        textArea = new JTextArea(s);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-        armourPanel.add(textArea);
-
-        JPanel armourLevelPanel = new JPanel();
-        armourLevelPanel.setLayout(new BoxLayout(armourLevelPanel, BoxLayout.X_AXIS));
-        armourLevelPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-
-        armourLevelPanel.add(new JLabel("Points d'armure : "));
-
-        s = "";
-        int head = 0, arms = 0, body = 0, legs = 0;
-        Armour armour;
-        for(String armourName : this.getArmours()){
-            armour = World.loadArmour(armourName);
-            if (armour.getCoveredZones().contains("Tête")){
-                head++;
-            }
-            if (armour.getCoveredZones().contains("Bras")){
-                arms++;
-            }
-            if (armour.getCoveredZones().contains("Corps")){
-                body++;
-            }
-            if (armour.getCoveredZones().contains("Jambes")){
-                legs++;
-            }
-        }
-
-        s += "Tête : " + head + ", Bras : " + arms + ", Corps : " + body + ", Jambes : " + legs;
-
-        textArea = new JTextArea(s);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-        armourLevelPanel.add(textArea);
-
-        JPanel weaponsPanel = new JPanel();
-        weaponsPanel.setLayout(new BoxLayout(weaponsPanel, BoxLayout.X_AXIS));
-        weaponsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-
-        weaponsPanel.add(new JLabel("Armes : "));
-
-        s = "";
-        for(String weapon : this.getWeapons()){
-            s += weapon + ", ";
-        }
-
-        if(s.length() >= 2){
-            s = s.substring(0, s.length() - 2);
-        }
-
-        textArea = new JTextArea(s);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-        weaponsPanel.add(textArea);
-
-        JPanel equipmentsPanel = new JPanel();
-        equipmentsPanel.setLayout(new BoxLayout(equipmentsPanel, BoxLayout.X_AXIS));
-        equipmentsPanel.add(new JLabel("Dotations : "));
-
-        s = "";
-        for(String equipment : this.getEquipment()){
-            s += equipment + ", ";
-        }
-
-        if(s.length() >= 2){
-            s = s.substring(0, s.length() - 2);
-        }
-
-        textArea = new JTextArea(s);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
-        equipmentsPanel.add(textArea);
-        equipmentsPanel.setAlignmentX(Component.RIGHT_ALIGNMENT);
-
-        panel.add(titlePanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(detailsPanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(profilePanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(skillsPanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(talentsPanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(armourPanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(armourLevelPanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(weaponsPanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-        panel.add(equipmentsPanel);
-        panel.add(new Box.Filler(new Dimension(5, 5), new Dimension(10, 10), new Dimension(100, 100)));
-
-        JButton removeButton = new JButton("Effacer le personnage");
-        removeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        removeButton.addActionListener(new removeCharacterAL());
-        panel.add(removeButton);
-
-        return panel;
-    }*/
 }

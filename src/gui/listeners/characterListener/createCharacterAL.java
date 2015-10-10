@@ -15,23 +15,19 @@ import java.awt.event.ActionListener;
  * Time: 23:30
  */
 public class createCharacterAL implements ActionListener {
-    private JComboBox<String> comboRace;
-    private JComboBox<String> comboCareer;
-    private JTextArea nameArea;
     private CharacterPanel characterPanel;
 
-    public createCharacterAL(JComboBox<String> comboRace, JComboBox<String> comboCareer, JTextArea nameArea, CharacterPanel characterPanel) {
-        this.comboRace = comboRace;
-        this.comboCareer = comboCareer;
-        this.nameArea = nameArea;
+    public createCharacterAL(CharacterPanel characterPanel) {
         this.characterPanel = characterPanel;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String race = (String)comboRace.getSelectedItem();
-        String career = (String)comboCareer.getSelectedItem();
-        String name = nameArea.getText();
+        String race = (String)this.characterPanel.getComboRace().getSelectedItem();
+        String career = (String)this.characterPanel.getComboCareer().getSelectedItem();
+        String name = this.characterPanel.getNameArea().getText();
+
+        String caracs[] = {}
 
         Character character = new Character(name, "NPC", race, career, "NPC");
 
