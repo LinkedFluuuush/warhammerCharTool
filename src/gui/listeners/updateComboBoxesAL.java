@@ -26,6 +26,8 @@ public class updateComboBoxesAL implements ActionListener {
         JComboBox<String> comboCareer = panel.getComboCareer();
         JComboBox<String> comboGod = panel.getComboGod();
 
+        panel.emptyElements();
+
         if(!comboRace.getSelectedItem().equals("")) {
             /* Update gods */
             LinkedList<String> availableGods = World.loadRace((String) comboRace.getSelectedItem()).getWorshipedGods();

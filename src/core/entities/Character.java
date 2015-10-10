@@ -8,6 +8,7 @@ import core.equipment.Armour;
 import core.equipment.Money;
 import core.equipment.Weapon;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -56,6 +57,193 @@ public class Character {
 
         this.previousCareers = new LinkedList<>();
         this.actualWounds = profile.getW();
+    }
+
+    public Character(String name, String player, String race, String career,
+                     String type, String[] caracs, String age, String eyeColour,
+                     String hairColour, String gender, String size, String weight,
+                     String astralSign, String birthPlace, String worshippedGod,
+                     String[] marks, LinkedList<String> skills, LinkedList<String> talents,
+                     LinkedList<String> armours, LinkedList<String> weapons,
+                     LinkedList<String> equipments, Money money) {
+
+        Random r = new Random();
+
+        this.name = name;
+        this.player = player;
+        this.race = race;
+        this.career = career;
+        this.type = type;
+
+        int[] basicCharacs = new int[16];
+
+        for(int i = 0 ; i < 16 ; i++){
+            if(caracs[i].equals("")){
+                basicCharacs[i] = 0;
+            } else {
+                basicCharacs[i] = Integer.parseInt(caracs[i]);
+            }
+        }
+
+        this.basicProfile = new Profile(basicCharacs[0], basicCharacs[1], basicCharacs[2],
+                basicCharacs [3], basicCharacs[4], basicCharacs[5], basicCharacs[6],
+                basicCharacs [7], basicCharacs[8], basicCharacs[9], basicCharacs[10],
+                basicCharacs [11], basicCharacs[12], basicCharacs[13], basicCharacs[14],
+                basicCharacs [15]);
+
+        boolean sex;
+
+        if(gender.equals("")){
+            sex = r.nextBoolean();
+        } else {
+            sex = gender.equals("Masculin");
+        }
+
+        size = size.replace("m", "");
+        weight = weight.replaceAll("kg", "");
+
+        int ageInt = (age.equals("")) ? World.loadRace(this.race).getAge()[r.nextInt(World.loadRace(this.race).getAge().length)] : Integer.parseInt(age);
+        int sizeInt = (size.equals("")) ? (sex ? World.loadRace(this.race).getmSize() : World.loadRace(this.race).getfSize()) + (int)(r.nextInt(10) * 2.5) : Integer.parseInt(size);
+        int weightInt = (weight.equals("")) ? World.loadRace(this.race).getWeight()[r.nextInt(World.loadRace(this.race).getWeight().length)] : Integer.parseInt(weight);
+
+        this.setDetails(new PersonalDetails(sex, ageInt,
+                birthPlace, worshippedGod, sizeInt, weightInt,
+                eyeColour, hairColour, astralSign, new LinkedList<String>(Arrays.asList(marks))));
+
+        this.skills = skills;
+        this.talents = talents;
+        this.armours = armours;
+        this.weapons = weapons;
+        this.equipment = equipments;
+        this.money = money;
+
+        this.previousCareers = new LinkedList<>();
+
+        this.completeCharacter();
+    }
+
+    private void completeCharacter() {
+        Random r = new Random();
+
+        Race race = World.loadRace(this.race);
+        Career career = World.loadCareer(this.career);
+
+        if(this.name.equals("")){
+            this.randomName();
+        }
+
+        if(this.details.getBirthplace().equals("")){
+            this.details.setBirthplace(race.getBirthPlaces().get(r.nextInt(race.getBirthPlaces().size())));
+        }
+
+        if(this.details.getFavoriteGod().equals("")){
+            this.details.setFavoriteGod(race.getWorshipedGods().get(r.nextInt(race.getWorshipedGods().size())));
+        }
+
+        if(this.details.getEyeColour().equals("")){
+            this.details.setEyeColour(race.getEyeColour()[r.nextInt(race.getEyeColour().length)]);
+        }
+
+        if(this.details.getHairColour().equals("")){
+            this.details.setHairColour(race.getHairColour()[r.nextInt(race.getHairColour().length)]);
+        }
+
+        if(this.details.getAstralSign().equals("")){
+            this.details.setAstralSign((String) World.ASTRALSIGNS.keySet().toArray()[r.nextInt(World.ASTRALSIGNS.keySet().size())]);
+        }
+
+        if(this.details.getDistinguishingMarks().isEmpty() || this.details.getDistinguishingMarks().get(0).equals("")){
+            LinkedList<String> distinguishingMarks = new LinkedList<>();
+            String selectedMark;
+            int nbMarks = r.nextInt(4) + 1;
+
+            for(int i = 0 ; i< nbMarks ; i++){
+                do{
+                    selectedMark = new LinkedList<>(World.DISTINGUISHINGSIGNS.keySet()).get(r.nextInt(World.DISTINGUISHINGSIGNS.size()));
+                } while(distinguishingMarks.contains(selectedMark));
+
+                distinguishingMarks.add(selectedMark);
+            }
+
+            this.details.setDistinguishingMarks(distinguishingMarks);
+        }
+
+        this.completeBasicProfile(race);
+        this.profile = this.applyCareersProfile();
+        this.skills.addAll(this.randomSkills());
+        this.talents.addAll(this.randomTalents());
+        this.randomTrappings();
+
+        this.cleanLists();
+    }
+
+    private void cleanLists() {
+        LinkedList<String> cleanedSkills = new LinkedList<>();
+
+        for(String skill : this.skills){
+            if(countElement(cleanedSkills, skill) < 3){
+                cleanedSkills.add(skill);
+            }
+        }
+
+        this.skills = cleanedSkills;
+
+        LinkedList<String> cleanedTalents = new LinkedList<>();
+        for(String talent : this.talents){
+            if(!cleanedTalents.contains(talent)){
+                cleanedTalents.add(talent);
+            }
+        }
+
+        this.talents = cleanedTalents;
+    }
+
+    private int countElement(LinkedList<String> list, String element) {
+        int i = 0;
+
+        for(String s : list){
+            if(s.equals(element)){
+                i++;
+            }
+        }
+
+        return i;
+    }
+
+    private void completeBasicProfile(Race race) {
+        Random r = new Random();
+
+        if(this.basicProfile.getWs() == 0){
+            this.basicProfile.setWs(r.nextInt(20) + race.getProfile().getWs());
+        }
+
+        if(this.basicProfile.getBs() == 0){
+            this.basicProfile.setBs(r.nextInt(20) + race.getProfile().getBs());
+        }
+
+        if(this.basicProfile.getS() == 0){
+            this.basicProfile.setS(r.nextInt(20) + race.getProfile().getWs());
+        }
+
+        if(this.basicProfile.getT() == 0){
+            this.basicProfile.setT(r.nextInt(20) + race.getProfile().getT());
+        }
+
+        if(this.basicProfile.getAg() == 0){
+            this.basicProfile.setAg(r.nextInt(20) + race.getProfile().getAg());
+        }
+
+        if(this.basicProfile.getIntel() == 0){
+            this.basicProfile.setIntel(r.nextInt(20) + race.getProfile().getIntel());
+        }
+
+        if(this.basicProfile.getWp() == 0){
+            this.basicProfile.setWp(r.nextInt(20) + race.getProfile().getWp());
+        }
+
+        if(this.basicProfile.getFel() == 0){
+            this.basicProfile.setFel(r.nextInt(20) + race.getProfile().getFel());
+        }
     }
 
     private void randomName(){
@@ -384,9 +572,9 @@ public class Character {
             newEquipment.add(equipmentChoice.get(r.nextInt(equipmentChoice.size())));
         }
 
-        this.setWeapons(newWeapons);
-        this.setArmours(newArmours);
-        this.setEquipment(newEquipment);
+        this.weapons.addAll(newWeapons);
+        this.armours.addAll(newArmours);
+        this.equipment.addAll(newEquipment);
     }
 
     private Money randomMoney(){

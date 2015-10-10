@@ -735,9 +735,10 @@ public class CharacterPanel extends JPanel {
 
         this.add(textAreaName);*/
 
-        nameArea.setText(character.getName());
         comboRace.setSelectedItem(character.getRace());
         comboCareer.setSelectedItem(character.getCareer());
+
+        nameArea.setText(character.getName());
 
         wsArea.setText(character.getProfile().getWs() + "");
         bsArea.setText(character.getProfile().getBs() + "");
@@ -809,6 +810,9 @@ public class CharacterPanel extends JPanel {
         removeButton.addActionListener(new removeCharacterAL());
         removeButton.setBounds(620, 450, 140, 30);
         this.add(removeButton);*/
+
+        this.revalidate();
+        this.repaint();
     }
 
     public void generatePanelSkills(){
@@ -1021,5 +1025,57 @@ public class CharacterPanel extends JPanel {
         this.add(rightLegArmourLabel);
         leftLegArmourLabel.setBounds(732, 424, 25, 10);
         this.add(leftLegArmourLabel);
+    }
+
+    public void emptyElements() {
+        this.nameArea.setText("");
+
+        this.wsArea.setText("");
+        this.bsArea.setText("");
+        this.sArea.setText("");
+        this.tArea.setText("");
+        this.agArea.setText("");
+        this.intArea.setText("");
+        this.wpArea.setText("");
+        this.felArea.setText("");
+
+
+        this.aArea.setText("");
+        this.wArea.setText("");
+        this.sbArea.setText("");
+        this.tbArea.setText("");
+        this.mArea.setText("");
+        this.magArea.setText("");
+        this.ipArea.setText("");
+        this.fpArea.setText("");
+
+
+        this.ageArea.setText("");
+        this.comboGender.setSelectedItem("");
+        this.eyeColourArea.setText("");
+        this.hairColourArea.setText("");
+        this.sizeArea.setText("");
+        this.weightArea.setText("");
+        this.comboAstralSign.setSelectedItem("");
+        this.birthPlaceArea.setText("");
+        this.comboGod.setSelectedItem("");
+        this.marksArea.setText("");
+
+
+        this.skillPanel.removeAll();
+        this.talentPanel.removeAll();
+        this.armourPanel.removeAll();
+        this.weaponPanel.removeAll();
+        this.equipmentPanel.removeAll();
+
+        this.headArmourLabel.setText("");
+        this.leftArmArmourLabel.setText("");
+        this.rightArmArmourLabel.setText("");
+        this.bodyArmourLabel.setText("");
+        this.leftLegArmourLabel.setText("");
+        this.rightLegArmourLabel.setText("");
+
+        this.revalidate();
+        this.repaint();
     }
 }
