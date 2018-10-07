@@ -1,6 +1,8 @@
 package gui.listeners.characterListener;
 
 import core.World;
+import core.characteristics.Career;
+import core.characteristics.Skill;
 import core.equipment.Armour;
 import core.equipment.Equipment;
 import core.equipment.Weapon;
@@ -51,28 +53,24 @@ public class addToCharacterAL implements ActionListener {
                 buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
 
                 /* Selection elements */
-                JComboBox<String> comboSkills = new JComboBox<>();
+                JComboBox<Skill> comboSkills = new JComboBox<>();
                 LinkedList<String> sortedSkills = new LinkedList<>(World.SKILLS.keySet());
                 Collections.sort(sortedSkills);
 
-                LinkedList<Component> alreadyHaveSkills = new LinkedList<>(Arrays.asList(panel.getSkillPanel().getComponents()));
+                LinkedList<String> alreadyHaveSkills = panel.getCharacter().getSkills();
 
                 JLabel labelSkill;
                 String skillNameTemp;
-                for(Component cmp : alreadyHaveSkills){
-                    if(cmp.getClass() == JLabel.class){
-                        labelSkill = (JLabel) cmp;
-                        if(labelSkill.getText().contains("(+20)")) {
-                            skillNameTemp = labelSkill.getText();
-                            skillNameTemp = skillNameTemp.replaceAll("( \\(\\+20\\))(.*)", "");
-                            sortedSkills.remove(skillNameTemp);
-                        }
+                for(String skill : alreadyHaveSkills){
+                    if(Collections.frequency(alreadyHaveSkills, skill) >= 3){
+                        sortedSkills.remove(skill);
                     }
                 }
 
-                comboSkills.addItem("Choisir une compétence");
+                Skill defaultSkill = new Skill("Choisir une compétence", "");
+                comboSkills.addItem(defaultSkill);
                 for(String skillName : sortedSkills){
-                    comboSkills.addItem(skillName + " : " + World.loadSkill(skillName).getCharacteristics());
+                    comboSkills.addItem(World.loadSkill(skillName));
                 }
 
                 saveButton.setEnabled(false);
@@ -81,39 +79,25 @@ public class addToCharacterAL implements ActionListener {
 
                 comboSkills.addActionListener(e1 -> {
                     comboLevels.removeAllItems();
-                    LinkedList<Component> alreadyHaveSkills1 = new LinkedList<>(Arrays.asList(panel.getSkillPanel().getComponents()));
 
-                    JLabel labelSkill1 = null;
-                    boolean skillFound = false;
-                    String skillName;
-                    for(Component cmp : alreadyHaveSkills1){
-                        if(cmp.getClass() == JLabel.class){
-                            labelSkill1 = (JLabel) cmp;
-                            skillName = labelSkill1.getText();
-                            skillName = skillName.replace(" (+10)", "");
-                            skillName = skillName.replace(" (+20)", "");
+                    LinkedList<String> alreadyHaveSkills_Listener = panel.getCharacter().getSkills();
 
-                            if(skillName.equals(comboSkills.getSelectedItem())) {
-                                skillFound = true;
+                    if(!comboSkills.getSelectedItem().equals(defaultSkill)){
+                        switch (Collections.frequency(alreadyHaveSkills_Listener, ((Skill)comboSkills.getSelectedItem()).getName())){
+                            case 0:
+                                comboLevels.addItem("Acquis");
+                            case 1:
+                                comboLevels.addItem("+10");
+                            case 2:
+                                comboLevels.addItem("+20");
                                 break;
-                            }
+                            default:
+                                break;
                         }
                     }
 
-                    if(skillFound){
-                        if(labelSkill1.getText().contains("+10")){
-                            comboLevels.addItem("+20");
-                        } else {
-                            comboLevels.addItem("+10");
-                            comboLevels.addItem("+20");
-                        }
-                    } else {
-                        comboLevels.addItem("Acquis");
-                        comboLevels.addItem("+10");
-                        comboLevels.addItem("+20");
-                    }
 
-                    if(comboSkills.getSelectedItem().equals("Choisir une compétence")){
+                    if(comboSkills.getSelectedItem().equals(defaultSkill)){
                         saveButton.setEnabled(false);
                     } else {
                         saveButton.setEnabled(true);
@@ -128,40 +112,31 @@ public class addToCharacterAL implements ActionListener {
                 cancelButton.addActionListener(e1 -> dialog.dispose());
 
                 saveButton.addActionListener(e1 -> {
-                    LinkedList<Component> alreadyHaveSkills1 = new LinkedList<>(Arrays.asList(panel.getSkillPanel().getComponents()));
+                    LinkedList<String> alreadyHaveSkills_Listener = panel.getCharacter().getSkills();
 
-                    JLabel skillLabel;
-                    String skillName;
-                    for(Component cmp : alreadyHaveSkills1){
-                        if(cmp.getClass() == JLabel.class){
-                            skillLabel = (JLabel) cmp;
-                            skillName = skillLabel.getText();
-                            skillName = skillName.replace(" (+10)", "");
-                            skillName = skillName.replace(" (+20)", "");
-
-                            if(skillName.equals(comboSkills.getSelectedItem())) {
-                                panel.getSkillPanel().remove(skillLabel);
-                                break;
-                            }
-                        }
+                    Skill skill = (Skill) comboSkills.getSelectedItem();
+                    int timesToAdd;
+                    switch(String.valueOf(comboLevels.getSelectedItem())){
+                        case "+20":
+                            timesToAdd = 3;
+                            break;
+                        case "+10":
+                            timesToAdd = 2;
+                            break;
+                        case "Acquis":
+                            timesToAdd = 1;
+                            break;
+                        default:
+                            timesToAdd = 0;
+                            break;
                     }
 
-                    skillLabel = new JLabel();
+                    timesToAdd -= Collections.frequency(alreadyHaveSkills_Listener, ((Skill)comboSkills.getSelectedItem()).getName());
 
-                    skillName = ((String) comboSkills.getSelectedItem()).split(" : ")[0];
-                    String skillChar = ((String) comboSkills.getSelectedItem()).split(" : ")[1];
-                    String skillNameLevel = skillName;
-                    String level = (String) comboLevels.getSelectedItem();
-
-                    if(!level.equals("Acquis")){
-                        skillNameLevel += " (" + level + ")";
+                    for(int i = 0 ; i < timesToAdd ; i++) {
+                        panel.getCharacter().getSkills().add(skill.getName());
                     }
 
-                    skillNameLevel += " : " + skillChar;
-                    skillLabel.setText(skillNameLevel);
-                    skillLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-
-                    panel.getSkillPanel().add(skillLabel);
                     panel.revalidate();
                     panel.repaint();
                     dialog.dispose();
@@ -203,14 +178,10 @@ public class addToCharacterAL implements ActionListener {
                 LinkedList<String> sortedTalents = new LinkedList<>(World.TALENTS.keySet());
                 Collections.sort(sortedTalents);
 
-                LinkedList<Component> alreadyHaveTalents = new LinkedList<>(Arrays.asList(panel.getTalentPanel().getComponents()));
+                LinkedList<String> alreadyHaveTalents = panel.getCharacter().getTalents();
 
-                JLabel labelTalent;
-                for(Component cmp : alreadyHaveTalents){
-                    if(cmp.getClass() == JLabel.class){
-                        labelTalent = (JLabel) cmp;
-                        sortedTalents.remove(labelTalent.getText());
-                    }
+                for(String talent : alreadyHaveTalents) {
+                    sortedTalents.remove(talent);
                 }
 
                 ComboboxToolTipRenderer comboTalentRenderer = new ComboboxToolTipRenderer();
@@ -229,15 +200,10 @@ public class addToCharacterAL implements ActionListener {
                 cancelButton.addActionListener(e1 -> dialog.dispose());
 
                 saveButton.addActionListener(e1 -> {
-                    JLabel talentLabel = new JLabel();
-
                     String talentName = (String) comboTalents.getSelectedItem();
 
-                    talentLabel.setText(talentName);
-                    talentLabel.setToolTipText(World.loadTalent(talentName).getDescription());
-                    talentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+                    panel.getCharacter().getTalents().add(talentName);
 
-                    panel.getTalentPanel().add(talentLabel);
                     panel.revalidate();
                     panel.repaint();
                     dialog.dispose();
@@ -277,26 +243,23 @@ public class addToCharacterAL implements ActionListener {
                 LinkedList<String> sortedArmours = new LinkedList<>(World.ARMOURS.keySet());
                 Collections.sort(sortedArmours);
 
-                LinkedList<Component> alreadyHaveArmours = new LinkedList<>(Arrays.asList(panel.getArmourPanel().getComponents()));
+                LinkedList<String> alreadyHaveArmours = panel.getCharacter().getArmours();
 
                 JLabel labelArmour;
                 Armour armour, armourInQueue;
                 LinkedList<String> sortedArmourCopy;
 
-                for(Component cmp : alreadyHaveArmours){
-                    if(cmp.getClass() == JLabel.class){
-                        labelArmour = (JLabel) cmp;
-                        sortedArmours.remove(labelArmour.getText());
+                for(String armourName : alreadyHaveArmours){
+                    sortedArmours.remove(armourName);
 
-                        armour = World.loadArmour(labelArmour.getText());
-                        sortedArmourCopy = (LinkedList<String>) sortedArmours.clone();
-                        for(String armourInQueueName : sortedArmourCopy){
-                            armourInQueue = World.loadArmour(armourInQueueName);
-                            if(armourInQueue.getArmourType().equals(armour.getArmourType())){
-                                for(String covered : armour.getCoveredZones()){
-                                    if(armourInQueue.getCoveredZones().contains(covered)){
-                                        sortedArmours.remove(armourInQueueName);
-                                    }
+                    armour = World.loadArmour(armourName);
+                    sortedArmourCopy = (LinkedList<String>) sortedArmours.clone();
+                    for(String armourInQueueName : sortedArmourCopy){
+                        armourInQueue = World.loadArmour(armourInQueueName);
+                        if(armourInQueue.getArmourType().equals(armour.getArmourType())){
+                            for(String covered : armour.getCoveredZones()){
+                                if(armourInQueue.getCoveredZones().contains(covered)){
+                                    sortedArmours.remove(armourInQueueName);
                                 }
                             }
                         }
@@ -332,27 +295,10 @@ public class addToCharacterAL implements ActionListener {
                 cancelButton.addActionListener(e1 -> dialog.dispose());
 
                 saveButton.addActionListener(e1 -> {
-                    JLabel armourLabel = new JLabel();
-
                     String armourName = (String) comboArmours.getSelectedItem();
 
-                    armourLabel.setText(armourName);
-                    String tooltip1 = "";
-                    Armour armour1 = World.loadArmour(armourName);
-                    LinkedList<String> coveredParts1 = armour1.getCoveredZones();
+                    panel.getCharacter().getArmours().add(armourName);
 
-                    for(String part : coveredParts1){
-                        tooltip1 += part + ", ";
-                    }
-
-                    tooltip1 = tooltip1.substring(0, tooltip1.length() - 2);
-
-                    tooltip1 += " : " + armour1.getArmourLevel() + " PA";
-
-                    armourLabel.setToolTipText(tooltip1);
-                    armourLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-
-                    panel.getArmourPanel().add(armourLabel);
                     panel.generateArmourLevels();
                     panel.revalidate();
                     panel.repaint();
@@ -444,46 +390,9 @@ public class addToCharacterAL implements ActionListener {
                 cancelButton.addActionListener(e1 -> dialog.dispose());
 
                 saveButton.addActionListener(e1 -> {
-                    JLabel weaponLabel = new JLabel();
-
                     String weaponName = (String) comboWeapons.getSelectedItem();
+                    panel.getCharacter().getWeapons().add(weaponName);
 
-                    weaponLabel.setText(weaponName);
-                    String tooltip1 = "";
-                    Weapon weapon1 = World.loadWeapon(weaponName);
-
-                    tooltip1 = weapon1.getGroup() + " | Dégâts " + weapon1.getDamage();
-
-                    if(weapon1.getLowRange() != 0){
-                        tooltip1 += " | Portée : " + weapon1.getLowRange() + " - " + weapon1.getHighRange();
-                        tooltip1 += " | Rechargement : ";
-                        int reload1 = weapon1.getReload();
-                        if(reload1 / 2 != 0){
-                            tooltip1 += (reload1 /2);
-                            if(reload1 %2 != 0){
-                                tooltip1 += " + " + (reload1 %2) + "/2";
-                            }
-                        } else if(reload1 %2 != 0){
-                            tooltip1 += (reload1 %2) + "/2";
-                        }
-
-                        tooltip1 += "A";
-                    }
-
-                    LinkedList<String> attributes1 = weapon1.getAttributes();
-                    if(attributes1.size() != 0) {
-                        tooltip1 += " | Attributs : ";
-                        for (String attribute : attributes1) {
-                            tooltip1 += attribute + ", ";
-                        }
-
-                        tooltip1 = tooltip1.substring(0, tooltip1.length() - 2);
-                    }
-
-                    weaponLabel.setToolTipText(tooltip1);
-                    weaponLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
-
-                    panel.getWeaponPanel().add(weaponLabel);
                     panel.revalidate();
                     panel.repaint();
                     dialog.dispose();
@@ -613,37 +522,11 @@ public class addToCharacterAL implements ActionListener {
                 cancelButton.addActionListener(e1 -> dialog.dispose());
 
                 saveButton.addActionListener(e1 -> {
-                    JLabel equipmentLabel = new JLabel();
-
                     if(selectEquipment.isSelected()) {
                         String equipmentName = (String) comboEquipment.getSelectedItem();
-
-                        equipmentLabel.setText(equipmentName);
-                        Equipment equipment1 = World.loadEquipment(equipmentName);
-
-                        String tooltip1 = "Enc : " + equipment1.getEnc();
-
-                        equipmentLabel.setToolTipText(tooltip1);
-                        equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+                        panel.getCharacter().getEquipment().add(equipmentName);
                     } else {
                         if(crownArea.getText().matches("([0-9]+)||(^$)") && shillingArea.getText().matches("([0-9]+)|(^$)") && pennyArea.getText().matches("([0-9]+)|(^$)")) {
-                            JLabel moneyLabel;
-                            String[] moneySplit;
-                            int[] newMoney = {0, 0, 0};
-                            for (Component cmp : panel.getEquipmentPanel().getComponents()) {
-                                if (cmp.getClass() == JLabel.class) {
-                                    moneyLabel = (JLabel) cmp;
-                                    if (moneyLabel.getText().startsWith("Money")) {
-                                        moneySplit = moneyLabel.getText().split(",");
-                                        newMoney[0] = Integer.parseInt(moneySplit[0].substring(8, moneySplit[0].length() - 3));
-                                        newMoney[1] = Integer.parseInt(moneySplit[1].substring(1, moneySplit[1].length() - 3));
-                                        newMoney[2] = Integer.parseInt(moneySplit[2].substring(1, moneySplit[2].length() - 3));
-
-                                        panel.getEquipmentPanel().remove(moneyLabel);
-                                    }
-                                }
-                            }
-
                             if(crownArea.getText().equals("")){
                                 crownArea.setText("0");
                             }
@@ -656,19 +539,14 @@ public class addToCharacterAL implements ActionListener {
                                 pennyArea.setText("0");
                             }
 
-                            newMoney[0] += Integer.parseInt(crownArea.getText());
-                            newMoney[1] += Integer.parseInt(shillingArea.getText());
-                            newMoney[2] += Integer.parseInt(pennyArea.getText());
-
-                            equipmentLabel.setText("Money : " + newMoney[0] + " Co, " + newMoney[1] + " Pa, " + newMoney[2] + " Sc");
-
-                            equipmentLabel.setBorder(BorderFactory.createRaisedSoftBevelBorder());
+                            panel.getCharacter().getMoney().setBrassPennies(Integer.parseInt(pennyArea.getText()) + panel.getCharacter().getMoney().getBrassPennies());
+                            panel.getCharacter().getMoney().setSilverShillings(Integer.parseInt(shillingArea.getText()) + panel.getCharacter().getMoney().getSilverShillings());
+                            panel.getCharacter().getMoney().setGoldenCrowns(Integer.parseInt(crownArea.getText()) + panel.getCharacter().getMoney().getGoldenCrowns());
                         } else {
                             dialog.dispose();
                             return;
                         }
                     }
-                    panel.getEquipmentPanel().add(equipmentLabel);
 
                     panel.revalidate();
                     panel.repaint();
@@ -693,8 +571,71 @@ public class addToCharacterAL implements ActionListener {
                 dialog.pack();
                 dialog.setVisible(true);
                 break;
+            case "career":
+                dialog = new JDialog((JFrame)panel.getParent().getParent().getParent().getParent(),"Sélection d'une carrière", true);
+                contentPane = dialog.getContentPane();
+
+                /* Panels */
+                choicePane = new JPanel();
+                choicePane.setLayout(new BoxLayout(choicePane, BoxLayout.LINE_AXIS));
+                choicePane.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+
+                buttonPane = new JPanel();
+                buttonPane.setLayout(new BoxLayout(buttonPane, BoxLayout.LINE_AXIS));
+                buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
+
+                /* Selection elements */
+                JComboBox<String> comboCareers = new JComboBox<>();
+                LinkedList<String> sortedCareers = new LinkedList<>(World.CAREERS.keySet());
+                Collections.sort(sortedCareers);
+
+                LinkedList<String> alreadyHaveCareers = panel.getCharacter().getCareers();
+
+                ComboboxToolTipRenderer comboCareerRenderer = new ComboboxToolTipRenderer();
+                comboCareers.setRenderer(comboCareerRenderer);
+
+                for(String careerName : sortedCareers) {
+                    if (!alreadyHaveCareers.contains(careerName) &&
+                            (World.loadCareer(careerName).getType().equals(Career.CareerType.BASE) ||
+                                    Career.isCareerAvailableFrom(careerName, alreadyHaveCareers)) &&
+                            World.loadCareer(careerName).getAvailableRaces().contains(panel.getComboRace().getSelectedItem())) {
+                        comboCareers.addItem(careerName);
+                    }
+                }
+
+                /* Buttons */
+                cancelButton.addActionListener(e1 -> dialog.dispose());
+
+                saveButton.addActionListener(e1 -> {
+                    String careerName = (String) comboCareers.getSelectedItem();
+
+                    panel.getCharacter().getCareers().add(careerName);
+                    panel.revalidate();
+                    panel.repaint();
+                    dialog.dispose();
+                });
+
+                choicePane.add(comboCareers);
+
+                buttonPane.add(Box.createHorizontalGlue());
+                buttonPane.add(cancelButton);
+                buttonPane.add(Box.createRigidArea(new Dimension(10, 0)));
+                buttonPane.add(saveButton);
+
+                contentPane.add(choicePane, BorderLayout.CENTER);
+                contentPane.add(buttonPane, BorderLayout.PAGE_END);
+
+                dialog.setLocationRelativeTo(null);
+                dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+                dialog.setResizable(false);
+                dialog.pack();
+                dialog.setVisible(true);
+                break;
             default:
                 break;
         }
+
+        panel.emptyElements();
+        panel.applyCharacter();
     }
 }

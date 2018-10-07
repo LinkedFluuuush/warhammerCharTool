@@ -1,5 +1,7 @@
 package core.characteristics;
 
+import core.World;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Linked
@@ -22,5 +24,10 @@ public class Skill {
 
     public String getCharacteristics() {
         return characteristics;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + (this.getCharacteristics().equals("") ? "" : " : " + this.getCharacteristics());
     }
 }

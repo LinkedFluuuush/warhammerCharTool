@@ -24,12 +24,13 @@ public class PersonalDetails {
     public PersonalDetails(){
         male = true;
         age = 0;
-        birthplace = "Unknown";
-        favoriteGod = "Sigmar";
+        birthplace = "";
+        favoriteGod = "";
         height = 0;
         weight = 0;
-        eyeColour = "Unknown";
-        hairColour = "Unknown";
+        eyeColour = "";
+        hairColour = "";
+        astralSign = "";
         distinguishingMarks = new LinkedList<>();
     }
 

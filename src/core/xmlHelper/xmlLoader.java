@@ -1500,7 +1500,14 @@ public class xmlLoader implements dataLoader{
                     }
                 }
 
-                return new Career(currentCareer.getAttributeValue("name"), profile, skills, talents, equipments, weapons, armours, availableRaces, Integer.parseInt(currentCareer.getAttributeValue("type")));
+                Career.CareerType type;
+                if(Integer.parseInt(currentCareer.getAttributeValue("type")) == 1){
+                    type = Career.CareerType.BASE;
+                } else {
+                    type = Career.CareerType.AVANCE;
+                }
+
+                return new Career(currentCareer.getAttributeValue("name"), profile, skills, talents, equipments, weapons, armours, availableRaces, type);
             }
         }
 

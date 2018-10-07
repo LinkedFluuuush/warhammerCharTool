@@ -24,6 +24,6 @@ public class recoverCharacterAL implements ActionListener {
 
         JTabbedPane tabbedPane = (JTabbedPane)characterPanel.getParent().getParent();
         tabbedPane.setTitleAt(tabbedPane.getSelectedIndex(), characterPanel.getCharacter().getRace()
-                + " " + characterPanel.getCharacter().getCareer());
+                + " " + characterPanel.getCharacter().getCareers());
     }
 }

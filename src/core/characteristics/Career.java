@@ -10,9 +10,26 @@ import java.util.LinkedList;
  * Time: 15:20
  */
 public class Career implements Comparable{
+    public static boolean isCareerAvailableFrom(String careerName, LinkedList<String> alreadyHaveCareers) {
+        boolean available = false;
+        for(String career : alreadyHaveCareers){
+            if(World.loadCareer(career).getOpeningCareers().contains(career)){
+                available = true;
+                break;
+            }
+        }
+
+        return available;
+    }
+
+    public enum CareerType{
+        BASE,
+        AVANCE
+    };
+
     private String name;
     private Profile profile;
-    private int type;
+    private CareerType type;
 
     private LinkedList<LinkedList<String>> skills;
     private LinkedList<LinkedList<String>> talents;
@@ -27,7 +44,7 @@ public class Career implements Comparable{
 
     public Career(String name, Profile profile, LinkedList<LinkedList<String>> skills,
                   LinkedList<LinkedList<String>> talents, LinkedList<LinkedList<String>> equipments,
-                  LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> availableRaces, int type) {
+                  LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> availableRaces, CareerType type) {
         this.name = name;
         this.profile = profile;
         this.skills = skills;
@@ -45,7 +62,7 @@ public class Career implements Comparable{
                   int fel, int a, int w, int m, int mag,
                   LinkedList<LinkedList<String>> skills,
                   LinkedList<LinkedList<String>> talents, LinkedList<LinkedList<String>> equipments,
-                  LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> availableRaces, int type) {
+                  LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> availableRaces, CareerType type) {
         this.name = name;
         this.profile = new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag);
         this.skills = skills;
@@ -75,11 +92,11 @@ public class Career implements Comparable{
         this.profile = profile;
     }
 
-    public int getType() {
+    public CareerType getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(CareerType type) {
         this.type = type;
     }
 
@@ -158,7 +175,7 @@ public class Career implements Comparable{
     public LinkedList<String> getRandomPreviousCareers(int depth, int minDepth, LinkedList<String> previousCareers, LinkedList<LinkedList<String>> allPossibilities){
         Career career;
         for(String careerName : this.getAccessCareers()){
-            if(this.type != 1){
+            if(this.type != CareerType.BASE){
                 career = World.loadCareer(careerName);
                 depth++;
                 previousCareers.add(careerName);
@@ -190,7 +207,7 @@ public class Career implements Comparable{
     public String allToString(){
         String res = "Carrière : " + name + " (Carrière";
 
-        if(type == 1){
+        if(type == CareerType.BASE){
             res += " de base)\n";
         } else {
             res += " avancée)\n";

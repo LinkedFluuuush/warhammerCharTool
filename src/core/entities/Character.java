@@ -23,8 +23,7 @@ public class Character {
     private String type;
 
     private String race;
-    private String career;
-    private LinkedList<String> previousCareers;
+    private LinkedList<String> careers;
     private Profile profile;
     private Profile basicProfile;
     private LinkedList<String> skills;
@@ -37,29 +36,50 @@ public class Character {
 
     private int actualWounds;
 
-    public Character(String name, String player, String type, String race, String career) {
+    public Character(String name, String player, String type, String race, LinkedList<String> careers) {
         this.name = name;
         this.player = player;
         this.type = type;
         this.race = race;
-        this.career = career;
+        this.careers = careers;
         this.randomCharacter(this.type);
     }
 
-    public Character(String race, String career) {
+    public Character(){
+        this.name = "";
+        this.player = "NPC";
+        this.type = "NPC";
+
+        this.race = "";
+        this.careers = new LinkedList<>();
+
+        this.profile = new Profile();
+        this.basicProfile = new Profile();
+
+
+        this.skills = new LinkedList<>();
+        this.talents = new LinkedList<>();
+        this.weapons = new LinkedList<>();
+        this.armours = new LinkedList<>();
+        this.equipment = new LinkedList<>();
+
+        this.money = new Money();
+        this.details = new PersonalDetails();
+    }
+
+    public Character(String race, LinkedList<String> careers) {
         this.race = race;
-        this.career = career;
+        this.careers = careers;
         this.type = "NPC";
 
         this.randomCharacter(this.type);
 
         this.randomName();
 
-        this.previousCareers = new LinkedList<>();
         this.actualWounds = profile.getW();
     }
 
-    public Character(String name, String player, String race, String career,
+    public Character(String name, String player, String race, LinkedList<String> career,
                      String type, String[] caracs, String age, String eyeColour,
                      String hairColour, String gender, String size, String weight,
                      String astralSign, String birthPlace, String worshippedGod,
@@ -72,7 +92,7 @@ public class Character {
         this.name = name;
         this.player = player;
         this.race = race;
-        this.career = career;
+        this.careers = careers;
         this.type = type;
 
         int[] basicCharacs = new int[16];
@@ -117,20 +137,21 @@ public class Character {
         this.equipment = equipments;
         this.money = money;
 
-        this.previousCareers = new LinkedList<>();
-
         this.completeCharacter();
     }
 
-    private void completeCharacter() {
+    public void completeCharacter() {
+
         Random r = new Random();
 
         Race race = World.loadRace(this.race);
-        Career career = World.loadCareer(this.career);
+
+        this.details.setMale(r.nextBoolean());
 
         if(this.name.equals("")){
             this.randomName();
         }
+
 
         if(this.details.getBirthplace().equals("")){
             this.details.setBirthplace(race.getBirthPlaces().get(r.nextInt(race.getBirthPlaces().size())));
@@ -167,6 +188,11 @@ public class Character {
 
             this.details.setDistinguishingMarks(distinguishingMarks);
         }
+
+        this.details.setAge((this.details.getAge() == 0) ? World.loadRace(this.race).getAge()[r.nextInt(World.loadRace(this.race).getAge().length)] : this.details.getAge());
+        this.details.setHeight((this.details.getHeight() == 0) ? (this.details.isMale() ? World.loadRace(this.race).getmSize() : World.loadRace(this.race).getfSize()) + (int)(r.nextInt(10) * 2.5) : this.details.getHeight());
+        this.details.setWeight((this.details.getWeight() == 0) ? World.loadRace(this.race).getWeight()[r.nextInt(World.loadRace(this.race).getWeight().length)] : this.details.getWeight());
+
 
         this.completeBasicProfile(race);
         this.profile = this.applyCareersProfile();
@@ -268,7 +294,6 @@ public class Character {
 
         this.money = randomMoney();
 //        this.previousCareers = career.getRandomPreviousCareers(0, 0, new LinkedList<Career>(), new LinkedList<LinkedList<Career>>());
-        this.previousCareers = new LinkedList<>();
 
         this.applyCareers();
     }
@@ -363,7 +388,7 @@ public class Character {
 
         Profile newProfile = basicProfile.clone();
         Career career1;
-        for(String careerName : previousCareers){
+        for(String careerName : careers){
             career1 = World.loadCareer(careerName);
             if(basicProfile.getWs() + career1.getProfile().getWs() >= newProfile.getWs()){
                 newProfile.setWs(basicProfile.getWs() + career1.getProfile().getWs());
@@ -414,56 +439,6 @@ public class Character {
             }
         }
 
-        career1 = World.loadCareer(this.getCareer());
-
-        if(basicProfile.getWs() + career1.getProfile().getWs() >= newProfile.getWs()){
-            newProfile.setWs(basicProfile.getWs() + career1.getProfile().getWs());
-        }
-
-        if(basicProfile.getBs() + career1.getProfile().getBs() >= newProfile.getBs()){
-            newProfile.setBs(basicProfile.getBs() + career1.getProfile().getBs());
-        }
-
-        if(basicProfile.getS() + career1.getProfile().getS() >= newProfile.getS()){
-            newProfile.setS(basicProfile.getS() + career1.getProfile().getS());
-        }
-
-        if(basicProfile.getT() + career1.getProfile().getT() >= newProfile.getT()){
-            newProfile.setT(basicProfile.getT() + career1.getProfile().getT());
-        }
-
-        if(basicProfile.getAg() + career1.getProfile().getAg() >= newProfile.getAg()){
-            newProfile.setAg(basicProfile.getAg() + career1.getProfile().getAg());
-        }
-
-        if(basicProfile.getIntel() + career1.getProfile().getIntel() >= newProfile.getIntel()){
-            newProfile.setIntel(basicProfile.getIntel() + career1.getProfile().getIntel());
-        }
-
-        if(basicProfile.getWp() + career1.getProfile().getWp() >= newProfile.getWp()){
-            newProfile.setWp(basicProfile.getWp() + career1.getProfile().getWp());
-        }
-
-        if(basicProfile.getFel() + career1.getProfile().getFel() >= newProfile.getFel()){
-            newProfile.setFel(basicProfile.getFel() + career1.getProfile().getFel());
-        }
-
-        if(basicProfile.getA() + career1.getProfile().getA() >= newProfile.getA()){
-            newProfile.setA(basicProfile.getA() + career1.getProfile().getA());
-        }
-
-        if(basicProfile.getW() + career1.getProfile().getW() >= newProfile.getW()){
-            newProfile.setW(basicProfile.getW() + career1.getProfile().getW());
-        }
-
-        if(basicProfile.getM() + career1.getProfile().getM() >= newProfile.getM()){
-            newProfile.setM(basicProfile.getM() + career1.getProfile().getM());
-        }
-
-        if(basicProfile.getMag() + career1.getProfile().getMag() >= newProfile.getMag()){
-            newProfile.setMag(basicProfile.getMag() + career1.getProfile().getMag());
-        }
-
         newProfile.setSb(newProfile.getS() / 10);
         newProfile.setTb(newProfile.getT() / 10);
 
@@ -479,15 +454,11 @@ public class Character {
             newSkills.add(skillChoice.get(r.nextInt(skillChoice.size())));
         }
 
-        for(String careerName : this.previousCareers){
+        for(String careerName : this.careers){
             career1 = World.loadCareer(careerName);
             for(LinkedList<String> skillChoice : career1.getSkills()){
                 newSkills.add(skillChoice.get(r.nextInt(skillChoice.size())));
             }
-        }
-
-        for(LinkedList<String> skillChoice : World.loadCareer(this.career).getSkills()){
-            newSkills.add(skillChoice.get(r.nextInt(skillChoice.size())));
         }
 
         return newSkills;
@@ -502,15 +473,11 @@ public class Character {
             newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
         }
 
-        for(String careerName : this.previousCareers){
+        for(String careerName : this.careers){
             career1 = World.loadCareer(careerName);
             for(LinkedList<String> talentChoice : career1.getTalents()){
                 newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
             }
-        }
-
-        for(LinkedList<String> talentChoice : World.loadCareer(this.career).getTalents()){
-            newTalents.add(talentChoice.get(r.nextInt(talentChoice.size())));
         }
 
         return newTalents;
@@ -518,20 +485,16 @@ public class Character {
 
     private void randomTrappings(){
         Random r = new Random();
-        Career careerEff = World.loadCareer(this.career), career1;
+        Career career1;
         Race raceEff = World.loadRace(this.race);
 
         LinkedList<String> newWeapons = new LinkedList<>();
 
-        for(String careerName : this.previousCareers){
+        for(String careerName : this.careers){
             career1 = World.loadCareer(careerName);
             for(LinkedList<String> weaponChoice : career1.getWeapons()){
                 newWeapons.add(weaponChoice.get(r.nextInt(weaponChoice.size())));
             }
-        }
-
-        for(LinkedList<String> weaponChoice : careerEff.getWeapons()){
-            newWeapons.add(weaponChoice.get(r.nextInt(weaponChoice.size())));
         }
 
         for(LinkedList<String> weaponChoice : raceEff.getWeapons()){
@@ -540,16 +503,13 @@ public class Character {
 
         LinkedList<String> newArmours = new LinkedList<>();
 
-        for(String careerName : this.previousCareers){
+        for(String careerName : this.careers){
             career1 = World.loadCareer(careerName);
             for(LinkedList<String> armourChoice : career1.getArmours()){
                 newArmours.add(armourChoice.get(r.nextInt(armourChoice.size())));
             }
         }
 
-        for(LinkedList<String> armourChoice : careerEff.getArmours()){
-            newArmours.add(armourChoice.get(r.nextInt(armourChoice.size())));
-        }
 
         for(LinkedList<String> armourChoice : raceEff.getArmours()){
             newArmours.add(armourChoice.get(r.nextInt(armourChoice.size())));
@@ -557,15 +517,11 @@ public class Character {
 
         LinkedList<String> newEquipment = new LinkedList<>();
 
-        for(String careerName : this.previousCareers){
+        for(String careerName : this.careers){
             career1 = World.loadCareer(careerName);
             for(LinkedList<String> equipmentChoice : career1.getEquipments()){
                 newEquipment.add(equipmentChoice.get(r.nextInt(equipmentChoice.size())));
             }
-        }
-
-        for(LinkedList<String> equipmentChoice : careerEff.getEquipments()){
-            newEquipment.add(equipmentChoice.get(r.nextInt(equipmentChoice.size())));
         }
 
         for(LinkedList<String> equipmentChoice : raceEff.getEquipments()){
@@ -625,20 +581,12 @@ public class Character {
         this.race = race;
     }
 
-    public String getCareer() {
-        return career;
+    public LinkedList<String> getCareers() {
+        return careers;
     }
 
-    public void setCareer(String career) {
-        this.career = career;
-    }
-
-    public LinkedList<String> getPreviousCareers() {
-        return previousCareers;
-    }
-
-    public void setPreviousCareers(LinkedList<String> previousCareers) {
-        this.previousCareers = previousCareers;
+    public void setCareers(LinkedList<String> careers) {
+        this.careers = careers;
     }
 
     public Profile getProfile() {
@@ -715,7 +663,7 @@ public class Character {
 
     @Override
     public String toString(){
-        String res = name + ", " + race+ " " + career + "\n";
+        String res = name + ", " + race+ " " + careers + "\n";
         res += details + "\n";
         res += profile + "\n";
         res += "Compétences : \n";

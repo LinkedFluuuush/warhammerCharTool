@@ -23,10 +23,7 @@ public class updateComboBoxesAL implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         JComboBox<String> comboRace = panel.getComboRace();
-        JComboBox<String> comboCareer = panel.getComboCareer();
         JComboBox<String> comboGod = panel.getComboGod();
-
-        panel.emptyElements();
 
         if(!comboRace.getSelectedItem().equals("")) {
             /* Update gods */
@@ -54,20 +51,12 @@ public class updateComboBoxesAL implements ActionListener {
             }
             comboGodRenderer.setTooltips(tooltips);
 
-            /* Update careers */
-            comboCareer.removeAllItems();
-
-            LinkedList<String> availableCareers = new LinkedList<>(World.CAREERS.keySet());
-            Collections.sort(availableCareers);
-            for (String careerName : availableCareers) {
-                if (World.loadCareer(careerName).getAvailableRaces().contains(comboRace.getSelectedItem())) {
-                    comboCareer.addItem(careerName);
-                }
-            }
+            panel.getCharacter().setCareers(new LinkedList<>());
+            panel.getCharacter().setRace(String.valueOf(comboRace.getSelectedItem()));
 
             panel.getCreateCharacterButton().setEnabled(true);
         } else {
-            comboCareer.removeAllItems();
+            panel.getCharacter().setCareers(new LinkedList<>());
             comboGod.removeAllItems();
             panel.getCreateCharacterButton().setEnabled(false);
         }

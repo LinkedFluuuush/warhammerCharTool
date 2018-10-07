@@ -105,6 +105,10 @@ public class Profile {
         this.fp = 0;
     }
 
+    public Profile(){
+        this(0, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
+
     public int getWs() {
         return ws;
     }
