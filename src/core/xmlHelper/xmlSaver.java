@@ -9,7 +9,9 @@ import org.jdom2.output.XMLOutputter;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 /**
  * User: Linked
@@ -56,7 +58,11 @@ public class xmlSaver {
             aCareer = World.loadCareer(aCareerName);
             career = new Element("career");
             career.setAttribute("name", aCareer.getName());
-            career.setAttribute("type", aCareer.getType()+"");
+            if(aCareer.getType() == Career.CareerType.BASE) {
+                career.setAttribute("type", "1");
+            } else {
+                career.setAttribute("type", "0");
+            }
 
             profile = new Element("profile");
             profile.setAttribute("WS", aCareer.getProfile().getWs() + "");
@@ -146,7 +152,11 @@ public class xmlSaver {
 
             accessTable = new Element("accessTable");
 
-            for(String aAccessCareer : aCareer.getAccessCareers()){
+            Set set = new HashSet() ;
+            set.addAll(aCareer.getAccessCareers()) ;
+            LinkedList<String> distinctList = new LinkedList(set) ;
+
+            for(String aAccessCareer : distinctList){
                 accessCareer = new Element("accessCareer");
                 accessCareer.setText(aAccessCareer);
                 accessTable.addContent(accessCareer);
@@ -156,7 +166,11 @@ public class xmlSaver {
 
             openingTable = new Element("openingTable");
 
-            for(String aOpeningCareer : aCareer.getOpeningCareers()){
+            set = new HashSet() ;
+            set.addAll(aCareer.getOpeningCareers()) ;
+            distinctList = new LinkedList(set) ;
+
+            for(String aOpeningCareer : distinctList){
                 openingCareer = new Element("openingCareer");
                 openingCareer.setText(aOpeningCareer);
                 openingTable.addContent(openingCareer);
@@ -166,7 +180,15 @@ public class xmlSaver {
 
             availableRaces = new Element("availableRaces");
 
-            for(String aAvailableRace : aCareer.getAvailableRaces()){
+            set = new HashSet() ;
+            set.addAll(aCareer.getAvailableRaces()) ;
+            distinctList = new LinkedList(set) ;
+
+            if(distinctList.size() == 0){
+                distinctList.addAll(World.RACES.keySet());
+            }
+
+            for(String aAvailableRace : distinctList){
                 race = new Element("race");
                 race.setText(aAvailableRace);
                 availableRaces.addContent(race);

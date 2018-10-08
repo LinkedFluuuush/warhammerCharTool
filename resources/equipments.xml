@@ -157,4 +157,7 @@
   <equipment name="Poule" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="5" />
   <equipment name="Vache" enc="0" goldenCrowns="10" silverShillings="0" brassPennies="0" />
   <equipment name="Bijoux d'une valeur de 6d10Co" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="0" />
+  <equipment name="Bijoux d'une valeur de 500Co" enc="0" goldenCrowns="500" silverShillings="0" brassPennies="0" />
+  <equipment name="Auberge" enc="0" goldenCrowns="200" silverShillings="0" brassPennies="0" />
+  <equipment name="Serviteurs" enc="0" goldenCrowns="0" silverShillings="0" brassPennies="0" />
 </equipments>

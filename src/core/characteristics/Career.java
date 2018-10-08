@@ -44,7 +44,7 @@ public class Career implements Comparable{
 
     public Career(String name, Profile profile, LinkedList<LinkedList<String>> skills,
                   LinkedList<LinkedList<String>> talents, LinkedList<LinkedList<String>> equipments,
-                  LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> availableRaces, CareerType type) {
+                  LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> accessCareers, LinkedList<String> openingCareers, LinkedList<String> availableRaces, CareerType type) {
         this.name = name;
         this.profile = profile;
         this.skills = skills;
@@ -54,8 +54,14 @@ public class Career implements Comparable{
         this.armours = armours;
         this.availableRaces = availableRaces;
         this.type = type;
-        this.accessCareers = new LinkedList<>();
-        this.openingCareers = new LinkedList<>();
+        this.accessCareers = accessCareers;
+        this.openingCareers = openingCareers;
+    }
+
+    public Career(String name, Profile profile, LinkedList<LinkedList<String>> skills,
+                  LinkedList<LinkedList<String>> talents, LinkedList<LinkedList<String>> equipments,
+                  LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> availableRaces, CareerType type) {
+        this(name, profile, skills, talents, equipments, weapons, armours, new LinkedList<>(), new LinkedList<>(), availableRaces, type);
     }
 
     public Career(String name, int ws, int bs, int s, int t, int ag, int intel, int wp,
@@ -63,17 +69,12 @@ public class Career implements Comparable{
                   LinkedList<LinkedList<String>> skills,
                   LinkedList<LinkedList<String>> talents, LinkedList<LinkedList<String>> equipments,
                   LinkedList<LinkedList<String>> weapons, LinkedList<LinkedList<String>> armours, LinkedList<String> availableRaces, CareerType type) {
-        this.name = name;
-        this.profile = new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag);
-        this.skills = skills;
-        this.talents = talents;
-        this.equipments = equipments;
-        this.weapons = weapons;
-        this.armours = armours;
-        this.availableRaces = availableRaces;
-        this.type = type;
-        this.accessCareers = new LinkedList<>();
-        this.openingCareers = new LinkedList<>();
+
+        this(name, new Profile(ws, bs, s, t, ag, intel, wp, fel, a, w, m, mag), skills, talents, equipments, weapons, armours, new LinkedList<>(), new LinkedList<>(), availableRaces, type);
+    }
+
+    public Career(){
+        this("", new Profile(), new LinkedList<>(), new LinkedList<>(), new LinkedList<>(), new LinkedList<>(), new LinkedList<>(), new LinkedList<>(), CareerType.AVANCE);
     }
 
     public String getName() {

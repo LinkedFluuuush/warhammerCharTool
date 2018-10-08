@@ -106,7 +106,7 @@ public class Profile {
     }
 
     public Profile(){
-        this(0, 0, 0, 0, 0, 0, 0, 0, 0);
+        this(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     }
 
     public int getWs() {
